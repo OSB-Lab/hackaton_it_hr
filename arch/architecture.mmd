@@ -1,0 +1,51 @@
+%%{init: {'flowchart': {'htmlLabels': true, 'nodeSpacing': 60, 'rankSpacing': 90, 'wrappingWidth': 220}} }%%
+flowchart LR
+  C["<b>Кандидат</b><br/>Профиль и согласия<br/>Тест / история / PDF<br/>Приглашения"]
+  E["<b>Работодатель</b><br/>Компания и потребность<br/>Банк / фильтры / подборка<br/>Персональное предложение"]
+
+  subgraph W["Next.js: два кабинета"]
+    N["Ролевые маршруты<br/>Формы и валидация<br/>REST-клиент<br/>Статусы и причины"]
+  end
+
+  subgraph A["FastAPI: модульный монолит"]
+    ID["Доступ и согласия<br/>Регистрация • JWT • RBAC"]
+    CP["Кандидат<br/>Профиль • приватность<br/>PDF-профиль • история"]
+    AS["Тестирование<br/>Blueprint → вариант → rubric<br/>Category • retest/cooldown"]
+    MT["Подбор<br/>Eligibility → filters → score<br/>Snapshot + причины"]
+    IV["Приглашения<br/>Зарплата RUB • статусы<br/>ContactDisclosure"]
+    FS["ФСП fixture<br/>linked / no_history<br/>Нормализация достижений"]
+  end
+
+  DB[("PostgreSQL<br/>Профили • попытки • category<br/>needs • snapshots • invitations<br/>audit • disclosure")]
+  MP["Mailpit<br/>Подтверждение email<br/>Уведомления"]
+
+  C -->|HTTPS / JWT| N
+  E -->|HTTPS / JWT| N
+  N -->|REST| ID
+  N -->|REST| CP
+  N -->|REST| AS
+  N -->|REST| MT
+  N -->|REST| IV
+  CP -->|ФСП ID| FS
+  AS -->|подтверждённая category| MT
+  MT -->|выбранный кандидат| IV
+  ID -->|транзакции| DB
+  CP -->|транзакции| DB
+  AS -->|попытки и баллы| DB
+  MT -->|снимки выдачи| DB
+  IV -->|статусы и раскрытие| DB
+  FS -->|evidence / no_history| DB
+  ID -->|письмо| MP
+  IV -->|уведомление| MP
+
+  classDef user fill:#ede9fe,stroke:#402FFF,color:#1B1C21
+  classDef web fill:#dbeafe,stroke:#2563eb,color:#1B1C21
+  classDef api fill:#dcfce7,stroke:#16a34a,color:#1B1C21
+  classDef secure fill:#ffe4e6,stroke:#EC1D35,color:#1B1C21
+  classDef data fill:#e0e7ff,stroke:#402FFF,color:#1B1C21
+  class C,E user
+  class N web
+  class ID,CP,AS,MT,FS api
+  class IV secure
+  class DB data
+  class MP web
