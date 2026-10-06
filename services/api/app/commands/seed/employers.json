@@ -1,0 +1,77 @@
+{
+  "credentials": {
+    "password": "FspDemo2026!",
+    "password_hash": "$2b$12$Nf.KdiJMXSAOs8FFdpuk0uVKRqZ/TTvx8K1dNTWZeiJfwoNdSHDd6"
+  },
+  "consents": [
+    {
+      "kind": "terms",
+      "granted": true,
+      "granted_at": "2026-01-15T10:00:00+00:00"
+    },
+    {
+      "kind": "privacy",
+      "granted": true,
+      "granted_at": "2026-01-15T10:00:00+00:00"
+    }
+  ],
+  "employers": [
+    {
+      "email": "employer1@demo.example",
+      "name": "Demo Python Labs",
+      "description": "Демонстрационная команда backend-разработки.",
+      "contacts": {
+        "email": "employer1@demo.example"
+      },
+      "hiring_needs": [
+        {
+          "title": "Junior Python Developer",
+          "stack": [
+            "Python",
+            "FastAPI"
+          ],
+          "grade": "junior",
+          "specialization": "backend"
+        },
+        {
+          "title": "Middle Python Developer",
+          "stack": [
+            "Python",
+            "FastAPI",
+            "PostgreSQL"
+          ],
+          "grade": "middle",
+          "specialization": "backend"
+        }
+      ]
+    },
+    {
+      "email": "employer2@demo.example",
+      "name": "Demo React Studio",
+      "description": "Демонстрационная команда frontend-разработки.",
+      "contacts": {
+        "email": "employer2@demo.example"
+      },
+      "hiring_needs": [
+        {
+          "title": "Junior React Developer",
+          "stack": [
+            "React",
+            "JavaScript"
+          ],
+          "grade": "junior",
+          "specialization": "frontend"
+        },
+        {
+          "title": "Middle React Developer",
+          "stack": [
+            "React",
+            "TypeScript"
+          ],
+          "grade": "middle",
+          "specialization": "frontend"
+        }
+      ]
+    }
+  ]
+}

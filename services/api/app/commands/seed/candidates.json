@@ -1,0 +1,345 @@
+{
+  "credentials": {
+    "password": "FspDemo2026!",
+    "password_hash": "$2b$12$Nf.KdiJMXSAOs8FFdpuk0uVKRqZ/TTvx8K1dNTWZeiJfwoNdSHDd6"
+  },
+  "consents": [
+    {
+      "kind": "terms",
+      "granted": true,
+      "granted_at": "2026-01-15T10:00:00+00:00"
+    },
+    {
+      "kind": "privacy",
+      "granted": true,
+      "granted_at": "2026-01-15T10:00:00+00:00"
+    },
+    {
+      "kind": "publish_profile",
+      "granted": true,
+      "granted_at": "2026-01-15T10:00:00+00:00"
+    }
+  ],
+  "candidates": [
+    {
+      "email": "candidate1@demo.example",
+      "full_name": "Анна Смирнова",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL"
+      ],
+      "grade": "junior",
+      "specialization": "backend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "python",
+          "score": 55,
+          "source": "test"
+        },
+        {
+          "competency": "sql",
+          "score": 58,
+          "source": "test"
+        },
+        {
+          "competency": "api",
+          "score": 61,
+          "source": "test"
+        }
+      ]
+    },
+    {
+      "email": "candidate2@demo.example",
+      "full_name": "Илья Волков",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL"
+      ],
+      "grade": "middle",
+      "specialization": "backend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "python",
+          "score": 76,
+          "source": "test"
+        },
+        {
+          "competency": "sql",
+          "score": 78,
+          "source": "test"
+        },
+        {
+          "competency": "api",
+          "score": 80,
+          "source": "test"
+        }
+      ]
+    },
+    {
+      "email": "candidate3@demo.example",
+      "full_name": "Мария Соколова",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL"
+      ],
+      "grade": "junior",
+      "specialization": "backend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "python",
+          "score": 57,
+          "source": "test"
+        },
+        {
+          "competency": "sql",
+          "score": 60,
+          "source": "test"
+        },
+        {
+          "competency": "api",
+          "score": 63,
+          "source": "test"
+        }
+      ]
+    },
+    {
+      "email": "candidate4@demo.example",
+      "full_name": "Дмитрий Орлов",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL"
+      ],
+      "grade": "middle",
+      "specialization": "backend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "python",
+          "score": 78,
+          "source": "test"
+        },
+        {
+          "competency": "sql",
+          "score": 80,
+          "source": "test"
+        },
+        {
+          "competency": "api",
+          "score": 82,
+          "source": "test"
+        }
+      ]
+    },
+    {
+      "email": "candidate5@demo.example",
+      "full_name": "Елена Морозова",
+      "stack": [
+        "Python",
+        "FastAPI",
+        "PostgreSQL"
+      ],
+      "grade": "junior",
+      "specialization": "backend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "python",
+          "score": 59,
+          "source": "test"
+        },
+        {
+          "competency": "sql",
+          "score": 62,
+          "source": "test"
+        },
+        {
+          "competency": "api",
+          "score": 65,
+          "source": "test"
+        }
+      ]
+    },
+    {
+      "email": "candidate6@demo.example",
+      "full_name": "Алексей Кузнецов",
+      "stack": [
+        "TypeScript",
+        "React",
+        "CSS"
+      ],
+      "grade": "middle",
+      "specialization": "frontend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "javascript",
+          "score": 80,
+          "source": "test"
+        },
+        {
+          "competency": "typescript",
+          "score": 82,
+          "source": "test"
+        },
+        {
+          "competency": "react",
+          "score": 84,
+          "source": "test"
+        }
+      ]
+    },
+    {
+      "email": "candidate7@demo.example",
+      "full_name": "Ольга Попова",
+      "stack": [
+        "TypeScript",
+        "React",
+        "CSS"
+      ],
+      "grade": "junior",
+      "specialization": "frontend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "javascript",
+          "score": 61,
+          "source": "test"
+        },
+        {
+          "competency": "typescript",
+          "score": 64,
+          "source": "test"
+        },
+        {
+          "competency": "react",
+          "score": 67,
+          "source": "test"
+        }
+      ]
+    },
+    {
+      "email": "candidate8@demo.example",
+      "full_name": "Никита Лебедев",
+      "stack": [
+        "TypeScript",
+        "React",
+        "CSS"
+      ],
+      "grade": "middle",
+      "specialization": "frontend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "javascript",
+          "score": 82,
+          "source": "test"
+        },
+        {
+          "competency": "typescript",
+          "score": 84,
+          "source": "test"
+        },
+        {
+          "competency": "react",
+          "score": 86,
+          "source": "test"
+        }
+      ]
+    },
+    {
+      "email": "candidate9@demo.example",
+      "full_name": "Софья Новикова",
+      "stack": [
+        "TypeScript",
+        "React",
+        "CSS"
+      ],
+      "grade": "junior",
+      "specialization": "frontend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "javascript",
+          "score": 63,
+          "source": "test"
+        },
+        {
+          "competency": "typescript",
+          "score": 66,
+          "source": "test"
+        },
+        {
+          "competency": "react",
+          "score": 69,
+          "source": "test"
+        }
+      ]
+    },
+    {
+      "email": "candidate10@demo.example",
+      "full_name": "Павел Егоров",
+      "stack": [
+        "TypeScript",
+        "React",
+        "CSS"
+      ],
+      "grade": "middle",
+      "specialization": "frontend",
+      "privacy_settings": {
+        "publish_profile": true,
+        "show_contacts": false
+      },
+      "competency_scores": [
+        {
+          "competency": "javascript",
+          "score": 84,
+          "source": "test"
+        },
+        {
+          "competency": "typescript",
+          "score": 86,
+          "source": "test"
+        },
+        {
+          "competency": "react",
+          "score": 88,
+          "source": "test"
+        }
+      ]
+    }
+  ]
+}

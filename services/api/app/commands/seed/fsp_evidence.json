@@ -1,0 +1,51 @@
+[
+  {
+    "email": "candidate2@demo.example",
+    "fsp_id": "demo-fsp-002",
+    "linked_at": "2026-01-20T12:00:00+00:00",
+    "achievements": [
+      {
+        "discipline": "Продуктовое программирование",
+        "competition": "Демо-турнир Python",
+        "result": "1 место",
+        "role": "Backend-разработчик",
+        "rank": "III разряд"
+      },
+      {
+        "discipline": "Алгоритмическое программирование",
+        "competition": null,
+        "result": "Демонстрационное достижение",
+        "role": "Участник",
+        "rank": null
+      }
+    ]
+  },
+  {
+    "email": "candidate6@demo.example",
+    "fsp_id": "demo-fsp-006",
+    "linked_at": "2026-01-20T12:00:00+00:00",
+    "achievements": [
+      {
+        "discipline": "Продуктовое программирование",
+        "competition": "Демо-турнир React",
+        "result": "2 место",
+        "role": "Frontend-разработчик",
+        "rank": null
+      }
+    ]
+  },
+  {
+    "email": "candidate8@demo.example",
+    "fsp_id": "demo-fsp-008",
+    "linked_at": "2026-01-20T12:00:00+00:00",
+    "achievements": [
+      {
+        "discipline": "Продуктовое программирование",
+        "competition": "Демо-командный хакатон",
+        "result": "Финалист",
+        "role": "Капитан",
+        "rank": null
+      }
+    ]
+  }
+]

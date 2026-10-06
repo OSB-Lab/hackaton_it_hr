@@ -3,6 +3,7 @@ from sqlalchemy import create_engine, pool
 
 from app.core.config import get_settings
 from app.db.base import Base
+from app import models  # noqa: F401 -- register all tables in Base.metadata
 
 config = context.config
 settings = get_settings()
