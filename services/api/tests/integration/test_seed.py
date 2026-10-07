@@ -22,6 +22,22 @@ def seed_database(migrated_engine, monkeypatch):
     return migrated_engine
 
 
+def test_seed_preserves_extended_need_fields(seed_database):
+    seed_demo.main()
+    with Session(seed_database) as session, session.begin():
+        need = session.scalars(select(HiringNeed).order_by(HiringNeed.id)).first()
+        need.team_description = "Employer-edited team"
+        need.min_grade = "custom-min"
+        need.optional_skills = ["custom-skill"]
+        session.flush()
+        before = [tuple(row) for row in session.execute(select(HiringNeed.__table__).order_by(HiringNeed.id))]
+    seed_demo.main()
+    with Session(seed_database) as session:
+        after = [tuple(row) for row in session.execute(select(HiringNeed.__table__).order_by(HiringNeed.id))]
+        assert after == before
+        assert len(after) == 4
+
+
 def table_counts(engine):
     with engine.connect() as connection:
         return {

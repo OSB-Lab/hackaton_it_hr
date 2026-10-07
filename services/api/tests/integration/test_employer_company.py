@@ -111,7 +111,9 @@ def test_concurrent_put_keeps_one_company(company_env):
 def test_company_openapi(company_env):
     client, _, _, _ = company_env
     schema = client.get("/openapi.json").json()
-    assert {path for path in schema["paths"] if path.startswith("/employer/")} == {URL}
+    assert {path for path in schema["paths"] if path.startswith("/employer/")} == {
+        URL, "/employer/needs", "/employer/needs/{need_id}",
+    }
     assert set(schema["paths"][URL]) == {"get", "put"}
     for method in ("get", "put"):
         assert schema["paths"][URL][method]["security"] == [{"HTTPBearer": []}]
