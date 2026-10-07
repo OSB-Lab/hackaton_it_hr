@@ -78,6 +78,25 @@ def test_register(auth_env, role):
     assert security.decode_email_verification_token(auth_env.sent[0][1]) == data["id"]
 
 
+@pytest.mark.parametrize("role", ["candidate", "employer"])
+def test_register_login_me_happy_path(auth_env, role):
+    registered = register(auth_env.client, role=role)
+    assert registered.status_code == 201
+    login = auth_env.client.post("/auth/login", json={
+        "email": "  Candidate@EXAMPLE.COM  ", "password": PASSWORD,
+    })
+    assert login.status_code == 200
+    assert login.json()["token_type"] == "bearer"
+    token = login.json()["access_token"]
+    claims = security.decode_access_token(token)
+    assert claims.sub == str(registered.json()["id"])
+    assert claims.role == role
+    me = auth_env.client.get("/auth/me", headers={"Authorization": f"Bearer {token}"})
+    assert me.status_code == 200
+    assert me.json() == registered.json()
+    assert "password_hash" not in me.json()
+
+
 def test_register_invalid_role(auth_env):
     assert register(auth_env.client, role="admin").status_code == 422
     assert auth_env.sent == []
