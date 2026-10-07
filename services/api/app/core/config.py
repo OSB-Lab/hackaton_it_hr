@@ -1,5 +1,6 @@
 from functools import lru_cache
 from pathlib import Path
+from typing import Literal
 
 from pydantic import Field, SecretStr
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -17,6 +18,9 @@ class Settings(BaseSettings):
     POSTGRES_HOST: str
     POSTGRES_PORT: int = Field(default=5432, ge=1, le=65535)
     JWT_SECRET: SecretStr
+    JWT_ALGORITHM: Literal["HS256", "HS384", "HS512"] = "HS256"
+    ACCESS_TOKEN_TTL_MINUTES: int = Field(default=15, gt=0)
+    EMAIL_VERIFICATION_TOKEN_TTL_MINUTES: int = Field(default=1440, gt=0)
 
     @property
     def DATABASE_URL(self) -> str:
