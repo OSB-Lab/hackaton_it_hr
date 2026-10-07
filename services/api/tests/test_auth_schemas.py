@@ -78,3 +78,21 @@ def test_password_is_not_in_request_repr():
     assert password not in repr(
         RegisterRequest(email="demo@example.com", password=password, role="candidate")
     )
+
+
+@pytest.mark.parametrize("schema", [RegisterRequest, LoginRequest])
+def test_shared_email_normalization(schema):
+    data = {"email": "  Demo@EXAMPLE.COM  ", "password": "demo-password"}
+    if schema is RegisterRequest:
+        data["role"] = "candidate"
+    assert schema.model_validate(data).email == "demo@example.com"
+
+
+@pytest.mark.parametrize("schema", [RegisterRequest, LoginRequest])
+@pytest.mark.parametrize("email", ["not-an-email", "user@", "user @example.com"])
+def test_shared_email_validation(schema, email):
+    data = {"email": email, "password": "demo-password"}
+    if schema is RegisterRequest:
+        data["role"] = "candidate"
+    with pytest.raises(ValidationError):
+        schema.model_validate(data)

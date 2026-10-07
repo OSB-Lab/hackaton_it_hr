@@ -1,12 +1,19 @@
-from typing import Literal
+from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, Field
+from pydantic import BaseModel, BeforeValidator, ConfigDict, EmailStr, Field
 
 AuthRole = Literal["candidate", "employer"]
 
 
+def normalize_email(value):
+    return value.strip().lower() if isinstance(value, str) else value
+
+
+NormalizedEmail = Annotated[EmailStr, BeforeValidator(normalize_email)]
+
+
 class RegisterRequest(BaseModel):
-    email: str
+    email: NormalizedEmail
     password: str = Field(repr=False)
     role: AuthRole
 
@@ -21,7 +28,7 @@ class UserResponse(BaseModel):
 
 
 class LoginRequest(BaseModel):
-    email: str
+    email: NormalizedEmail
     password: str = Field(repr=False)
 
 

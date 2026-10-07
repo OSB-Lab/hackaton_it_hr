@@ -8,3 +8,4 @@ pytest
 httpx
 argon2-cffi>=25.1,<26
 PyJWT>=2.12,<3
+email-validator>=2.2,<3

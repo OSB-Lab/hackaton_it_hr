@@ -5,6 +5,7 @@ from sqlalchemy import MetaData, Table, func, inspect, select
 from sqlalchemy.orm import Session, sessionmaker
 
 from app.commands import seed_demo
+from app.modules.auth.security import hash_password, verify_password
 from app.models import (
     CandidateProfile, Company, CompetencyScore, Consent, FspAchievement,
     FspLink, HiringNeed, User,
@@ -36,6 +37,8 @@ def table_counts(engine):
 def test_seed_is_idempotent(seed_database, capsys):
     seed_demo.main()
     first = table_counts(seed_database)
+    with Session(seed_database) as session:
+        first_hashes = dict(session.execute(select(User.id, User.password_hash)).all())
     seed_demo.main()
     assert table_counts(seed_database) == first
     assert capsys.readouterr().out == "seed completed\nseed completed\n"
@@ -72,8 +75,12 @@ def test_seed_is_idempotent(seed_database, capsys):
             select(func.count()).select_from(User)
         ) == session.scalar(select(func.count(func.distinct(User.email))))
         for user in session.scalars(select(User)):
-            assert user.password_hash.startswith("$2b$")
-            assert len(user.password_hash) == 60
+            fixture = "candidates.json" if user.role == "candidate" else "employers.json"
+            password = seed_demo._read_json(fixture)["credentials"]["password"]
+            assert user.password_hash.startswith("$argon2id$")
+            assert verify_password(password, user.password_hash)
+            assert user.password_hash == first_hashes[user.id]
+            assert user.is_verified is True
 
         for model, keys in (
             (Consent, [Consent.user_id, Consent.kind]),
@@ -128,3 +135,42 @@ def test_seed_rolls_back_on_failure(seed_database, monkeypatch):
         seed_demo.main()
     counts = table_counts(seed_database)
     assert all(count == 0 for name, count in counts.items() if name != "alembic_version")
+
+
+def test_seed_upgrades_legacy_demo_passwords_only_once(seed_database):
+    legacy_hash = "$2b$12$Nf.KdiJMXSAOs8FFdpuk0uVKRqZ/TTvx8K1dNTWZeiJfwoNdSHDd6"
+    with Session(seed_database) as session, session.begin():
+        for email, role in [
+            ("candidate1@demo.example", "candidate"),
+            ("employer1@demo.example", "employer"),
+            ("unrelated@example.com", "candidate"),
+        ]:
+            session.add(User(
+                email=email, password_hash=legacy_hash, role=role, is_verified=True,
+            ))
+    seed_demo.main()
+    with Session(seed_database) as session:
+        hashes = dict(session.execute(select(User.email, User.password_hash)).all())
+        assert hashes["unrelated@example.com"] == legacy_hash
+        for email, fixture in [
+            ("candidate1@demo.example", "candidates.json"),
+            ("employer1@demo.example", "employers.json"),
+        ]:
+            password = seed_demo._read_json(fixture)["credentials"]["password"]
+            assert verify_password(password, hashes[email])
+    seed_demo.main()
+    with Session(seed_database) as session:
+        assert dict(session.execute(select(User.email, User.password_hash)).all()) == hashes
+
+
+def test_seed_preserves_changed_argon2_password(seed_database):
+    seed_demo.main()
+    changed_hash = hash_password("user-changed-password")
+    with Session(seed_database) as session, session.begin():
+        user = session.scalar(select(User).where(User.email == "candidate1@demo.example"))
+        user.password_hash = changed_hash
+    seed_demo.main()
+    with Session(seed_database) as session:
+        assert session.scalar(
+            select(User.password_hash).where(User.email == "candidate1@demo.example")
+        ) == changed_hash
