@@ -1,0 +1,26 @@
+{
+  "specializations": [
+    {
+      "id": "backend",
+      "name": "Backend Python"
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend React"
+    }
+  ],
+  "grades": [
+    "junior",
+    "middle",
+    "senior"
+  ],
+  "competencies": [
+    "python",
+    "sql",
+    "api",
+    "javascript",
+    "typescript",
+    "react",
+    "teamwork"
+  ]
+}
