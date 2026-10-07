@@ -1,32 +1,42 @@
 import logging
-from collections.abc import Iterator
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, status
-from sqlalchemy.orm import Session
-
-from app.db.session import SessionLocal
+from app.models.user import User
+from app.modules.auth.dependencies import AuthSession, current_user, get_auth_session
 from app.modules.auth.mailer import send_verification_email
 from app.modules.auth.schemas import (
-    RegisterRequest, UserResponse, VerifyEmailRequest, VerifyEmailResponse,
+    LoginRequest, TokenResponse, RegisterRequest, UserResponse, VerifyEmailRequest, VerifyEmailResponse,
 )
 from app.modules.auth.security import (
-    InvalidTokenError, create_email_verification_token,
+    InvalidTokenError, create_access_token, create_email_verification_token,
 )
 from app.modules.auth.service import (
-    AuthPersistenceError, EmailAlreadyRegistered, register_user, verify_email,
+    AuthPersistenceError, EmailAlreadyRegistered, InvalidCredentials, authenticate_user,
+    register_user, verify_email,
 )
 
 logger = logging.getLogger(__name__)
 router = APIRouter(prefix="/auth", tags=["auth"])
 
 
-def get_auth_session() -> Iterator[Session]:
-    with SessionLocal() as session:
-        yield session
+@router.post("/login", response_model=TokenResponse)
+def login(request: LoginRequest, session: AuthSession) -> TokenResponse:
+    try:
+        user = authenticate_user(session, request)
+    except InvalidCredentials:
+        raise HTTPException(
+            status_code=401, detail="Invalid email or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        ) from None
+    except AuthPersistenceError:
+        raise HTTPException(status_code=503, detail="Login unavailable") from None
+    return TokenResponse(access_token=create_access_token(user.id, user.role))
 
 
-AuthSession = Annotated[Session, Depends(get_auth_session)]
+@router.get("/me", response_model=UserResponse)
+def me(user: Annotated[User, Depends(current_user)]) -> UserResponse:
+    return UserResponse.model_validate(user)
 
 
 @router.post("/register", response_model=UserResponse, status_code=status.HTTP_201_CREATED)

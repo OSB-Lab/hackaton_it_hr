@@ -1,4 +1,4 @@
-# Auth: schemas, security, registration and email verification (SPR-11.1–SPR-11.3)
+# Auth: schemas, security, registration and email verification (SPR-11.1–SPR-11.4)
 
 Схемы импортируются из `app.modules.auth.schemas`. Общий тип
 `AuthRole = Literal["candidate", "employer"]` соответствует строковому полю
@@ -28,8 +28,7 @@ RegisterRequest и LoginRequest используют общий NormalizedEmail:
 
 ## Registration and email verification
 
-В app подключён auth router. Реализованы только POST /auth/register и
-POST /auth/verify-email; login и me остаются будущими endpoint.
+All four auth endpoints listed above are implemented.
 
 Регистрация вызывает существующий hash_password, сохраняет User с
 is_verified=false и возвращает HTTP 201 с UserResponse. Предварительный
@@ -132,15 +131,8 @@ CandidateUser = Annotated[User, Depends(require_role("candidate"))]
 EmployerUser = Annotated[User, Depends(require_role("employer"))]
 ```
 
-- `current_user` — async FastAPI dependency. Будущая реализация валидирует
-  Bearer JWT и возвращает ORM User, а не схему ответа или словарь claims.
-- `require_role(role: AuthRole)` — factory async dependency. Использует
-  `Depends(current_user)`, возвращает ORM User при нужной роли;
-  несовпадение роли в будущей реализации даёт HTTP 403.
-- Сигнатуры возвращаемых значений, имена функций и пути импорта зафиксированы.
-  Внутренние зависимости чтения JWT/сессии будут добавлены на security-шаге.
-
-Сейчас обе зависимости — заглушки с `NotImplementedError`. Они не
-аутентифицируют пользователя и не предоставляют доступ. Их нельзя подключать
-к рабочим маршрутам до реализации dependencies в SPR-11.4.
-JWT и hashing реализованы в security.py; login, me и RBAC пока не реализованы.
+- `current_user` is a synchronous FastAPI dependency, run in the thread pool with the synchronous SQLAlchemy Session. HTTPBearer reads Authorization; decode_access_token validates the JWT. The current ORM User is loaded from the database using sub. Missing, malformed, expired, wrong-purpose tokens and deleted users return 401 with WWW-Authenticate: Bearer.
+- `require_role(role: AuthRole)` uses Depends(current_user), checks the current database role and returns the same ORM User. A wrong role returns 403.
+- GET /auth/me uses current_user and UserResponse; password_hash is never returned.
+- POST /auth/login uses shared email normalization, loads User and calls verify_password. Unknown email and wrong password return the same 401: Invalid email or password. Success returns an access JWT and token_type=bearer. Database errors return a generic 503.
+- is_verified=false does not block login, me or RBAC.

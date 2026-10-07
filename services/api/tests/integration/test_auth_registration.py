@@ -256,7 +256,7 @@ def test_verification_database_error_is_sanitized(auth_env, monkeypatch):
 def test_openapi_auth_routes(auth_env):
     paths = auth_env.client.get("/openapi.json").json()["paths"]
     assert {path for path in paths if path.startswith("/auth/")} == {
-        "/auth/register", "/auth/verify-email",
+        "/auth/register", "/auth/verify-email", "/auth/login", "/auth/me",
     }
     assert "201" in paths["/auth/register"]["post"]["responses"]
     assert "200" in paths["/auth/verify-email"]["post"]["responses"]

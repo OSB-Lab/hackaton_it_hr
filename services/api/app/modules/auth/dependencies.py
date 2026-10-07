@@ -1,15 +1,44 @@
-from collections.abc import Callable, Coroutine
+from collections.abc import Callable, Coroutine, Iterator
 from typing import Annotated, Any
 
-from fastapi import Depends
+from fastapi import Depends, HTTPException
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
+from sqlalchemy.orm import Session
+
+from app.db.session import SessionLocal
 
 from app.models.user import User
 from app.modules.auth.schemas import AuthRole
+from app.modules.auth.security import InvalidTokenError, decode_access_token
 
 
-async def current_user() -> User:
-    """Contract: validate Bearer JWT and return the authenticated ORM User."""
-    raise NotImplementedError("Bearer JWT authentication is not implemented yet")
+def get_auth_session() -> Iterator[Session]:
+    with SessionLocal() as session:
+        yield session
+
+
+AuthSession = Annotated[Session, Depends(get_auth_session)]
+bearer = HTTPBearer(auto_error=False)
+
+
+def current_user(
+    credentials: Annotated[HTTPAuthorizationCredentials | None, Depends(bearer)],
+    session: AuthSession,
+) -> User:
+    """Validate an access token and load the current ORM user from the database."""
+    unauthorized = HTTPException(
+        status_code=401, detail="Not authenticated", headers={"WWW-Authenticate": "Bearer"},
+    )
+    if credentials is None:
+        raise unauthorized
+    try:
+        claims = decode_access_token(credentials.credentials)
+    except InvalidTokenError:
+        raise unauthorized from None
+    user = session.get(User, int(claims.sub))
+    if user is None:
+        raise unauthorized
+    return user
 
 
 def require_role(role: AuthRole) -> Callable[..., Coroutine[Any, Any, User]]:
@@ -18,7 +47,8 @@ def require_role(role: AuthRole) -> Callable[..., Coroutine[Any, Any, User]]:
     async def dependency(
         user: Annotated[User, Depends(current_user)],
     ) -> User:
-        # This placeholder must never grant access before RBAC is implemented.
-        raise NotImplementedError("Role authorization is not implemented yet")
+        if user.role != role:
+            raise HTTPException(status_code=403, detail="Forbidden")
+        return user
 
     return dependency
