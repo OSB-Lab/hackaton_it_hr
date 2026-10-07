@@ -22,6 +22,11 @@ class CandidateProfile(CreatedAtMixin, UpdatedAtMixin, Base):
     stack: Mapped[list[str]] = mapped_column(JSON, default=list, server_default=text("'[]'"))
     grade: Mapped[str | None]
     specialization: Mapped[str | None]
+    phone: Mapped[str | None]
+    professional_role: Mapped[str | None]
+    experience_months: Mapped[int | None]
+    soft_skills: Mapped[list[str]] = mapped_column(JSON, default=list, server_default=text("'[]'"))
+    self_declared_grade: Mapped[str | None]
     privacy_settings: Mapped[dict[str, Any]] = mapped_column(
         JSON, default=dict, server_default=text("'{}'")
     )

@@ -5,9 +5,11 @@ from fastapi.responses import JSONResponse
 
 from app.db.session import check_database
 from app.modules.auth.router import router as auth_router
+from app.modules.candidate.router import router as candidate_router
 
 app = FastAPI(title="FSP Platform API")
 app.include_router(auth_router)
+app.include_router(candidate_router)
 
 
 @app.get("/health/live")
