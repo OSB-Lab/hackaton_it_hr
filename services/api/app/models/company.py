@@ -1,6 +1,6 @@
 from typing import Any
 
-from sqlalchemy import JSON, ForeignKey, Text, UniqueConstraint, text
+from sqlalchemy import JSON, ForeignKey, String, Text, UniqueConstraint, text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base
@@ -32,3 +32,6 @@ class HiringNeed(CreatedAtMixin, Base):
     stack: Mapped[list[str]] = mapped_column(JSON, default=list, server_default=text("'[]'"))
     grade: Mapped[str | None]
     specialization: Mapped[str | None]
+    team_description: Mapped[str | None] = mapped_column(Text)
+    min_grade: Mapped[str | None] = mapped_column(String)
+    optional_skills: Mapped[list[str] | None] = mapped_column(JSON(none_as_null=True))

@@ -12,7 +12,7 @@ DOMAIN_COLUMNS = {
     "consents": "id user_id kind granted granted_at created_at",
     "candidate_profiles": "id user_id full_name stack grade specialization privacy_settings created_at updated_at phone professional_role experience_months soft_skills self_declared_grade",
     "companies": "id user_id name description contacts created_at",
-    "hiring_needs": "id company_id title stack grade specialization created_at",
+    "hiring_needs": "id company_id title stack grade specialization created_at team_description min_grade optional_skills",
     "test_attempts": "id candidate_id test_id answers score grade created_at",
     "competency_scores": "id candidate_id competency score source created_at",
     "fsp_links": "id candidate_id fsp_id linked_at status",
@@ -46,6 +46,39 @@ def test_candidate_extension_preserves_existing_data(migration_connection):
     command.check(config)
 
 
+def test_hiring_needs_0004_preserves_rows(migration_connection):
+    config = Config(str(Path(__file__).resolve().parents[2] / "alembic.ini"))
+    config.attributes["connection"] = migration_connection
+    command.upgrade(config, "0003")
+    user_id = migration_connection.scalar(text(
+        "INSERT INTO users (email, password_hash, role) "
+        "VALUES ('migration@example.com', 'fixture', 'employer') RETURNING id"
+    ))
+    company_id = migration_connection.scalar(text(
+        "INSERT INTO companies (user_id, name) VALUES (:id, 'Existing') RETURNING id"
+    ), {"id": user_id})
+    migration_connection.execute(text(
+        "INSERT INTO hiring_needs (company_id, title, stack, grade, specialization) "
+        "VALUES (:id, 'Existing need', '[\"Python\"]', 'middle', 'backend')"
+    ), {"id": company_id})
+    before = list(migration_connection.execute(text("SELECT * FROM hiring_needs ORDER BY id")).mappings())
+    migration_connection.commit()
+    command.upgrade(config, "0004")
+    assert migration_connection.scalar(text("SELECT version_num FROM alembic_version")) == "0004"
+    after = list(migration_connection.execute(text("SELECT * FROM hiring_needs ORDER BY id")).mappings())
+    assert len(after) == len(before)
+    for old, new in zip(before, after):
+        assert all(new[key] == value for key, value in old.items())
+        assert all(new[key] is None for key in ("team_description", "min_grade", "optional_skills"))
+    columns = {col["name"]: col for col in inspect(migration_connection).get_columns("hiring_needs")}
+    for name, sql_type in (("team_description", "TEXT"), ("min_grade", "VARCHAR"), ("optional_skills", "JSON")):
+        assert str(columns[name]["type"]) == sql_type
+        assert columns[name]["nullable"] is True
+        assert columns[name]["default"] is None
+    migration_connection.commit()
+    command.check(config)
+
+
 def test_migrations(migration_connection):
     config = Config(str(Path(__file__).resolve().parents[2] / "alembic.ini"))
     config.attributes["connection"] = migration_connection
@@ -56,7 +89,7 @@ def test_migrations(migration_connection):
     command.upgrade(config, "head")
     assert migration_connection.scalar(
         text("SELECT version_num FROM alembic_version")
-    ) == "0003"
+    ) == "0004"
     inspector = inspect(migration_connection)
     assert set(inspector.get_table_names()) == set(DOMAIN_COLUMNS) | {"alembic_version"}
     assert set(Base.metadata.tables) == set(DOMAIN_COLUMNS)
@@ -69,7 +102,7 @@ def test_migrations(migration_connection):
     command.upgrade(config, "head")
     assert migration_connection.scalar(
         text("SELECT version_num FROM alembic_version")
-    ) == "0003"
+    ) == "0004"
     migration_connection.commit()
 
     command.downgrade(config, "base")
