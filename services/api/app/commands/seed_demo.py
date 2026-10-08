@@ -13,11 +13,20 @@ from app.models import (
     FspLink, HiringNeed, User,
 )
 from app.modules.auth.security import hash_password
+from app.modules.catalog.repository import CatalogRepository
 
 SEED_DIR = Path(__file__).with_name("seed")
 
 
 def _read_json(name: str) -> Any:
+    if name == "catalog.json":
+        # Compatibility shape for existing seed consumers, from the single catalog.
+        catalog = CatalogRepository().catalog().document
+        return {
+            "specializations": [{"id": s.id, "name": s.name} for s in catalog.specializations],
+            "grades": [g.id for g in catalog.grades],
+            "competencies": [s.id for s in catalog.skills],
+        }
     return json.loads((SEED_DIR / name).read_text(encoding="utf-8"))
 
 

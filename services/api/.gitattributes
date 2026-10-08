@@ -1,0 +1,3 @@
+# Checksums are over exact JSON bytes; keep artifacts portable across checkouts.
+app/data/catalog/**/*.json text eol=lf
+app/data/catalog/manifest.json text eol=lf
