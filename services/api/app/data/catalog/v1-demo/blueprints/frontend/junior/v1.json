@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "version": "v1-demo",
+  "status": "DEMO",
+  "provenance": "DEMO",
+  "id": "frontend-junior",
+  "catalogVersion": "v1-demo",
+  "specialization": "frontend",
+  "grade": "junior",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillId": "javascript",
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact-demo"
+    },
+    {
+      "id": "slot-2",
+      "skillId": "react",
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact-demo"
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact-demo",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "scaleMin": 0,
+    "scaleMax": 100.0,
+    "thresholds": {
+      "passScore": 50.0,
+      "highScore": 100.0,
+      "passInclusive": true,
+      "highInclusive": true
+    }
+  },
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "frontend-junior-a-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "DEMO: Which keyword declares a block-scoped variable?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "let"
+            },
+            {
+              "id": "o2",
+              "text": "var"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-a-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "DEMO: Which hook manages local component state?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "useState"
+            },
+            {
+              "id": "o2",
+              "text": "useEffect"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "frontend-junior-b-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "DEMO: Which value represents an absent object reference?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "true"
+            },
+            {
+              "id": "o2",
+              "text": "null"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-b-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "DEMO: Which prop identifies items in a rendered list?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "style"
+            },
+            {
+              "id": "o2",
+              "text": "key"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        }
+      ]
+    }
+  ]
+}

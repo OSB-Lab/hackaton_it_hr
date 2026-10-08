@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "version": "v1-demo",
+  "status": "DEMO",
+  "provenance": "DEMO",
+  "id": "fsp-catalog",
+  "specializations": [
+    {
+      "id": "backend",
+      "name": "Backend Python",
+      "skillIds": [
+        "python",
+        "sql",
+        "api",
+        "teamwork"
+      ]
+    },
+    {
+      "id": "frontend",
+      "name": "Frontend React",
+      "skillIds": [
+        "javascript",
+        "typescript",
+        "react",
+        "teamwork"
+      ]
+    }
+  ],
+  "grades": [
+    {
+      "id": "junior",
+      "name": "Junior",
+      "order": 0
+    },
+    {
+      "id": "middle",
+      "name": "Middle",
+      "order": 1
+    },
+    {
+      "id": "senior",
+      "name": "Senior",
+      "order": 2
+    }
+  ],
+  "skills": [
+    {
+      "id": "python",
+      "name": "Python"
+    },
+    {
+      "id": "sql",
+      "name": "Sql"
+    },
+    {
+      "id": "api",
+      "name": "Api"
+    },
+    {
+      "id": "javascript",
+      "name": "Javascript"
+    },
+    {
+      "id": "typescript",
+      "name": "Typescript"
+    },
+    {
+      "id": "react",
+      "name": "React"
+    },
+    {
+      "id": "teamwork",
+      "name": "Teamwork"
+    }
+  ]
+}
