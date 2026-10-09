@@ -13,7 +13,7 @@ DOMAIN_COLUMNS = {
     "candidate_profiles": "id user_id full_name stack grade specialization privacy_settings created_at updated_at phone professional_role experience_months soft_skills self_declared_grade",
     "companies": "id user_id name description contacts created_at",
     "hiring_needs": "id company_id title stack grade specialization created_at team_description min_grade optional_skills",
-    "test_attempts": "id candidate_id test_id answers score grade created_at",
+    "test_attempts": "id candidate_id test_id answers score grade created_at specialization requested_grade blueprint_version catalog_version blueprint_checksum catalog_checksum snapshot_schema_version snapshot variant content_status status submitted_at",
     "competency_scores": "id candidate_id competency score source created_at",
     "fsp_links": "id candidate_id fsp_id linked_at status",
     "fsp_achievements": "id candidate_id discipline competition result role rank created_at",
@@ -76,6 +76,32 @@ def test_hiring_needs_0004_preserves_rows(migration_connection):
         assert columns[name]["nullable"] is True
         assert columns[name]["default"] is None
     migration_connection.commit()
+    command.upgrade(config, "head")
+    command.check(config)
+
+
+def test_assessment_migration_preserves_legacy(migration_connection):
+    config = Config(str(Path(__file__).resolve().parents[2] / "alembic.ini"))
+    config.attributes["connection"] = migration_connection
+    command.upgrade(config, "0004")
+    user_id = migration_connection.scalar(text(
+        "INSERT INTO users (email, password_hash, role) VALUES ('legacy@example.com', 'fixture', 'candidate') RETURNING id"
+    ))
+    candidate_id = migration_connection.scalar(text(
+        "INSERT INTO candidate_profiles (user_id) VALUES (:id) RETURNING id"
+    ), {"id": user_id})
+    migration_connection.execute(text(
+        "INSERT INTO test_attempts (candidate_id, test_id, answers, score, grade) "
+        "VALUES (:id, 'old-test', '[1,2]', 42, 'junior')"
+    ), {"id": candidate_id})
+    before = dict(migration_connection.execute(text("SELECT * FROM test_attempts")).mappings().one())
+    migration_connection.commit()
+    command.upgrade(config, "0005")
+    after = dict(migration_connection.execute(text("SELECT * FROM test_attempts")).mappings().one())
+    assert all(after[k] == v for k, v in before.items())
+    assert after["status"] == "legacy"
+    assert all(v is None for k, v in after.items() if k not in before and k != "status")
+    migration_connection.commit()
     command.check(config)
 
 
@@ -89,7 +115,7 @@ def test_migrations(migration_connection):
     command.upgrade(config, "head")
     assert migration_connection.scalar(
         text("SELECT version_num FROM alembic_version")
-    ) == "0004"
+    ) == "0005"
     inspector = inspect(migration_connection)
     assert set(inspector.get_table_names()) == set(DOMAIN_COLUMNS) | {"alembic_version"}
     assert set(Base.metadata.tables) == set(DOMAIN_COLUMNS)
@@ -102,7 +128,7 @@ def test_migrations(migration_connection):
     command.upgrade(config, "head")
     assert migration_connection.scalar(
         text("SELECT version_num FROM alembic_version")
-    ) == "0004"
+    ) == "0005"
     migration_connection.commit()
 
     command.downgrade(config, "base")
