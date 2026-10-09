@@ -1,12 +1,14 @@
 import json
 import secrets
+from datetime import datetime, timezone
+from decimal import Decimal
 
 from fastapi import HTTPException
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models import CandidateProfile, TestAttempt
-from app.modules.assessments.schemas import AttemptDTO, AttemptSnapshot, StartRequest
+from app.modules.assessments.schemas import AttemptDTO, AttemptSnapshot, StartRequest, ResultDTO, SubmitDTO, SubmitRequest
 from app.modules.catalog.public import public_variant
 from app.modules.catalog.repository import CatalogRepository, Loaded, decode
 
@@ -31,6 +33,71 @@ def read_attempt(session: Session, user_id: int, attempt_id: int) -> AttemptDTO:
     if attempt is None:
         raise HTTPException(status_code=404, detail="Attempt not found")
     return attempt_dto(attempt)
+
+
+def score_answers(snapshot: AttemptSnapshot, variant: str, request: SubmitRequest) -> ResultDTO:
+    blueprint = snapshot.blueprint
+    questions = next(v.questions for v in blueprint.variants if v.id == variant)
+    answers = {a.questionId: a.optionId for a in request.answers}
+    if len(answers) != len(request.answers) or set(answers) != {q.id for q in questions}:
+        raise HTTPException(status_code=422, detail="Answers must cover each question exactly once")
+    slots = {s.id: s for s in blueprint.slots}
+    rubrics = {r.id: r for r in blueprint.rubric}
+    earned, weights = {}, {}
+    for question in questions:
+        option = answers[question.id]
+        if option is not None and option not in {o.id for o in question.options}:
+            raise HTTPException(status_code=422, detail="Unknown answer option")
+        slot = slots[question.slotId]
+        rubric = rubrics[slot.rubricId]
+        fraction = (rubric.unansweredFraction if option is None else
+                    rubric.correctFraction if option == question.answerKey.optionId else rubric.incorrectFraction)
+        weight = Decimal(str(slot.weight))
+        # awardedScore / maxScore equals the rubric fraction exactly.
+        earned[slot.skillId] = earned.get(slot.skillId, Decimal(0)) + weight * Decimal(str(fraction))
+        weights[slot.skillId] = weights.get(slot.skillId, Decimal(0)) + weight
+    scale = Decimal(str(blueprint.scoring.scaleMax))
+    total = scale * sum(earned.values()) / sum(weights.values())
+    thresholds = blueprint.scoring.thresholds
+    outcome = ("high" if total >= Decimal(str(thresholds.highScore)) else
+               "pass" if total >= Decimal(str(thresholds.passScore)) else "fail")
+    return ResultDTO(subscores={skill: float(scale * value / weights[skill]) for skill, value in earned.items()},
+                     totalScore=float(total), outcome=outcome, status=blueprint.status)
+
+
+def submit_attempt(session: Session, user_id: int, attempt_id: int, request: SubmitRequest) -> SubmitDTO:
+    try:
+        attempt = session.scalar(select(TestAttempt).join(CandidateProfile).where(
+            TestAttempt.id == attempt_id, CandidateProfile.user_id == user_id
+        ).with_for_update(of=TestAttempt))
+        if attempt is None:
+            raise HTTPException(status_code=404, detail="Attempt not found")
+        if attempt.snapshot is None or attempt.status == "legacy":
+            raise HTTPException(status_code=409, detail="Historical attempt has no snapshot")
+        if attempt.status == "active":
+            try:
+                if attempt.snapshot_schema_version != 1:
+                    raise ValueError("Unsupported snapshot")
+                snapshot = decode(AttemptSnapshot, json.dumps(attempt.snapshot))
+                if attempt.variant not in {v.id for v in snapshot.blueprint.variants}:
+                    raise ValueError("Unknown variant")
+            except (ValueError, TypeError):
+                raise HTTPException(status_code=503, detail="Assessment snapshot unavailable") from None
+            result = score_answers(snapshot, attempt.variant, request)
+            attempt.answers = [answer.model_dump(mode="json") for answer in request.answers]
+            attempt.score = result.totalScore
+            attempt.result = result.model_dump(mode="json")
+            attempt.submitted_at = datetime.now(timezone.utc)
+            attempt.status = "submitted"
+        if attempt.result is None or attempt.submitted_at is None:
+            raise HTTPException(status_code=409, detail="Saved assessment result unavailable")
+        response = SubmitDTO(id=attempt.id, status="submitted", submittedAt=attempt.submitted_at,
+                             result=ResultDTO.model_validate(attempt.result))
+        session.commit()
+        return response
+    except Exception:
+        session.rollback()
+        raise
 
 
 def start_attempt(session: Session, user_id: int, request: StartRequest) -> tuple[AttemptDTO, bool]:

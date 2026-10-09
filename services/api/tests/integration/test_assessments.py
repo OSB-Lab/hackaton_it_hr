@@ -88,6 +88,9 @@ def test_active_blueprint_switch_preserves_started_attempt(assessment_env, monke
     blueprint = json.loads((root / ref["path"]).read_text())
     blueprint["version"] = "v2-demo"
     blueprint["variants"][0]["questions"][0]["prompt"] = "DEMO: Changed question"
+    question = blueprint["variants"][0]["questions"][0]
+    question["answerKey"]["optionId"] = next(o["id"] for o in question["options"] if o["id"] != question["answerKey"]["optionId"])
+    blueprint["scoring"]["thresholds"]["passScore"] = 75
     raw = json.dumps(blueprint).encode()
     (root / new_ref["path"]).write_bytes(raw)
     new_ref["sha256"] = hashlib.sha256(raw).hexdigest()
@@ -108,6 +111,12 @@ def test_active_blueprint_switch_preserves_started_attempt(assessment_env, monke
     assert fresh.status_code == 201
     assert fresh.json()["assessment"]["blueprintVersion"] == "v2-demo"
     assert fresh.json()["assessment"]["variant"] == "B"
+    answers = [{"questionId": q["id"], "optionId": q["answerKey"]["optionId"]}
+               for q in snapshot["blueprint"]["variants"][0]["questions"]]
+    submitted = client.post(f'/assessments/{original["id"]}/submit', headers=headers[0], json={"answers": answers})
+    assert submitted.status_code == 200
+    assert submitted.json()["result"]["totalScore"] == 100
+    assert submitted.json()["result"]["outcome"] == "high"
 
 
 @pytest.mark.parametrize("method,path", [("post", START), ("get", "/assessments/1")])
@@ -174,7 +183,7 @@ def test_partial_unique_index_and_completed_history(assessment_env):
         with pytest.raises(IntegrityError): session.commit()
         session.rollback()
         row = session.get(Attempt, first["id"])
-        # Fixture simulates a future submit; this task exposes no submit operation.
+        # Historical submitted row without a SPR-15.2 result.
         row.status = "submitted"
         row.submitted_at = datetime.now(timezone.utc)
         session.add(Attempt(candidate_id=candidate_id, test_id="historical", score=42, grade="junior"))
@@ -196,5 +205,5 @@ def test_partial_unique_index_and_completed_history(assessment_env):
 def test_assessment_openapi(assessment_env):
     client, _, _, _ = assessment_env
     paths = client.get("/openapi.json").json()["paths"]
-    assert {p for p in paths if p.startswith("/assessments")} == {START, "/assessments/{attempt_id}"}
+    assert {p for p in paths if p.startswith("/assessments")} == {START, "/assessments/{attempt_id}", "/assessments/{attempt_id}/submit"}
     assert set(paths[START]["post"]["responses"]) >= {"200", "201"}

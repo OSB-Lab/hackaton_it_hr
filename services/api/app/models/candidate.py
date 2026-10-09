@@ -48,6 +48,7 @@ class TestAttempt(CreatedAtMixin, Base):
     test_id: Mapped[str]
     answers: Mapped[list[Any]] = mapped_column(JSON, default=list, server_default=text("'[]'"))
     score: Mapped[float | None]
+    result: Mapped[dict[str, Any] | None] = mapped_column(JSON(none_as_null=True))
     grade: Mapped[str | None]
     specialization: Mapped[str | None]
     requested_grade: Mapped[str | None]

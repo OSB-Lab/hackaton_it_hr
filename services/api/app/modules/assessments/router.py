@@ -4,8 +4,8 @@ from fastapi import APIRouter, Depends, Response
 
 from app.models import User
 from app.modules.auth.dependencies import AuthSession, require_role
-from app.modules.assessments.schemas import AttemptDTO, StartRequest
-from app.modules.assessments.service import read_attempt, start_attempt
+from app.modules.assessments.schemas import AttemptDTO, StartRequest, SubmitDTO, SubmitRequest
+from app.modules.assessments.service import read_attempt, start_attempt, submit_attempt
 
 router = APIRouter(prefix="/assessments", tags=["assessments"])
 CandidateUser = Annotated[User, Depends(require_role("candidate"))]
@@ -22,3 +22,8 @@ def start(request: StartRequest, response: Response, user: CandidateUser, sessio
 @router.get("/{attempt_id}", response_model=AttemptDTO)
 def read(attempt_id: int, user: CandidateUser, session: AuthSession):
     return read_attempt(session, user.id, attempt_id)
+
+
+@router.post("/{attempt_id}/submit", response_model=SubmitDTO)
+def submit(attempt_id: int, request: SubmitRequest, user: CandidateUser, session: AuthSession):
+    return submit_attempt(session, user.id, attempt_id, request)

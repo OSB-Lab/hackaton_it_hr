@@ -25,3 +25,29 @@ class AttemptDTO(BaseModel):
     createdAt: datetime
     submittedAt: datetime | None
     assessment: PublicVariant
+
+
+class Answer(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+    questionId: ID
+    optionId: ID | None
+
+
+class SubmitRequest(BaseModel):
+    model_config = ConfigDict(extra="forbid", strict=True)
+    answers: list[Answer]
+
+
+class ResultDTO(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    subscores: dict[str, float]
+    totalScore: float
+    outcome: Literal["fail", "pass", "high"]
+    status: Literal["DEMO", "APPROVED"]
+
+
+class SubmitDTO(BaseModel):
+    id: int
+    status: Literal["submitted"]
+    submittedAt: datetime
+    result: ResultDTO
