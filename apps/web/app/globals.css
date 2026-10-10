@@ -3,12 +3,28 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-surface font-sans text-ink antialiased;
+    font-variant-numeric: tabular-nums;
   }
 
   :focus-visible {
     outline: 2px solid #402fff;
     outline-offset: 2px;
+  }
+
+  /* На синем фоне синий контур не виден, поэтому там он белый. */
+  .on-brand :focus-visible {
+    outline-color: #ffffff;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
   }
 }

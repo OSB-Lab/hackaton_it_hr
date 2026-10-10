@@ -16,6 +16,20 @@ export default {
         // --font-jetbrains задаётся в app/layout.tsx через next/font
         sans: ['var(--font-jetbrains)', 'ui-monospace', 'monospace'],
       },
+      boxShadow: {
+        // Жёсткая синяя тень под главной таблицей: единственный «громкий» элемент страницы.
+        hard: '8px 8px 0 0 #402FFF',
+      },
+      keyframes: {
+        // Единственная анимация на странице: предложение появляется под лучшей строкой рейтинга.
+        reveal: {
+          from: { opacity: '0', transform: 'translateY(8px)' },
+          to: { opacity: '1', transform: 'none' },
+        },
+      },
+      animation: {
+        reveal: 'reveal 0.7s ease-out 0.9s both',
+      },
     },
   },
   plugins: [],

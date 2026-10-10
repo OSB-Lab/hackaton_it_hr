@@ -28,6 +28,11 @@ const ROLE_TITLE: Record<Role, string> = {
   employer: 'Кабинет работодателя',
 };
 
+const WELCOME: Record<Role, string> = {
+  candidate: 'Пройдите тест, чтобы получить категорию: именно её увидят работодатели.',
+  employer: 'Опишите, кого вы ищете, и вы получите подборку кандидатов с объяснением.',
+};
+
 export function CabinetStub({ role }: { role: Role }) {
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
@@ -81,13 +86,13 @@ export function CabinetStub({ role }: { role: Role }) {
 
   if (!user) {
     return (
-      <main className="grid min-h-screen place-items-center text-sm text-ink/60">Загрузка…</main>
+      <main className="grid min-h-screen place-items-center text-sm text-ink/70">Загрузка…</main>
     );
   }
 
   return (
     <div className="min-h-screen">
-      <header className="border-b border-muted bg-white">
+      <header className="border-b border-ink bg-white">
         <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-4">
           <Logo />
           <div className="flex items-center gap-4 text-sm">
@@ -104,7 +109,8 @@ export function CabinetStub({ role }: { role: Role }) {
       </header>
 
       <main className="mx-auto max-w-5xl px-5 py-10">
-        <h1 className="text-2xl font-bold">{ROLE_TITLE[role]}</h1>
+        <h1 className="text-2xl font-bold sm:text-3xl">{ROLE_TITLE[role]}</h1>
+        <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink/75">{WELCOME[role]}</p>
 
         {!user.is_verified && (
           <div className="mt-6">
@@ -120,16 +126,19 @@ export function CabinetStub({ role }: { role: Role }) {
           </div>
         )}
 
-        <ul className="mt-8 grid gap-4 sm:grid-cols-2">
+        <ul className="mt-8 divide-y divide-muted border-y border-ink bg-white">
           {SECTIONS[role].map((section) => (
-            <li key={section.title} className="rounded-xl border border-muted bg-white p-6">
-              <div className="flex items-start justify-between gap-3">
-                <h2 className="text-base font-bold">{section.title}</h2>
-                <span className="shrink-0 rounded-full bg-surface px-2.5 py-1 text-xs text-ink/70">
-                  Скоро
-                </span>
+            <li
+              key={section.title}
+              className="flex items-start justify-between gap-4 px-5 py-5"
+            >
+              <div>
+                <h2 className="font-bold">{section.title}</h2>
+                <p className="mt-1 text-sm leading-relaxed text-ink/70">{section.text}</p>
               </div>
-              <p className="mt-2 text-sm leading-relaxed text-ink/70">{section.text}</p>
+              <span className="shrink-0 rounded border border-muted px-2 py-0.5 text-xs text-ink/70">
+                Скоро
+              </span>
             </li>
           ))}
         </ul>
