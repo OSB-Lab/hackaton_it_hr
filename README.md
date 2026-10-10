@@ -1,7 +1,28 @@
-Запуск (перед первым запуском скопируйте `.env.example` в `.env`):
+Запуск
+
+Перед первым запуском создайте локальный файл окружения:
+
+```sh
+cp .env.example .env
+```
+
+Для PowerShell:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+Поднимите сервисы:
 
 ```sh
 docker compose -f infra/docker-compose.yml up --build
+```
+
+В отдельном терминале примените миграции и загрузите демо-данные. Команда `up --build` выполняет только сборку и запуск сервисов — миграции и seed автоматически не запускаются:
+
+```sh
+docker compose -f infra/docker-compose.yml run --rm api alembic upgrade head
+docker compose -f infra/docker-compose.yml run --rm api python -m app.commands.seed_demo
 ```
 
 - Web: http://localhost:3000 — Next.js 14, TypeScript, Tailwind CSS; заглушка и прокси `/api/*`.
