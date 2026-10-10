@@ -10,6 +10,11 @@ from app.modules.auth.security import verify_password
 from app.modules.assessments.qualification import qualification
 from app.modules.employer.needs_service import dto, validate_values
 
+# Test-only fixtures/helpers for the positive eligibility scenario.
+from test_candidate_profile import env  # noqa: F401
+from test_assessment_v3_lifecycle import approved  # noqa: F401
+from test_ranking_create import setup, certify  # noqa: F401
+
 
 @pytest.mark.parametrize("url,confirmation", [
     ("postgresql+psycopg://localhost/fsp", CONFIRMATION),
@@ -45,7 +50,19 @@ def test_generate_100_idempotent_and_safe(migrated_engine, tmp_path):
             assert session.get(User, p.user_id).role == "candidate"
             assert p.verified_grade is None and p.verified_attempt_id is None
             assert qualification(session, p.id) is None
-        assert session.scalar(select(func.count()).select_from(Attempt)) == 0
+            # Enriched, clearly synthetic profile fields.
+            assert p.professional_role and p.experience_months is not None
+            assert p.phone and p.phone.startswith("+7 900 ")
+            assert isinstance(p.soft_skills, list) and p.soft_skills
+        assert len(saved["demoAttempts"]) == 6
+        attempts = session.scalars(select(Attempt)).all()
+        assert len(attempts) == 6
+        assert sum(a.status == "active" for a in attempts) == 3
+        assert sum(a.status == "submitted" for a in attempts) == 3
+        for a in attempts:
+            assert a.content_status == "DEMO"
+            if a.status == "submitted":
+                assert a.result and a.result.get("status") == "DEMO"
         assert session.scalar(select(func.count()).select_from(Consent)) == 196
         assert session.scalar(select(func.count()).select_from(Company)) == 2
         needs = session.scalars(select(HiringNeed)).all()
@@ -73,3 +90,25 @@ def test_conflict_existing_account(migrated_engine, tmp_path):
     with Session(migrated_engine) as session:
         assert session.scalar(select(User)).password_hash == "do-not-change"
         assert session.scalar(select(func.count()).select_from(User)) == 1
+
+
+def test_positive_eligibility_ranking_invitation(env, approved):
+    """TEST-ONLY: certified via the `approved` fixture, never real qualifications."""
+    client, headers, ids, engine = env
+    url, _need_id = setup(env)
+    certify(env, 0, 18)  # full correct -> high
+    certify(env, 1, 13)  # partial -> pass
+    ranking = client.post(url, headers=headers[2])
+    assert ranking.status_code == 200
+    items = ranking.json()["items"]
+    assert len(items) == 2
+    assert items[0]["rank"] == 1 and items[0]["score"] == 0.85
+    with Session(engine) as session:
+        profile = session.scalar(select(CandidateProfile).where(CandidateProfile.user_id == ids[0]))
+        company = session.scalar(select(Company).where(Company.user_id == ids[2]))
+    invitation = client.post("/invitations", headers=headers[2], json={
+        "companyId": company.id, "candidateId": profile.id,
+        "offerDescription": "Backend", "contactMethod": "email",
+        "salaryMin": "100", "salaryMax": "200"})
+    assert invitation.status_code == 201
+
