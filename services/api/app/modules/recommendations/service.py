@@ -21,10 +21,8 @@ def has_verified_qualification(session: Session, candidate_id: int) -> bool:
 
 
 def eligible_for_ranking(session: Session, candidate_id: int, need=None) -> bool:
-    from app.modules.assessments.qualification import matches_need
-    if need is not None and not matches_need(session, candidate_id, need):
-        return False
-    return can_disclose_candidate(session, candidate_id) and has_verified_qualification(session, candidate_id)
+    from app.modules.recommendations.eligibility import evaluate_candidate
+    return evaluate_candidate(session, candidate_id, need).eligible
 
 
 def create_snapshot(session: Session, user_id: int, need_id: int):

@@ -11,6 +11,7 @@ from app.modules.employer.router import router as employer_router
 from app.modules.employer.needs_router import router as needs_router
 from app.modules.assessments.router import router as assessments_router
 from app.modules.recommendations.router import router as recommendations_router
+from app.modules.recommendations.router import eligibility_router
 from app.modules.invitations.router import router as invitations_router
 from app.modules.catalog.router import router as catalog_router
 
@@ -22,6 +23,7 @@ app.include_router(employer_router)
 app.include_router(needs_router)
 app.include_router(assessments_router)
 app.include_router(recommendations_router)
+app.include_router(eligibility_router)
 app.include_router(invitations_router)
 app.include_router(catalog_router)
 
