@@ -29,4 +29,4 @@ def validate_blueprint(catalog: Catalog, blueprint: Blueprint):
         raise ValueError("APPROVED blueprint requires APPROVED catalog")
     validate_specialization(catalog, blueprint.specialization)
     validate_grade(catalog, blueprint.grade)
-    validate_skills(catalog, [slot.skillId for slot in blueprint.slots], blueprint.specialization)
+    validate_skills(catalog, [tag for slot in blueprint.slots for tag in (slot.skillTags if blueprint.schemaVersion == 3 else (slot.skillId,))], blueprint.specialization)

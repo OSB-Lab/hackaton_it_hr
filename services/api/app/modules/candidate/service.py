@@ -36,8 +36,13 @@ def eligible_for_employer_search(session: Session, user_id: int) -> bool:
 def self_profile(session: Session, user: User) -> SelfCandidateDTO:
     profile = get_profile(session, user.id)
     values = {key: getattr(profile, attr) for key, attr in FIELDS.items()} if profile else {}
-    return SelfCandidateDTO(email=user.email, **values, consents=consent_state(session, user.id),
-                            eligibleForEmployerSearch=eligible_for_employer_search(session, user.id))
+    privacy = {"showContacts": bool(profile and (profile.privacy_settings or {}).get("show_contacts") is True)}
+    from app.modules.assessments.qualification import qualification
+    proof = qualification(session, profile.id) if profile else None
+    return SelfCandidateDTO(verifiedGrade=profile.verified_grade if proof else None,
+                            verifiedSpecialization=profile.verified_specialization if proof else None,
+                            email=user.email, **values, privacy=privacy, consents=consent_state(session, user.id),
+                            eligibleForEmployerSearch=bool(proof and user.is_verified and eligible_for_employer_search(session, user.id)))
 
 
 def patch_profile(session: Session, user: User, patch: CandidateProfilePatch) -> SelfCandidateDTO:
@@ -47,8 +52,10 @@ def patch_profile(session: Session, user: User, patch: CandidateProfilePatch) ->
     if profile is None:
         profile = CandidateProfile(user_id=user.id)
         session.add(profile)
-    for key in patch.model_fields_set - {"consents"}:
+    for key in patch.model_fields_set - {"consents", "privacy"}:
         setattr(profile, FIELDS[key], getattr(patch, key))
+    if "showContacts" in patch.privacy.model_fields_set:
+        profile.privacy_settings = {**(profile.privacy_settings or {}), "show_contacts": patch.privacy.showContacts}
     for key in patch.consents.model_fields_set:
         granted = getattr(patch.consents, key)
         kind = CONSENT_KINDS[key]

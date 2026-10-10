@@ -22,6 +22,9 @@ def _no_duplicate_keys(pairs):
 
 def decode(model, raw):
     json.loads(raw, object_pairs_hook=_no_duplicate_keys)
+    if model is Blueprint and json.loads(raw).get("schemaVersion") == 3:
+        from app.modules.catalog.v3 import BlueprintV3
+        model = BlueprintV3
     return model.model_validate_json(raw)
 
 

@@ -10,6 +10,7 @@ class PublicQuestion(FrozenModel):
     type: Literal["single_choice"]
     prompt: str
     options: tuple[Option, ...]
+    skillTags: tuple[str, ...] = ()
 
 
 class PublicVariant(FrozenModel):
@@ -17,7 +18,7 @@ class PublicVariant(FrozenModel):
     blueprintVersion: str
     catalogVersion: str
     status: Literal["DEMO", "APPROVED"]
-    variant: Literal["A", "B"]
+    variant: Literal["A", "B", "C"]
     questions: tuple[PublicQuestion, ...]
 
 
@@ -30,5 +31,5 @@ def public_variant(loaded: Loaded[Blueprint], variant_id: str) -> PublicVariant:
         blueprintId=blueprint.id, blueprintVersion=blueprint.version,
         catalogVersion=blueprint.catalogVersion, status=blueprint.status, variant=variant.id,
         questions=tuple(PublicQuestion(id=q.id, slotId=q.slotId, type=q.type,
-                                       prompt=q.prompt, options=q.options) for q in variant.questions),
+                                       prompt=q.prompt, options=q.options, skillTags=getattr(q, "skillTags", ())) for q in variant.questions),
     )

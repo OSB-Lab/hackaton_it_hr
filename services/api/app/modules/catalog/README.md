@@ -1,3 +1,12 @@
+# Current v3 publication
+
+See ../assessments/README.md for the active v3 contract. New v3-demo artifacts use
+schemaVersion=3, skillTags, A/B/C and 20 questions. The locked thresholds are 13/16
+with 50/70 core gates. Content remains DEMO pending expert review. v3.py validates
+the exact shared incidence matrix; it cannot prove semantic difficulty equivalence.
+The sections below describe retained schemaVersion=1 artifacts for legacy attempts.
+Their two-question DEMO thresholds never apply to new v3 attempts.
+
 # SPR-14 versioned catalog and blueprints
 
 Data lives in app/data/catalog. No database access, migrations, endpoints, scoring

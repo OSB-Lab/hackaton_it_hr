@@ -14,4 +14,6 @@ The existing Company table is reused without migrations. PostgreSQL upsert uses
 the unique user_id constraint, preserving company ID and preventing duplicate
 companies on concurrent first writes. Nested contacts data is stored only as JSON
 and cannot select an owner or mutate ownership. Repeated identical PUT retains the
-company ID and values. No hiring needs endpoints or seed changes are introduced.
+company ID and values. Company operations do not modify hiring needs or seed data.
+
+SPR-17 needs endpoints and catalog validation are described in [NEEDS.md](NEEDS.md).

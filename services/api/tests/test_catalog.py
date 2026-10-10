@@ -26,7 +26,7 @@ def bundle(tmp_path):
 
 
 def raw_blueprint(repo):
-    return repo.blueprint(repo.manifest.activeBlueprints[0]).document.model_dump(mode="json")
+    return repo.blueprint("backend-junior-v1-demo").document.model_dump(mode="json")
 
 
 def write_json(path, data):
@@ -44,7 +44,7 @@ def test_bundle_coverage_and_equivalence(repo):
         pairs.add((bp.specialization, bp.grade))
         assert bp.status == bp.provenance == "DEMO"
         assert len(loaded.checksum) == 64
-        assert {v.id for v in bp.variants} == {"A", "B"}
+        assert {v.id for v in bp.variants} == {"A", "B", "C"}
         assert all({q.slotId for q in v.questions} == {s.id for s in bp.slots} for v in bp.variants)
     assert pairs == {(s,g) for s in ("backend", "frontend") for g in ("junior", "middle")}
     with pytest.raises(ValidationError):
@@ -74,7 +74,7 @@ def test_public_projection_does_not_leak(repo, key, variant):
 
 @pytest.mark.parametrize("variant", ["A", "B"])
 def test_public_output_independent_of_correct_option_and_scoring(repo, variant):
-    loaded = repo.blueprint(repo.manifest.activeBlueprints[0])
+    loaded = repo.blueprint("backend-junior-v1-demo")
     original = public_variant(loaded, variant)
     internal = loaded.document.model_dump(mode="json")
     for item in internal["variants"]:
@@ -188,8 +188,8 @@ def test_explicit_version_survives_active_switch(bundle):
     switched = CatalogRepository(bundle)
     switched.validate_all()
     assert switched.catalog().document.version == "v2-demo"
-    assert switched.catalog("v1-demo") == old
-    assert switched.blueprint(repo.manifest.activeBlueprints[0]).document.catalogVersion == "v1-demo"
+    assert switched.catalog(old.document.version) == old
+    assert switched.blueprint(repo.manifest.activeBlueprints[0]).document.catalogVersion == "v3-demo"
     with pytest.raises(ValueError): switched.catalog("unknown")
     with pytest.raises(ValueError): switched.blueprint("unknown")
 

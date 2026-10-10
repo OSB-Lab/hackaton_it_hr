@@ -1,0 +1,2085 @@
+{
+  "schemaVersion": 3,
+  "id": "frontend-middle",
+  "version": "v3-demo",
+  "catalogVersion": "v3-demo",
+  "status": "DEMO",
+  "provenance": "DEMO",
+  "specialization": "frontend",
+  "grade": "middle",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "frontend-middle-A-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что раньше: Promise.then или setTimeout?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "всегда одновременно"
+            },
+            {
+              "id": "o2",
+              "text": "setTimeout"
+            },
+            {
+              "id": "o3",
+              "text": "Promise.then"
+            },
+            {
+              "id": "o4",
+              "text": "зависит от CSS"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "frontend-middle-A-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает spread для массива?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сортирует"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт поверхностную копию"
+            },
+            {
+              "id": "o3",
+              "text": "замораживает"
+            },
+            {
+              "id": "o4",
+              "text": "удаляет null"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "frontend-middle-A-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое closure?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "class"
+            },
+            {
+              "id": "o2",
+              "text": "HTTP cookie"
+            },
+            {
+              "id": "o3",
+              "text": "доступ функции к внешнему scope"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "frontend-middle-A-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Promise.all при reject?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторяет запрос"
+            },
+            {
+              "id": "o2",
+              "text": "reject всего результата"
+            },
+            {
+              "id": "o3",
+              "text": "игнорирует ошибку"
+            },
+            {
+              "id": "o4",
+              "text": "возвращает null"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "frontend-middle-A-typescript-1",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт keyof T?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "union ключей типа"
+            },
+            {
+              "id": "o2",
+              "text": "число полей"
+            },
+            {
+              "id": "o3",
+              "text": "массив значений"
+            },
+            {
+              "id": "o4",
+              "text": "runtime object"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "frontend-middle-A-typescript-2",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем unknown безопаснее any?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "запрещает null"
+            },
+            {
+              "id": "o2",
+              "text": "быстрее"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт class"
+            },
+            {
+              "id": "o4",
+              "text": "требует narrowing"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "frontend-middle-A-typescript-3",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Partial<T>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "делает свойства optional"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт enum"
+            },
+            {
+              "id": "o3",
+              "text": "делает readonly"
+            },
+            {
+              "id": "o4",
+              "text": "удаляет keys"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "frontend-middle-A-typescript-4",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего generics?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "заменять tests"
+            },
+            {
+              "id": "o2",
+              "text": "обфусцировать"
+            },
+            {
+              "id": "o3",
+              "text": "ускорять сеть"
+            },
+            {
+              "id": "o4",
+              "text": "сохранять типы в reusable code"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "frontend-middle-A-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Когда useEffect запускается снова?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "никогда"
+            },
+            {
+              "id": "o2",
+              "text": "при изменении dependencies"
+            },
+            {
+              "id": "o3",
+              "text": "только на click"
+            },
+            {
+              "id": "o4",
+              "text": "при CSS change"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "frontend-middle-A-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что memoизирует useCallback?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "state"
+            },
+            {
+              "id": "o2",
+              "text": "ссылку на функцию"
+            },
+            {
+              "id": "o3",
+              "text": "значение"
+            },
+            {
+              "id": "o4",
+              "text": "HTTP response"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "frontend-middle-A-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему index плохой key в изменяемом списке?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "React не рендерит list"
+            },
+            {
+              "id": "o2",
+              "text": "ломает TypeScript"
+            },
+            {
+              "id": "o3",
+              "text": "state может перейти не тому item"
+            },
+            {
+              "id": "o4",
+              "text": "index не number"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "frontend-middle-A-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое controlled input?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "value управляется state"
+            },
+            {
+              "id": "o2",
+              "text": "input без value"
+            },
+            {
+              "id": "o3",
+              "text": "browser cache"
+            },
+            {
+              "id": "o4",
+              "text": "server component"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "frontend-middle-A-pair-1",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o2",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o3",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o4",
+              "text": "хранить ключи в UI"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "frontend-middle-A-pair-2",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o2",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o4",
+              "text": "повторять запрос бесконечно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "frontend-middle-A-pair-3",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o2",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o4",
+              "text": "явно валидировать контракт и данные на границе"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "frontend-middle-A-all-1",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o2",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o3",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o4",
+              "text": "скрыть ошибку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "frontend-middle-A-all-2",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o2",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o3",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная mutable переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "frontend-middle-A-all-3",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o2",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o3",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o4",
+              "text": "явный контракт, валидация и тесты"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "frontend-middle-A-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o2",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o3",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o4",
+              "text": "удалить задачу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "frontend-middle-A-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o2",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o3",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o4",
+              "text": "обвинить коллегу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "frontend-middle-B-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает spread для массива?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "замораживает"
+            },
+            {
+              "id": "o2",
+              "text": "удаляет null"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт поверхностную копию"
+            },
+            {
+              "id": "o4",
+              "text": "сортирует"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "frontend-middle-B-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое closure?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "доступ функции к внешнему scope"
+            },
+            {
+              "id": "o2",
+              "text": "глобальная переменная"
+            },
+            {
+              "id": "o3",
+              "text": "class"
+            },
+            {
+              "id": "o4",
+              "text": "HTTP cookie"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "frontend-middle-B-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Promise.all при reject?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "reject всего результата"
+            },
+            {
+              "id": "o2",
+              "text": "повторяет запрос"
+            },
+            {
+              "id": "o3",
+              "text": "возвращает null"
+            },
+            {
+              "id": "o4",
+              "text": "игнорирует ошибку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "frontend-middle-B-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что возвращает Array.filter?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Promise"
+            },
+            {
+              "id": "o2",
+              "text": "новый массив прошедших predicate"
+            },
+            {
+              "id": "o3",
+              "text": "исходный массив"
+            },
+            {
+              "id": "o4",
+              "text": "первый элемент"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "frontend-middle-B-typescript-1",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем unknown безопаснее any?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "требует narrowing"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт class"
+            },
+            {
+              "id": "o3",
+              "text": "быстрее"
+            },
+            {
+              "id": "o4",
+              "text": "запрещает null"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "frontend-middle-B-typescript-2",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Partial<T>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "делает readonly"
+            },
+            {
+              "id": "o2",
+              "text": "делает свойства optional"
+            },
+            {
+              "id": "o3",
+              "text": "удаляет keys"
+            },
+            {
+              "id": "o4",
+              "text": "создаёт enum"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "frontend-middle-B-typescript-3",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего generics?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "заменять tests"
+            },
+            {
+              "id": "o2",
+              "text": "обфусцировать"
+            },
+            {
+              "id": "o3",
+              "text": "ускорять сеть"
+            },
+            {
+              "id": "o4",
+              "text": "сохранять типы в reusable code"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "frontend-middle-B-typescript-4",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой тип отключает проверку любого значения?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "void"
+            },
+            {
+              "id": "o2",
+              "text": "never"
+            },
+            {
+              "id": "o3",
+              "text": "any"
+            },
+            {
+              "id": "o4",
+              "text": "unknown"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "frontend-middle-B-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что memoизирует useCallback?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "state"
+            },
+            {
+              "id": "o2",
+              "text": "HTTP response"
+            },
+            {
+              "id": "o3",
+              "text": "значение"
+            },
+            {
+              "id": "o4",
+              "text": "ссылку на функцию"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "frontend-middle-B-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему index плохой key в изменяемом списке?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ломает TypeScript"
+            },
+            {
+              "id": "o2",
+              "text": "React не рендерит list"
+            },
+            {
+              "id": "o3",
+              "text": "state может перейти не тому item"
+            },
+            {
+              "id": "o4",
+              "text": "index не number"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "frontend-middle-B-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое controlled input?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "browser cache"
+            },
+            {
+              "id": "o2",
+              "text": "input без value"
+            },
+            {
+              "id": "o3",
+              "text": "server component"
+            },
+            {
+              "id": "o4",
+              "text": "value управляется state"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "frontend-middle-B-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой hook хранит локальный state?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "useContext"
+            },
+            {
+              "id": "o2",
+              "text": "useState"
+            },
+            {
+              "id": "o3",
+              "text": "useEffect"
+            },
+            {
+              "id": "o4",
+              "text": "useMemo"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "frontend-middle-B-pair-1",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o2",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o3",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать ошибки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "frontend-middle-B-pair-2",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o3",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o4",
+              "text": "хранить ключи в UI"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "frontend-middle-B-pair-3",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o2",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o3",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o4",
+              "text": "повторять запрос бесконечно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "frontend-middle-B-all-1",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o2",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o3",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o4",
+              "text": "явный контракт, валидация и тесты"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "frontend-middle-B-all-2",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o2",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o3",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная mutable переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "frontend-middle-B-all-3",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o2",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o4",
+              "text": "скрыть ошибку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "frontend-middle-B-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o2",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o3",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o4",
+              "text": "молчать до дедлайна"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "frontend-middle-B-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o2",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o3",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o4",
+              "text": "обвинить коллегу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "frontend-middle-C-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое closure?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "доступ функции к внешнему scope"
+            },
+            {
+              "id": "o2",
+              "text": "глобальная переменная"
+            },
+            {
+              "id": "o3",
+              "text": "HTTP cookie"
+            },
+            {
+              "id": "o4",
+              "text": "class"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "frontend-middle-C-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Promise.all при reject?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорирует ошибку"
+            },
+            {
+              "id": "o2",
+              "text": "возвращает null"
+            },
+            {
+              "id": "o3",
+              "text": "повторяет запрос"
+            },
+            {
+              "id": "o4",
+              "text": "reject всего результата"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "frontend-middle-C-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что возвращает Array.filter?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "первый элемент"
+            },
+            {
+              "id": "o2",
+              "text": "новый массив прошедших predicate"
+            },
+            {
+              "id": "o3",
+              "text": "исходный массив"
+            },
+            {
+              "id": "o4",
+              "text": "Promise"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "frontend-middle-C-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему === предпочтительнее ==?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт type"
+            },
+            {
+              "id": "o2",
+              "text": "нет неявного приведения"
+            },
+            {
+              "id": "o3",
+              "text": "быстрее сеть"
+            },
+            {
+              "id": "o4",
+              "text": "меняет scope"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "frontend-middle-C-typescript-1",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Partial<T>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удаляет keys"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт enum"
+            },
+            {
+              "id": "o3",
+              "text": "делает свойства optional"
+            },
+            {
+              "id": "o4",
+              "text": "делает readonly"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "frontend-middle-C-typescript-2",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего generics?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "заменять tests"
+            },
+            {
+              "id": "o2",
+              "text": "сохранять типы в reusable code"
+            },
+            {
+              "id": "o3",
+              "text": "ускорять сеть"
+            },
+            {
+              "id": "o4",
+              "text": "обфусцировать"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "frontend-middle-C-typescript-3",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой тип отключает проверку любого значения?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "unknown"
+            },
+            {
+              "id": "o2",
+              "text": "void"
+            },
+            {
+              "id": "o3",
+              "text": "any"
+            },
+            {
+              "id": "o4",
+              "text": "never"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "frontend-middle-C-typescript-4",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Как сделать поле необязательным?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "name!: string"
+            },
+            {
+              "id": "o2",
+              "text": "name: optional<string>"
+            },
+            {
+              "id": "o3",
+              "text": "optional name"
+            },
+            {
+              "id": "o4",
+              "text": "name?: string"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "frontend-middle-C-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему index плохой key в изменяемом списке?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "React не рендерит list"
+            },
+            {
+              "id": "o2",
+              "text": "state может перейти не тому item"
+            },
+            {
+              "id": "o3",
+              "text": "ломает TypeScript"
+            },
+            {
+              "id": "o4",
+              "text": "index не number"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "frontend-middle-C-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое controlled input?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "value управляется state"
+            },
+            {
+              "id": "o2",
+              "text": "server component"
+            },
+            {
+              "id": "o3",
+              "text": "browser cache"
+            },
+            {
+              "id": "o4",
+              "text": "input без value"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "frontend-middle-C-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой hook хранит локальный state?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "useEffect"
+            },
+            {
+              "id": "o2",
+              "text": "useMemo"
+            },
+            {
+              "id": "o3",
+              "text": "useContext"
+            },
+            {
+              "id": "o4",
+              "text": "useState"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "frontend-middle-C-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем key в списке?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "задать CSS"
+            },
+            {
+              "id": "o2",
+              "text": "кэшировать fetch"
+            },
+            {
+              "id": "o3",
+              "text": "создать DOM id"
+            },
+            {
+              "id": "o4",
+              "text": "сопоставить элементы при reconciliation"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "frontend-middle-C-pair-1",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o2",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o3",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать ошибки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "frontend-middle-C-pair-2",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o3",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o4",
+              "text": "хранить ключи в UI"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "frontend-middle-C-pair-3",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o3",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o4",
+              "text": "хранить ключи в UI"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "frontend-middle-C-all-1",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o2",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная mutable переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "frontend-middle-C-all-2",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o2",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o3",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o4",
+              "text": "отключить типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "frontend-middle-C-all-3",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o2",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная mutable переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "frontend-middle-C-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o2",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o3",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o4",
+              "text": "обвинить коллегу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "frontend-middle-C-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o2",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o3",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o4",
+              "text": "молчать до дедлайна"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    },
+    "scaleMin": 0,
+    "scaleMax": 100.0
+  }
+}

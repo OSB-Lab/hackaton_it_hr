@@ -34,3 +34,20 @@ without email, phone, user ID or raw JSON. Free-text values containing @ or comm
 numeric phone patterns are omitted by the projection and rejected by direct DTO
 validation. This guards ordinary contact strings, not arbitrary obfuscation in
 user-authored text. No employer search/matching endpoint is introduced.
+
+
+Contact privacy is exposed only in the candidate's existing GET/PATCH
+/me/candidate-profile as `privacy: {"showContacts": false}`. Missing stored
+privacy_settings.show_contacts means false. PATCH accepts only a strict JSON
+boolean; strings, numbers and null give 422. Omitted privacy/showContacts leaves
+storage unchanged. Example: `{"privacy":{"showContacts":true}}`. The update
+merges the single key, preserving publish_profile and other existing privacy keys;
+publication consent updates likewise preserve show_contacts. It never grants
+processing/publication consent implicitly. Ownership and candidate RBAC are unchanged.
+
+
+Jira 5.2: HiringCandidateDTO adds optional contacts (shared ContactsDTO email/phone),
+default null. The general hiring_profile projection never fills it: it has no
+origin-employer/invitation authorization context. Invitation detail is the only
+current endpoint allowed to fill contacts after its disclosure and consent checks.
+Existing free-text contact rejection remains in force.

@@ -2,6 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .workspace-panel { @apply rounded-2xl border border-muted/60 bg-white p-5 shadow-sm sm:p-7; }
+  .workspace-grid { @apply grid gap-5 sm:grid-cols-2; }
+  .workspace-input { @apply block w-full rounded-md border border-muted bg-white px-3.5 py-2.5 text-sm outline-none focus:border-brand focus:ring-2 focus:ring-brand/25; }
+  .workspace-badge { @apply inline-flex items-center rounded-md border border-muted/50 bg-surface/60 px-2.5 py-1 text-xs font-medium; }
+  .workspace-stat { @apply rounded-xl border border-brand/15 bg-brand-soft/40 p-5; }
+  .workspace-stat span { @apply block text-xs text-ink/65; }
+  .workspace-stat strong { @apply mt-2 block text-3xl font-bold text-brand; }
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

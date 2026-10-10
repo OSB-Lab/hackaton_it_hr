@@ -5,21 +5,25 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { ApiError, authApi, cabinetPath, tokenStore, type Role, type User } from '../_lib/api';
 import { Alert, Logo } from './ui';
+import { get, type Catalog } from '../_lib/platform';
+import { CandidateProfile, Assessment, FspInfo } from './CandidateWorkspace';
+import { CompanyProfile, Needs, TalentBank } from './EmployerWorkspace';
+import { Invitations } from './InvitationsWorkspace';
 
 // Разделы будущих кабинетов (задачи 3.2–3.7). Пока это заглушки, но они показывают,
 // как будет устроена навигация, и защищают маршрут по роли.
-const SECTIONS: Record<Role, { title: string; text: string }[]> = {
+const SECTIONS: Record<Role, { id: string; title: string; text: string }[]> = {
   candidate: [
-    { title: 'Профиль и согласия', text: 'Данные, приватность, привязка ФСП ID' },
-    { title: 'Тест и категория', text: 'Специализация, грейд, история попыток' },
-    { title: 'Приглашения', text: 'Предложения от работодателей с зарплатой' },
-    { title: 'Достижения ФСП', text: 'Подтверждённые результаты соревнований' },
+    { id: 'profile', title: 'Профиль и согласия', text: 'Данные и приватность' },
+    { id: 'assessment', title: 'Тест и квалификация', text: 'Вопросы и результаты' },
+    { id: 'invitations', title: 'Приглашения', text: 'Предложения с зарплатой' },
+    { id: 'fsp', title: 'Достижения ФСП', text: 'Статус интеграции' },
   ],
   employer: [
-    { title: 'Компания', text: 'Описание и контакты организации' },
-    { title: 'Потребность', text: 'Какие специалисты нужны и с каким стеком' },
-    { title: 'Подборка', text: 'Рекомендованные кандидаты с объяснением' },
-    { title: 'Приглашения', text: 'Отправленные предложения и их статусы' },
+    { id: 'company', title: 'Компания', text: 'Описание и контакты' },
+    { id: 'needs', title: 'Потребности', text: 'Роли и технические навыки' },
+    { id: 'talent', title: 'Банк талантов', text: 'Подборки и объяснения' },
+    { id: 'invitations', title: 'Приглашения', text: 'Предложения и контакты' },
   ],
 };
 
@@ -29,14 +33,23 @@ const ROLE_TITLE: Record<Role, string> = {
 };
 
 const WELCOME: Record<Role, string> = {
-  candidate: 'Пройдите тест, чтобы получить категорию: именно её увидят работодатели.',
+  candidate: 'Управляйте профилем, проверяйте навыки и выбирайте предложения. DEMO-тест не подтверждает квалификацию.',
   employer: 'Опишите, кого вы ищете, и вы получите подборку кандидатов с объяснением.',
 };
 
-export function CabinetStub({ role }: { role: Role }) {
+export function CabinetStub({ role, section }: { role: Role; section?: string }) {
   const router = useRouter();
   const [user, setUser] = useState<User | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [catalog, setCatalog] = useState<Catalog | null>(null);
+  const [catalogError, setCatalogError] = useState('');
+  const active = section || SECTIONS[role][0].id;
+  async function loadCatalog() {
+    setCatalogError('');
+    try { setCatalog(await get<Catalog>('/catalog')); }
+    catch (e) { setCatalogError(e instanceof Error ? e.message : 'Каталог недоступен'); }
+  }
+  useEffect(() => { if(user) void loadCatalog(); }, [user]);
 
   useEffect(() => {
     if (!tokenStore.get()) {
@@ -93,7 +106,7 @@ export function CabinetStub({ role }: { role: Role }) {
   return (
     <div className="min-h-screen">
       <header className="border-b border-ink bg-white">
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-5 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
           <Logo />
           <div className="flex items-center gap-4 text-sm">
             <span className="hidden text-ink/70 sm:inline">{user.email}</span>
@@ -108,7 +121,7 @@ export function CabinetStub({ role }: { role: Role }) {
         </div>
       </header>
 
-      <main className="mx-auto max-w-5xl px-5 py-10">
+      <main className="mx-auto max-w-7xl px-5 py-8 sm:py-10">
         <h1 className="text-2xl font-bold sm:text-3xl">{ROLE_TITLE[role]}</h1>
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink/75">{WELCOME[role]}</p>
 
@@ -126,22 +139,23 @@ export function CabinetStub({ role }: { role: Role }) {
           </div>
         )}
 
-        <ul className="mt-8 divide-y divide-muted border-y border-ink bg-white">
+        <div className="mt-8 grid items-start gap-6 lg:grid-cols-[240px_minmax(0,1fr)]"><nav aria-label="Разделы кабинета" className="grid grid-cols-2 gap-2 lg:sticky lg:top-5 lg:grid-cols-1">
           {SECTIONS[role].map((section) => (
-            <li
+            <Link
               key={section.title}
-              className="flex items-start justify-between gap-4 px-5 py-5"
+              href={`/${role}/${section.id}`}
+              aria-current={active===section.id?'page':undefined}
+              className={`rounded-xl border p-4 transition ${active===section.id?'border-brand bg-brand text-white shadow-sm':'border-muted/50 bg-white hover:border-brand'}`}
             >
               <div>
                 <h2 className="font-bold">{section.title}</h2>
-                <p className="mt-1 text-sm leading-relaxed text-ink/70">{section.text}</p>
+                <p className="mt-1 text-xs leading-relaxed opacity-70">{section.text}</p>
               </div>
-              <span className="shrink-0 rounded border border-muted px-2 py-0.5 text-xs text-ink/70">
-                Скоро
-              </span>
-            </li>
+            </Link>
           ))}
-        </ul>
+        </nav><div className="min-w-0">
+          {active==='invitations' ? <Invitations role={role}/> : role==='candidate'&&active==='fsp' ? <FspInfo/> : role==='employer'&&active==='company' ? <CompanyProfile/> : !catalog ? <div className="workspace-panel">{catalogError?<><Alert kind="error">{catalogError}</Alert><button className="mt-4 text-brand underline" onClick={()=>void loadCatalog()}>Повторить загрузку каталога</button></>:<p role="status">Загрузка справочника…</p>}</div> : role==='candidate'&&active==='profile' ? <CandidateProfile catalog={catalog}/> : role==='candidate'&&active==='assessment' ? <Assessment catalog={catalog} userId={user.id}/> : role==='employer'&&active==='needs' ? <Needs catalog={catalog}/> : role==='employer'&&active==='talent' ? <TalentBank catalog={catalog} userId={user.id}/> : <Alert kind="error">Раздел не найден.</Alert>}
+        </div></div>
       </main>
     </div>
   );

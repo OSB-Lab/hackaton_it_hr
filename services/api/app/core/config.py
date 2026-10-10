@@ -21,6 +21,7 @@ class Settings(BaseSettings):
     JWT_ALGORITHM: Literal["HS256", "HS384", "HS512"] = "HS256"
     ACCESS_TOKEN_TTL_MINUTES: int = Field(default=15, gt=0)
     EMAIL_VERIFICATION_TOKEN_TTL_MINUTES: int = Field(default=1440, gt=0)
+    ASSESSMENT_COOLDOWN_DAYS: int = Field(default=90, ge=0)
     SMTP_HOST: str = "mailpit"
     SMTP_PORT: int = Field(default=1025, ge=1, le=65535)
     SMTP_FROM: str = "noreply@fsp.example"

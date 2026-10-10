@@ -77,7 +77,7 @@ interface RequestOptions {
   errors?: Record<number, string>;
 }
 
-async function request<T>(path: string, options: RequestOptions = {}): Promise<T> {
+export async function request<T>(path: string, options: RequestOptions = {}): Promise<T> {
   const headers: Record<string, string> = { Accept: 'application/json' };
   if (options.body !== undefined) headers['Content-Type'] = 'application/json';
   if (options.auth) {
@@ -97,6 +97,10 @@ async function request<T>(path: string, options: RequestOptions = {}): Promise<T
   }
 
   if (!response.ok) {
+    if (response.status === 401 && options.auth) {
+      tokenStore.clear();
+      window.location.assign('/login?expired=1');
+    }
     const message =
       options.errors?.[response.status] ??
       DEFAULT_ERRORS[response.status] ??
