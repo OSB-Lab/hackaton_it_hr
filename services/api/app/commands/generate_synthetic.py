@@ -4,6 +4,7 @@ import hashlib
 import json
 import os
 import re
+from datetime import datetime, timezone
 from pathlib import Path
 
 from sqlalchemy import create_engine, select, text
@@ -13,6 +14,8 @@ from sqlalchemy.orm import Session
 from app import models
 from app.core.config import get_settings
 from app.db.base import Base
+from app.modules.assessments.schemas import Answer, AttemptSnapshot, SubmitRequest
+from app.modules.assessments.scoring_v3 import score_v3
 from app.modules.auth.security import hash_password
 from app.modules.catalog.repository import CatalogRepository
 from app.modules.employer.needs_service import validate_values
@@ -23,6 +26,9 @@ VERSION = "synthetic-profiles-v1"
 GROUPS = [("ready_except_qualification", 20), ("specialization", 10),
           ("grade", 10), ("required_skills", 10), ("publication", 12),
           ("email", 12), ("qualification", 24)]
+# Deterministic, clearly synthetic enrichment (no real personal data).
+SOFT_SKILLS = ["Коммуникация", "Работа в команде", "Самоорганизация",
+               "Критическое мышление", "Инициативность", "Наставничество"]
 
 
 def validate_target(url, confirmation):
@@ -94,10 +100,18 @@ def generate(url, manifest_path, password, confirmation, batch="mvp100"):
                                        is_verified=group != "email")
                     session.add(user)
                     session.flush()
+                    spec_id = specs[1].id if group == "specialization" else specs[0].id
+                    roles = (["Backend-разработчик", "Python-инженер", "Бэкенд-разработчик", "DevOps-инженер"]
+                             if spec_id == specs[0].id else
+                             ["Frontend-разработчик", "React-разработчик", "Веб-разработчик", "UI-инженер"])
                     profile = models.CandidateProfile(user_id=user.id, full_name=f"Синтетический кандидат {ordinal:03}",
-                        specialization=specs[1].id if group == "specialization" else specs[0].id,
+                        specialization=spec_id,
                         self_declared_grade=grades[0 if group == "grade" else 1].id,
-                        stack=[] if group == "required_skills" else list((specs[1] if group == "specialization" else specs[0]).skillIds),
+                        stack=[] if group == "required_skills" else list((specs[1] if spec_id == specs[1].id else specs[0]).skillIds),
+                        professional_role=roles[ordinal % len(roles)],
+                        experience_months=6 + (ordinal * 7) % 96,
+                        phone=f"+7 900 {ordinal:03d} {ordinal:03d} {ordinal:03d}",
+                        soft_skills=[SOFT_SKILLS[(ordinal + i) % len(SOFT_SKILLS)] for i in range(2 + ordinal % 3)],
                         privacy_settings={"publish_profile": group != "publication", "show_contacts": False})
                     session.add(profile)
                     session.add_all([models.Consent(user_id=user.id, kind="privacy", granted=True),
@@ -110,6 +124,42 @@ def generate(url, manifest_path, password, confirmation, batch="mvp100"):
                     candidates.append(dict(userId=user.id, candidateId=profile.id, group=group,
                         expected={"eligible": False, "reasonCodes": reasons, "missingRequiredSkills": [],
                                   "policyVersion": POLICY_VERSION}))
+            # DEMO test scenarios: an active attempt and a submitted (non-certifying)
+            # DEMO attempt. DEMO content never sets a verified grade.
+            demo_attempts = []
+            demo_spec, demo_grade = specs[0].id, grades[1].id
+            demo_loaded = next(loaded for key in repo.manifest.activeBlueprints
+                               if (loaded := repo.blueprint(key)).document.specialization == demo_spec
+                               and loaded.document.grade == demo_grade)
+            demo_blueprint = demo_loaded.document
+            demo_catalog = repo.catalog(demo_blueprint.catalogVersion)
+            snapshot = AttemptSnapshot(schemaVersion=1, blueprint=demo_blueprint, catalog=demo_catalog.document)
+            variant = demo_blueprint.variants[0].id
+            questions = next(v.questions for v in demo_blueprint.variants if v.id == variant)
+            correct_answers = [Answer(questionId=q.id, optionId=q.answerKey.optionId) for q in questions]
+            for index, cand in enumerate([c for c in candidates if c["group"] == "qualification"][:6]):
+                pid = cand["candidateId"]
+                common = dict(candidate_id=pid, test_id=demo_blueprint.id,
+                              specialization=demo_spec, requested_grade=demo_grade,
+                              blueprint_version=demo_blueprint.version, catalog_version=demo_catalog.document.version,
+                              blueprint_checksum=demo_loaded.checksum, catalog_checksum=demo_catalog.checksum,
+                              snapshot_schema_version=1, snapshot=snapshot.model_dump(mode="json"),
+                              variant=variant, content_status="DEMO")
+                if index % 2 == 0:
+                    attempt = models.TestAttempt(**common, status="active", submitted_at=None)
+                    session.add(attempt)
+                    session.flush()
+                    demo_attempts.append(dict(candidateId=pid, attemptId=attempt.id, status="active"))
+                else:
+                    result = score_v3(demo_blueprint, variant, SubmitRequest(answers=correct_answers))
+                    attempt = models.TestAttempt(**common, status="submitted",
+                        answers=[a.model_dump(mode="json") for a in correct_answers],
+                        score=result.totalScore, result=result.model_dump(mode="json"),
+                        submitted_at=datetime.now(timezone.utc))
+                    session.add(attempt)
+                    session.flush()
+                    demo_attempts.append(dict(candidateId=pid, attemptId=attempt.id, status="submitted",
+                                              outcome=result.outcome))
             for index in range(2):
                 user = models.User(email=f"{batch}-employer-{index + 1}@example.test",
                     password_hash=hash_password(password), role="employer", is_verified=True)
@@ -132,6 +182,7 @@ def generate(url, manifest_path, password, confirmation, batch="mvp100"):
             saved = dict(version=VERSION, database=target.database, batch=batch, catalogVersion=catalog.document.version,
                          catalogChecksum=catalog.checksum, policyVersion=POLICY_VERSION,
                          candidates=candidates, employers=employers, eligibleCount=0,
+                         demoAttempts=demo_attempts,
                          positiveScenarios="BLOCKED: no real APPROVED qualification",
                          databaseFingerprint=fingerprint(session))
             # Exclusive creation: never overwrite another manifest. Written before
