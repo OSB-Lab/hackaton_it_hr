@@ -53,15 +53,14 @@ def test_rbac_and_ownership(recommendation_env, method, actor, status):
         assert getattr(client, method)(url, **kwargs).json() == getattr(client, method)(missing, **kwargs).json()
 
 
-def test_blocked_creation_no_writes_and_scoped_snapshot(recommendation_env):
+def test_invalid_legacy_need_no_writes_and_scoped_snapshot(recommendation_env):
     (client, headers, _, engine), (need, other, _, snapshot) = recommendation_env
     with Session(engine) as session:
         before = [session.scalar(select(func.count()).select_from(model))
                   for model in (RecommendationSnapshot, RecommendationItem)]
     for _ in range(2):
         response = client.post(path(need), headers=headers[0])
-        assert response.status_code == 503
-        assert response.json()["detail"]["code"] == "ranking_unavailable"
+        assert response.status_code == 422
     assert client.get(path(other, snapshot), headers=headers[1]).status_code == 404
     assert client.get(path(need, 999999), headers=headers[0]).status_code == 404
     with Session(engine) as session:
@@ -109,7 +108,7 @@ def test_legacy_snapshot_safe_and_unchanged(recommendation_env):
     assert first.status_code == 200
     assert first.json()["algorithmVersion"] is None
     assert first.json()["weights"] is None
-    assert first.json()["items"] == [{"candidate": {"id": candidate}, "rank": 1, "score": 12.0, "components": None}]
+    assert first.json()["items"] == [{"candidate": {"id": candidate}, "rank": 1, "score": 12.0, "components": None, "reasons": []}]
     for word in ("email", "phone", "answerKey", "rubric", "scoring", "contact@example.com", "+79991234567"):
         assert word not in first.text
     with Session(engine) as session, session.begin():
@@ -137,7 +136,7 @@ def test_versioned_snapshot_reads_saved_data_only(recommendation_env, monkeypatc
     monkeypatch.setattr(CatalogRepository, "catalog", forbidden)
     first = client.get(path(need, snapshot), headers=headers[0])
     assert first.status_code == 200
-    assert first.json()["items"] == items
+    assert first.json()["items"] == [{**item, "reasons": []} for item in items]
     assert client.get(path(need, snapshot), headers=headers[0]).json() == first.json()
     with Session(engine) as session:
         row = session.get(RecommendationSnapshot, snapshot)

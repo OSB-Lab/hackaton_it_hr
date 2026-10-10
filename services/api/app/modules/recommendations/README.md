@@ -1,3 +1,57 @@
+# Deterministic ranking (current)
+
+POST `/employer/needs/{need_id}/recommendations` now returns 200 with a saved
+snapshot, including a valid empty cohort. Employer RBAC/ownership remain unchanged.
+Missing/foreign need is 404; incomplete legacy need (specialization/minGrade) or
+nontechnical/duplicate/unknown skills is 422, unavailable catalog/evidence is 503.
+No client candidate IDs, scores or qualifications are accepted.
+
+Algorithm `v3-mvp-coverage-1`: LOCKED weights 0.50 skillFit + 0.35 testStrength +
+0.15 fspBonus. Public `assessmentStrength` remains the name for testStrength.
+All components and final score are 0..1. Sort score DESC, assessmentStrength DESC,
+candidate_id ASC, with contiguous one-based rank. Old algorithm versions retain
+their previous validation/order. No migration or rewriting of saved data.
+
+Temporary **team MVP policy, not an approved v3 normalization rule**:
+coverage = mean(certified skill evidence / 100), absent evidence=0, empty required=0.
+skillFit = .80 required + .20 optional; without optional, required has weight 1.
+Only canonical technical skills are accepted (teamwork is rejected for ranking).
+CompetencyScore is a mutable latest-attempt cache: an unsuccessful retest overwrites
+it. Therefore ranking uses the same technical subscores/evidenceCounts preserved in
+the immutable result of the attempt pointed to by verified_attempt_id, not that cache
+or any later attempt. testStrength = that result's technicalTotal / 100.
+No assessment rules are changed and no self-reported stack contributes to score.
+
+FSP limitation: existing FspAchievement/FspLink do not record trustworthy confirmation
+or provenance and include demo seed rows. Production fspBonus is conservatively 0;
+linked history or a winner string is NOT proof. The pure calculation supports the
+temporary binary policy (confirmed achievement=1, otherwise=0), tested in isolation,
+but no production provider asserts confirmation. A trustworthy source and explicit
+team decision are needed before enabling it, with a new algorithm version. This
+limitation does not exclude candidates without FSP and does not redistribute weights.
+
+`eligible_for_ranking` checks current email/publication/privacy + authoritative v3
+qualification/matches_need before scores. Qualification must reference a successful
+submitted APPROVED v3 attempt with matching candidate/catalog/blueprint metadata.
+DEMO remains ineligible. User/profile locks serialize creation with privacy changes;
+need is locked while calculating. This deliberately simple MVP scans candidate users;
+batching/query optimization is deferred until measured scale requires it.
+
+Creation atomically stores RecommendationSnapshot plus RecommendationItem rows.
+GET replays saved values and rechecks disclosure gates without ranking again.
+Each item adds optional `reasons` (empty for legacy) with three bounded numeric
+templates: required evidence %, technical test %, verified FSP bonus %. These are
+allowlisted strings, never candidate text, raw answers or contact fields. Existing
+legacy free-text RecommendationItem.reason remains hidden; ranks/scores unchanged.
+Talent Bank continues to use saved rank/score and current privacy checks.
+
+Tests use controlled test-only APPROVED fixtures, never approve production artifacts.
+The active pool is still DEMO: production needs normally produce empty cohorts until
+real expert approval and successful qualification. Ranking execution is not evidence
+of production accuracy; independent labels/Precision@3 remain outstanding.
+
+## Historical SPR-18.1 implementation notes (superseded for POST)
+
 # v3 qualification integration
 
 The authoritative provider is now assessments/qualification.py. It validates the

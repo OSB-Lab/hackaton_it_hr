@@ -28,10 +28,63 @@ def eligible_for_ranking(session: Session, candidate_id: int, need=None) -> bool
 
 
 def create_snapshot(session: Session, user_id: int, need_id: int):
-    get_need(session, user_id, need_id)
-    # No flush/commit, empty snapshot or fallback algorithm.
-    raise HTTPException(status_code=503, detail={"code": "ranking_unavailable",
-                        "message": "Verified qualification and approved ranking specification are required"})
+    from app.modules.assessments.qualification import qualification
+    from app.modules.assessments.schemas import ResultDTO
+    from app.modules.catalog.repository import CatalogRepository
+    from app.modules.catalog.validators import validate_grade, validate_skills, validate_specialization
+    from app.modules.recommendations.ranking import ALGORITHM_VERSION, WEIGHTS, calculate
+
+    need = get_need(session, user_id, need_id, lock=True)
+    try:
+        catalog = CatalogRepository().catalog().document
+    except (ValueError, OSError):
+        raise HTTPException(503, "Catalog unavailable") from None
+    try:
+        validate_specialization(catalog, need.specialization)
+        validate_grade(catalog, need.min_grade)
+        required, optional = need.stack, need.optional_skills or []
+        validate_skills(catalog, required + optional, need.specialization)
+        if "teamwork" in required + optional or len(set(required + optional)) != len(required + optional):
+            raise ValueError("Ranking requires distinct canonical technical skills")
+    except (ValueError, TypeError):
+        raise HTTPException(422, "Need requires specialization, minGrade and canonical technical skills") from None
+    items = []
+    # Same lock order as profile privacy PATCH: User first, then profile.
+    users = session.scalars(select(User).where(User.role == "candidate").order_by(User.id).with_for_update()).all()
+    for user in users:
+        profile = session.scalar(select(CandidateProfile).where(CandidateProfile.user_id == user.id).with_for_update())
+        if profile is None or not eligible_for_ranking(session, profile.id, need):
+            continue
+        proof = qualification(session, profile.id)
+        _, attempt, saved = proof
+        result = ResultDTO.model_validate(attempt.result)
+        technical = {tag for slot in saved.blueprint.slots for tag in slot.skillTags} - {"teamwork"}
+        evidence = {s: result.subscores[s] for s in technical if (result.evidenceCounts or {}).get(s, 0) > 0}
+        try:
+            # No trusted FSP confirmation source exists yet; never promote seed/linked rows.
+            score, components, reasons = calculate(required, optional, evidence, result.technicalTotal)
+        except ValueError:
+            raise HTTPException(503, "Certified evidence unavailable") from None
+        items.append(ItemDTO(candidate=CandidateDTO(id=profile.id), rank=1, score=score,
+                             components=components, reasons=reasons))
+    items.sort(key=lambda item: (-item.score, -item.components.assessmentStrength, item.candidate.id))
+    payload = SnapshotPayload(algorithmVersion=ALGORITHM_VERSION, weights=WEIGHTS,
+                              items=tuple(item.model_copy(update={"rank": i}) for i, item in enumerate(items, 1)))
+    row = RecommendationSnapshot(need_id=need.id, algorithm_version=payload.algorithmVersion,
+                                 weights=payload.weights.model_dump(),
+                                 ordered_items=[item.model_dump(mode="json") for item in payload.items])
+    try:
+        session.add(row)
+        session.flush()
+        session.add_all([RecommendationItem(snapshot_id=row.id, candidate_id=item.candidate.id,
+                         score=item.score, rank=item.rank, reason="; ".join(item.reasons)) for item in payload.items])
+        response = SnapshotDTO(id=row.id, needId=need.id, createdAt=row.created_at,
+                               algorithmVersion=payload.algorithmVersion, weights=payload.weights, items=payload.items)
+        session.commit()
+    except Exception:
+        session.rollback()
+        raise
+    return response
 
 
 def read_snapshot(session: Session, user_id: int, need_id: int, snapshot_id: int) -> SnapshotDTO:

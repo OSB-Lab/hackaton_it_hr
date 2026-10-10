@@ -24,6 +24,7 @@ class ItemDTO(FrozenDTO):
     rank: Annotated[int, Field(strict=True, gt=0)] | None
     score: FiniteFloat
     components: Components | None
+    reasons: tuple[Annotated[str, Field(pattern=r"^(Required skill evidence|Technical test|Verified FSP bonus): (?:100|[0-9]{1,2})\.[0-9]%$")], ...] = ()
 
 
 def ranking_order_key(score: float, candidate_id: int) -> tuple[float, int]:
@@ -43,7 +44,15 @@ class SnapshotPayload(FrozenDTO):
             raise ValueError("Duplicate candidate")
         if any(item.components is None or item.rank != i for i, item in enumerate(self.items, 1)):
             raise ValueError("Components and contiguous ranks are required")
-        keys = [ranking_order_key(item.score, item.candidate.id) for item in self.items]
+        from app.modules.recommendations.ranking import ALGORITHM_VERSION, WEIGHTS
+        if self.algorithmVersion == ALGORITHM_VERSION:
+            if self.weights.model_dump() != WEIGHTS:
+                raise ValueError("Invalid v3 weights")
+            if any(not 0 <= item.score <= 1 or any(not 0 <= v <= 1 for v in item.components.model_dump().values()) for item in self.items):
+                raise ValueError("Invalid normalized components")
+            keys = [(-item.score, -item.components.assessmentStrength, item.candidate.id) for item in self.items]
+        else:
+            keys = [ranking_order_key(item.score, item.candidate.id) for item in self.items]
         if keys != sorted(keys):
             raise ValueError("Items must preserve descending score and candidate ID tie-breaker")
         return self
