@@ -6,16 +6,22 @@ from fastapi.responses import JSONResponse
 from app.db.session import check_database
 from app.modules.auth.router import router as auth_router
 from app.modules.candidate.router import router as candidate_router
+from app.modules.candidate.pdf import router as profile_pdf_router
 from app.modules.employer.router import router as employer_router
 from app.modules.employer.needs_router import router as needs_router
 from app.modules.assessments.router import router as assessments_router
+from app.modules.recommendations.router import router as recommendations_router
+from app.modules.invitations.router import router as invitations_router
 
 app = FastAPI(title="FSP Platform API")
 app.include_router(auth_router)
 app.include_router(candidate_router)
+app.include_router(profile_pdf_router)
 app.include_router(employer_router)
 app.include_router(needs_router)
 app.include_router(assessments_router)
+app.include_router(recommendations_router)
+app.include_router(invitations_router)
 
 
 @app.get("/health/live")

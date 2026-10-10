@@ -1,0 +1,7342 @@
+{
+  "backend-junior": {
+    "A": [
+      {
+        "id": "backend-junior-A-python-1",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой тип Python неизменяем?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "set"
+          },
+          {
+            "id": "o2",
+            "text": "tuple"
+          },
+          {
+            "id": "o3",
+            "text": "list"
+          },
+          {
+            "id": "o4",
+            "text": "dict"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-python-2",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что возвращает list.pop()?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "последний элемент и удаляет его"
+          },
+          {
+            "id": "o2",
+            "text": "индекс"
+          },
+          {
+            "id": "o3",
+            "text": "копию списка"
+          },
+          {
+            "id": "o4",
+            "text": "ничего"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-python-3",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем используют context manager?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "гарантировать cleanup ресурса"
+          },
+          {
+            "id": "o2",
+            "text": "создать поток"
+          },
+          {
+            "id": "o3",
+            "text": "сериализовать объект"
+          },
+          {
+            "id": "o4",
+            "text": "ускорить GC"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-python-4",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает generator?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "компилирует код"
+          },
+          {
+            "id": "o2",
+            "text": "выдаёт значения лениво"
+          },
+          {
+            "id": "o3",
+            "text": "всегда создаёт list"
+          },
+          {
+            "id": "o4",
+            "text": "параллелит CPU"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-sql-1",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что фильтрует строки до агрегации?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "LIMIT"
+          },
+          {
+            "id": "o2",
+            "text": "HAVING"
+          },
+          {
+            "id": "o3",
+            "text": "ORDER BY"
+          },
+          {
+            "id": "o4",
+            "text": "WHERE"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-sql-2",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой JOIN требует совпадения с обеих сторон?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "LEFT JOIN"
+          },
+          {
+            "id": "o2",
+            "text": "FULL JOIN"
+          },
+          {
+            "id": "o3",
+            "text": "INNER JOIN"
+          },
+          {
+            "id": "o4",
+            "text": "CROSS JOIN"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-sql-3",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему лишние индексы вредны?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удаляют дубликаты"
+          },
+          {
+            "id": "o2",
+            "text": "замедляют запись"
+          },
+          {
+            "id": "o3",
+            "text": "ломают SELECT"
+          },
+          {
+            "id": "o4",
+            "text": "делают таблицу readonly"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-sql-4",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает ROW_NUMBER?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удаляет строки"
+          },
+          {
+            "id": "o2",
+            "text": "создаёт индекс"
+          },
+          {
+            "id": "o3",
+            "text": "группирует таблицу"
+          },
+          {
+            "id": "o4",
+            "text": "нумерует строки в окне"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-api-1",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой статус означает Not Found?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "302"
+          },
+          {
+            "id": "o2",
+            "text": "404"
+          },
+          {
+            "id": "o3",
+            "text": "500"
+          },
+          {
+            "id": "o4",
+            "text": "201"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-api-2",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего Idempotency-Key?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "ускорить DNS"
+          },
+          {
+            "id": "o2",
+            "text": "безопасно повторить POST"
+          },
+          {
+            "id": "o3",
+            "text": "зашифровать body"
+          },
+          {
+            "id": "o4",
+            "text": "заменить auth"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-api-3",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой статус rate limit?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "503"
+          },
+          {
+            "id": "o2",
+            "text": "401"
+          },
+          {
+            "id": "o3",
+            "text": "204"
+          },
+          {
+            "id": "o4",
+            "text": "429"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-api-4",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Где передают bearer token?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "response body"
+          },
+          {
+            "id": "o2",
+            "text": "URL path"
+          },
+          {
+            "id": "o3",
+            "text": "cookie name"
+          },
+          {
+            "id": "o4",
+            "text": "Authorization header"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-pair-1",
+        "skillTags": [
+          "python",
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o2",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-pair-2",
+        "skillTags": [
+          "python",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-pair-3",
+        "skillTags": [
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o2",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o3",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-all-1",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-all-2",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "отключить типы"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-all-3",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o2",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o3",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o2",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o3",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o4",
+            "text": "удалить задачу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-A-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o4",
+            "text": "удалить задачу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      }
+    ],
+    "B": [
+      {
+        "id": "backend-junior-B-python-1",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что возвращает list.pop()?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "последний элемент и удаляет его"
+          },
+          {
+            "id": "o2",
+            "text": "индекс"
+          },
+          {
+            "id": "o3",
+            "text": "копию списка"
+          },
+          {
+            "id": "o4",
+            "text": "ничего"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-python-2",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем используют context manager?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сериализовать объект"
+          },
+          {
+            "id": "o2",
+            "text": "гарантировать cleanup ресурса"
+          },
+          {
+            "id": "o3",
+            "text": "ускорить GC"
+          },
+          {
+            "id": "o4",
+            "text": "создать поток"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-python-3",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает generator?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "компилирует код"
+          },
+          {
+            "id": "o2",
+            "text": "выдаёт значения лениво"
+          },
+          {
+            "id": "o3",
+            "text": "всегда создаёт list"
+          },
+          {
+            "id": "o4",
+            "text": "параллелит CPU"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-python-4",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему mutable default опасен?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "нельзя передать list"
+          },
+          {
+            "id": "o2",
+            "text": "он неизменяем"
+          },
+          {
+            "id": "o3",
+            "text": "один объект разделяется вызовами"
+          },
+          {
+            "id": "o4",
+            "text": "ломает typing"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-sql-1",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой JOIN требует совпадения с обеих сторон?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "INNER JOIN"
+          },
+          {
+            "id": "o2",
+            "text": "FULL JOIN"
+          },
+          {
+            "id": "o3",
+            "text": "CROSS JOIN"
+          },
+          {
+            "id": "o4",
+            "text": "LEFT JOIN"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-sql-2",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему лишние индексы вредны?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "делают таблицу readonly"
+          },
+          {
+            "id": "o2",
+            "text": "удаляют дубликаты"
+          },
+          {
+            "id": "o3",
+            "text": "ломают SELECT"
+          },
+          {
+            "id": "o4",
+            "text": "замедляют запись"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-sql-3",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает ROW_NUMBER?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "нумерует строки в окне"
+          },
+          {
+            "id": "o2",
+            "text": "удаляет строки"
+          },
+          {
+            "id": "o3",
+            "text": "создаёт индекс"
+          },
+          {
+            "id": "o4",
+            "text": "группирует таблицу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-sql-4",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего transaction?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сжатие данных"
+          },
+          {
+            "id": "o2",
+            "text": "атомарность согласованных изменений"
+          },
+          {
+            "id": "o3",
+            "text": "кэширование"
+          },
+          {
+            "id": "o4",
+            "text": "форматирование SQL"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-api-1",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего Idempotency-Key?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "безопасно повторить POST"
+          },
+          {
+            "id": "o2",
+            "text": "заменить auth"
+          },
+          {
+            "id": "o3",
+            "text": "ускорить DNS"
+          },
+          {
+            "id": "o4",
+            "text": "зашифровать body"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-api-2",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой статус rate limit?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "204"
+          },
+          {
+            "id": "o2",
+            "text": "401"
+          },
+          {
+            "id": "o3",
+            "text": "503"
+          },
+          {
+            "id": "o4",
+            "text": "429"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-api-3",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Где передают bearer token?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "Authorization header"
+          },
+          {
+            "id": "o2",
+            "text": "cookie name"
+          },
+          {
+            "id": "o3",
+            "text": "URL path"
+          },
+          {
+            "id": "o4",
+            "text": "response body"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-api-4",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем HTTP timeout клиенту?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "увеличить payload"
+          },
+          {
+            "id": "o2",
+            "text": "ограничить зависшее ожидание"
+          },
+          {
+            "id": "o3",
+            "text": "создать JWT"
+          },
+          {
+            "id": "o4",
+            "text": "выбрать status"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-pair-1",
+        "skillTags": [
+          "python",
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-pair-2",
+        "skillTags": [
+          "python",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o4",
+            "text": "игнорировать ошибки"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-pair-3",
+        "skillTags": [
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "повторять запрос бесконечно"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-all-1",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "отключить типы"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-all-2",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "скрыть ошибку"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-all-3",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o2",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o3",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o4",
+            "text": "обвинить коллегу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-B-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o2",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o3",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o4",
+            "text": "удалить задачу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      }
+    ],
+    "C": [
+      {
+        "id": "backend-junior-C-python-1",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем используют context manager?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "ускорить GC"
+          },
+          {
+            "id": "o2",
+            "text": "создать поток"
+          },
+          {
+            "id": "o3",
+            "text": "гарантировать cleanup ресурса"
+          },
+          {
+            "id": "o4",
+            "text": "сериализовать объект"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-python-2",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает generator?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "параллелит CPU"
+          },
+          {
+            "id": "o2",
+            "text": "всегда создаёт list"
+          },
+          {
+            "id": "o3",
+            "text": "компилирует код"
+          },
+          {
+            "id": "o4",
+            "text": "выдаёт значения лениво"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-python-3",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему mutable default опасен?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "нельзя передать list"
+          },
+          {
+            "id": "o2",
+            "text": "ломает typing"
+          },
+          {
+            "id": "o3",
+            "text": "один объект разделяется вызовами"
+          },
+          {
+            "id": "o4",
+            "text": "он неизменяем"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-python-4",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что ограничивает GIL?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "CPU-bound параллелизм потоков"
+          },
+          {
+            "id": "o2",
+            "text": "async I/O"
+          },
+          {
+            "id": "o3",
+            "text": "память процесса"
+          },
+          {
+            "id": "o4",
+            "text": "HTTP timeout"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-sql-1",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему лишние индексы вредны?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "замедляют запись"
+          },
+          {
+            "id": "o2",
+            "text": "ломают SELECT"
+          },
+          {
+            "id": "o3",
+            "text": "удаляют дубликаты"
+          },
+          {
+            "id": "o4",
+            "text": "делают таблицу readonly"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-sql-2",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает ROW_NUMBER?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создаёт индекс"
+          },
+          {
+            "id": "o2",
+            "text": "удаляет строки"
+          },
+          {
+            "id": "o3",
+            "text": "нумерует строки в окне"
+          },
+          {
+            "id": "o4",
+            "text": "группирует таблицу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-sql-3",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего transaction?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "форматирование SQL"
+          },
+          {
+            "id": "o2",
+            "text": "сжатие данных"
+          },
+          {
+            "id": "o3",
+            "text": "атомарность согласованных изменений"
+          },
+          {
+            "id": "o4",
+            "text": "кэширование"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-sql-4",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что предотвращает unique constraint?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "deadlock"
+          },
+          {
+            "id": "o2",
+            "text": "slow query"
+          },
+          {
+            "id": "o3",
+            "text": "дубликаты ключа"
+          },
+          {
+            "id": "o4",
+            "text": "NULL"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-api-1",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой статус rate limit?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "204"
+          },
+          {
+            "id": "o2",
+            "text": "503"
+          },
+          {
+            "id": "o3",
+            "text": "401"
+          },
+          {
+            "id": "o4",
+            "text": "429"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-api-2",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Где передают bearer token?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "Authorization header"
+          },
+          {
+            "id": "o2",
+            "text": "response body"
+          },
+          {
+            "id": "o3",
+            "text": "URL path"
+          },
+          {
+            "id": "o4",
+            "text": "cookie name"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-api-3",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем HTTP timeout клиенту?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создать JWT"
+          },
+          {
+            "id": "o2",
+            "text": "увеличить payload"
+          },
+          {
+            "id": "o3",
+            "text": "выбрать status"
+          },
+          {
+            "id": "o4",
+            "text": "ограничить зависшее ожидание"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-api-4",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Что означает 204?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "ресурс создан"
+          },
+          {
+            "id": "o2",
+            "text": "redirect"
+          },
+          {
+            "id": "o3",
+            "text": "успех без тела"
+          },
+          {
+            "id": "o4",
+            "text": "ошибка схемы"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-pair-1",
+        "skillTags": [
+          "python",
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o2",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-pair-2",
+        "skillTags": [
+          "python",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-pair-3",
+        "skillTags": [
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "повторять запрос бесконечно"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-all-1",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o2",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o3",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-all-2",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "отключить типы"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-all-3",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o2",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o3",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o4",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-junior-C-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o2",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o3",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o4",
+            "text": "молчать до дедлайна"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      }
+    ]
+  },
+  "backend-middle": {
+    "A": [
+      {
+        "id": "backend-middle-A-python-1",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем используют context manager?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создать поток"
+          },
+          {
+            "id": "o2",
+            "text": "гарантировать cleanup ресурса"
+          },
+          {
+            "id": "o3",
+            "text": "сериализовать объект"
+          },
+          {
+            "id": "o4",
+            "text": "ускорить GC"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-python-2",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает generator?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "параллелит CPU"
+          },
+          {
+            "id": "o2",
+            "text": "компилирует код"
+          },
+          {
+            "id": "o3",
+            "text": "выдаёт значения лениво"
+          },
+          {
+            "id": "o4",
+            "text": "всегда создаёт list"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-python-3",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему mutable default опасен?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "один объект разделяется вызовами"
+          },
+          {
+            "id": "o2",
+            "text": "нельзя передать list"
+          },
+          {
+            "id": "o3",
+            "text": "он неизменяем"
+          },
+          {
+            "id": "o4",
+            "text": "ломает typing"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-python-4",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что ограничивает GIL?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "память процесса"
+          },
+          {
+            "id": "o2",
+            "text": "async I/O"
+          },
+          {
+            "id": "o3",
+            "text": "CPU-bound параллелизм потоков"
+          },
+          {
+            "id": "o4",
+            "text": "HTTP timeout"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-sql-1",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему лишние индексы вредны?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "замедляют запись"
+          },
+          {
+            "id": "o2",
+            "text": "удаляют дубликаты"
+          },
+          {
+            "id": "o3",
+            "text": "ломают SELECT"
+          },
+          {
+            "id": "o4",
+            "text": "делают таблицу readonly"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-sql-2",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает ROW_NUMBER?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создаёт индекс"
+          },
+          {
+            "id": "o2",
+            "text": "группирует таблицу"
+          },
+          {
+            "id": "o3",
+            "text": "удаляет строки"
+          },
+          {
+            "id": "o4",
+            "text": "нумерует строки в окне"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-sql-3",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего transaction?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сжатие данных"
+          },
+          {
+            "id": "o2",
+            "text": "кэширование"
+          },
+          {
+            "id": "o3",
+            "text": "атомарность согласованных изменений"
+          },
+          {
+            "id": "o4",
+            "text": "форматирование SQL"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-sql-4",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что предотвращает unique constraint?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "deadlock"
+          },
+          {
+            "id": "o2",
+            "text": "slow query"
+          },
+          {
+            "id": "o3",
+            "text": "NULL"
+          },
+          {
+            "id": "o4",
+            "text": "дубликаты ключа"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-api-1",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой статус rate limit?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "429"
+          },
+          {
+            "id": "o2",
+            "text": "503"
+          },
+          {
+            "id": "o3",
+            "text": "204"
+          },
+          {
+            "id": "o4",
+            "text": "401"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-api-2",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Где передают bearer token?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "URL path"
+          },
+          {
+            "id": "o2",
+            "text": "Authorization header"
+          },
+          {
+            "id": "o3",
+            "text": "cookie name"
+          },
+          {
+            "id": "o4",
+            "text": "response body"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-api-3",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем HTTP timeout клиенту?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создать JWT"
+          },
+          {
+            "id": "o2",
+            "text": "увеличить payload"
+          },
+          {
+            "id": "o3",
+            "text": "выбрать status"
+          },
+          {
+            "id": "o4",
+            "text": "ограничить зависшее ожидание"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-api-4",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Что означает 204?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "ошибка схемы"
+          },
+          {
+            "id": "o2",
+            "text": "redirect"
+          },
+          {
+            "id": "o3",
+            "text": "ресурс создан"
+          },
+          {
+            "id": "o4",
+            "text": "успех без тела"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-pair-1",
+        "skillTags": [
+          "python",
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "повторять запрос бесконечно"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-pair-2",
+        "skillTags": [
+          "python",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-pair-3",
+        "skillTags": [
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o2",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o3",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-all-1",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o2",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o3",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-all-2",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o2",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o3",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o4",
+            "text": "скрыть ошибку"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-all-3",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o3",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o4",
+            "text": "обвинить коллегу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-A-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o4",
+            "text": "молчать до дедлайна"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      }
+    ],
+    "B": [
+      {
+        "id": "backend-middle-B-python-1",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает generator?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "выдаёт значения лениво"
+          },
+          {
+            "id": "o2",
+            "text": "компилирует код"
+          },
+          {
+            "id": "o3",
+            "text": "параллелит CPU"
+          },
+          {
+            "id": "o4",
+            "text": "всегда создаёт list"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-python-2",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему mutable default опасен?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "он неизменяем"
+          },
+          {
+            "id": "o2",
+            "text": "нельзя передать list"
+          },
+          {
+            "id": "o3",
+            "text": "один объект разделяется вызовами"
+          },
+          {
+            "id": "o4",
+            "text": "ломает typing"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-python-3",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что ограничивает GIL?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "async I/O"
+          },
+          {
+            "id": "o2",
+            "text": "HTTP timeout"
+          },
+          {
+            "id": "o3",
+            "text": "память процесса"
+          },
+          {
+            "id": "o4",
+            "text": "CPU-bound параллелизм потоков"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-python-4",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой тип Python неизменяем?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "list"
+          },
+          {
+            "id": "o2",
+            "text": "set"
+          },
+          {
+            "id": "o3",
+            "text": "dict"
+          },
+          {
+            "id": "o4",
+            "text": "tuple"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-sql-1",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает ROW_NUMBER?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удаляет строки"
+          },
+          {
+            "id": "o2",
+            "text": "создаёт индекс"
+          },
+          {
+            "id": "o3",
+            "text": "нумерует строки в окне"
+          },
+          {
+            "id": "o4",
+            "text": "группирует таблицу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-sql-2",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего transaction?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "кэширование"
+          },
+          {
+            "id": "o2",
+            "text": "сжатие данных"
+          },
+          {
+            "id": "o3",
+            "text": "атомарность согласованных изменений"
+          },
+          {
+            "id": "o4",
+            "text": "форматирование SQL"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-sql-3",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что предотвращает unique constraint?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "дубликаты ключа"
+          },
+          {
+            "id": "o2",
+            "text": "NULL"
+          },
+          {
+            "id": "o3",
+            "text": "slow query"
+          },
+          {
+            "id": "o4",
+            "text": "deadlock"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-sql-4",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что фильтрует строки до агрегации?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "HAVING"
+          },
+          {
+            "id": "o2",
+            "text": "WHERE"
+          },
+          {
+            "id": "o3",
+            "text": "ORDER BY"
+          },
+          {
+            "id": "o4",
+            "text": "LIMIT"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-api-1",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Где передают bearer token?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "response body"
+          },
+          {
+            "id": "o2",
+            "text": "URL path"
+          },
+          {
+            "id": "o3",
+            "text": "cookie name"
+          },
+          {
+            "id": "o4",
+            "text": "Authorization header"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-api-2",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем HTTP timeout клиенту?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создать JWT"
+          },
+          {
+            "id": "o2",
+            "text": "ограничить зависшее ожидание"
+          },
+          {
+            "id": "o3",
+            "text": "выбрать status"
+          },
+          {
+            "id": "o4",
+            "text": "увеличить payload"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-api-3",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Что означает 204?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "ресурс создан"
+          },
+          {
+            "id": "o2",
+            "text": "redirect"
+          },
+          {
+            "id": "o3",
+            "text": "ошибка схемы"
+          },
+          {
+            "id": "o4",
+            "text": "успех без тела"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-api-4",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой статус означает Not Found?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "500"
+          },
+          {
+            "id": "o2",
+            "text": "201"
+          },
+          {
+            "id": "o3",
+            "text": "404"
+          },
+          {
+            "id": "o4",
+            "text": "302"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-pair-1",
+        "skillTags": [
+          "python",
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o2",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o3",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-pair-2",
+        "skillTags": [
+          "python",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o2",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o3",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-pair-3",
+        "skillTags": [
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o2",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o3",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o4",
+            "text": "игнорировать ошибки"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-all-1",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o3",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "отключить типы"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-all-2",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o3",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o4",
+            "text": "скрыть ошибку"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-all-3",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o2",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o3",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o4",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-B-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o4",
+            "text": "обвинить коллегу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      }
+    ],
+    "C": [
+      {
+        "id": "backend-middle-C-python-1",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему mutable default опасен?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "один объект разделяется вызовами"
+          },
+          {
+            "id": "o2",
+            "text": "нельзя передать list"
+          },
+          {
+            "id": "o3",
+            "text": "ломает typing"
+          },
+          {
+            "id": "o4",
+            "text": "он неизменяем"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-python-2",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что ограничивает GIL?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "CPU-bound параллелизм потоков"
+          },
+          {
+            "id": "o2",
+            "text": "HTTP timeout"
+          },
+          {
+            "id": "o3",
+            "text": "память процесса"
+          },
+          {
+            "id": "o4",
+            "text": "async I/O"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-python-3",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой тип Python неизменяем?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "list"
+          },
+          {
+            "id": "o2",
+            "text": "set"
+          },
+          {
+            "id": "o3",
+            "text": "tuple"
+          },
+          {
+            "id": "o4",
+            "text": "dict"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-python-4",
+        "skillTags": [
+          "python"
+        ],
+        "type": "single_choice",
+        "prompt": "Что возвращает list.pop()?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "копию списка"
+          },
+          {
+            "id": "o2",
+            "text": "ничего"
+          },
+          {
+            "id": "o3",
+            "text": "последний элемент и удаляет его"
+          },
+          {
+            "id": "o4",
+            "text": "индекс"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-sql-1",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего transaction?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "форматирование SQL"
+          },
+          {
+            "id": "o2",
+            "text": "кэширование"
+          },
+          {
+            "id": "o3",
+            "text": "атомарность согласованных изменений"
+          },
+          {
+            "id": "o4",
+            "text": "сжатие данных"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-sql-2",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что предотвращает unique constraint?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "дубликаты ключа"
+          },
+          {
+            "id": "o2",
+            "text": "slow query"
+          },
+          {
+            "id": "o3",
+            "text": "deadlock"
+          },
+          {
+            "id": "o4",
+            "text": "NULL"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-sql-3",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Что фильтрует строки до агрегации?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "WHERE"
+          },
+          {
+            "id": "o2",
+            "text": "HAVING"
+          },
+          {
+            "id": "o3",
+            "text": "LIMIT"
+          },
+          {
+            "id": "o4",
+            "text": "ORDER BY"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-sql-4",
+        "skillTags": [
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой JOIN требует совпадения с обеих сторон?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "INNER JOIN"
+          },
+          {
+            "id": "o2",
+            "text": "FULL JOIN"
+          },
+          {
+            "id": "o3",
+            "text": "CROSS JOIN"
+          },
+          {
+            "id": "o4",
+            "text": "LEFT JOIN"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-api-1",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем HTTP timeout клиенту?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "ограничить зависшее ожидание"
+          },
+          {
+            "id": "o2",
+            "text": "создать JWT"
+          },
+          {
+            "id": "o3",
+            "text": "увеличить payload"
+          },
+          {
+            "id": "o4",
+            "text": "выбрать status"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-api-2",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Что означает 204?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "ошибка схемы"
+          },
+          {
+            "id": "o2",
+            "text": "redirect"
+          },
+          {
+            "id": "o3",
+            "text": "ресурс создан"
+          },
+          {
+            "id": "o4",
+            "text": "успех без тела"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-api-3",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой статус означает Not Found?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "500"
+          },
+          {
+            "id": "o2",
+            "text": "302"
+          },
+          {
+            "id": "o3",
+            "text": "404"
+          },
+          {
+            "id": "o4",
+            "text": "201"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-api-4",
+        "skillTags": [
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего Idempotency-Key?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "зашифровать body"
+          },
+          {
+            "id": "o2",
+            "text": "безопасно повторить POST"
+          },
+          {
+            "id": "o3",
+            "text": "ускорить DNS"
+          },
+          {
+            "id": "o4",
+            "text": "заменить auth"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-pair-1",
+        "skillTags": [
+          "python",
+          "sql"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o4",
+            "text": "игнорировать ошибки"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-pair-2",
+        "skillTags": [
+          "python",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o2",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o3",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o4",
+            "text": "повторять запрос бесконечно"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-pair-3",
+        "skillTags": [
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-all-1",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o2",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o3",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-all-2",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o3",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-all-3",
+        "skillTags": [
+          "python",
+          "sql",
+          "api"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o2",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o3",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o4",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "backend-middle-C-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o2",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o3",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o4",
+            "text": "обвинить коллегу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      }
+    ]
+  },
+  "frontend-junior": {
+    "A": [
+      {
+        "id": "frontend-junior-A-javascript-1",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что возвращает Array.filter?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "исходный массив"
+          },
+          {
+            "id": "o2",
+            "text": "новый массив прошедших predicate"
+          },
+          {
+            "id": "o3",
+            "text": "первый элемент"
+          },
+          {
+            "id": "o4",
+            "text": "Promise"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-javascript-2",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему === предпочтительнее ==?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создаёт type"
+          },
+          {
+            "id": "o2",
+            "text": "нет неявного приведения"
+          },
+          {
+            "id": "o3",
+            "text": "быстрее сеть"
+          },
+          {
+            "id": "o4",
+            "text": "меняет scope"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-javascript-3",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что раньше: Promise.then или setTimeout?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "Promise.then"
+          },
+          {
+            "id": "o2",
+            "text": "setTimeout"
+          },
+          {
+            "id": "o3",
+            "text": "всегда одновременно"
+          },
+          {
+            "id": "o4",
+            "text": "зависит от CSS"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-javascript-4",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает spread для массива?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создаёт поверхностную копию"
+          },
+          {
+            "id": "o2",
+            "text": "замораживает"
+          },
+          {
+            "id": "o3",
+            "text": "удаляет null"
+          },
+          {
+            "id": "o4",
+            "text": "сортирует"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-typescript-1",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой тип отключает проверку любого значения?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "never"
+          },
+          {
+            "id": "o2",
+            "text": "void"
+          },
+          {
+            "id": "o3",
+            "text": "unknown"
+          },
+          {
+            "id": "o4",
+            "text": "any"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-typescript-2",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Как сделать поле необязательным?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "name?: string"
+          },
+          {
+            "id": "o2",
+            "text": "name!: string"
+          },
+          {
+            "id": "o3",
+            "text": "optional name"
+          },
+          {
+            "id": "o4",
+            "text": "name: optional<string>"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-typescript-3",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что даёт keyof T?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "union ключей типа"
+          },
+          {
+            "id": "o2",
+            "text": "runtime object"
+          },
+          {
+            "id": "o3",
+            "text": "число полей"
+          },
+          {
+            "id": "o4",
+            "text": "массив значений"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-typescript-4",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Чем unknown безопаснее any?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "запрещает null"
+          },
+          {
+            "id": "o2",
+            "text": "быстрее"
+          },
+          {
+            "id": "o3",
+            "text": "требует narrowing"
+          },
+          {
+            "id": "o4",
+            "text": "создаёт class"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-react-1",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой hook хранит локальный state?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "useMemo"
+          },
+          {
+            "id": "o2",
+            "text": "useState"
+          },
+          {
+            "id": "o3",
+            "text": "useContext"
+          },
+          {
+            "id": "o4",
+            "text": "useEffect"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-react-2",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем key в списке?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "кэшировать fetch"
+          },
+          {
+            "id": "o2",
+            "text": "создать DOM id"
+          },
+          {
+            "id": "o3",
+            "text": "задать CSS"
+          },
+          {
+            "id": "o4",
+            "text": "сопоставить элементы при reconciliation"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-react-3",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Когда useEffect запускается снова?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "при изменении dependencies"
+          },
+          {
+            "id": "o2",
+            "text": "при CSS change"
+          },
+          {
+            "id": "o3",
+            "text": "никогда"
+          },
+          {
+            "id": "o4",
+            "text": "только на click"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-react-4",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Что memoизирует useCallback?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "HTTP response"
+          },
+          {
+            "id": "o2",
+            "text": "state"
+          },
+          {
+            "id": "o3",
+            "text": "ссылку на функцию"
+          },
+          {
+            "id": "o4",
+            "text": "значение"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-pair-1",
+        "skillTags": [
+          "javascript",
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o2",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o3",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-pair-2",
+        "skillTags": [
+          "javascript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o2",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o3",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-pair-3",
+        "skillTags": [
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "повторять запрос бесконечно"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-all-1",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o3",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "отключить типы"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-all-2",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-all-3",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o2",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o3",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o4",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-A-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o2",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o3",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o4",
+            "text": "обвинить коллегу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      }
+    ],
+    "B": [
+      {
+        "id": "frontend-junior-B-javascript-1",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему === предпочтительнее ==?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "нет неявного приведения"
+          },
+          {
+            "id": "o2",
+            "text": "быстрее сеть"
+          },
+          {
+            "id": "o3",
+            "text": "меняет scope"
+          },
+          {
+            "id": "o4",
+            "text": "создаёт type"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-javascript-2",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что раньше: Promise.then или setTimeout?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "Promise.then"
+          },
+          {
+            "id": "o2",
+            "text": "всегда одновременно"
+          },
+          {
+            "id": "o3",
+            "text": "setTimeout"
+          },
+          {
+            "id": "o4",
+            "text": "зависит от CSS"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-javascript-3",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает spread для массива?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сортирует"
+          },
+          {
+            "id": "o2",
+            "text": "удаляет null"
+          },
+          {
+            "id": "o3",
+            "text": "замораживает"
+          },
+          {
+            "id": "o4",
+            "text": "создаёт поверхностную копию"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-javascript-4",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что такое closure?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная переменная"
+          },
+          {
+            "id": "o2",
+            "text": "доступ функции к внешнему scope"
+          },
+          {
+            "id": "o3",
+            "text": "HTTP cookie"
+          },
+          {
+            "id": "o4",
+            "text": "class"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-typescript-1",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Как сделать поле необязательным?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "name!: string"
+          },
+          {
+            "id": "o2",
+            "text": "name?: string"
+          },
+          {
+            "id": "o3",
+            "text": "name: optional<string>"
+          },
+          {
+            "id": "o4",
+            "text": "optional name"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-typescript-2",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что даёт keyof T?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "число полей"
+          },
+          {
+            "id": "o2",
+            "text": "массив значений"
+          },
+          {
+            "id": "o3",
+            "text": "union ключей типа"
+          },
+          {
+            "id": "o4",
+            "text": "runtime object"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-typescript-3",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Чем unknown безопаснее any?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "быстрее"
+          },
+          {
+            "id": "o2",
+            "text": "создаёт class"
+          },
+          {
+            "id": "o3",
+            "text": "запрещает null"
+          },
+          {
+            "id": "o4",
+            "text": "требует narrowing"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-typescript-4",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает Partial<T>?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удаляет keys"
+          },
+          {
+            "id": "o2",
+            "text": "делает readonly"
+          },
+          {
+            "id": "o3",
+            "text": "создаёт enum"
+          },
+          {
+            "id": "o4",
+            "text": "делает свойства optional"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-react-1",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем key в списке?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "задать CSS"
+          },
+          {
+            "id": "o2",
+            "text": "создать DOM id"
+          },
+          {
+            "id": "o3",
+            "text": "кэшировать fetch"
+          },
+          {
+            "id": "o4",
+            "text": "сопоставить элементы при reconciliation"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-react-2",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Когда useEffect запускается снова?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "при изменении dependencies"
+          },
+          {
+            "id": "o2",
+            "text": "только на click"
+          },
+          {
+            "id": "o3",
+            "text": "никогда"
+          },
+          {
+            "id": "o4",
+            "text": "при CSS change"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-react-3",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Что memoизирует useCallback?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "ссылку на функцию"
+          },
+          {
+            "id": "o2",
+            "text": "HTTP response"
+          },
+          {
+            "id": "o3",
+            "text": "state"
+          },
+          {
+            "id": "o4",
+            "text": "значение"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-react-4",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему index плохой key в изменяемом списке?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "index не number"
+          },
+          {
+            "id": "o2",
+            "text": "ломает TypeScript"
+          },
+          {
+            "id": "o3",
+            "text": "React не рендерит list"
+          },
+          {
+            "id": "o4",
+            "text": "state может перейти не тому item"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-pair-1",
+        "skillTags": [
+          "javascript",
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o4",
+            "text": "игнорировать ошибки"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-pair-2",
+        "skillTags": [
+          "javascript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-pair-3",
+        "skillTags": [
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-all-1",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o3",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "отключить типы"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-all-2",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-all-3",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "скрыть ошибку"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o2",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o3",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o4",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-B-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o4",
+            "text": "молчать до дедлайна"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      }
+    ],
+    "C": [
+      {
+        "id": "frontend-junior-C-javascript-1",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что раньше: Promise.then или setTimeout?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "Promise.then"
+          },
+          {
+            "id": "o2",
+            "text": "setTimeout"
+          },
+          {
+            "id": "o3",
+            "text": "зависит от CSS"
+          },
+          {
+            "id": "o4",
+            "text": "всегда одновременно"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-javascript-2",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает spread для массива?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "замораживает"
+          },
+          {
+            "id": "o2",
+            "text": "создаёт поверхностную копию"
+          },
+          {
+            "id": "o3",
+            "text": "удаляет null"
+          },
+          {
+            "id": "o4",
+            "text": "сортирует"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-javascript-3",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что такое closure?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "HTTP cookie"
+          },
+          {
+            "id": "o2",
+            "text": "глобальная переменная"
+          },
+          {
+            "id": "o3",
+            "text": "доступ функции к внешнему scope"
+          },
+          {
+            "id": "o4",
+            "text": "class"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-javascript-4",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает Promise.all при reject?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "reject всего результата"
+          },
+          {
+            "id": "o2",
+            "text": "игнорирует ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "возвращает null"
+          },
+          {
+            "id": "o4",
+            "text": "повторяет запрос"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-typescript-1",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что даёт keyof T?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "runtime object"
+          },
+          {
+            "id": "o2",
+            "text": "union ключей типа"
+          },
+          {
+            "id": "o3",
+            "text": "массив значений"
+          },
+          {
+            "id": "o4",
+            "text": "число полей"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-typescript-2",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Чем unknown безопаснее any?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "требует narrowing"
+          },
+          {
+            "id": "o2",
+            "text": "запрещает null"
+          },
+          {
+            "id": "o3",
+            "text": "создаёт class"
+          },
+          {
+            "id": "o4",
+            "text": "быстрее"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-typescript-3",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает Partial<T>?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создаёт enum"
+          },
+          {
+            "id": "o2",
+            "text": "делает свойства optional"
+          },
+          {
+            "id": "o3",
+            "text": "делает readonly"
+          },
+          {
+            "id": "o4",
+            "text": "удаляет keys"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-typescript-4",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего generics?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сохранять типы в reusable code"
+          },
+          {
+            "id": "o2",
+            "text": "заменять tests"
+          },
+          {
+            "id": "o3",
+            "text": "обфусцировать"
+          },
+          {
+            "id": "o4",
+            "text": "ускорять сеть"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-react-1",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Когда useEffect запускается снова?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "никогда"
+          },
+          {
+            "id": "o2",
+            "text": "только на click"
+          },
+          {
+            "id": "o3",
+            "text": "при CSS change"
+          },
+          {
+            "id": "o4",
+            "text": "при изменении dependencies"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-react-2",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Что memoизирует useCallback?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "state"
+          },
+          {
+            "id": "o2",
+            "text": "HTTP response"
+          },
+          {
+            "id": "o3",
+            "text": "значение"
+          },
+          {
+            "id": "o4",
+            "text": "ссылку на функцию"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-react-3",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему index плохой key в изменяемом списке?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "index не number"
+          },
+          {
+            "id": "o2",
+            "text": "React не рендерит list"
+          },
+          {
+            "id": "o3",
+            "text": "ломает TypeScript"
+          },
+          {
+            "id": "o4",
+            "text": "state может перейти не тому item"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-react-4",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Что такое controlled input?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "input без value"
+          },
+          {
+            "id": "o2",
+            "text": "browser cache"
+          },
+          {
+            "id": "o3",
+            "text": "value управляется state"
+          },
+          {
+            "id": "o4",
+            "text": "server component"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-pair-1",
+        "skillTags": [
+          "javascript",
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o2",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o3",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o4",
+            "text": "игнорировать ошибки"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-pair-2",
+        "skillTags": [
+          "javascript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o4",
+            "text": "игнорировать ошибки"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-pair-3",
+        "skillTags": [
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-all-1",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o2",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o3",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-all-2",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-all-3",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o2",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o3",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o4",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-junior-C-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o4",
+            "text": "молчать до дедлайна"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      }
+    ]
+  },
+  "frontend-middle": {
+    "A": [
+      {
+        "id": "frontend-middle-A-javascript-1",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что раньше: Promise.then или setTimeout?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "всегда одновременно"
+          },
+          {
+            "id": "o2",
+            "text": "setTimeout"
+          },
+          {
+            "id": "o3",
+            "text": "Promise.then"
+          },
+          {
+            "id": "o4",
+            "text": "зависит от CSS"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-javascript-2",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает spread для массива?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сортирует"
+          },
+          {
+            "id": "o2",
+            "text": "создаёт поверхностную копию"
+          },
+          {
+            "id": "o3",
+            "text": "замораживает"
+          },
+          {
+            "id": "o4",
+            "text": "удаляет null"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-javascript-3",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что такое closure?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "class"
+          },
+          {
+            "id": "o2",
+            "text": "HTTP cookie"
+          },
+          {
+            "id": "o3",
+            "text": "доступ функции к внешнему scope"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-javascript-4",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает Promise.all при reject?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторяет запрос"
+          },
+          {
+            "id": "o2",
+            "text": "reject всего результата"
+          },
+          {
+            "id": "o3",
+            "text": "игнорирует ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "возвращает null"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-typescript-1",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что даёт keyof T?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "union ключей типа"
+          },
+          {
+            "id": "o2",
+            "text": "число полей"
+          },
+          {
+            "id": "o3",
+            "text": "массив значений"
+          },
+          {
+            "id": "o4",
+            "text": "runtime object"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-typescript-2",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Чем unknown безопаснее any?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "запрещает null"
+          },
+          {
+            "id": "o2",
+            "text": "быстрее"
+          },
+          {
+            "id": "o3",
+            "text": "создаёт class"
+          },
+          {
+            "id": "o4",
+            "text": "требует narrowing"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-typescript-3",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает Partial<T>?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "делает свойства optional"
+          },
+          {
+            "id": "o2",
+            "text": "создаёт enum"
+          },
+          {
+            "id": "o3",
+            "text": "делает readonly"
+          },
+          {
+            "id": "o4",
+            "text": "удаляет keys"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-typescript-4",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего generics?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "заменять tests"
+          },
+          {
+            "id": "o2",
+            "text": "обфусцировать"
+          },
+          {
+            "id": "o3",
+            "text": "ускорять сеть"
+          },
+          {
+            "id": "o4",
+            "text": "сохранять типы в reusable code"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-react-1",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Когда useEffect запускается снова?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "никогда"
+          },
+          {
+            "id": "o2",
+            "text": "при изменении dependencies"
+          },
+          {
+            "id": "o3",
+            "text": "только на click"
+          },
+          {
+            "id": "o4",
+            "text": "при CSS change"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-react-2",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Что memoизирует useCallback?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "state"
+          },
+          {
+            "id": "o2",
+            "text": "ссылку на функцию"
+          },
+          {
+            "id": "o3",
+            "text": "значение"
+          },
+          {
+            "id": "o4",
+            "text": "HTTP response"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-react-3",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему index плохой key в изменяемом списке?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "React не рендерит list"
+          },
+          {
+            "id": "o2",
+            "text": "ломает TypeScript"
+          },
+          {
+            "id": "o3",
+            "text": "state может перейти не тому item"
+          },
+          {
+            "id": "o4",
+            "text": "index не number"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-react-4",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Что такое controlled input?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "value управляется state"
+          },
+          {
+            "id": "o2",
+            "text": "input без value"
+          },
+          {
+            "id": "o3",
+            "text": "browser cache"
+          },
+          {
+            "id": "o4",
+            "text": "server component"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-pair-1",
+        "skillTags": [
+          "javascript",
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-pair-2",
+        "skillTags": [
+          "javascript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "повторять запрос бесконечно"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-pair-3",
+        "skillTags": [
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o4",
+            "text": "явно валидировать контракт и данные на границе"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-all-1",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o2",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o3",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o4",
+            "text": "скрыть ошибку"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-all-2",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o3",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-all-3",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o3",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o4",
+            "text": "удалить задачу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-A-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o2",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o3",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o4",
+            "text": "обвинить коллегу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      }
+    ],
+    "B": [
+      {
+        "id": "frontend-middle-B-javascript-1",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает spread для массива?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "замораживает"
+          },
+          {
+            "id": "o2",
+            "text": "удаляет null"
+          },
+          {
+            "id": "o3",
+            "text": "создаёт поверхностную копию"
+          },
+          {
+            "id": "o4",
+            "text": "сортирует"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-javascript-2",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что такое closure?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "доступ функции к внешнему scope"
+          },
+          {
+            "id": "o2",
+            "text": "глобальная переменная"
+          },
+          {
+            "id": "o3",
+            "text": "class"
+          },
+          {
+            "id": "o4",
+            "text": "HTTP cookie"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-javascript-3",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает Promise.all при reject?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "reject всего результата"
+          },
+          {
+            "id": "o2",
+            "text": "повторяет запрос"
+          },
+          {
+            "id": "o3",
+            "text": "возвращает null"
+          },
+          {
+            "id": "o4",
+            "text": "игнорирует ошибку"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-javascript-4",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что возвращает Array.filter?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "Promise"
+          },
+          {
+            "id": "o2",
+            "text": "новый массив прошедших predicate"
+          },
+          {
+            "id": "o3",
+            "text": "исходный массив"
+          },
+          {
+            "id": "o4",
+            "text": "первый элемент"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-typescript-1",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Чем unknown безопаснее any?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "требует narrowing"
+          },
+          {
+            "id": "o2",
+            "text": "создаёт class"
+          },
+          {
+            "id": "o3",
+            "text": "быстрее"
+          },
+          {
+            "id": "o4",
+            "text": "запрещает null"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-typescript-2",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает Partial<T>?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "делает readonly"
+          },
+          {
+            "id": "o2",
+            "text": "делает свойства optional"
+          },
+          {
+            "id": "o3",
+            "text": "удаляет keys"
+          },
+          {
+            "id": "o4",
+            "text": "создаёт enum"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-typescript-3",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего generics?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "заменять tests"
+          },
+          {
+            "id": "o2",
+            "text": "обфусцировать"
+          },
+          {
+            "id": "o3",
+            "text": "ускорять сеть"
+          },
+          {
+            "id": "o4",
+            "text": "сохранять типы в reusable code"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-typescript-4",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой тип отключает проверку любого значения?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "void"
+          },
+          {
+            "id": "o2",
+            "text": "never"
+          },
+          {
+            "id": "o3",
+            "text": "any"
+          },
+          {
+            "id": "o4",
+            "text": "unknown"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-react-1",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Что memoизирует useCallback?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "state"
+          },
+          {
+            "id": "o2",
+            "text": "HTTP response"
+          },
+          {
+            "id": "o3",
+            "text": "значение"
+          },
+          {
+            "id": "o4",
+            "text": "ссылку на функцию"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-react-2",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему index плохой key в изменяемом списке?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "ломает TypeScript"
+          },
+          {
+            "id": "o2",
+            "text": "React не рендерит list"
+          },
+          {
+            "id": "o3",
+            "text": "state может перейти не тому item"
+          },
+          {
+            "id": "o4",
+            "text": "index не number"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-react-3",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Что такое controlled input?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "browser cache"
+          },
+          {
+            "id": "o2",
+            "text": "input без value"
+          },
+          {
+            "id": "o3",
+            "text": "server component"
+          },
+          {
+            "id": "o4",
+            "text": "value управляется state"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-react-4",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой hook хранит локальный state?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "useContext"
+          },
+          {
+            "id": "o2",
+            "text": "useState"
+          },
+          {
+            "id": "o3",
+            "text": "useEffect"
+          },
+          {
+            "id": "o4",
+            "text": "useMemo"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-pair-1",
+        "skillTags": [
+          "javascript",
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o3",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o4",
+            "text": "игнорировать ошибки"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-pair-2",
+        "skillTags": [
+          "javascript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o3",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-pair-3",
+        "skillTags": [
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o4",
+            "text": "повторять запрос бесконечно"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-all-1",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o4",
+            "text": "явный контракт, валидация и тесты"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-all-2",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o2",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o3",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-all-3",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o2",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "скрыть ошибку"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o4",
+            "text": "молчать до дедлайна"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-B-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o2",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o3",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o4",
+            "text": "обвинить коллегу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      }
+    ],
+    "C": [
+      {
+        "id": "frontend-middle-C-javascript-1",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что такое closure?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "доступ функции к внешнему scope"
+          },
+          {
+            "id": "o2",
+            "text": "глобальная переменная"
+          },
+          {
+            "id": "o3",
+            "text": "HTTP cookie"
+          },
+          {
+            "id": "o4",
+            "text": "class"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-javascript-2",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает Promise.all при reject?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "игнорирует ошибку"
+          },
+          {
+            "id": "o2",
+            "text": "возвращает null"
+          },
+          {
+            "id": "o3",
+            "text": "повторяет запрос"
+          },
+          {
+            "id": "o4",
+            "text": "reject всего результата"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-javascript-3",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что возвращает Array.filter?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "первый элемент"
+          },
+          {
+            "id": "o2",
+            "text": "новый массив прошедших predicate"
+          },
+          {
+            "id": "o3",
+            "text": "исходный массив"
+          },
+          {
+            "id": "o4",
+            "text": "Promise"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-javascript-4",
+        "skillTags": [
+          "javascript"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему === предпочтительнее ==?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "создаёт type"
+          },
+          {
+            "id": "o2",
+            "text": "нет неявного приведения"
+          },
+          {
+            "id": "o3",
+            "text": "быстрее сеть"
+          },
+          {
+            "id": "o4",
+            "text": "меняет scope"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-typescript-1",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Что делает Partial<T>?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удаляет keys"
+          },
+          {
+            "id": "o2",
+            "text": "создаёт enum"
+          },
+          {
+            "id": "o3",
+            "text": "делает свойства optional"
+          },
+          {
+            "id": "o4",
+            "text": "делает readonly"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-typescript-2",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Для чего generics?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "заменять tests"
+          },
+          {
+            "id": "o2",
+            "text": "сохранять типы в reusable code"
+          },
+          {
+            "id": "o3",
+            "text": "ускорять сеть"
+          },
+          {
+            "id": "o4",
+            "text": "обфусцировать"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-typescript-3",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой тип отключает проверку любого значения?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "unknown"
+          },
+          {
+            "id": "o2",
+            "text": "void"
+          },
+          {
+            "id": "o3",
+            "text": "any"
+          },
+          {
+            "id": "o4",
+            "text": "never"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-typescript-4",
+        "skillTags": [
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "Как сделать поле необязательным?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "name!: string"
+          },
+          {
+            "id": "o2",
+            "text": "name: optional<string>"
+          },
+          {
+            "id": "o3",
+            "text": "optional name"
+          },
+          {
+            "id": "o4",
+            "text": "name?: string"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-react-1",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Почему index плохой key в изменяемом списке?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "React не рендерит list"
+          },
+          {
+            "id": "o2",
+            "text": "state может перейти не тому item"
+          },
+          {
+            "id": "o3",
+            "text": "ломает TypeScript"
+          },
+          {
+            "id": "o4",
+            "text": "index не number"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-react-2",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Что такое controlled input?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "value управляется state"
+          },
+          {
+            "id": "o2",
+            "text": "server component"
+          },
+          {
+            "id": "o3",
+            "text": "browser cache"
+          },
+          {
+            "id": "o4",
+            "text": "input без value"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-react-3",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какой hook хранит локальный state?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "useEffect"
+          },
+          {
+            "id": "o2",
+            "text": "useMemo"
+          },
+          {
+            "id": "o3",
+            "text": "useContext"
+          },
+          {
+            "id": "o4",
+            "text": "useState"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-react-4",
+        "skillTags": [
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Зачем key в списке?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "задать CSS"
+          },
+          {
+            "id": "o2",
+            "text": "кэшировать fetch"
+          },
+          {
+            "id": "o3",
+            "text": "создать DOM id"
+          },
+          {
+            "id": "o4",
+            "text": "сопоставить элементы при reconciliation"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o4"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-pair-1",
+        "skillTags": [
+          "javascript",
+          "typescript"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "хранить ключи в UI"
+          },
+          {
+            "id": "o3",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o4",
+            "text": "игнорировать ошибки"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-pair-2",
+        "skillTags": [
+          "javascript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o2",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o3",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-pair-3",
+        "skillTags": [
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "повторять запрос бесконечно"
+          },
+          {
+            "id": "o2",
+            "text": "игнорировать ошибки"
+          },
+          {
+            "id": "o3",
+            "text": "явно валидировать контракт и данные на границе"
+          },
+          {
+            "id": "o4",
+            "text": "хранить ключи в UI"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-all-1",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o2",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-all-2",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o2",
+            "text": "глобальная mutable переменная"
+          },
+          {
+            "id": "o3",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o4",
+            "text": "отключить типы"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o1"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-all-3",
+        "skillTags": [
+          "javascript",
+          "typescript",
+          "react"
+        ],
+        "type": "single_choice",
+        "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "скрыть ошибку"
+          },
+          {
+            "id": "o2",
+            "text": "отключить типы"
+          },
+          {
+            "id": "o3",
+            "text": "явный контракт, валидация и тесты"
+          },
+          {
+            "id": "o4",
+            "text": "глобальная mutable переменная"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o3"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-teamwork-1",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "молчать до дедлайна"
+          },
+          {
+            "id": "o4",
+            "text": "обвинить коллегу"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      },
+      {
+        "id": "frontend-middle-C-teamwork-2",
+        "skillTags": [
+          "teamwork"
+        ],
+        "type": "single_choice",
+        "prompt": "Как корректно сообщить о блокере?",
+        "options": [
+          {
+            "id": "o1",
+            "text": "обвинить коллегу"
+          },
+          {
+            "id": "o2",
+            "text": "сразу: контекст, влияние и следующий шаг"
+          },
+          {
+            "id": "o3",
+            "text": "удалить задачу"
+          },
+          {
+            "id": "o4",
+            "text": "молчать до дедлайна"
+          }
+        ],
+        "answerKey": {
+          "optionId": "o2"
+        },
+        "maxScore": 1.0
+      }
+    ]
+  }
+}

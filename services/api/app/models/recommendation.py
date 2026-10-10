@@ -1,4 +1,6 @@
-from sqlalchemy import ForeignKey, Text
+from typing import Any
+
+from sqlalchemy import JSON, ForeignKey, Text
 from sqlalchemy.orm import Mapped, mapped_column
 
 from app.db.base import Base
@@ -10,6 +12,10 @@ class RecommendationSnapshot(CreatedAtMixin, Base):
 
     id: Mapped[int] = mapped_column(primary_key=True, autoincrement=True)
     need_id: Mapped[int] = mapped_column(ForeignKey("hiring_needs.id"), index=True)
+
+    algorithm_version: Mapped[str | None]
+    weights: Mapped[dict[str, float] | None] = mapped_column(JSON(none_as_null=True))
+    ordered_items: Mapped[list[dict[str, Any]] | None] = mapped_column(JSON(none_as_null=True))
 
 
 class RecommendationItem(Base):

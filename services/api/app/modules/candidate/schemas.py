@@ -23,6 +23,21 @@ class ConsentDTO(BaseModel):
     publication: bool = False
 
 
+class PrivacyPatch(BaseModel):
+    model_config = ConfigDict(extra="forbid")
+    showContacts: StrictBool | None = None
+
+    @model_validator(mode="after")
+    def reject_null(self):
+        if "showContacts" in self.model_fields_set and self.showContacts is None:
+            raise ValueError("showContacts must be true or false")
+        return self
+
+
+class PrivacyDTO(BaseModel):
+    showContacts: bool = False
+
+
 class CandidateProfilePatch(BaseModel):
     model_config = ConfigDict(extra="forbid")
     fullName: str | None = Field(default=None, max_length=200)
@@ -34,9 +49,12 @@ class CandidateProfilePatch(BaseModel):
     specialization: str | None = Field(default=None, max_length=200)
     selfDeclaredGrade: Grade | None = None
     consents: ConsentPatch = Field(default_factory=ConsentPatch)
+    privacy: PrivacyPatch = Field(default_factory=PrivacyPatch)
 
 
 class SelfCandidateDTO(BaseModel):
+    verifiedGrade: Grade | None = None
+    verifiedSpecialization: str | None = None
     fullName: str | None = None
     email: str
     phone: str | None = None
@@ -48,6 +66,7 @@ class SelfCandidateDTO(BaseModel):
     selfDeclaredGrade: Grade | None = None
     consents: ConsentDTO = Field(default_factory=ConsentDTO)
     eligibleForEmployerSearch: bool = False
+    privacy: PrivacyDTO = Field(default_factory=PrivacyDTO)
 
 
 def contact_free(value: str | None) -> str | None:
@@ -55,6 +74,12 @@ def contact_free(value: str | None) -> str | None:
     if value is None or "@" in value or re.search(r"(?:\+?\d[\s().-]*){7,}", value):
         return None
     return value
+
+
+class ContactsDTO(BaseModel):
+    model_config = ConfigDict(extra="forbid", frozen=True)
+    email: str
+    phone: str | None
 
 
 class HiringCandidateDTO(BaseModel):
@@ -67,6 +92,7 @@ class HiringCandidateDTO(BaseModel):
     softSkills: tuple[str, ...] = ()
     specialization: str | None = None
     selfDeclaredGrade: Grade | None = None
+    contacts: ContactsDTO | None = None
 
     @model_validator(mode="after")
     def reject_contacts(self):

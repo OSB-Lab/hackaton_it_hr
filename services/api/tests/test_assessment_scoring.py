@@ -20,7 +20,7 @@ def test_weighted_rubric_manual_calculation(pass_score, high_score, outcome, sam
     blueprint['rubric'][0].update(incorrectFraction=0.25, unansweredFraction=0.5)
     blueprint['scoring']['thresholds'].update(passScore=pass_score, highScore=high_score)
     snapshot = decode(AttemptSnapshot, json.dumps({'schemaVersion': 1, 'blueprint': blueprint,
-                      'catalog': repo.catalog().document.model_dump(mode='json')}))
+                      'catalog': repo.catalog("v1-demo").document.model_dump(mode='json')}))
     questions = snapshot.blueprint.variants[0].questions
     body = SubmitRequest(answers=[{'questionId': questions[0].id,
                                   'optionId': next(o.id for o in questions[0].options if o.id != questions[0].answerKey.optionId)},
@@ -46,7 +46,7 @@ def test_weighted_rubric_manual_calculation(pass_score, high_score, outcome, sam
     # Exact 60 using both unanswered fractions set by this fixture.
     blueprint['rubric'][0]['unansweredFraction'] = 0.6
     snapshot = decode(AttemptSnapshot, json.dumps({'schemaVersion': 1, 'blueprint': blueprint,
-                      'catalog': repo.catalog().document.model_dump(mode='json')}))
+                      'catalog': repo.catalog("v1-demo").document.model_dump(mode='json')}))
     for answer in body.answers:
         answer.optionId = None
     result = score_answers(snapshot, 'A', body)

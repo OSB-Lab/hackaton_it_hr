@@ -1,0 +1,2085 @@
+{
+  "schemaVersion": 3,
+  "id": "backend-junior",
+  "version": "v3-demo",
+  "catalogVersion": "v3-demo",
+  "status": "DEMO",
+  "provenance": "DEMO",
+  "specialization": "backend",
+  "grade": "junior",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "backend-junior-A-python-1",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой тип Python неизменяем?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "set"
+            },
+            {
+              "id": "o2",
+              "text": "tuple"
+            },
+            {
+              "id": "o3",
+              "text": "list"
+            },
+            {
+              "id": "o4",
+              "text": "dict"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "backend-junior-A-python-2",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что возвращает list.pop()?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "последний элемент и удаляет его"
+            },
+            {
+              "id": "o2",
+              "text": "индекс"
+            },
+            {
+              "id": "o3",
+              "text": "копию списка"
+            },
+            {
+              "id": "o4",
+              "text": "ничего"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "backend-junior-A-python-3",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем используют context manager?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "гарантировать cleanup ресурса"
+            },
+            {
+              "id": "o2",
+              "text": "создать поток"
+            },
+            {
+              "id": "o3",
+              "text": "сериализовать объект"
+            },
+            {
+              "id": "o4",
+              "text": "ускорить GC"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "backend-junior-A-python-4",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает generator?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "компилирует код"
+            },
+            {
+              "id": "o2",
+              "text": "выдаёт значения лениво"
+            },
+            {
+              "id": "o3",
+              "text": "всегда создаёт list"
+            },
+            {
+              "id": "o4",
+              "text": "параллелит CPU"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "backend-junior-A-sql-1",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что фильтрует строки до агрегации?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "LIMIT"
+            },
+            {
+              "id": "o2",
+              "text": "HAVING"
+            },
+            {
+              "id": "o3",
+              "text": "ORDER BY"
+            },
+            {
+              "id": "o4",
+              "text": "WHERE"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "backend-junior-A-sql-2",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой JOIN требует совпадения с обеих сторон?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "LEFT JOIN"
+            },
+            {
+              "id": "o2",
+              "text": "FULL JOIN"
+            },
+            {
+              "id": "o3",
+              "text": "INNER JOIN"
+            },
+            {
+              "id": "o4",
+              "text": "CROSS JOIN"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "backend-junior-A-sql-3",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему лишние индексы вредны?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удаляют дубликаты"
+            },
+            {
+              "id": "o2",
+              "text": "замедляют запись"
+            },
+            {
+              "id": "o3",
+              "text": "ломают SELECT"
+            },
+            {
+              "id": "o4",
+              "text": "делают таблицу readonly"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "backend-junior-A-sql-4",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает ROW_NUMBER?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удаляет строки"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт индекс"
+            },
+            {
+              "id": "o3",
+              "text": "группирует таблицу"
+            },
+            {
+              "id": "o4",
+              "text": "нумерует строки в окне"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "backend-junior-A-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой статус означает Not Found?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "302"
+            },
+            {
+              "id": "o2",
+              "text": "404"
+            },
+            {
+              "id": "o3",
+              "text": "500"
+            },
+            {
+              "id": "o4",
+              "text": "201"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "backend-junior-A-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего Idempotency-Key?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ускорить DNS"
+            },
+            {
+              "id": "o2",
+              "text": "безопасно повторить POST"
+            },
+            {
+              "id": "o3",
+              "text": "зашифровать body"
+            },
+            {
+              "id": "o4",
+              "text": "заменить auth"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "backend-junior-A-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой статус rate limit?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "503"
+            },
+            {
+              "id": "o2",
+              "text": "401"
+            },
+            {
+              "id": "o3",
+              "text": "204"
+            },
+            {
+              "id": "o4",
+              "text": "429"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "backend-junior-A-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Где передают bearer token?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "response body"
+            },
+            {
+              "id": "o2",
+              "text": "URL path"
+            },
+            {
+              "id": "o3",
+              "text": "cookie name"
+            },
+            {
+              "id": "o4",
+              "text": "Authorization header"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "backend-junior-A-pair-1",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o2",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o4",
+              "text": "явно валидировать контракт и данные на границе"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "backend-junior-A-pair-2",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o2",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o3",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o4",
+              "text": "явно валидировать контракт и данные на границе"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "backend-junior-A-pair-3",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o3",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o4",
+              "text": "явно валидировать контракт и данные на границе"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "backend-junior-A-all-1",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o2",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная mutable переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "backend-junior-A-all-2",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o2",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o4",
+              "text": "отключить типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "backend-junior-A-all-3",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o2",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o3",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o4",
+              "text": "явный контракт, валидация и тесты"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "backend-junior-A-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o2",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o3",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o4",
+              "text": "удалить задачу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "backend-junior-A-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o2",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o3",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o4",
+              "text": "удалить задачу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "backend-junior-B-python-1",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что возвращает list.pop()?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "последний элемент и удаляет его"
+            },
+            {
+              "id": "o2",
+              "text": "индекс"
+            },
+            {
+              "id": "o3",
+              "text": "копию списка"
+            },
+            {
+              "id": "o4",
+              "text": "ничего"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "backend-junior-B-python-2",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем используют context manager?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сериализовать объект"
+            },
+            {
+              "id": "o2",
+              "text": "гарантировать cleanup ресурса"
+            },
+            {
+              "id": "o3",
+              "text": "ускорить GC"
+            },
+            {
+              "id": "o4",
+              "text": "создать поток"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "backend-junior-B-python-3",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает generator?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "компилирует код"
+            },
+            {
+              "id": "o2",
+              "text": "выдаёт значения лениво"
+            },
+            {
+              "id": "o3",
+              "text": "всегда создаёт list"
+            },
+            {
+              "id": "o4",
+              "text": "параллелит CPU"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "backend-junior-B-python-4",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему mutable default опасен?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "нельзя передать list"
+            },
+            {
+              "id": "o2",
+              "text": "он неизменяем"
+            },
+            {
+              "id": "o3",
+              "text": "один объект разделяется вызовами"
+            },
+            {
+              "id": "o4",
+              "text": "ломает typing"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "backend-junior-B-sql-1",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой JOIN требует совпадения с обеих сторон?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "INNER JOIN"
+            },
+            {
+              "id": "o2",
+              "text": "FULL JOIN"
+            },
+            {
+              "id": "o3",
+              "text": "CROSS JOIN"
+            },
+            {
+              "id": "o4",
+              "text": "LEFT JOIN"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "backend-junior-B-sql-2",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему лишние индексы вредны?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "делают таблицу readonly"
+            },
+            {
+              "id": "o2",
+              "text": "удаляют дубликаты"
+            },
+            {
+              "id": "o3",
+              "text": "ломают SELECT"
+            },
+            {
+              "id": "o4",
+              "text": "замедляют запись"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "backend-junior-B-sql-3",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает ROW_NUMBER?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "нумерует строки в окне"
+            },
+            {
+              "id": "o2",
+              "text": "удаляет строки"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт индекс"
+            },
+            {
+              "id": "o4",
+              "text": "группирует таблицу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "backend-junior-B-sql-4",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего transaction?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сжатие данных"
+            },
+            {
+              "id": "o2",
+              "text": "атомарность согласованных изменений"
+            },
+            {
+              "id": "o3",
+              "text": "кэширование"
+            },
+            {
+              "id": "o4",
+              "text": "форматирование SQL"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "backend-junior-B-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего Idempotency-Key?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "безопасно повторить POST"
+            },
+            {
+              "id": "o2",
+              "text": "заменить auth"
+            },
+            {
+              "id": "o3",
+              "text": "ускорить DNS"
+            },
+            {
+              "id": "o4",
+              "text": "зашифровать body"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "backend-junior-B-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой статус rate limit?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "204"
+            },
+            {
+              "id": "o2",
+              "text": "401"
+            },
+            {
+              "id": "o3",
+              "text": "503"
+            },
+            {
+              "id": "o4",
+              "text": "429"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "backend-junior-B-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Где передают bearer token?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Authorization header"
+            },
+            {
+              "id": "o2",
+              "text": "cookie name"
+            },
+            {
+              "id": "o3",
+              "text": "URL path"
+            },
+            {
+              "id": "o4",
+              "text": "response body"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "backend-junior-B-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем HTTP timeout клиенту?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "увеличить payload"
+            },
+            {
+              "id": "o2",
+              "text": "ограничить зависшее ожидание"
+            },
+            {
+              "id": "o3",
+              "text": "создать JWT"
+            },
+            {
+              "id": "o4",
+              "text": "выбрать status"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "backend-junior-B-pair-1",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o2",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o3",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o4",
+              "text": "хранить ключи в UI"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "backend-junior-B-pair-2",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o2",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o3",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать ошибки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "backend-junior-B-pair-3",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o2",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o4",
+              "text": "повторять запрос бесконечно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "backend-junior-B-all-1",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o2",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o4",
+              "text": "отключить типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "backend-junior-B-all-2",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o2",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o4",
+              "text": "скрыть ошибку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "backend-junior-B-all-3",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o2",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная mutable переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "backend-junior-B-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o2",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o3",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o4",
+              "text": "обвинить коллегу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "backend-junior-B-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o2",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o3",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o4",
+              "text": "удалить задачу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "backend-junior-C-python-1",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем используют context manager?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ускорить GC"
+            },
+            {
+              "id": "o2",
+              "text": "создать поток"
+            },
+            {
+              "id": "o3",
+              "text": "гарантировать cleanup ресурса"
+            },
+            {
+              "id": "o4",
+              "text": "сериализовать объект"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "backend-junior-C-python-2",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает generator?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "параллелит CPU"
+            },
+            {
+              "id": "o2",
+              "text": "всегда создаёт list"
+            },
+            {
+              "id": "o3",
+              "text": "компилирует код"
+            },
+            {
+              "id": "o4",
+              "text": "выдаёт значения лениво"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "backend-junior-C-python-3",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему mutable default опасен?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "нельзя передать list"
+            },
+            {
+              "id": "o2",
+              "text": "ломает typing"
+            },
+            {
+              "id": "o3",
+              "text": "один объект разделяется вызовами"
+            },
+            {
+              "id": "o4",
+              "text": "он неизменяем"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "backend-junior-C-python-4",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что ограничивает GIL?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "CPU-bound параллелизм потоков"
+            },
+            {
+              "id": "o2",
+              "text": "async I/O"
+            },
+            {
+              "id": "o3",
+              "text": "память процесса"
+            },
+            {
+              "id": "o4",
+              "text": "HTTP timeout"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "backend-junior-C-sql-1",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему лишние индексы вредны?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "замедляют запись"
+            },
+            {
+              "id": "o2",
+              "text": "ломают SELECT"
+            },
+            {
+              "id": "o3",
+              "text": "удаляют дубликаты"
+            },
+            {
+              "id": "o4",
+              "text": "делают таблицу readonly"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "backend-junior-C-sql-2",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает ROW_NUMBER?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт индекс"
+            },
+            {
+              "id": "o2",
+              "text": "удаляет строки"
+            },
+            {
+              "id": "o3",
+              "text": "нумерует строки в окне"
+            },
+            {
+              "id": "o4",
+              "text": "группирует таблицу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "backend-junior-C-sql-3",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего transaction?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "форматирование SQL"
+            },
+            {
+              "id": "o2",
+              "text": "сжатие данных"
+            },
+            {
+              "id": "o3",
+              "text": "атомарность согласованных изменений"
+            },
+            {
+              "id": "o4",
+              "text": "кэширование"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "backend-junior-C-sql-4",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что предотвращает unique constraint?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "deadlock"
+            },
+            {
+              "id": "o2",
+              "text": "slow query"
+            },
+            {
+              "id": "o3",
+              "text": "дубликаты ключа"
+            },
+            {
+              "id": "o4",
+              "text": "NULL"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "backend-junior-C-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой статус rate limit?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "204"
+            },
+            {
+              "id": "o2",
+              "text": "503"
+            },
+            {
+              "id": "o3",
+              "text": "401"
+            },
+            {
+              "id": "o4",
+              "text": "429"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "backend-junior-C-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Где передают bearer token?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Authorization header"
+            },
+            {
+              "id": "o2",
+              "text": "response body"
+            },
+            {
+              "id": "o3",
+              "text": "URL path"
+            },
+            {
+              "id": "o4",
+              "text": "cookie name"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "backend-junior-C-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем HTTP timeout клиенту?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создать JWT"
+            },
+            {
+              "id": "o2",
+              "text": "увеличить payload"
+            },
+            {
+              "id": "o3",
+              "text": "выбрать status"
+            },
+            {
+              "id": "o4",
+              "text": "ограничить зависшее ожидание"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "backend-junior-C-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что означает 204?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ресурс создан"
+            },
+            {
+              "id": "o2",
+              "text": "redirect"
+            },
+            {
+              "id": "o3",
+              "text": "успех без тела"
+            },
+            {
+              "id": "o4",
+              "text": "ошибка схемы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "backend-junior-C-pair-1",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o2",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o4",
+              "text": "явно валидировать контракт и данные на границе"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "backend-junior-C-pair-2",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторять запрос бесконечно"
+            },
+            {
+              "id": "o2",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o4",
+              "text": "хранить ключи в UI"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "backend-junior-C-pair-3",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "В интеграционном кейсе какой подход сохраняет корректность обоих слоёв?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "явно валидировать контракт и данные на границе"
+            },
+            {
+              "id": "o2",
+              "text": "хранить ключи в UI"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o4",
+              "text": "повторять запрос бесконечно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "backend-junior-C-all-1",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o2",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o3",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная mutable переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "backend-junior-C-all-2",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o2",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт, валидация и тесты"
+            },
+            {
+              "id": "o4",
+              "text": "отключить типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "backend-junior-C-all-3",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое решение помогает безопасно связать компоненты системы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальная mutable переменная"
+            },
+            {
+              "id": "o2",
+              "text": "скрыть ошибку"
+            },
+            {
+              "id": "o3",
+              "text": "отключить типы"
+            },
+            {
+              "id": "o4",
+              "text": "явный контракт, валидация и тесты"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "backend-junior-C-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o2",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o3",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o4",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "backend-junior-C-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o2",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o3",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o4",
+              "text": "молчать до дедлайна"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    },
+    "scaleMin": 0,
+    "scaleMax": 100.0
+  }
+}

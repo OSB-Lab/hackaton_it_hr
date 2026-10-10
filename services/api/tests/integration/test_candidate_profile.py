@@ -95,7 +95,7 @@ def test_independent_consents_and_eligibility(env, processing, publication):
         "consents": {"processing": processing, "publication": publication}})
     assert response.status_code == 200
     assert response.json()["consents"] == {"processing": processing, "publication": publication}
-    assert response.json()["eligibleForEmployerSearch"] == publication
+    assert response.json()["eligibleForEmployerSearch"] is False  # No certifying attempt
     with Session(engine) as session:
         assert eligible_for_employer_search(session, ids[0]) == publication
         assert (hiring_profile(session, ids[0]) is not None) == publication

@@ -1,0 +1,30 @@
+
+backend-junior
+  novice                      4/18 fail 4/18 fail 7/18 fail
+  backend_junior              15/18 pass 14/18 pass 16/18 high
+  backend_strong_junior       17/18 high 18/18 high 18/18 high
+  backend_middle              18/18 high 18/18 high 17/18 high
+  backend_api_gap_middle      9/18 fail 10/18 fail 9/18 fail
+
+backend-middle
+  novice                      0/18 fail 3/18 fail 2/18 fail
+  backend_junior              3/18 fail 6/18 fail 3/18 fail
+  backend_strong_junior       11/18 fail 7/18 fail 7/18 fail
+  backend_middle              14/18 pass 17/18 high 16/18 high
+  backend_api_gap_middle      9/18 fail 8/18 fail 10/18 fail
+
+frontend-junior
+  novice                      11/18 fail 3/18 fail 5/18 fail
+  frontend_junior             15/18 pass 15/18 pass 16/18 high
+  frontend_strong_junior      18/18 high 17/18 high 18/18 high
+  frontend_middle             17/18 high 16/18 high 17/18 high
+  frontend_react_gap_middle   8/18 fail 10/18 fail 9/18 fail
+
+frontend-middle
+  novice                      0/18 fail 1/18 fail 1/18 fail
+  frontend_junior             5/18 fail 4/18 fail 6/18 fail
+  frontend_strong_junior      11/18 fail 12/18 fail 8/18 fail
+  frontend_middle             14/18 pass 17/18 high 15/18 pass
+  frontend_react_gap_middle   9/18 fail 6/18 fail 8/18 fail
+
+PASS

@@ -49,7 +49,7 @@ def test_start_repeat_snapshot_and_no_grade_change(assessment_env, monkeypatch, 
         assert row.score is None and row.grade is None and row.answers == []
         assert session.get(CandidateProfile, row.candidate_id).grade == initial_grade
         catalog = CatalogRepository()
-        assert row.catalog_checksum == catalog.catalog().checksum
+        assert row.catalog_checksum == catalog.catalog("v1-demo").checksum
         assert row.blueprint_checksum == catalog.blueprint("backend-junior-v1-demo").checksum
         assert row.snapshot["blueprint"]["variants"][0]["questions"][0]["answerKey"]
     # GET and retry must not touch the repository, even if files/active pointers change.
@@ -70,7 +70,7 @@ def test_start_repeat_snapshot_and_no_grade_change(assessment_env, monkeypatch, 
 def test_active_blueprint_switch_preserves_started_attempt(assessment_env, monkeypatch, tmp_path):
     client, headers, _, engine = prepare(assessment_env)
     root = tmp_path / "catalog"
-    shutil.copytree(DATA_ROOT, root)
+    shutil.copytree(service.CatalogRepository().root, root)
     monkeypatch.setattr(service, "CatalogRepository", lambda: CatalogRepository(root))
     monkeypatch.setattr(service.secrets, "choice", lambda values: "A")
     first = client.post(START, headers=headers[0], json=BODY)
@@ -207,3 +207,17 @@ def test_assessment_openapi(assessment_env):
     paths = client.get("/openapi.json").json()["paths"]
     assert {p for p in paths if p.startswith("/assessments")} == {START, "/assessments/{attempt_id}", "/assessments/{attempt_id}/submit"}
     assert set(paths[START]["post"]["responses"]) >= {"200", "201"}
+
+
+@pytest.fixture(autouse=True)
+def legacy_catalog(monkeypatch, tmp_path):
+    import json, shutil
+    from app.modules.catalog.repository import CatalogRepository, DATA_ROOT
+    root = tmp_path / 'legacy_catalog'
+    shutil.copytree(DATA_ROOT, root)
+    path = root / 'manifest.json'
+    manifest = json.loads(path.read_text())
+    manifest['activeCatalog'] = next(r['key'] for r in manifest['artifacts'] if r['kind'] == 'catalog' and r['version'] == 'v1-demo')
+    manifest['activeBlueprints'] = [r['key'] for r in manifest['artifacts'] if r['kind'] == 'blueprint' and r['version'] == 'v1-demo']
+    path.write_text(json.dumps(manifest))
+    monkeypatch.setattr(service, 'CatalogRepository', lambda: CatalogRepository(root))

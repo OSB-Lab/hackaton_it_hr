@@ -1,6 +1,6 @@
 import json
 import secrets
-from datetime import datetime, timezone
+from datetime import datetime, timezone, timedelta
 from decimal import Decimal
 
 from fastapi import HTTPException
@@ -8,6 +8,9 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from app.models import CandidateProfile, TestAttempt
+from app.core.config import get_settings
+from app.modules.assessments.qualification import apply_result, check_start
+from app.modules.assessments.scoring_v3 import score_v3
 from app.modules.assessments.schemas import AttemptDTO, AttemptSnapshot, StartRequest, ResultDTO, SubmitDTO, SubmitRequest
 from app.modules.catalog.public import public_variant
 from app.modules.catalog.repository import CatalogRepository, Loaded, decode
@@ -28,7 +31,7 @@ def attempt_dto(attempt: TestAttempt) -> AttemptDTO:
 
 
 def read_attempt(session: Session, user_id: int, attempt_id: int) -> AttemptDTO:
-    attempt = session.scalar(select(TestAttempt).join(CandidateProfile).where(
+    attempt = session.scalar(select(TestAttempt).join(CandidateProfile, TestAttempt.candidate_id == CandidateProfile.id).where(
         TestAttempt.id == attempt_id, CandidateProfile.user_id == user_id))
     if attempt is None:
         raise HTTPException(status_code=404, detail="Attempt not found")
@@ -37,6 +40,8 @@ def read_attempt(session: Session, user_id: int, attempt_id: int) -> AttemptDTO:
 
 def score_answers(snapshot: AttemptSnapshot, variant: str, request: SubmitRequest) -> ResultDTO:
     blueprint = snapshot.blueprint
+    if blueprint.schemaVersion == 3:
+        return score_v3(blueprint, variant, request)
     questions = next(v.questions for v in blueprint.variants if v.id == variant)
     answers = {a.questionId: a.optionId for a in request.answers}
     if len(answers) != len(request.answers) or set(answers) != {q.id for q in questions}:
@@ -67,7 +72,8 @@ def score_answers(snapshot: AttemptSnapshot, variant: str, request: SubmitReques
 
 def submit_attempt(session: Session, user_id: int, attempt_id: int, request: SubmitRequest) -> SubmitDTO:
     try:
-        attempt = session.scalar(select(TestAttempt).join(CandidateProfile).where(
+        profile = session.scalar(select(CandidateProfile).where(CandidateProfile.user_id == user_id).with_for_update())
+        attempt = session.scalar(select(TestAttempt).join(CandidateProfile, TestAttempt.candidate_id == CandidateProfile.id).where(
             TestAttempt.id == attempt_id, CandidateProfile.user_id == user_id
         ).with_for_update(of=TestAttempt))
         if attempt is None:
@@ -86,9 +92,10 @@ def submit_attempt(session: Session, user_id: int, attempt_id: int, request: Sub
             result = score_answers(snapshot, attempt.variant, request)
             attempt.answers = [answer.model_dump(mode="json") for answer in request.answers]
             attempt.score = result.totalScore
-            attempt.result = result.model_dump(mode="json")
             attempt.submitted_at = datetime.now(timezone.utc)
             attempt.status = "submitted"
+            apply_result(session, profile, attempt, snapshot, result)
+            attempt.result = result.model_dump(mode="json")
         if attempt.result is None or attempt.submitted_at is None:
             raise HTTPException(status_code=409, detail="Saved assessment result unavailable")
         response = SubmitDTO(id=attempt.id, status="submitted", submittedAt=attempt.submitted_at,
@@ -122,11 +129,29 @@ def start_attempt(session: Session, user_id: int, request: StartRequest) -> tupl
                        if (loaded := repository.blueprint(key)).document.specialization == request.specialization
                        and loaded.document.grade == request.grade]
             if not matches:
-                raise HTTPException(status_code=422, detail="Assessment combination unavailable")
+                raise HTTPException(status_code=422, detail="no blueprint for grade")
             blueprint = matches[0]
             catalog = repository.catalog(blueprint.document.catalogVersion)
         except (ValueError, OSError):
             raise HTTPException(status_code=503, detail="Assessment catalog unavailable") from None
+        variants = ("A", "B")
+        if blueprint.document.schemaVersion == 3:
+            now = datetime.now(timezone.utc)
+            check_start(profile, request, catalog.document, now)
+            history = list(session.scalars(select(TestAttempt).where(
+                TestAttempt.candidate_id == profile.id,
+                TestAttempt.specialization == request.specialization,
+                TestAttempt.requested_grade == request.grade,
+                TestAttempt.blueprint_version == blueprint.document.version)))
+            # A/B first; C is the reserve. Retests never reuse a recently seen form.
+            cutoff = now - timedelta(days=get_settings().ASSESSMENT_COOLDOWN_DAYS)
+            seen = {a.variant for a in history if a.created_at > cutoff}
+            variants = tuple(v.id for v in blueprint.document.variants if v.id not in seen)
+            if not history:
+                variants = ("A", "B")
+            if not variants:
+                until = min(a.created_at for a in history if a.created_at > cutoff) + timedelta(days=get_settings().ASSESSMENT_COOLDOWN_DAYS)
+                raise HTTPException(409, {"code": "assessment_pool_exhausted", "retest_available_at": until.isoformat()})
         snapshot = AttemptSnapshot(schemaVersion=1, blueprint=blueprint.document, catalog=catalog.document)
         attempt = TestAttempt(
             candidate_id=profile.id, test_id=blueprint.document.id,
@@ -134,7 +159,7 @@ def start_attempt(session: Session, user_id: int, request: StartRequest) -> tupl
             blueprint_version=blueprint.document.version, catalog_version=catalog.document.version,
             blueprint_checksum=blueprint.checksum, catalog_checksum=catalog.checksum,
             snapshot_schema_version=1, snapshot=snapshot.model_dump(mode="json"),
-            variant=secrets.choice(("A", "B")), content_status=blueprint.document.status,
+            variant=secrets.choice(variants), content_status=blueprint.document.status,
             status="active", submitted_at=None,
         )
         session.add(attempt)

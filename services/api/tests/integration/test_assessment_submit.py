@@ -113,3 +113,17 @@ def test_concurrent_submit_first_result_wins(assessment_env):
         assert row.answers in (body['answers'], other['answers'])
         assert row.result == responses[0].json()['result']
         assert row.score == (100 if row.answers == body['answers'] else 0)
+
+
+@pytest.fixture(autouse=True)
+def legacy_catalog(monkeypatch, tmp_path):
+    import json, shutil
+    from app.modules.catalog.repository import CatalogRepository, DATA_ROOT
+    root = tmp_path / 'legacy_catalog'
+    shutil.copytree(DATA_ROOT, root)
+    path = root / 'manifest.json'
+    manifest = json.loads(path.read_text())
+    manifest['activeCatalog'] = next(r['key'] for r in manifest['artifacts'] if r['kind'] == 'catalog' and r['version'] == 'v1-demo')
+    manifest['activeBlueprints'] = [r['key'] for r in manifest['artifacts'] if r['kind'] == 'blueprint' and r['version'] == 'v1-demo']
+    path.write_text(json.dumps(manifest))
+    monkeypatch.setattr(service, 'CatalogRepository', lambda: CatalogRepository(root))
