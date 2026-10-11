@@ -1,14 +1,41 @@
-Запуск (перед первым запуском скопируйте `.env.example` в `.env`):
+# ФСП | ИТ-подбор
 
-```sh
+Запуск (нужен Docker Desktop; команды выполняются из корня репозитория).
+
+1. Создайте `.env` из `.env.example`:
+
+```powershell
+Copy-Item .env.example .env
+```
+
+```bash
+cp .env.example .env
+```
+
+2. Поднимите стек (первый запуск собирает образы):
+
+```bash
 docker compose -f infra/docker-compose.yml up --build
 ```
 
-- Web: http://localhost:3001 — Next.js 14, TypeScript, Tailwind CSS; заглушка и прокси `/api/*`.
+- Web: http://localhost:3000 — Next.js 14, TypeScript, Tailwind CSS; прокси `/api/*` на сервис `api`.
 - API: http://localhost:8000 — FastAPI; `GET /health/live` возвращает `{"status":"ok"}`.
 - Swagger: http://localhost:8000/docs — документация API.
 - Mailpit UI: http://localhost:8025 — просмотр писем; SMTP на порту 1025.
 - PostgreSQL 16 — база данных на порту 5432; данные в volume `pgdata`.
+
+Что показывает продукт:
+
+- кандидат: регистрация → подтверждение email (письмо в Mailpit) → профиль и согласия → DEMO-тест → результат;
+- работодатель: компания → потребность → подборка (формальный eligibility + RankScore) → приглашение с вилкой зарплаты;
+- кандидат: входящее приглашение → принятие → контакты открываются только работодателю-источнику.
+
+Ограничение (важно для демонстрации): активный каталог помечен `DEMO`, поэтому тест выдаёт результат,
+но не подтверждает квалификацию. Из-за этого подборка на демо-данных пустая, а приглашение требует
+подтверждённой квалификации. Положительный сценарий (непустая подборка, RankScore, приглашение)
+воспроизводится только на изолированной TEST-ONLY копии каталога: см. тест
+`services/api/tests/integration/test_mvp_end_to_end.py`. Тесты для грейда senior не опубликованы —
+доступны только junior и middle.
 
 Остановка:
 
@@ -48,7 +75,7 @@ docker compose -f infra/docker-compose.yml run --rm api pytest -v
 
 Интеграционные тесты создают отдельные временные БД `fsp_test_<uuid>` и удаляют их после проверки; пользователь PostgreSQL должен иметь право `CREATEDB` (пользователь образа `postgres:16` имеет его). Тест миграций проверяет точный список таблиц и колонок, согласованность с ORM, повторный `upgrade head`, `downgrade base` и восстановление схемы. После downgrade остаётся только пустая таблица `alembic_version`.
 
-Доменные таблицы (миграции `17dada67f98e` → `0002`):
+Доменные таблицы (Alembic head — `0010`):
 
 - `users`, `consents`, `candidate_profiles`, `companies`, `hiring_needs`;
 - `test_attempts`, `competency_scores`, `fsp_links`, `fsp_achievements`;
@@ -56,7 +83,7 @@ docker compose -f infra/docker-compose.yml run --rm api pytest -v
 
 Демо-данные: 10 кандидатов (5 Backend Python и 5 Frontend React), грейды junior/middle, 2 работодателя и 4 потребности в найме. У 7 кандидатов статус ФСП `no_history`; у 3 — `linked`, всего 4 достижения. Также создаются 34 согласия и 30 оценок компетенций. Остальные доменные таблицы пока пустые. Все имена, контакты и достижения синтетические.
 
-Фикстуры находятся в `services/api/app/commands/seed/`: `catalog.json`, `candidates.json`, `employers.json`, `fsp_evidence.json`. Демо-аккаунты: `candidate1@demo.example` … `candidate10@demo.example`, `employer1@demo.example`, `employer2@demo.example`. Демонстрационный пароль и готовый bcrypt-хеш находятся в JSON-фикстурах; в БД сохраняется только хеш. Auth-модуль ещё не реализован.
+Фикстуры находятся в `services/api/app/commands/seed/`: `candidates.json`, `employers.json`, `fsp_evidence.json` (справочник читается из активного каталога `services/api/app/data/catalog`). Демо-аккаунты: `candidate1@demo.example` … `candidate10@demo.example`, `employer1@demo.example`, `employer2@demo.example`. Демонстрационные логины и пароль лежат в JSON-фикстурах (`credentials.password`); в БД сохраняется только хеш Argon2id. Вход реализован: `POST /auth/login`, профиль — `GET /auth/me`.
 
 Проверка идемпотентности:
 
@@ -80,7 +107,7 @@ Seed пропускает существующие записи: ключи — 
 - Для диагностики БД используйте `docker compose -f infra/docker-compose.yml logs postgres api` и `docker compose -f infra/docker-compose.yml ps`.
 - HTTP 503 на `/health/ready` означает, что БД недоступна, настройки подключения неверны или проверка превысила таймаут. После остановки PostgreSQL запустите его командой `docker compose -f infra/docker-compose.yml start postgres`.
 - Ошибка `permission denied to create database` в тесте требует роли с правом `CREATEDB`; тест не использует рабочую БД для downgrade.
-- Если seed сообщает `relation ... does not exist`, сначала выполните `alembic upgrade head` через сервис api. Команда `docker compose -f infra/docker-compose.yml run --rm api alembic current` должна показать `0002 (head)`.
-- Если миграция не найдена, проверьте наличие обоих файлов в `services/api/alembic/versions/`. Не исправляйте это через `stamp head`: он не создаёт таблицы. Проверка `docker compose -f infra/docker-compose.yml run --rm api alembic check` выявляет расхождения ORM и схемы.
+- Если seed сообщает `relation ... does not exist`, сначала выполните `alembic upgrade head` через сервис api. Команда `docker compose -f infra/docker-compose.yml run --rm api alembic current` должна показать `0010 (head)`.
+- Если миграция не найдена, проверьте содержимое `services/api/alembic/versions/`. Не исправляйте это через `stamp head`: он не создаёт таблицы. Проверка `docker compose -f infra/docker-compose.yml run --rm api alembic check` выявляет расхождения ORM и схемы.
 - При ошибке seed вся его транзакция откатывается. Исправьте данные фикстур или причину ошибки и повторите команду; существующие записи сохранятся.
 - Изменение `POSTGRES_USER`, `POSTGRES_PASSWORD` или `POSTGRES_DB` в `.env` не меняет уже инициализированный volume. Для демо с новыми настройками используйте `bash demo-reset.sh --purge`, учитывая удаление данных.
