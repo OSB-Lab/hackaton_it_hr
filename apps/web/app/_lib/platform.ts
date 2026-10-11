@@ -38,6 +38,9 @@ export interface Item {
   candidate: { id: number; specialization?: string | null; grade?: string | null; stack?: string[]; hasFspAchievements?: boolean };
   rank: number | null; score: number;
   components: { skillFit: number; assessmentStrength: number; fspBonus: number } | null;
+  filterFit?: number; rankingFit?: number; qualityScore?: number;
+  filterFactors?: {code:string; coefficient:number; reason:string}[];
+  taxonomyVersion?: string; filterPolicyVersion?: string;
   reasons?: string[];
 }
 export interface Snapshot { id: number; needId: number; algorithmVersion: string | null; items: Item[] }

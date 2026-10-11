@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "catalog_version": "talent-taxonomy-v1",
+  "sources": [
+    "onet31",
+    "esco121",
+    "sopranos_v3"
+  ],
+  "roles": [
+    {
+      "id": "backend",
+      "label_ru": "Backend-разработчик",
+      "aliases": [
+        "бэкенд",
+        "бекенд",
+        "backend",
+        "back-end",
+        "server-side developer"
+      ],
+      "family": "development",
+      "assessment_status": "mvp",
+      "external_refs": {
+        "onet_soc": "15-1252.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1",
+        "mapping_status": "broader_occupation_anchor"
+      },
+      "related_roles": [
+        {
+          "role_id": "fullstack",
+          "coefficient": 0.9
+        },
+        {
+          "role_id": "data_engineer",
+          "coefficient": 0.68
+        },
+        {
+          "role_id": "devops",
+          "coefficient": 0.62
+        },
+        {
+          "role_id": "security_engineer",
+          "coefficient": 0.55
+        }
+      ]
+    },
+    {
+      "id": "frontend",
+      "label_ru": "Frontend-разработчик",
+      "aliases": [
+        "фронтенд",
+        "frontend",
+        "front-end",
+        "UI developer"
+      ],
+      "family": "development",
+      "assessment_status": "mvp",
+      "external_refs": {
+        "onet_soc": "15-1254.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/866c7813-2c03-47d7-9bdc-192cfbace57c",
+        "mapping_status": "near_exact"
+      },
+      "related_roles": [
+        {
+          "role_id": "fullstack",
+          "coefficient": 0.9
+        },
+        {
+          "role_id": "mobile",
+          "coefficient": 0.67
+        }
+      ]
+    },
+    {
+      "id": "fullstack",
+      "label_ru": "Fullstack-разработчик",
+      "aliases": [
+        "fullstack",
+        "full-stack",
+        "full stack",
+        "фулстек",
+        "фуллстек"
+      ],
+      "family": "development",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-1252.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/f2b15a0e-e65a-438a-affb-29b9d50b77d1",
+        "mapping_status": "broader_occupation_anchor"
+      },
+      "related_roles": [
+        {
+          "role_id": "backend",
+          "coefficient": 0.9
+        },
+        {
+          "role_id": "frontend",
+          "coefficient": 0.9
+        },
+        {
+          "role_id": "mobile",
+          "coefficient": 0.6
+        }
+      ]
+    },
+    {
+      "id": "mobile",
+      "label_ru": "Мобильный разработчик",
+      "aliases": [
+        "mobile developer",
+        "android developer",
+        "ios developer",
+        "мобильный разработчик"
+      ],
+      "family": "development",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-1252.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/2ed56c3f-61d6-4f7e-9ef8-8849eb102e4c",
+        "mapping_status": "exact"
+      },
+      "related_roles": [
+        {
+          "role_id": "frontend",
+          "coefficient": 0.67
+        },
+        {
+          "role_id": "fullstack",
+          "coefficient": 0.6
+        }
+      ]
+    },
+    {
+      "id": "ml_engineer",
+      "label_ru": "ML-инженер",
+      "aliases": [
+        "ml engineer",
+        "machine learning engineer",
+        "ml-инженер",
+        "mlops engineer"
+      ],
+      "family": "data",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-2051.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/35553663-deab-4d9a-bf22-15c1625d28e8",
+        "mapping_status": "nearest_reference"
+      },
+      "related_roles": [
+        {
+          "role_id": "data_scientist",
+          "coefficient": 0.86
+        },
+        {
+          "role_id": "data_engineer",
+          "coefficient": 0.72
+        },
+        {
+          "role_id": "backend",
+          "coefficient": 0.58
+        }
+      ]
+    },
+    {
+      "id": "data_scientist",
+      "label_ru": "Data Scientist",
+      "aliases": [
+        "data scientist",
+        "дата-сайентист",
+        "data science specialist"
+      ],
+      "family": "data",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-2051.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/258e46f9-0075-4a2e-adae-1ff0477e0f30",
+        "mapping_status": "exact"
+      },
+      "related_roles": [
+        {
+          "role_id": "ml_engineer",
+          "coefficient": 0.86
+        },
+        {
+          "role_id": "data_engineer",
+          "coefficient": 0.72
+        }
+      ]
+    },
+    {
+      "id": "data_engineer",
+      "label_ru": "Data Engineer",
+      "aliases": [
+        "data engineer",
+        "дата-инженер",
+        "инженер данных",
+        "etl engineer"
+      ],
+      "family": "data",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-1243.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/812c217d-32b7-4f6a-9faf-993d3577ac7f",
+        "mapping_status": "nearest_reference"
+      },
+      "related_roles": [
+        {
+          "role_id": "data_scientist",
+          "coefficient": 0.72
+        },
+        {
+          "role_id": "ml_engineer",
+          "coefficient": 0.72
+        },
+        {
+          "role_id": "backend",
+          "coefficient": 0.68
+        },
+        {
+          "role_id": "devops",
+          "coefficient": 0.58
+        }
+      ]
+    },
+    {
+      "id": "qa_manual",
+      "label_ru": "Инженер ручного тестирования",
+      "aliases": [
+        "manual qa",
+        "qa engineer",
+        "software tester",
+        "тестировщик"
+      ],
+      "family": "qa",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-1253.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/106f79e4-6264-45f1-9e7a-297435cd684b",
+        "mapping_status": "exact"
+      },
+      "related_roles": [
+        {
+          "role_id": "qa_automation",
+          "coefficient": 0.84
+        },
+        {
+          "role_id": "system_analyst",
+          "coefficient": 0.58
+        }
+      ]
+    },
+    {
+      "id": "qa_automation",
+      "label_ru": "Инженер по автоматизации тестирования",
+      "aliases": [
+        "qa automation",
+        "sdet",
+        "test automation engineer",
+        "автотестировщик"
+      ],
+      "family": "qa",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-1253.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/106f79e4-6264-45f1-9e7a-297435cd684b",
+        "mapping_status": "broader_occupation_anchor"
+      },
+      "related_roles": [
+        {
+          "role_id": "qa_manual",
+          "coefficient": 0.84
+        },
+        {
+          "role_id": "backend",
+          "coefficient": 0.55
+        }
+      ]
+    },
+    {
+      "id": "devops",
+      "label_ru": "DevOps/SRE-инженер",
+      "aliases": [
+        "devops",
+        "devops engineer",
+        "sre",
+        "platform engineer"
+      ],
+      "family": "infrastructure",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-1244.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/cf2b03cd-feb7-4f47-90f6-ff1ed6016d3d",
+        "mapping_status": "nearest_reference"
+      },
+      "related_roles": [
+        {
+          "role_id": "security_engineer",
+          "coefficient": 0.72
+        },
+        {
+          "role_id": "backend",
+          "coefficient": 0.62
+        },
+        {
+          "role_id": "data_engineer",
+          "coefficient": 0.58
+        }
+      ]
+    },
+    {
+      "id": "system_analyst",
+      "label_ru": "Системный аналитик",
+      "aliases": [
+        "system analyst",
+        "системный аналитик",
+        "ict system analyst",
+        "business systems analyst"
+      ],
+      "family": "analytics",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-1211.00",
+        "esco_uri": "http://data.europa.eu/esco/occupation/a6a0b60f-08da-4faa-bf54-942987efb471",
+        "mapping_status": "exact"
+      },
+      "related_roles": [
+        {
+          "role_id": "qa_manual",
+          "coefficient": 0.58
+        },
+        {
+          "role_id": "backend",
+          "coefficient": 0.48
+        }
+      ]
+    },
+    {
+      "id": "security_engineer",
+      "label_ru": "Инженер информационной безопасности",
+      "aliases": [
+        "security engineer",
+        "appsec",
+        "инженер иб",
+        "кибербезопасность",
+        "soc analyst"
+      ],
+      "family": "security",
+      "assessment_status": "taxonomy_only",
+      "external_refs": {
+        "onet_soc": "15-1299.05",
+        "esco_uri": "http://data.europa.eu/esco/occupation/0ce5a9f4-e00a-4bbe-b255-3c63407167a4",
+        "mapping_status": "near_exact"
+      },
+      "related_roles": [
+        {
+          "role_id": "devops",
+          "coefficient": 0.72
+        },
+        {
+          "role_id": "backend",
+          "coefficient": 0.55
+        }
+      ]
+    }
+  ]
+}

@@ -114,6 +114,7 @@ def test_company_openapi(company_env):
     assert {path for path in schema["paths"] if path.startswith("/employer/")} == {
         URL, "/employer/needs", "/employer/needs/{need_id}",
         "/employer/needs/{need_id}/recommendations",
+        "/employer/needs/{need_id}/recommendations/similar",
         "/employer/needs/{need_id}/recommendations/{snapshot_id}",
         "/employer/needs/{need_id}/recommendations/{snapshot_id}/items",
         "/employer/needs/{need_id}/eligibility/{candidate_id}",

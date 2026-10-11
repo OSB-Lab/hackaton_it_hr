@@ -1,5 +1,10 @@
 # Deterministic ranking (current)
 
+Separate v4 similar-candidate lane, its taxonomy/config, eligibility boundary,
+formula, double-counting policy, API and 40-candidate validation are documented in
+[`docs/SIMILAR_TAXONOMY_V4.md`](../../../docs/SIMILAR_TAXONOMY_V4.md).
+The strict v3 endpoint below remains unchanged.
+
 POST `/employer/needs/{need_id}/recommendations` now returns 200 with a saved
 snapshot, including a valid empty cohort. Employer RBAC/ownership remain unchanged.
 Missing/foreign need is 404; incomplete legacy need (specialization/minGrade) or
