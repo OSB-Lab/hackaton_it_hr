@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "version": "v1-demo",
+  "status": "DEMO",
+  "provenance": "DEMO",
+  "id": "backend-middle",
+  "catalogVersion": "v1-demo",
+  "specialization": "backend",
+  "grade": "middle",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillId": "python",
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact-demo"
+    },
+    {
+      "id": "slot-2",
+      "skillId": "sql",
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact-demo"
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact-demo",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "scaleMin": 0,
+    "scaleMax": 100.0,
+    "thresholds": {
+      "passScore": 50.0,
+      "highScore": 100.0,
+      "passInclusive": true,
+      "highInclusive": true
+    }
+  },
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "backend-middle-a-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "DEMO: Which Python value is immutable?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "tuple"
+            },
+            {
+              "id": "o2",
+              "text": "list"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-a-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "DEMO: Which clause filters rows?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "WHERE"
+            },
+            {
+              "id": "o2",
+              "text": "ORDER BY"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "backend-middle-b-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "DEMO: Which Python type stores key/value pairs?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "set"
+            },
+            {
+              "id": "o2",
+              "text": "dict"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-b-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "DEMO: Which keyword combines query results without duplicates?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "UNION ALL"
+            },
+            {
+              "id": "o2",
+              "text": "UNION"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        }
+      ]
+    }
+  ]
+}

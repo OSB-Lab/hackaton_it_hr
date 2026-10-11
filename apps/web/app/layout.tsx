@@ -27,7 +27,23 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ru" className={jetbrainsMono.variable}>
-      <body>{children}</body>
+      <body>
+        <div
+          style={{
+            background: '#f59e0b',
+            color: '#111827',
+            padding: '8px 16px',
+            textAlign: 'center',
+            fontSize: '13px',
+            fontWeight: 600,
+            lineHeight: 1.4,
+          }}
+        >
+          Тестовые данные / демонстрационный стенд (TEST-ONLY). Синтетические аккаунты и
+          тестовый каталог — не для продакшена.
+        </div>
+        {children}
+      </body>
     </html>
   );
 }

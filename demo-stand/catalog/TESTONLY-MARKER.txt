@@ -1,0 +1,3 @@
+TEST-ONLY-DEMO-STAND
+Synthetic, TEST-ONLY approved content for the isolated demo stand.
+Never publish, merge or copy into the shipped catalog.
