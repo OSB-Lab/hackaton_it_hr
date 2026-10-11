@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { NetworkArt } from './_components/NetworkArt';
-import { Logo } from './_components/ui';
+import { Badge, Logo } from './_components/ui';
 
 // Все данные на этой странице — иллюстрация. Реальные кандидаты в рейтинге обезличены.
 
@@ -46,10 +46,13 @@ const FOR_EMPLOYER = [
 
 function Scoreboard() {
   return (
-    <div className="rounded-lg border border-ink bg-white shadow-hard">
-      <div className="flex flex-wrap items-center justify-between gap-2 rounded-t-lg bg-ink px-4 py-3 text-sm text-white">
-        <span className="font-bold">Backend · Middle</span>
-        <span className="text-white/75">128 кандидатов · пример подборки</span>
+    <div className="overflow-hidden rounded-2xl border border-ink/10 bg-canvas shadow-hard">
+      <div className="flex flex-wrap items-center justify-between gap-2 bg-ink px-5 py-4 text-sm text-white">
+        <span className="font-semibold">Backend · Middle</span>
+        <span className="flex items-center gap-2 text-xs text-white/70">
+          <Badge className="border-white/25 bg-white/10 text-white">Демо-иллюстрация</Badge>
+          <span>128 кандидатов</span>
+        </span>
       </div>
 
       <div className="overflow-x-auto">
@@ -90,7 +93,7 @@ function Scoreboard() {
         </table>
       </div>
 
-      <div className="border-t border-ink px-4 py-4 motion-safe:animate-reveal">
+      <div className="border-t border-border px-5 py-4 motion-safe:animate-reveal">
         <p className="text-xs text-ink/70">Предложение кандидату 4812</p>
         <div className="mt-1.5 flex flex-wrap items-end justify-between gap-3">
           <div>
@@ -112,56 +115,66 @@ function Scoreboard() {
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <header className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-5">
-        <Logo />
-        <nav className="hidden items-center gap-8 text-sm md:flex" aria-label="Разделы страницы">
-          <a href="#how" className="hover:text-brand">Как это устроено</a>
-          <a href="#audience" className="hover:text-brand">Кому подходит</a>
-          <a href="#fsp" className="hover:text-brand">Достижения ФСП</a>
-        </nav>
-        <div className="flex items-center gap-3 text-sm">
-          <Link href="/login" className="font-semibold hover:text-brand">
-            Войти
-          </Link>
-          <Link
-            href="/register"
-            className="rounded-md bg-ink px-4 py-2 font-semibold text-white transition hover:bg-brand"
-          >
-            Регистрация
-          </Link>
+      <header className="sticky top-0 z-20 border-b border-border bg-canvas/80 backdrop-blur">
+        <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
+          <Logo />
+          <nav className="hidden items-center gap-8 text-sm text-ink/70 md:flex" aria-label="Разделы страницы">
+            <a href="#how" className="transition hover:text-brand">Как это устроено</a>
+            <a href="#audience" className="transition hover:text-brand">Кому подходит</a>
+            <a href="#fsp" className="transition hover:text-brand">Достижения ФСП</a>
+          </nav>
+          <div className="flex items-center gap-3 text-sm">
+            <Link href="/login" className="font-semibold text-ink/80 transition hover:text-brand">
+              Войти
+            </Link>
+            <Link
+              href="/register"
+              className="rounded-lg bg-brand px-4 py-2 font-semibold text-white transition hover:bg-brand-dark"
+            >
+              Регистрация
+            </Link>
+          </div>
         </div>
       </header>
 
       <main>
-        <section className="mx-auto grid max-w-6xl grid-cols-1 gap-14 px-5 pb-20 pt-10 lg:grid-cols-[5fr_7fr] lg:items-center lg:pt-16">
+        <section className="relative mx-auto grid max-w-6xl grid-cols-1 gap-14 px-5 pb-20 pt-12 lg:grid-cols-[5fr_7fr] lg:items-center lg:pt-20">
+          {/* Фирменный мотив «линии соединяют точки» — лёгкий фон на светлой странице. */}
+          <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block">
+            <NetworkArt tone="light" className="absolute -right-20 -top-20 h-[520px] w-[520px] opacity-[0.06]" />
+          </div>
           <div>
-            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl">
-              Не откликайтесь вслепую. Вас найдут сами.
+            <Badge tone="brand" dot className="mb-5">Обратный найм для ИТ</Badge>
+            <h1 className="text-4xl font-bold leading-[1.08] tracking-tight text-ink sm:text-5xl">
+              Не откликайтесь вслепую. <span className="text-brand">Вас найдут сами.</span>
             </h1>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-ink/80">
+            <p className="mt-6 max-w-md text-base leading-relaxed text-ink/70">
               Категорию определяют тест и достижения Федерации спортивного программирования, а не
               резюме. Работодатель выбирает из рейтинга и сразу пишет, сколько готов платить.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link
                 href="/register?role=candidate"
-                className="rounded-md bg-brand px-6 py-3.5 text-center text-sm font-semibold text-white transition hover:bg-brand-dark"
+                className="rounded-lg bg-brand px-6 py-3.5 text-center text-sm font-semibold text-white shadow-sm transition hover:bg-brand-dark"
               >
                 Я ищу работу
               </Link>
               <Link
                 href="/register?role=employer"
-                className="rounded-md border border-ink px-6 py-3.5 text-center text-sm font-semibold transition hover:bg-white"
+                className="rounded-lg border border-border bg-canvas px-6 py-3.5 text-center text-sm font-semibold text-ink transition hover:border-brand hover:text-brand"
               >
                 Я работодатель
               </Link>
             </div>
+            <p className="mt-6 text-xs text-ink/70">
+              Квалификация подтверждается тестом и достижениями, а не самопрезентацией.
+            </p>
           </div>
 
           <Scoreboard />
         </section>
 
-        <section id="how" className="scroll-mt-4 border-y border-ink bg-white">
+        <section id="how" className="scroll-mt-4 border-y border-border bg-canvas">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 py-16 lg:grid-cols-[4fr_8fr]">
             <h2 className="text-2xl font-bold sm:text-3xl">Как это устроено</h2>
             <ol className="divide-y divide-muted">
@@ -182,7 +195,7 @@ export default function Home() {
         </section>
 
         <section id="audience" className="mx-auto grid max-w-6xl scroll-mt-4 grid-cols-1 gap-6 px-5 py-16 lg:grid-cols-2">
-          <div className="rounded-lg border border-muted bg-white p-8">
+          <div className="rounded-2xl border border-border bg-canvas p-8 shadow-card">
             <h2 className="text-2xl font-bold">Кандидату</h2>
             <ul className="mt-6 space-y-3 text-sm leading-relaxed">
               {FOR_CANDIDATE.map((item) => (
@@ -200,7 +213,7 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="rounded-lg bg-ink p-8 text-white">
+          <div className="rounded-2xl bg-ink p-8 text-white">
             <h2 className="text-2xl font-bold">Работодателю</h2>
             <ul className="mt-6 space-y-3 text-sm leading-relaxed">
               {FOR_EMPLOYER.map((item) => (
@@ -219,7 +232,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="fsp" className="scroll-mt-4 border-t border-ink bg-white">
+        <section id="fsp" className="scroll-mt-4 border-t border-border bg-canvas">
           <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-5 py-16 lg:grid-cols-2 lg:items-center">
             <div>
               <h2 className="text-2xl font-bold sm:text-3xl">Навыки подтверждены делом</h2>
@@ -233,7 +246,7 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="on-brand overflow-hidden rounded-lg bg-brand p-6 text-white sm:p-8">
+            <div className="on-brand overflow-hidden rounded-2xl bg-brand p-6 text-white sm:p-8">
               {/* Сеть вынесена в верхнюю полосу панели, чтобы линии не проходили по тексту. */}
               <div className="relative -mx-6 -mt-6 mb-4 h-40 sm:-mx-8 sm:-mt-8">
                 <NetworkArt className="pointer-events-none absolute inset-0 h-full w-full" />

@@ -49,9 +49,22 @@ export interface Invitation {
   salaryMin: string; salaryMax: string; currency: string; status: 'sent' | 'viewed' | 'accepted' | 'declined';
   contacts?: { email: string; phone: string | null } | null;
 }
+export interface Eligibility {
+  eligible: boolean;
+  reasonCodes: string[];
+  missingRequiredSkills: string[];
+  policyVersion: string;
+}
 export const get = <T,>(path: string) => request<T>(path, { auth: true });
 export const send = <T,>(path: string, body: unknown, method: 'POST' | 'PATCH' | 'PUT' = 'POST', errors?: Record<number, string>) =>
   request<T>(path, { auth: true, method, body, errors });
+// Формальный фильтр допуска. Скрытые причины (email/публикация/квалификация/профиль)
+// сервер закрывает за 404 — сообщение нейтральное и не раскрывает приватность.
+export const checkEligibility = (needId: number, candidateId: number) =>
+  request<Eligibility>(`/employer/needs/${needId}/eligibility/${candidateId}`, {
+    auth: true,
+    errors: { 404: 'Кандидат не виден или недоступен работодателю.', 403: 'Недостаточно прав для этой проверки.' },
+  });
 export function remember(key: string, value: string) { try { localStorage.setItem(key, value); } catch {} }
 export function recalled(key: string) { try { return localStorage.getItem(key) || ''; } catch { return ''; } }
 export async function downloadPdf() {
