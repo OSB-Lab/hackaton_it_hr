@@ -1,0 +1,2085 @@
+{
+  "schemaVersion": 3,
+  "id": "frontend-junior",
+  "version": "v3-demo-q2",
+  "catalogVersion": "v3-demo",
+  "status": "DEMO",
+  "provenance": "DEMO",
+  "specialization": "frontend",
+  "grade": "junior",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "frontend-junior-A-javascript-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "Что вернёт выражение typeof null?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "'undefined'"
+            },
+            {
+              "id": "o2",
+              "text": "'object'"
+            },
+            {
+              "id": "o3",
+              "text": "'null'"
+            },
+            {
+              "id": "o4",
+              "text": "'number'"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-A-javascript-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "Что возвращает метод [1, 2, 3].map(x => x * 2)?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Число 12"
+            },
+            {
+              "id": "o2",
+              "text": "Новый массив [2, 4, 6]"
+            },
+            {
+              "id": "o3",
+              "text": "Изменённый исходный массив"
+            },
+            {
+              "id": "o4",
+              "text": "Первый подходящий элемент"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-A-javascript-3",
+          "slotId": "slot-3",
+          "type": "single_choice",
+          "prompt": "Чем let отличается от var внутри цикла?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "let создаёт переменную для каждой итерации, var — одну на функцию"
+            },
+            {
+              "id": "o2",
+              "text": "let поднимается, var — нет"
+            },
+            {
+              "id": "o3",
+              "text": "var доступен только внутри блока, let — везде"
+            },
+            {
+              "id": "o4",
+              "text": "Разницы в поведении нет"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-A-javascript-4",
+          "slotId": "slot-4",
+          "type": "single_choice",
+          "prompt": "Что вернёт [1, 2, 3].find(x => x > 1)?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "2"
+            },
+            {
+              "id": "o2",
+              "text": "[3]"
+            },
+            {
+              "id": "o3",
+              "text": "1"
+            },
+            {
+              "id": "o4",
+              "text": "[2, 3]"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-A-typescript-1",
+          "slotId": "slot-5",
+          "type": "single_choice",
+          "prompt": "Какой тип требует явной проверки перед использованием значения?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "never"
+            },
+            {
+              "id": "o2",
+              "text": "void"
+            },
+            {
+              "id": "o3",
+              "text": "any"
+            },
+            {
+              "id": "o4",
+              "text": "unknown"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-A-typescript-2",
+          "slotId": "slot-6",
+          "type": "single_choice",
+          "prompt": "Как объявить необязательное свойство интерфейса name?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "name?: string"
+            },
+            {
+              "id": "o2",
+              "text": "name: string?"
+            },
+            {
+              "id": "o3",
+              "text": "optional name: string"
+            },
+            {
+              "id": "o4",
+              "text": "name: string | undefined = undefined"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-A-typescript-3",
+          "slotId": "slot-7",
+          "type": "single_choice",
+          "prompt": "Что делает Partial<T>?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Делает все свойства типа необязательными"
+            },
+            {
+              "id": "o2",
+              "text": "Добавляет индексную сигнатуру"
+            },
+            {
+              "id": "o3",
+              "text": "Удаляет часть свойств типа"
+            },
+            {
+              "id": "o4",
+              "text": "Делает все свойства только для чтения"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-A-typescript-4",
+          "slotId": "slot-8",
+          "type": "single_choice",
+          "prompt": "Что описывает тип 'active' | 'blocked'?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Массив из двух строк"
+            },
+            {
+              "id": "o2",
+              "text": "Любую строку"
+            },
+            {
+              "id": "o3",
+              "text": "Значение только из двух указанных строк"
+            },
+            {
+              "id": "o4",
+              "text": "Логическое выражение"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "frontend-junior-A-react-1",
+          "slotId": "slot-9",
+          "type": "single_choice",
+          "prompt": "Какой hook хранит локальное состояние компонента?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "useRef"
+            },
+            {
+              "id": "o2",
+              "text": "useState"
+            },
+            {
+              "id": "o3",
+              "text": "useContext"
+            },
+            {
+              "id": "o4",
+              "text": "useEffect"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-A-react-2",
+          "slotId": "slot-10",
+          "type": "single_choice",
+          "prompt": "Зачем элементу списка задавать key?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Чтобы включить мемоизацию компонента"
+            },
+            {
+              "id": "o2",
+              "text": "Чтобы создать DOM-идентификатор"
+            },
+            {
+              "id": "o3",
+              "text": "Чтобы задать стиль элемента"
+            },
+            {
+              "id": "o4",
+              "text": "Чтобы React сопоставлял элементы между рендерами"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-A-react-3",
+          "slotId": "slot-11",
+          "type": "single_choice",
+          "prompt": "Как правильно обновить одно поле объекта в состоянии?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Создать новый объект: setUser({ ...user, name: 'Ann' })"
+            },
+            {
+              "id": "o2",
+              "text": "Изменить поле напрямую: user.name = 'Ann'"
+            },
+            {
+              "id": "o3",
+              "text": "Мутировать состояние через ссылку в ref"
+            },
+            {
+              "id": "o4",
+              "text": "Вызвать setUser(user) без изменений"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-A-react-4",
+          "slotId": "slot-12",
+          "type": "single_choice",
+          "prompt": "Когда сработает useEffect с пустым массивом зависимостей?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "При каждом изменении props"
+            },
+            {
+              "id": "o2",
+              "text": "Только при размонтировании"
+            },
+            {
+              "id": "o3",
+              "text": "Один раз после монтирования компонента"
+            },
+            {
+              "id": "o4",
+              "text": "На каждом рендере"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "frontend-junior-A-pair-1",
+          "slotId": "slot-13",
+          "type": "single_choice",
+          "prompt": "Данные приходят из внешнего API и могут иметь любую форму. Как типизировать ответ в TypeScript?",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Как any, чтобы не мешать компилятору"
+            },
+            {
+              "id": "o2",
+              "text": "Как never и приводить значение через as"
+            },
+            {
+              "id": "o3",
+              "text": "Как object без дополнительных проверок"
+            },
+            {
+              "id": "o4",
+              "text": "Как unknown и затем сузить тип явной проверкой"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-A-pair-2",
+          "slotId": "slot-14",
+          "type": "single_choice",
+          "prompt": "useEffect читает состояние, но объявлен с пустыми зависимостями. Что произойдёт?",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "React выбросит ошибку о зависимостях"
+            },
+            {
+              "id": "o2",
+              "text": "Эффект перезапустится при каждом изменении состояния"
+            },
+            {
+              "id": "o3",
+              "text": "Эффект выполнится после каждого изменения props"
+            },
+            {
+              "id": "o4",
+              "text": "Эффект увидит значение из момента монтирования и будет использовать устаревшие данные"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-A-pair-3",
+          "slotId": "slot-15",
+          "type": "single_choice",
+          "prompt": "Как типизировать props функционального компонента с обязательным полем title?",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Объявить интерфейс с title: string и указать его типом параметра компонента"
+            },
+            {
+              "id": "o2",
+              "text": "Указать тип any для параметра и проверить значение в рантайме"
+            },
+            {
+              "id": "o3",
+              "text": "Описать props как объект со строковым индексом"
+            },
+            {
+              "id": "o4",
+              "text": "Объявить props как массив строк"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-A-all-1",
+          "slotId": "slot-16",
+          "type": "single_choice",
+          "prompt": "Компонент получает данные из API и рендерит список. Где проверять форму данных?",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Внутри каждого дочернего компонента отдельно"
+            },
+            {
+              "id": "o2",
+              "text": "На границе получения данных, до передачи их в состояние"
+            },
+            {
+              "id": "o3",
+              "text": "В обработчике клика по элементу"
+            },
+            {
+              "id": "o4",
+              "text": "В CSS-стилях списка"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-A-all-2",
+          "slotId": "slot-17",
+          "type": "single_choice",
+          "prompt": "Форма отправляет данные, сервер отвечает 422 с описанием ошибки поля. Что делать интерфейсу?",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Показать ошибку рядом с соответствующим полем и сохранить введённые значения"
+            },
+            {
+              "id": "o2",
+              "text": "Показать общее сообщение «что-то пошло не так»"
+            },
+            {
+              "id": "o3",
+              "text": "Обновить страницу целиком"
+            },
+            {
+              "id": "o4",
+              "text": "Стереть форму и попросить заполнить заново"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-A-all-3",
+          "slotId": "slot-18",
+          "type": "single_choice",
+          "prompt": "Компонент загружает данные. Как корректно отразить процесс?",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Блокировать браузер до завершения запроса"
+            },
+            {
+              "id": "o2",
+              "text": "Считать отсутствие данных ошибкой"
+            },
+            {
+              "id": "o3",
+              "text": "Отображать пустой список до получения данных"
+            },
+            {
+              "id": "o4",
+              "text": "Вести отдельные состояния загрузки и ошибки и показывать их явно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-A-teamwork-1",
+          "slotId": "slot-19",
+          "type": "single_choice",
+          "prompt": "Реализация расходится с макетом в деталях отступов. Как поступить?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Сделать по-своему и не обсуждать отличия"
+            },
+            {
+              "id": "o2",
+              "text": "Скопировать отступы из соседнего экрана"
+            },
+            {
+              "id": "o3",
+              "text": "Отложить вёрстку до полного прояснения макета"
+            },
+            {
+              "id": "o4",
+              "text": "Уточнить у дизайнера, что критично, и зафиксировать расхождение"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-A-teamwork-2",
+          "slotId": "slot-20",
+          "type": "single_choice",
+          "prompt": "Коллега предлагает другое имя поля в API. Что уместно сделать?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Обсудить варианты и зафиксировать выбор в контракте"
+            },
+            {
+              "id": "o2",
+              "text": "Поддерживать оба имени без документации"
+            },
+            {
+              "id": "o3",
+              "text": "Оставить своё имя без обсуждения"
+            },
+            {
+              "id": "o4",
+              "text": "Переименовать поле на бэкенде, не сообщая команде"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "frontend-junior-B-javascript-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "Что вернёт [1, 2, 3].filter(x => x > 5)?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Пустой массив"
+            },
+            {
+              "id": "o2",
+              "text": "undefined"
+            },
+            {
+              "id": "o3",
+              "text": "Исходный массив"
+            },
+            {
+              "id": "o4",
+              "text": "null"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-B-javascript-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "Почему NaN === NaN возвращает false и как корректно проверить NaN?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Через Number.isNaN(value)"
+            },
+            {
+              "id": "o2",
+              "text": "Через typeof value === 'nan'"
+            },
+            {
+              "id": "o3",
+              "text": "Через value == null"
+            },
+            {
+              "id": "o4",
+              "text": "Через Boolean(value)"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-B-javascript-3",
+          "slotId": "slot-3",
+          "type": "single_choice",
+          "prompt": "Чем Array.prototype.slice отличается от splice?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "slice изменяет массив, splice возвращает копию"
+            },
+            {
+              "id": "o2",
+              "text": "Оба метода только читают массив"
+            },
+            {
+              "id": "o3",
+              "text": "Оба метода изменяют исходный массив"
+            },
+            {
+              "id": "o4",
+              "text": "slice возвращает копию и не изменяет массив, splice изменяет исходный"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-B-javascript-4",
+          "slotId": "slot-4",
+          "type": "single_choice",
+          "prompt": "Что делает оператор ??",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Подставляет правый операнд при любом ложном значении"
+            },
+            {
+              "id": "o2",
+              "text": "Подставляет правый операнд только при null или undefined"
+            },
+            {
+              "id": "o3",
+              "text": "Проверяет наличие свойства в объекте"
+            },
+            {
+              "id": "o4",
+              "text": "Сравнивает значения без приведения типов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-B-typescript-1",
+          "slotId": "slot-5",
+          "type": "single_choice",
+          "prompt": "Что даёт модификатор readonly у свойства интерфейса?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Делает свойство необязательным"
+            },
+            {
+              "id": "o2",
+              "text": "Запрещает присваивание после создания объекта на уровне типов"
+            },
+            {
+              "id": "o3",
+              "text": "Замораживает объект во время выполнения"
+            },
+            {
+              "id": "o4",
+              "text": "Скрывает свойство из JSON"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-B-typescript-2",
+          "slotId": "slot-6",
+          "type": "single_choice",
+          "prompt": "Что делает оператор as const для литералов?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Отключает проверку типов в файле"
+            },
+            {
+              "id": "o2",
+              "text": "Приводит значение к строке"
+            },
+            {
+              "id": "o3",
+              "text": "Выводит максимально узкие литеральные типы и readonly-структуры"
+            },
+            {
+              "id": "o4",
+              "text": "Преобразует объект в Map"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "frontend-junior-B-typescript-3",
+          "slotId": "slot-7",
+          "type": "single_choice",
+          "prompt": "Какой тип возвращаемого значения у функции без return?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "never"
+            },
+            {
+              "id": "o2",
+              "text": "any"
+            },
+            {
+              "id": "o3",
+              "text": "undefined | null"
+            },
+            {
+              "id": "o4",
+              "text": "void"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-B-typescript-4",
+          "slotId": "slot-8",
+          "type": "single_choice",
+          "prompt": "Что произойдёт при попытке прочитать свойство у unknown-значения?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Свойство будет доступно как any"
+            },
+            {
+              "id": "o2",
+              "text": "Вернётся undefined"
+            },
+            {
+              "id": "o3",
+              "text": "Компилятор приведёт значение к object"
+            },
+            {
+              "id": "o4",
+              "text": "Ошибка компиляции до сужения типа"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-B-react-1",
+          "slotId": "slot-9",
+          "type": "single_choice",
+          "prompt": "Что такое controlled input?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Поле без атрибута value"
+            },
+            {
+              "id": "o2",
+              "text": "Поле, читаемое из кэша браузера"
+            },
+            {
+              "id": "o3",
+              "text": "Поле, доступное только для чтения"
+            },
+            {
+              "id": "o4",
+              "text": "Поле, значение которого управляется состоянием React"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-B-react-2",
+          "slotId": "slot-10",
+          "type": "single_choice",
+          "prompt": "Что произойдёт при рендере {count && <Badge />}, когда count равен 0?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "На экране появится символ 0"
+            },
+            {
+              "id": "o2",
+              "text": "Возникнет ошибка рендеринга"
+            },
+            {
+              "id": "o3",
+              "text": "Отрендерится Badge с нулевым значением"
+            },
+            {
+              "id": "o4",
+              "text": "Компонент Badge не отрендерится и ничего не появится"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-B-react-3",
+          "slotId": "slot-11",
+          "type": "single_choice",
+          "prompt": "Как вывести массив элементов в JSX?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Через items.map(item => <Row key={item.id} />)"
+            },
+            {
+              "id": "o2",
+              "text": "Через items.join('<Row/>')"
+            },
+            {
+              "id": "o3",
+              "text": "Через items.push(...) в разметке"
+            },
+            {
+              "id": "o4",
+              "text": "Через items.forEach(...) внутри JSX"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-B-react-4",
+          "slotId": "slot-12",
+          "type": "single_choice",
+          "prompt": "Что даёт useRef для DOM-узла?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Новое состояние компонента"
+            },
+            {
+              "id": "o2",
+              "text": "Автоматическое подключение к store"
+            },
+            {
+              "id": "o3",
+              "text": "Подписку на изменение DOM"
+            },
+            {
+              "id": "o4",
+              "text": "Ссылку на узел, доступную через поле current без перерисовки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-B-pair-1",
+          "slotId": "slot-13",
+          "type": "single_choice",
+          "prompt": "Как типизировать изменение пользовательского поля ввода в React-компоненте?",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Через приведение события к HTMLElement без чтения значения"
+            },
+            {
+              "id": "o2",
+              "text": "Через тип string у всего события"
+            },
+            {
+              "id": "o3",
+              "text": "Через тип события изменения ввода и чтение event.target.value"
+            },
+            {
+              "id": "o4",
+              "text": "Через any для параметра обработчика"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "frontend-junior-B-pair-2",
+          "slotId": "slot-14",
+          "type": "single_choice",
+          "prompt": "Список из сотен элементов перерисовывается слишком часто. Что проверить первым?",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Количество CSS-классов у элементов"
+            },
+            {
+              "id": "o2",
+              "text": "Стабильность ключей и отсутствие создания новых объектов при каждом рендере"
+            },
+            {
+              "id": "o3",
+              "text": "Порядок объявления компонентов в файле"
+            },
+            {
+              "id": "o4",
+              "text": "Тип данных в состоянии"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-B-pair-3",
+          "slotId": "slot-15",
+          "type": "single_choice",
+          "prompt": "Компоненту нужен необязательный prop с значением по умолчанию. Как оформить?",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Читать значение из глобальной переменной"
+            },
+            {
+              "id": "o2",
+              "text": "Объявить prop необязательным и подставить значение по умолчанию в параметрах функции"
+            },
+            {
+              "id": "o3",
+              "text": "Объявить prop обязательным и передавать значение всегда"
+            },
+            {
+              "id": "o4",
+              "text": "Использовать non-null assertion при чтении prop"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-B-all-1",
+          "slotId": "slot-16",
+          "type": "single_choice",
+          "prompt": "В разметке выводится {user.name}, но user ещё не загружен. Что произойдёт?",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "React подставит пустую строку вместо ошибки"
+            },
+            {
+              "id": "o2",
+              "text": "Возникнет ошибка при чтении свойства undefined"
+            },
+            {
+              "id": "o3",
+              "text": "Ошибка появится только на этапе сборки"
+            },
+            {
+              "id": "o4",
+              "text": "Компонент молча не отрендерится"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-B-all-2",
+          "slotId": "slot-17",
+          "type": "single_choice",
+          "prompt": "В форме есть value из состояния и локальная переменная с вводом. Почему это проблема?",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Строки нельзя хранить в состоянии"
+            },
+            {
+              "id": "o2",
+              "text": "React запрещает обработчики на изменение"
+            },
+            {
+              "id": "o3",
+              "text": "Два источника истины расходятся, и значение поля теряется"
+            },
+            {
+              "id": "o4",
+              "text": "Локальные переменные нельзя использовать в компонентах"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "frontend-junior-B-all-3",
+          "slotId": "slot-18",
+          "type": "single_choice",
+          "prompt": "Как проверить компонент, который загружает данные асинхронно?",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Проверять только начальный рендер"
+            },
+            {
+              "id": "o2",
+              "text": "Считать тест успешным, если компонент смонтировался"
+            },
+            {
+              "id": "o3",
+              "text": "Дождаться завершения состояния загрузки и только затем проверять результат"
+            },
+            {
+              "id": "o4",
+              "text": "Проверять CSS-классы контейнера"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "frontend-junior-B-teamwork-1",
+          "slotId": "slot-19",
+          "type": "single_choice",
+          "prompt": "Вы нашли баг в компоненте, который пишет другой разработчик. Как действовать?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Исправить компонент в общем pull request без обсуждения"
+            },
+            {
+              "id": "o2",
+              "text": "Подождать, пока баг найдёт кто-то ещё"
+            },
+            {
+              "id": "o3",
+              "text": "Сообщить о баге устно в общем канале без деталей"
+            },
+            {
+              "id": "o4",
+              "text": "Воспроизвести проблему и передать шаги воспроизведения автору кода"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-B-teamwork-2",
+          "slotId": "slot-20",
+          "type": "single_choice",
+          "prompt": "Завтра демонстрация, а часть экранов не готова. Что показать?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Только технические детали реализации"
+            },
+            {
+              "id": "o2",
+              "text": "Работающий основной сценарий целиком и честно назвать неготовые части"
+            },
+            {
+              "id": "o3",
+              "text": "Заранее подготовленные скриншоты вместо демонстрации"
+            },
+            {
+              "id": "o4",
+              "text": "Все экраны по отдельности, включая нерабочие"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "frontend-junior-C-javascript-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "Что делает цикл for...of для массива?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Перебирает значения элементов"
+            },
+            {
+              "id": "o2",
+              "text": "Перебирает индексы"
+            },
+            {
+              "id": "o3",
+              "text": "Изменяет массив на месте"
+            },
+            {
+              "id": "o4",
+              "text": "Перебирает ключи объекта"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-C-javascript-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "Что произойдёт при JSON.stringify(undefined)?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Вернётся строка 'null'"
+            },
+            {
+              "id": "o2",
+              "text": "Функция вернёт undefined, а не строку"
+            },
+            {
+              "id": "o3",
+              "text": "Выбросится TypeError"
+            },
+            {
+              "id": "o4",
+              "text": "Вернётся строка 'undefined'"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-C-javascript-3",
+          "slotId": "slot-3",
+          "type": "single_choice",
+          "prompt": "Что делает Array.prototype.includes(value)?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Изменяет массив, добавляя значение"
+            },
+            {
+              "id": "o2",
+              "text": "Возвращает индекс найденного значения"
+            },
+            {
+              "id": "o3",
+              "text": "Возвращает true, если значение найдено в массиве"
+            },
+            {
+              "id": "o4",
+              "text": "Возвращает найденное значение"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "frontend-junior-C-javascript-4",
+          "slotId": "slot-4",
+          "type": "single_choice",
+          "prompt": "Что вернёт 0 || 'default'?",
+          "skillTags": [
+            "javascript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "'default'"
+            },
+            {
+              "id": "o2",
+              "text": "0"
+            },
+            {
+              "id": "o3",
+              "text": "Ошибку типа"
+            },
+            {
+              "id": "o4",
+              "text": "undefined"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-C-typescript-1",
+          "slotId": "slot-5",
+          "type": "single_choice",
+          "prompt": "Как расширить интерфейс базовым набором свойств?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "interface B inherits A {}"
+            },
+            {
+              "id": "o2",
+              "text": "interface B extends A {}"
+            },
+            {
+              "id": "o3",
+              "text": "interface B implements A {}"
+            },
+            {
+              "id": "o4",
+              "text": "type B = A + {}"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-C-typescript-2",
+          "slotId": "slot-6",
+          "type": "single_choice",
+          "prompt": "Что описывает тип Record<string, number>?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Объект со строковыми ключами и числовыми значениями"
+            },
+            {
+              "id": "o2",
+              "text": "Пару ключ-значение из строки и числа"
+            },
+            {
+              "id": "o3",
+              "text": "Функцию, принимающую строку и возвращающую число"
+            },
+            {
+              "id": "o4",
+              "text": "Массив из чисел"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-C-typescript-3",
+          "slotId": "slot-7",
+          "type": "single_choice",
+          "prompt": "Зачем нужен модификатор strict в tsconfig?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Он автоматически добавляет аннотации типов"
+            },
+            {
+              "id": "o2",
+              "text": "Он включает набор строгих проверок, включая обработку null и отсутствующих типов"
+            },
+            {
+              "id": "o3",
+              "text": "Он ускоряет сборку проекта"
+            },
+            {
+              "id": "o4",
+              "text": "Он отключает проверку типов в тестах"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-C-typescript-4",
+          "slotId": "slot-8",
+          "type": "single_choice",
+          "prompt": "Что произойдёт при передаче строки в функцию, ожидающую number?",
+          "skillTags": [
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Ошибка компиляции"
+            },
+            {
+              "id": "o2",
+              "text": "Ошибка во время выполнения"
+            },
+            {
+              "id": "o3",
+              "text": "Значение будет приведено к числу"
+            },
+            {
+              "id": "o4",
+              "text": "Функция вернёт NaN"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-C-react-1",
+          "slotId": "slot-9",
+          "type": "single_choice",
+          "prompt": "Что произойдёт, если напрямую мутировать массив в состоянии?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Изменение применится, но только после перезагрузки страницы"
+            },
+            {
+              "id": "o2",
+              "text": "React выбросит исключение"
+            },
+            {
+              "id": "o3",
+              "text": "Массив будет автоматически скопирован"
+            },
+            {
+              "id": "o4",
+              "text": "React может не заметить изменение и не перерисовать компонент"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-C-react-2",
+          "slotId": "slot-10",
+          "type": "single_choice",
+          "prompt": "Как передать данные от родителя к дочернему компоненту?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Через setState дочернего компонента"
+            },
+            {
+              "id": "o2",
+              "text": "Через CSS-переменные"
+            },
+            {
+              "id": "o3",
+              "text": "Через глобальную переменную"
+            },
+            {
+              "id": "o4",
+              "text": "Через props"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-C-react-3",
+          "slotId": "slot-11",
+          "type": "single_choice",
+          "prompt": "Что содержит props.children?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Только текстовые узлы"
+            },
+            {
+              "id": "o2",
+              "text": "Список дочерних компонентов, отфильтрованный по типу"
+            },
+            {
+              "id": "o3",
+              "text": "Ссылку на DOM-родителя"
+            },
+            {
+              "id": "o4",
+              "text": "Всё, что передано между открывающим и закрывающим тегом компонента"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-C-react-4",
+          "slotId": "slot-12",
+          "type": "single_choice",
+          "prompt": "Как обновить состояние на основе предыдущего значения?",
+          "skillTags": [
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Прочитать count и вызвать setCount(count + 1) в обработчике"
+            },
+            {
+              "id": "o2",
+              "text": "Обновить состояние дважды подряд в одном обработчике"
+            },
+            {
+              "id": "o3",
+              "text": "Передать функцию обновления: setCount(prev => prev + 1)"
+            },
+            {
+              "id": "o4",
+              "text": "Изменить переменную состояния напрямую"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "frontend-junior-C-pair-1",
+          "slotId": "slot-13",
+          "type": "single_choice",
+          "prompt": "Статус загрузки может быть 'idle', 'loading' или 'error'. Как это описать в типах?",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Типом boolean"
+            },
+            {
+              "id": "o2",
+              "text": "Типом number"
+            },
+            {
+              "id": "o3",
+              "text": "Объединением литеральных типов"
+            },
+            {
+              "id": "o4",
+              "text": "Типом string"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "frontend-junior-C-pair-2",
+          "slotId": "slot-14",
+          "type": "single_choice",
+          "prompt": "Компонент запускает запрос и размонтируется до ответа. Как избежать обновления состояния после ухода?",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Сохранять результат в глобальную переменную"
+            },
+            {
+              "id": "o2",
+              "text": "Отменять запрос в функции очистки эффекта через AbortController"
+            },
+            {
+              "id": "o3",
+              "text": "Отключать StrictMode в приложении"
+            },
+            {
+              "id": "o4",
+              "text": "Игнорировать ошибку в блоке catch запроса"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "frontend-junior-C-pair-3",
+          "slotId": "slot-15",
+          "type": "single_choice",
+          "prompt": "Как типизировать props.children компонента-обёртки?",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Как массив компонентов того же типа"
+            },
+            {
+              "id": "o2",
+              "text": "Как HTMLElement"
+            },
+            {
+              "id": "o3",
+              "text": "Как string"
+            },
+            {
+              "id": "o4",
+              "text": "Как React.ReactNode"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-C-all-1",
+          "slotId": "slot-16",
+          "type": "single_choice",
+          "prompt": "Тип поля из ответа API перестал совпадать с типом на фронте. Что делать?",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Игнорировать расхождение, пока не появится баг"
+            },
+            {
+              "id": "o2",
+              "text": "Привести значение через as и оставить как есть"
+            },
+            {
+              "id": "o3",
+              "text": "Отключить строгую проверку типов в проекте"
+            },
+            {
+              "id": "o4",
+              "text": "Исправить описание контракта и добавить проверку на границе"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-C-all-2",
+          "slotId": "slot-17",
+          "type": "single_choice",
+          "prompt": "Поле отображает текст ошибки, приходящий с сервера. Что учитывать при выводе?",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Использовать его как селектор стилей"
+            },
+            {
+              "id": "o2",
+              "text": "Записывать его в атрибут href"
+            },
+            {
+              "id": "o3",
+              "text": "Вставлять через dangerouslySetInnerHTML для форматирования"
+            },
+            {
+              "id": "o4",
+              "text": "Выводить его как текст, а не как HTML"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-C-all-3",
+          "slotId": "slot-18",
+          "type": "single_choice",
+          "prompt": "Клиентская валидация прошла, но сервер вернул 400. Как трактовать ситуацию?",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Правила на клиенте и сервере разошлись; показать серверную причину"
+            },
+            {
+              "id": "o2",
+              "text": "Заменить клиентскую валидацию на серверную"
+            },
+            {
+              "id": "o3",
+              "text": "Игнорировать ответ, так как форма уже проверена"
+            },
+            {
+              "id": "o4",
+              "text": "Отправить запрос повторно без изменений"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "frontend-junior-C-teamwork-1",
+          "slotId": "slot-19",
+          "type": "single_choice",
+          "prompt": "У двух человек конфликтуют глобальные стили. Как решить?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Использовать победивший вариант и не менять остальное"
+            },
+            {
+              "id": "o2",
+              "text": "Добавить !important, чтобы гарантированно перекрыть"
+            },
+            {
+              "id": "o3",
+              "text": "Оставить оба варианта и проверить на проде"
+            },
+            {
+              "id": "o4",
+              "text": "Договориться об области действия стилей и способе их изоляции"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "frontend-junior-C-teamwork-2",
+          "slotId": "slot-20",
+          "type": "single_choice",
+          "prompt": "В макете нет состояния ошибки формы. Что сделать?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Показать alert браузера"
+            },
+            {
+              "id": "o2",
+              "text": "Согласовать состояние ошибки с дизайнером до релиза"
+            },
+            {
+              "id": "o3",
+              "text": "Не показывать ничего и оставить поле без обратной связи"
+            },
+            {
+              "id": "o4",
+              "text": "Показать технический текст ошибки без оформления"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        }
+      ]
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    },
+    "scaleMin": 0,
+    "scaleMax": 100.0
+  }
+}

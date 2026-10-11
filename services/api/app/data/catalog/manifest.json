@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "activeCatalog": "fsp-catalog-v3-demo",
   "activeBlueprints": [
-    "backend-junior-v3-demo",
-    "backend-middle-v3-demo",
-    "frontend-junior-v3-demo",
-    "frontend-middle-v3-demo"
+    "backend-junior-v3-demo-q2",
+    "backend-middle-v3-demo-q2",
+    "frontend-junior-v3-demo-q2",
+    "frontend-middle-v3-demo-q2"
   ],
   "artifacts": [
     {
@@ -87,6 +87,38 @@
       "version": "v3-demo",
       "path": "blueprints/frontend-middle/v3-demo.json",
       "sha256": "91357353eab60419a12f0d71d67c56f775d025a81e5e65af4961429bd0c3c83f"
+    },
+    {
+      "key": "backend-junior-v3-demo-q2",
+      "kind": "blueprint",
+      "id": "backend-junior",
+      "version": "v3-demo-q2",
+      "path": "blueprints/backend-junior/v3-demo-q2.json",
+      "sha256": "dcbec35a4e6186967eff3ba4a146e417f3c95110717671b120aa03f146bbf3d6"
+    },
+    {
+      "key": "backend-middle-v3-demo-q2",
+      "kind": "blueprint",
+      "id": "backend-middle",
+      "version": "v3-demo-q2",
+      "path": "blueprints/backend-middle/v3-demo-q2.json",
+      "sha256": "396dd6f72ce97073ca09491b6c08ae80313da56102c3aaefddca4edc343149ee"
+    },
+    {
+      "key": "frontend-junior-v3-demo-q2",
+      "kind": "blueprint",
+      "id": "frontend-junior",
+      "version": "v3-demo-q2",
+      "path": "blueprints/frontend-junior/v3-demo-q2.json",
+      "sha256": "150c081bb777b0fcd62f0318cc1a8996800504383d6dc8a874eb5c2bd7580cb9"
+    },
+    {
+      "key": "frontend-middle-v3-demo-q2",
+      "kind": "blueprint",
+      "id": "frontend-middle",
+      "version": "v3-demo-q2",
+      "path": "blueprints/frontend-middle/v3-demo-q2.json",
+      "sha256": "e3bd4538258aa40b76ff2dd64b6272130c04f851eeb9e78fdbedb4395bfe0499"
     }
   ]
 }

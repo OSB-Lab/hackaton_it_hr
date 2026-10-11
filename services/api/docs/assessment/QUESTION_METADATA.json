@@ -1,0 +1,3956 @@
+{
+  "schemaVersion": 1,
+  "version": "v3-demo-q2",
+  "generatedBy": "build_assessment_quality.py",
+  "note": "Metadata is intentionally kept out of the blueprint schema. Difficulty and rationale are author statements, not calibrated measurements.",
+  "items": [
+    {
+      "id": "backend-junior-A-python-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Какой из перечисленных типов Python является неизменяемым?",
+      "correct": "tuple",
+      "rationale": "tuple не поддерживает изменение элементов на месте; list, dict и set изменяемы.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-python-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Что вернёт выражение len('abc' + 'de')?",
+      "correct": "5",
+      "rationale": "Оператор + конкатенирует строки, длина результата — 5 символов.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-python-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Каков результат выражения 7 // 2?",
+      "correct": "3",
+      "rationale": "// — целочисленное деление с округлением вниз.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-python-4",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Что проверяет выражение 'cat' in 'concatenate'?",
+      "correct": "Входит ли подстрока в строку",
+      "rationale": "Для строк оператор in выполняет проверку вхождения подстроки.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-sql-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Что вернёт запрос SELECT 1 WHERE 1 = 0?",
+      "correct": "Пустой результат",
+      "rationale": "Условие ложно, поэтому в результат не попадает ни одной строки.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-sql-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Как ограничить число возвращаемых строк в PostgreSQL?",
+      "correct": "LIMIT n",
+      "rationale": "В PostgreSQL применяется LIMIT; TOP — синтаксис SQL Server.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-sql-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Что считает COUNT(*)?",
+      "correct": "Все строки выборки",
+      "rationale": "COUNT(*) считает строки; COUNT(col) пропускает NULL в этом столбце.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-sql-4",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Какой JOIN вернёт все строки левой таблицы вместе с совпадениями справа?",
+      "correct": "LEFT JOIN",
+      "rationale": "LEFT JOIN сохраняет все строки левой таблицы, подставляя NULL при отсутствии совпадения.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-api-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Какое свойство HTTP-метода означает, что повторный вызов не меняет состояние на сервере?",
+      "correct": "Идемпотентность",
+      "rationale": "Идемпотентность гарантирует одинаковый результат при повторе; именно этим объясняется роль Idempotency-Key.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-api-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Что означает статус 201?",
+      "correct": "Ресурс создан",
+      "rationale": "201 Created возвращается при успешном создании ресурса, обычно с заголовком Location.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-api-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Что означает статус 404?",
+      "correct": "Ресурс не найден",
+      "rationale": "404 Not Found означает, что по указанному пути ресурса нет.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-api-4",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Что делает заголовок Content-Type в запросе?",
+      "correct": "Описывает формат тела запроса",
+      "rationale": "Content-Type описывает тело запроса; желаемый формат ответа задаёт Accept.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-pair-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Значение из формы подставляется в SQL-запрос. Как сделать это безопасно?",
+      "correct": "Передать значение параметром запроса через placeholder",
+      "rationale": "Параметризация отделяет код от данных и исключает SQL-инъекцию; ручное экранирование и f-строки остаются уязвимы.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-pair-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Обработчик синхронно вызывает внешний API, который иногда не отвечает. Что корректно?",
+      "correct": "Задать таймаут запроса и обработать его истечение",
+      "rationale": "Таймаут ограничивает зависшее ожидание; бесконечные повторы и молчаливый пустой ответ маскируют сбой.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-pair-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Нужно отдать список записей постранично. Что корректно возвращать клиенту?",
+      "correct": "Часть строк через LIMIT/OFFSET и признак наличия следующей страницы",
+      "rationale": "Пагинация ограничивает объём ответа; полная выборка не масштабируется, а одно количество бесполезно клиенту.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-all-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Сервис принимает заявку, сохраняет её и отвечает клиенту. Что делать, если запись в БД не удалась?",
+      "correct": "Откатить транзакцию и вернуть ошибку, не подтверждая приём",
+      "rationale": "Подтверждение приёма допустимо только после успешного COMMIT, иначе клиент считает данные сохранёнными.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-all-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Эндпоинт возвращает сумму заказа, собранную в Python из позиций, полученных из БД. Где считать итог?",
+      "correct": "В SQL-агрегате по позициям этого заказа",
+      "rationale": "Агрегат считает итог без пересылки лишних строк и без расхождения с данными БД.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-all-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Клиент дважды отправил одинаковый POST из-за таймаута. Что убережёт от дублей?",
+      "correct": "Ключ идемпотентности с уникальным ограничением в БД",
+      "rationale": "Только ограничение уникальности в БД надёжно защищает от повторов; проверка в коде проигрывает гонке.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-teamwork-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Вы обнаружили блокер, который сдвигает срок задачи. Как поступить?",
+      "correct": "Сообщить контекст, влияние на срок и предложить следующий шаг",
+      "rationale": "Команда может управлять сроком только вместе с контекстом и оценкой влияния.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-A-teamwork-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "В код-ревью коллега указал на ошибку, с которой вы не согласны. Что уместно?",
+      "correct": "Ответить аргументами о поведении кода и при необходимости уточнить вопрос",
+      "rationale": "Технические разногласия решаются аргументами о поведении кода.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-python-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Как получить последний элемент непустого списка items?",
+      "correct": "items[-1]",
+      "rationale": "Индекс -1 адресует последний элемент; items[len(items)] вызовет IndexError.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-python-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Что вернёт bool([])?",
+      "correct": "False",
+      "rationale": "Пустой список ложен по правилам truthiness.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-python-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Чем list.append отличается от list.extend?",
+      "correct": "append добавляет один элемент, extend — элементы итерируемого",
+      "rationale": "append(x) добавляет x как один элемент, extend(iterable) разворачивает итерируемое.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-python-4",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Что произойдёт при выполнении int('3.5')?",
+      "correct": "Возникнет ValueError",
+      "rationale": "int() разбирает только целочисленные строки; для '3.5' нужен float().",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-sql-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Как отфильтровать строки с пустым значением в столбце email?",
+      "correct": "WHERE email IS NULL",
+      "rationale": "SQL не сравнивает NULL через =; проверка выполняется оператором IS NULL.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-sql-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Что произойдёт при INSERT строки с уже существующим значением PRIMARY KEY?",
+      "correct": "Запрос завершится ошибкой ограничения уникальности",
+      "rationale": "PRIMARY KEY подразумевает уникальность; иное поведение требует ON CONFLICT.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-sql-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Что делает ORDER BY created_at DESC?",
+      "correct": "Сортирует по убыванию даты",
+      "rationale": "DESC задаёт убывающий порядок; фильтрацией занимается WHERE.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-sql-4",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Какое значение даёт сравнение x = NULL в условии WHERE?",
+      "correct": "UNKNOWN, строка не попадает в результат",
+      "rationale": "Сравнение с NULL даёт UNKNOWN, которое в WHERE трактуется как «не проходит».",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-api-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Что означает статус 400?",
+      "correct": "Клиент прислал некорректный запрос",
+      "rationale": "400 Bad Request указывает на проблему в запросе клиента, а не на сбой сервера.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-api-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Как передать параметр фильтрации в запросе списка?",
+      "correct": "В query-строке URL: /items?status=active",
+      "rationale": "Query-параметры предназначены для фильтров, сортировки и пагинации.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-api-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Что означает статус 500?",
+      "correct": "Необработанная ошибка на сервере",
+      "rationale": "500 Internal Server Error сигнализирует о сбое на стороне сервера.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-api-4",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Зачем нужен заголовок Accept?",
+      "correct": "Указать, какой формат ответа ожидает клиент",
+      "rationale": "Accept описывает ожидаемый тип ответа, Content-Type — отправляемый.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-pair-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Скрипт читает много строк из БД. Как корректно распорядиться соединением и курсором?",
+      "correct": "Использовать контекстный менеджер и закрыть ресурсы после обработки",
+      "rationale": "Контекстный менеджер гарантирует освобождение ресурсов; открытые соединения и соединение на строку исчерпывают пул.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-pair-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Как передать словарь Python как JSON-тело при вызове внешнего API?",
+      "correct": "Передать его в параметре json библиотеки HTTP-клиента",
+      "rationale": "Параметр json сериализует данные и выставляет Content-Type; repr не является валидным JSON.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-pair-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-15",
+      "prompt": "POST создаёт запись с уже существующим уникальным кодом. Какой ответ уместен?",
+      "correct": "409 Conflict",
+      "rationale": "409 Conflict точно описывает конфликт с текущим состоянием; 500 скрывает причину от клиента.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-all-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-16",
+      "prompt": "В логах видно, что эндпоинт отвечает медленно. Какой первый шаг диагностики?",
+      "correct": "Измерить время запроса и посмотреть план выполнения SQL",
+      "rationale": "Сначала измеряют и находят узкое место; кэш и лимиты — меры после диагноза.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-all-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Что отвечает за целостность связи заказа и его позиций?",
+      "correct": "Внешний ключ и запись заказа вместе с позициями в одной транзакции",
+      "rationale": "Целостность обеспечивают ограничения БД и транзакция; проверки в коде и оголённое JSON-поле её не гарантируют.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-all-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Клиент получает 200, но данные в БД не изменились. Что проверить первым делом?",
+      "correct": "Был ли COMMIT в обработчике запроса",
+      "rationale": "Без COMMIT изменения откатываются, а ответ 200 уже сформирован.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-teamwork-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Оценка задачи выросла вдвое против первоначальной. Когда сообщить об этом?",
+      "correct": "Сразу, как только расхождение стало понятно",
+      "rationale": "Раннее сообщение даёт команде время изменить план.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-B-teamwork-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Есть два варианта схемы API с разными компромиссами. Как действовать?",
+      "correct": "Описать оба варианта с компромиссами и предложить рекомендацию",
+      "rationale": "Команда решает быстрее, когда видит варианты, компромиссы и рекомендацию.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-python-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Какая проверка значения на None корректна?",
+      "correct": "value is None",
+      "rationale": "`is None` сравнивает идентичность и не ломается на объектах с переопределённым __eq__.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-python-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Что делает dict.get('k', 0), если ключа 'k' нет?",
+      "correct": "Возвращает 0",
+      "rationale": "get возвращает значение по умолчанию и не бросает KeyError; ключ не создаётся.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-python-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Какой тип у результата выражения 4 / 2?",
+      "correct": "float",
+      "rationale": "Оператор / в Python 3 всегда возвращает float, даже при делении без остатка.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-python-4",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Зачем в f-строке использовать {value!r}?",
+      "correct": "Чтобы подставить repr(value) вместо str(value)",
+      "rationale": "Флаг !r подставляет repr — удобно при отладке строк.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-sql-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Как вставить строку, оставив столбец со значением DEFAULT?",
+      "correct": "Не указывать этот столбец в списке INSERT",
+      "rationale": "Если столбец не указан, применяется его DEFAULT; NULL — это отдельное значение.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-sql-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Что делает DISTINCT в SELECT DISTINCT role?",
+      "correct": "Убирает повторяющиеся значения role из результата",
+      "rationale": "DISTINCT устраняет дубли строк результата; подсчёт выполняет COUNT(DISTINCT ...).",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-sql-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Как вычислить сумму значений столбца amount?",
+      "correct": "SUM(amount)",
+      "rationale": "SUM складывает значения; COUNT считает строки, AVG считает среднее.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-sql-4",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Что произойдёт при выполнении UPDATE без условия WHERE?",
+      "correct": "Будут изменены все строки таблицы",
+      "rationale": "WHERE ограничивает набор строк; без него обновляется вся таблица.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-api-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Что означает статус 204?",
+      "correct": "Успех без тела ответа",
+      "rationale": "204 No Content используется, когда тело ответа не предусмотрено.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-api-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Как корректно отправить JSON-тело в POST-запросе?",
+      "correct": "Указать Content-Type: application/json и передать JSON в теле",
+      "rationale": "Формат тела объявляется в Content-Type; Accept к телу запроса не относится.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-api-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Чем 401 отличается от 403?",
+      "correct": "401 — клиент не аутентифицирован, 403 — аутентифицирован, но прав нет",
+      "rationale": "401 указывает на отсутствие валидных учётных данных, 403 — на недостаток прав при валидных данных.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-api-4",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Когда уместно возвращать 422?",
+      "correct": "Когда тело запроса синтаксически верное, но не проходит валидацию",
+      "rationale": "422 Unprocessable Entity применяется для ошибок валидации тела запроса.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-pair-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Драйвер вернул DECIMAL как Decimal, а сравнить нужно со значением из JSON. Что делать?",
+      "correct": "Привести оба значения к Decimal перед сравнением",
+      "rationale": "Decimal сохраняет точность; float и строки дают ложные расхождения.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-pair-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Внешний сервис отвечает 404 на запрос справочника. Как это трактовать?",
+      "correct": "Как неуспешный ответ и обработать его отдельно от 2xx",
+      "rationale": "Коды 4xx означают неуспех; пустые данные и падение процесса — неверные реакции.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-pair-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Эндпоинт отдаёт список из 50 заказов вместе с позициями. Как избежать N+1 запросов?",
+      "correct": "Загрузить позиции одним запросом с IN/JOIN и сгруппировать их в коде",
+      "rationale": "Один агрегирующий запрос убирает N+1; выборка всей таблицы и N клиентских вызовов лишь переносят проблему.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-all-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Число приходит в JSON строкой там, где ожидается целое. Где это исправлять?",
+      "correct": "В схеме ответа на уровне сериализации DTO",
+      "rationale": "Тип задаёт контракт ответа: приведение выполняется до сериализации.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-all-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Нужно добавить новое поле в ответ API. Что важно сохранить?",
+      "correct": "Обратную совместимость: старые клиенты продолжают работать",
+      "rationale": "Добавление поля совместимо; удаление и смена типов ломают контракт.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-all-3",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Задача: ускорить частый запрос списка с фильтром по status. Что разумно сделать сначала?",
+      "correct": "Посмотреть план выполнения и добавить индекс по полю фильтра",
+      "rationale": "Индекс по реально используемому фильтру решает задачу; индексы «на всё» замедляют запись.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-teamwork-1",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Часть требований задачи непонятна. Что лучше сделать?",
+      "correct": "Задать уточняющий вопрос до начала работы",
+      "rationale": "Уточнение до старта дешевле переделки, а скрытое непонимание превращается в пересмотр работы.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-junior-C-teamwork-2",
+      "specialization": "backend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Вы заметили инцидент в проде первым. Какое сообщение полезнее всего?",
+      "correct": "Что именно сломано, с какого времени и что уже проверено",
+      "rationale": "Команда начинает работу с симптомов и времени; гипотезы добавляются позже.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-python-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Что произойдёт с файлом, если внутри блока with open(...) возникнет исключение?",
+      "correct": "Файл будет закрыт, исключение распространится дальше",
+      "rationale": "Контекстный менеджер освобождает ресурс при любом выходе и не подавляет исключение.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-python-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Почему изменяемый аргумент по умолчанию (def f(items=[])) считается ошибкой?",
+      "correct": "Один и тот же объект переиспользуется между вызовами",
+      "rationale": "Значение по умолчанию вычисляется один раз при определении функции.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-python-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Что именно ограничивает GIL в CPython?",
+      "correct": "Одновременное выполнение байт-кода Python в нескольких потоках",
+      "rationale": "GIL сериализует исполнение байт-кода, поэтому CPU-bound задачи в потоках не ускоряются.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-python-4",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Чем asyncio выгоднее потоков для множества сетевых ожиданий?",
+      "correct": "Один поток обслуживает много ожиданий за счёт кооперативного переключения",
+      "rationale": "asyncio переключает задачи в точках await и не требует потока на каждое соединение.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-sql-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Чем HAVING отличается от WHERE в агрегирующем запросе?",
+      "correct": "HAVING фильтрует результат агрегации, WHERE — строки до неё",
+      "rationale": "WHERE применяется до группировки, HAVING — к уже посчитанным группам.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-sql-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Что делает оконная функция ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY created_at)?",
+      "correct": "Нумерует строки внутри каждого user_id по дате создания",
+      "rationale": "Оконная функция добавляет номер строки, не сворачивая набор, в отличие от GROUP BY.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-sql-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Зачем запускать EXPLAIN ANALYZE для медленного запроса?",
+      "correct": "Чтобы увидеть фактический план и время выполнения по узлам",
+      "rationale": "EXPLAIN ANALYZE даёт реальный план и время; сам он запрос не оптимизирует.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-sql-4",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Как снизить риск взаимных блокировок (deadlock) в транзакциях?",
+      "correct": "Обращаться к таблицам и строкам в одном и том же порядке во всех транзакциях",
+      "rationale": "Один и тот же порядок захвата ресурсов убирает цикл ожидания; таймаут лишь меняет способ обнаружения.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-api-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Зачем клиент передаёт Idempotency-Key при POST?",
+      "correct": "Чтобы повтор запроса не создал вторую сущность",
+      "rationale": "Ключ идемпотентности связывает повторы одного намерения с одной операцией на сервере.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-api-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Клиент отправил тело с неверным типом поля. Какой код точнее описывает ситуацию?",
+      "correct": "422",
+      "rationale": "Тело синтаксически верное, но не проходит валидацию — это 422; 409 описывает конфликт состояния.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-api-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Для каких ответов уместен автоматический повтор запроса с backoff?",
+      "correct": "Для 503 и сетевых таймаутов",
+      "rationale": "Повтор помогает при временных сбоях; клиентские ошибки валидации и авторизации повтор не исправит.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-api-4",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Что означает ответ 429 вместе с заголовком Retry-After?",
+      "correct": "Слишком много запросов; повтор допустим после указанного времени",
+      "rationale": "429 описывает лимит, а Retry-After сообщает, когда можно повторить.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-pair-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Сервис выполняет несколько связанных изменений в БД. Где границы транзакции?",
+      "correct": "Вокруг всего набора изменений, с COMMIT в конце и откатом при исключении",
+      "rationale": "Атомарность набора обеспечивает только общая транзакция; промежуточные COMMIT оставляют частичные данные.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-pair-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Внешний сервис периодически отвечает 503. Как организовать повторы?",
+      "correct": "Ограниченное число попыток с экспоненциальной задержкой и учётом идемпотентности",
+      "rationale": "Ограниченные повторы с backoff не перегружают сервис; отсутствие идемпотентности создаёт дубли.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-pair-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Нужен эндпоинт «создать или обновить» по уникальному коду. Как защититься от гонки?",
+      "correct": "Выполнить upsert с уникальным ограничением в БД",
+      "rationale": "Только ограничение уникальности и атомарный upsert устраняют гонку между проверкой и вставкой.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-all-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Обработчик отвечает 500, в логах только трассировка без контекста запроса. Что улучшить первым делом?",
+      "correct": "Добавить в лог идентификатор запроса, параметры и причину ошибки",
+      "rationale": "Контекст в логах позволяет воспроизвести сбой; стек клиенту раскрывает внутренности, а 200 скрывает ошибку.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-all-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Где размещать бизнес-валидацию входных данных?",
+      "correct": "На границе API, с дополнительными ограничениями целостности в БД",
+      "rationale": "Валидация на входе даёт быстрый ответ, а ограничения БД защищают любые пути записи.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-all-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Как сделать фоновую задачу наблюдаемой?",
+      "correct": "Публиковать метрики обработки и структурированные логи с идентификатором задачи",
+      "rationale": "Метрики и структурные логи позволяют заметить отставание и рост ошибок автоматически.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-teamwork-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Вы меняете контракт ответа API, которым пользуется другая команда. Что сделать до реализации?",
+      "correct": "Согласовать изменения с потребителем и договориться о совместимом переходе",
+      "rationale": "Согласование до реализации предотвращает поломку потребителей и лишнюю работу.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-A-teamwork-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Ваша команда первой заметила деградацию сервиса. Что уместно взять на себя?",
+      "correct": "Вести статус инцидента и обновлять его по мере выяснения причин",
+      "rationale": "Регулярные обновления статуса снижают неопределённость для всех участников инцидента.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-python-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Что делает dict.setdefault('k', []) при отсутствии ключа 'k'?",
+      "correct": "Записывает значение по умолчанию и возвращает его",
+      "rationale": "setdefault вставляет значение по умолчанию и возвращает текущее значение ключа.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-python-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Как корректно залогировать исключение с трассировкой внутри except?",
+      "correct": "Вызвать logger.exception(...) внутри блока except",
+      "rationale": "Только logger.exception сохраняет трассировку; str(exception) и info её теряют.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-python-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Что вернёт выражение {**a, **b} при совпадающих ключах?",
+      "correct": "Значения из b, так как они переопределяют значения a",
+      "rationale": "Распаковка словарей применяется слева направо, поэтому правая часть побеждает.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-python-4",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Зачем объявлять __slots__ в классе с большим числом экземпляров?",
+      "correct": "Чтобы ограничить набор атрибутов и уменьшить память на объект",
+      "rationale": "__slots__ убирает словарь атрибутов экземпляра, экономя память.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-sql-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Какое чтение допускает уровень изоляции READ COMMITTED?",
+      "correct": "Повторный запрос в той же транзакции может увидеть новые подтверждённые данные",
+      "rationale": "READ COMMITTED допускает неповторяющееся чтение, но не грязное.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-sql-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Для чего полезен составной индекс (user_id, created_at)?",
+      "correct": "Для фильтра по user_id и сортировки по created_at внутри него",
+      "rationale": "Составной индекс работает на префиксе: поиск по created_at отдельно он не ускоряет.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-sql-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Как найти пользователей с более чем одной активной подпиской?",
+      "correct": "Сгруппировать по user_id и отфильтровать группы через HAVING COUNT(*) > 1",
+      "rationale": "Именно GROUP BY с HAVING считает количество строк в группе.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-sql-4",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Что вернёт COALESCE(NULLIF(flag, ''), 'unset') для flag = ''?",
+      "correct": "'unset'",
+      "rationale": "NULLIF превращает пустую строку в NULL, затем COALESCE подставляет значение по умолчанию.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-api-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Как организовать условную проверку кэша у клиента?",
+      "correct": "Отправлять If-None-Match с полученным ранее ETag",
+      "rationale": "ETag и If-None-Match позволяют серверу ответить 304 и не передавать тело повторно.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-api-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-10",
+      "prompt": "В чём основное преимущество курсорной пагинации над offset-пагинацией?",
+      "correct": "Она не пропускает и не дублирует строки при вставках во время листания",
+      "rationale": "Курсор опирается на позицию в упорядоченном наборе, поэтому сдвиги данных не ломают страницы.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-api-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Зачем версионировать публичный HTTP API?",
+      "correct": "Чтобы менять контракт, не ломая существующих клиентов",
+      "rationale": "Версия фиксирует контракт и позволяет развивать API с сохранением совместимости.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-api-4",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Чем таймаут соединения отличается от таймаута чтения?",
+      "correct": "Первый ограничивает установку соединения, второй — ожидание данных",
+      "rationale": "Разделение таймаутов позволяет различать недоступность хоста и медленный ответ.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-pair-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Перед записью в БД сервис вызывает внешний HTTP API. Как избежать долгого удержания транзакции?",
+      "correct": "Выполнить внешний вызов до открытия транзакции или вне её",
+      "rationale": "Долгие внешние вызовы внутри транзакции удерживают блокировки и соединения из пула.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-pair-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Внешний API вернул 200, но структура тела не соответствует ожидаемой схеме. Что делать?",
+      "correct": "Отклонить ответ как ошибку контракта и обработать её явно",
+      "rationale": "Ответ, не соответствующий схеме, — ошибка интеграции; молчаливое продолжение скрывает нарушение контракта.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-pair-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Клиент листает список и видит разное общее число на соседних страницах. Что исправить?",
+      "correct": "Считать элементы и страницу в одном согласованном снимке данных",
+      "rationale": "Согласованный снимок данных делает количество и содержимое страницы непротиворечивыми.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-all-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Как корректно тестировать код, работающий с реальными SQL-запросами?",
+      "correct": "Поднимать изолированную тестовую БД, применять миграции и выполнять настоящие запросы",
+      "rationale": "Реальные запросы на изолированной БД ловят ошибки диалекта, схемы и планов, которые моки скрывают.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-all-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Как избежать частичных состояний, когда локальная запись прошла, а вызов внешней системы — нет?",
+      "correct": "Записать намерение в транзакции и выполнить внешний вызов асинхронно по outbox-шаблону",
+      "rationale": "Outbox фиксирует намерение вместе с данными и делает повтор доставки безопасным.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-all-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Когда синхронный вызов предпочтительнее очереди?",
+      "correct": "Когда клиенту нужен ответ по этому же запросу и задержка допустима",
+      "rationale": "Очередь выигрывает при длительной обработке и сглаживании пиков; синхронный вызов — когда ответ нужен сейчас.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-teamwork-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Коллега прислал pull request на 1200 строк. Как провести полезное ревью?",
+      "correct": "Попросить разбить изменения по смыслу и проверять по частям с описанием ожидаемого поведения",
+      "rationale": "Малые связные изменения проверяются качественно; ревью по объёму формально не находит дефектов.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-B-teamwork-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Внутренний инструмент требует доработки, и мнения о приоритете расходятся. Как решать?",
+      "correct": "Сравнить затраты и влияние на команду и зафиксировать критерий приоритизации",
+      "rationale": "Явные критерии приоритизации делают решение воспроизводимым и понятным команде.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-python-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-1",
+      "prompt": "В чём преимущество генератора над построением списка при обработке большого файла?",
+      "correct": "Значения вычисляются лениво и не занимают память под весь набор",
+      "rationale": "Ленивые вычисления снижают потребление памяти; скорость чтения от этого не меняется.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-python-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Что выведет набор лямбд, созданных в цикле for i in range(3): f = lambda: i?",
+      "correct": "Все лямбды вернут последнее значение i",
+      "rationale": "Замыкание захватывает переменную, а не значение; значение фиксируют через аргумент по умолчанию.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-python-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Что делает сравнение двух словарей через ==?",
+      "correct": "Сравнивает наборы пар ключ-значение независимо от порядка вставки",
+      "rationale": "dict.__eq__ сравнивает содержимое, порядок ключей не важен.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-python-4",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "python"
+      ],
+      "slotId": "slot-4",
+      "prompt": "В конструкции try/except/else/finally когда выполняется блок else?",
+      "correct": "Если в try не возникло исключения",
+      "rationale": "else выполняется при успешном завершении try и до finally.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-sql-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Что делает ON CONFLICT (code) DO UPDATE SET name = EXCLUDED.name?",
+      "correct": "Обновляет существующую строку значениями из вставляемой",
+      "rationale": "EXCLUDED содержит значения предлагаемой вставки — это upsert.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-sql-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Почему SELECT * нежелателен в коде приложения?",
+      "correct": "Он тянет лишние столбцы и ломается при изменении схемы",
+      "rationale": "Явный список столбцов стабилизирует контракт и снижает объём передаваемых данных.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-sql-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Как одним запросом найти заказы без позиций?",
+      "correct": "LEFT JOIN позиций и фильтр WHERE positions.id IS NULL",
+      "rationale": "LEFT JOIN сохраняет заказы без совпадений, и NULL по правой таблице их выявляет.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-sql-4",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "sql"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Зачем создавать индекс по выражению, например lower(email)?",
+      "correct": "Чтобы поиск по lower(email) использовал индекс, а не последовательное сканирование",
+      "rationale": "Индекс по выражению ускоряет сравнение по этому выражению, но не меняет данные.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-api-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Какой код уместен, если запрошенная сущность существует, но недоступна текущему пользователю?",
+      "correct": "404, чтобы не раскрывать существование объекта",
+      "rationale": "Скрытие существования объекта предотвращает утечку данных через коды ответа.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-api-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Что делает клиентский circuit breaker?",
+      "correct": "Прекращает вызовы к сбоящему сервису на время после серии ошибок",
+      "rationale": "Размыкание цепи защищает и клиента, и деградировавший сервис от лавины запросов.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-api-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Что означает требование, что PUT и DELETE — идемпотентные методы?",
+      "correct": "Повторный вызов с тем же телом даёт то же состояние ресурса",
+      "rationale": "Идемпотентность — про итоговое состояние, а не про код ответа; «безопасные» методы состояние не меняют вовсе.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-api-4",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "api"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Клиент получает 502 от прокси. Чей это сбой и что делать вызывающей стороне?",
+      "correct": "Ошибка вышестоящего слоя; запрос стоит повторить с ограничениями",
+      "rationale": "502 сигнализирует о недоступности бэкенда через прокси — это временная инфраструктурная ошибка.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-pair-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Нужно вставить 10 000 строк из списка Python. Какой подход разумен?",
+      "correct": "Batch-вставка одним executemany или COPY в одной транзакции",
+      "rationale": "Пакетная вставка сокращает число сетевых обменов и транзакций на порядки.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-pair-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Асинхронный обработчик должен вызвать синхронную библиотеку с блокирующим I/O. Как поступить?",
+      "correct": "Выполнить вызов в отдельном исполнителе (executor), не блокируя цикл событий",
+      "rationale": "Блокирующий вызов остановит весь цикл событий и все конкурентные задачи.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-pair-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-15",
+      "prompt": "COUNT(*) по большой таблице выполняется долго на каждом запросе страницы. Что разумно?",
+      "correct": "Перейти на keyset-пагинацию без полного подсчёта",
+      "rationale": "Keyset-пагинация исключает дорогой подсчёт и сдвиг страниц; COUNT(1) в PostgreSQL планируется так же, как COUNT(*).",
+      "difficulty": "middle-applied",
+      "measurableSkill": "sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-all-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Время ответа выросло, нагрузка не изменилась. Что проверить?",
+      "correct": "Планы выполнения запросов, блокировки и размер рабочих наборов",
+      "rationale": "Деградация без роста нагрузки обычно связана с блокировками, изменением плана или ростом данных.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-all-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Нужно изменить схему таблицы на работающей системе. Как безопасно?",
+      "correct": "Расширить схему совместимо, перенести данные, затем удалить старое отдельным шагом",
+      "rationale": "Пошаговое расширение и сжатие не ломает работающие версии приложения.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-all-3",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Пакетная обработка упала на 20-й записи из 1000. Что предусмотреть?",
+      "correct": "Учёт обработанных записей и идемпотентный повтор с той же точки",
+      "rationale": "Идемпотентная возобновляемая обработка не дублирует результаты и не теряет элементы.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "python+sql+api",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-teamwork-1",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Вы уходите в отпуск и завершаете работу над задачей. Что важно оставить?",
+      "correct": "Краткое описание состояния задачи, рисков и следующих шагов",
+      "rationale": "Передача состояния и рисков сокращает время входа коллеги в задачу.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "backend-middle-C-teamwork-2",
+      "specialization": "backend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Скорее всего команда не успеет к обещанному сроку. Что делать?",
+      "correct": "Сообщить о риске заранее с оценкой и вариантами сокращения объёма",
+      "rationale": "Раннее сообщение с вариантами даёт заказчику выбор вместо факта срыва.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-javascript-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Что вернёт выражение typeof null?",
+      "correct": "'object'",
+      "rationale": "Это историческая особенность языка: null относится к типу object.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-javascript-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Что возвращает метод [1, 2, 3].map(x => x * 2)?",
+      "correct": "Новый массив [2, 4, 6]",
+      "rationale": "map возвращает новый массив той же длины, не изменяя исходный.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-javascript-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Чем let отличается от var внутри цикла?",
+      "correct": "let создаёт переменную для каждой итерации, var — одну на функцию",
+      "rationale": "Блочная область видимости let изолирует значение на итерацию, что важно для колбэков.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-javascript-4",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Что вернёт [1, 2, 3].find(x => x > 1)?",
+      "correct": "2",
+      "rationale": "find возвращает первый подходящий элемент, а не массив.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-typescript-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Какой тип требует явной проверки перед использованием значения?",
+      "correct": "unknown",
+      "rationale": "unknown безопасен: до сужения типа работать со значением нельзя, в отличие от any.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-typescript-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Как объявить необязательное свойство интерфейса name?",
+      "correct": "name?: string",
+      "rationale": "В TypeScript необязательность выражается символом ? в объявлении свойства.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-typescript-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Что делает Partial<T>?",
+      "correct": "Делает все свойства типа необязательными",
+      "rationale": "Partial превращает каждое свойство в опциональное.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-typescript-4",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Что описывает тип 'active' | 'blocked'?",
+      "correct": "Значение только из двух указанных строк",
+      "rationale": "Literal-типы ограничивают допустимые значения конкретными константами.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-react-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Какой hook хранит локальное состояние компонента?",
+      "correct": "useState",
+      "rationale": "useState хранит изменяемое локальное состояние и возвращает пару значение-сеттер.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-react-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Зачем элементу списка задавать key?",
+      "correct": "Чтобы React сопоставлял элементы между рендерами",
+      "rationale": "Стабильный key помогает согласованию списка при вставке и удалении элементов.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-react-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Как правильно обновить одно поле объекта в состоянии?",
+      "correct": "Создать новый объект: setUser({ ...user, name: 'Ann' })",
+      "rationale": "React сравнивает состояние по ссылке, поэтому нужен новый объект.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-react-4",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Когда сработает useEffect с пустым массивом зависимостей?",
+      "correct": "Один раз после монтирования компонента",
+      "rationale": "Пустой список зависимостей ограничивает эффект моментом монтирования.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-pair-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Данные приходят из внешнего API и могут иметь любую форму. Как типизировать ответ в TypeScript?",
+      "correct": "Как unknown и затем сузить тип явной проверкой",
+      "rationale": "unknown заставляет проверить форму данных до использования, any отключает проверки.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-pair-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "slotId": "slot-14",
+      "prompt": "useEffect читает состояние, но объявлен с пустыми зависимостями. Что произойдёт?",
+      "correct": "Эффект увидит значение из момента монтирования и будет использовать устаревшие данные",
+      "rationale": "Замыкание захватывает значение времени создания эффекта; нужны зависимости или функциональное обновление.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-pair-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Как типизировать props функционального компонента с обязательным полем title?",
+      "correct": "Объявить интерфейс с title: string и указать его типом параметра компонента",
+      "rationale": "Явный интерфейс props даёт проверку обязательных и необязательных полей.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-all-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Компонент получает данные из API и рендерит список. Где проверять форму данных?",
+      "correct": "На границе получения данных, до передачи их в состояние",
+      "rationale": "Проверка на границе гарантирует, что дальше компоненты работают с известной формой.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-all-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Форма отправляет данные, сервер отвечает 422 с описанием ошибки поля. Что делать интерфейсу?",
+      "correct": "Показать ошибку рядом с соответствующим полем и сохранить введённые значения",
+      "rationale": "Ошибка привязывается к полю, а введённые данные сохраняются.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-all-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Компонент загружает данные. Как корректно отразить процесс?",
+      "correct": "Вести отдельные состояния загрузки и ошибки и показывать их явно",
+      "rationale": "Явные состояния отличают «ещё не пришло» от «данных нет».",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-teamwork-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Реализация расходится с макетом в деталях отступов. Как поступить?",
+      "correct": "Уточнить у дизайнера, что критично, и зафиксировать расхождение",
+      "rationale": "Уточнение отделяет критичные требования от несущественных деталей.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-A-teamwork-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "A",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Коллега предлагает другое имя поля в API. Что уместно сделать?",
+      "correct": "Обсудить варианты и зафиксировать выбор в контракте",
+      "rationale": "Зафиксированный контракт избавляет обе стороны от расхождений.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-javascript-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Что вернёт [1, 2, 3].filter(x => x > 5)?",
+      "correct": "Пустой массив",
+      "rationale": "filter всегда возвращает массив, даже если ни один элемент не подошёл.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-javascript-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Почему NaN === NaN возвращает false и как корректно проверить NaN?",
+      "correct": "Через Number.isNaN(value)",
+      "rationale": "По стандарту NaN не равно самому себе; для проверки служит Number.isNaN.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-javascript-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Чем Array.prototype.slice отличается от splice?",
+      "correct": "slice возвращает копию и не изменяет массив, splice изменяет исходный",
+      "rationale": "slice — чтение диапазона без побочных эффектов, splice удаляет и вставляет элементы на месте.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-javascript-4",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Что делает оператор ??",
+      "correct": "Подставляет правый операнд только при null или undefined",
+      "rationale": "?? реагирует только на null и undefined, сохраняя 0 и пустую строку как валидные значения.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-typescript-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Что даёт модификатор readonly у свойства интерфейса?",
+      "correct": "Запрещает присваивание после создания объекта на уровне типов",
+      "rationale": "readonly проверяется компилятором и не влияет на рантайм.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-typescript-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Что делает оператор as const для литералов?",
+      "correct": "Выводит максимально узкие литеральные типы и readonly-структуры",
+      "rationale": "as const сохраняет литеральные типы и добавляет readonly.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-typescript-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Какой тип возвращаемого значения у функции без return?",
+      "correct": "void",
+      "rationale": "void означает отсутствие значимого возвращаемого значения; never — что функция не возвращает управление.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-typescript-4",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Что произойдёт при попытке прочитать свойство у unknown-значения?",
+      "correct": "Ошибка компиляции до сужения типа",
+      "rationale": "unknown требует предварительного сужения (typeof, проверки на null и т. п.).",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-react-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Что такое controlled input?",
+      "correct": "Поле, значение которого управляется состоянием React",
+      "rationale": "В controlled-компоненте value приходит из состояния, а изменение обрабатывается обработчиком.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-react-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Что произойдёт при рендере {count && <Badge />}, когда count равен 0?",
+      "correct": "На экране появится символ 0",
+      "rationale": "Ложные числа в JSX выводятся как текст; явную проверку задают через count > 0.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-react-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Как вывести массив элементов в JSX?",
+      "correct": "Через items.map(item => <Row key={item.id} />)",
+      "rationale": "map возвращает массив элементов, который React умеет рендерить; forEach возвращает undefined.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-react-4",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Что даёт useRef для DOM-узла?",
+      "correct": "Ссылку на узел, доступную через поле current без перерисовки",
+      "rationale": "useRef хранит изменяемое значение между рендерами и не вызывает перерисовку.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-pair-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Как типизировать изменение пользовательского поля ввода в React-компоненте?",
+      "correct": "Через тип события изменения ввода и чтение event.target.value",
+      "rationale": "Типизированное событие сохраняет типы target и value и проверяется компилятором.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-pair-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Список из сотен элементов перерисовывается слишком часто. Что проверить первым?",
+      "correct": "Стабильность ключей и отсутствие создания новых объектов при каждом рендере",
+      "rationale": "Нестабильные ключи и новые ссылки ломают переиспользование и вызывают лишние обновления.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-pair-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Компоненту нужен необязательный prop с значением по умолчанию. Как оформить?",
+      "correct": "Объявить prop необязательным и подставить значение по умолчанию в параметрах функции",
+      "rationale": "Значение по умолчанию в деструктуризации совместимо с необязательным типом.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-all-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-16",
+      "prompt": "В разметке выводится {user.name}, но user ещё не загружен. Что произойдёт?",
+      "correct": "Возникнет ошибка при чтении свойства undefined",
+      "rationale": "Обращение к свойству undefined даёт исключение; до загрузки нужна проверка.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-all-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-17",
+      "prompt": "В форме есть value из состояния и локальная переменная с вводом. Почему это проблема?",
+      "correct": "Два источника истины расходятся, и значение поля теряется",
+      "rationale": "Единственный источник истины исключает рассинхронизацию данных и представления.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-all-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Как проверить компонент, который загружает данные асинхронно?",
+      "correct": "Дождаться завершения состояния загрузки и только затем проверять результат",
+      "rationale": "Проверять нужно конечное состояние: данные, отсутствие загрузки и ошибки.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-teamwork-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Вы нашли баг в компоненте, который пишет другой разработчик. Как действовать?",
+      "correct": "Воспроизвести проблему и передать шаги воспроизведения автору кода",
+      "rationale": "Шаги воспроизведения экономят время автора и снижают риск спорного исправления.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-B-teamwork-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "B",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Завтра демонстрация, а часть экранов не готова. Что показать?",
+      "correct": "Работающий основной сценарий целиком и честно назвать неготовые части",
+      "rationale": "Целостный сценарий показывает ценность, а честные ограничения не создают ложных ожиданий.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-javascript-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Что делает цикл for...of для массива?",
+      "correct": "Перебирает значения элементов",
+      "rationale": "for...of итерирует значения; для индексов применяют entries или обычный for.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-javascript-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Что произойдёт при JSON.stringify(undefined)?",
+      "correct": "Функция вернёт undefined, а не строку",
+      "rationale": "Значения undefined не сериализуются, поэтому результат — undefined.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-javascript-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Что делает Array.prototype.includes(value)?",
+      "correct": "Возвращает true, если значение найдено в массиве",
+      "rationale": "includes возвращает булево значение; индекс возвращает indexOf.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-javascript-4",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Что вернёт 0 || 'default'?",
+      "correct": "'default'",
+      "rationale": "|| реагирует на любое ложное значение; чтобы сохранить 0, нужен оператор ??.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-typescript-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Как расширить интерфейс базовым набором свойств?",
+      "correct": "interface B extends A {}",
+      "rationale": "Интерфейсы расширяются ключевым словом extends.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-typescript-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Что описывает тип Record<string, number>?",
+      "correct": "Объект со строковыми ключами и числовыми значениями",
+      "rationale": "Record<K, V> описывает словарь с ключами K и значениями V.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-typescript-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Зачем нужен модификатор strict в tsconfig?",
+      "correct": "Он включает набор строгих проверок, включая обработку null и отсутствующих типов",
+      "rationale": "strict включает strictNullChecks и другие строгие проверки компилятора.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-typescript-4",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Что произойдёт при передаче строки в функцию, ожидающую number?",
+      "correct": "Ошибка компиляции",
+      "rationale": "Несовпадение типов обнаруживается компилятором до запуска кода.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-react-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Что произойдёт, если напрямую мутировать массив в состоянии?",
+      "correct": "React может не заметить изменение и не перерисовать компонент",
+      "rationale": "Ссылка на массив не меняется, поэтому сравнение не покажет обновления.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-react-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Как передать данные от родителя к дочернему компоненту?",
+      "correct": "Через props",
+      "rationale": "Props — однонаправленный способ передачи данных вниз по дереву.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-react-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Что содержит props.children?",
+      "correct": "Всё, что передано между открывающим и закрывающим тегом компонента",
+      "rationale": "children — обычное свойство props, содержащее вложенное содержимое.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-react-4",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Как обновить состояние на основе предыдущего значения?",
+      "correct": "Передать функцию обновления: setCount(prev => prev + 1)",
+      "rationale": "Функциональное обновление гарантирует актуальное предыдущее значение при пакетной обработке.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-pair-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Статус загрузки может быть 'idle', 'loading' или 'error'. Как это описать в типах?",
+      "correct": "Объединением литеральных типов",
+      "rationale": "Union литералов делает недопустимые значения ошибкой компиляции.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-pair-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Компонент запускает запрос и размонтируется до ответа. Как избежать обновления состояния после ухода?",
+      "correct": "Отменять запрос в функции очистки эффекта через AbortController",
+      "rationale": "Очистка эффекта отменяет запрос и снимает необходимость обновлять состояние снятого компонента.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-pair-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Как типизировать props.children компонента-обёртки?",
+      "correct": "Как React.ReactNode",
+      "rationale": "ReactNode покрывает элементы, строки, числа, массивы и null.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-all-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Тип поля из ответа API перестал совпадать с типом на фронте. Что делать?",
+      "correct": "Исправить описание контракта и добавить проверку на границе",
+      "rationale": "Расхождение контракта фиксируется типом и проверкой, иначе ошибка проявится в рантайме.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-all-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Поле отображает текст ошибки, приходящий с сервера. Что учитывать при выводе?",
+      "correct": "Выводить его как текст, а не как HTML",
+      "rationale": "Серверный текст не должен исполняться как разметка — иначе это XSS.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-all-3",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Клиентская валидация прошла, но сервер вернул 400. Как трактовать ситуацию?",
+      "correct": "Правила на клиенте и сервере разошлись; показать серверную причину",
+      "rationale": "Клиентская проверка удобна, но источник истины — сервер.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-teamwork-1",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "У двух человек конфликтуют глобальные стили. Как решить?",
+      "correct": "Договориться об области действия стилей и способе их изоляции",
+      "rationale": "Изоляция стилей устраняет причину конфликта вместо борьбы за приоритет.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-junior-C-teamwork-2",
+      "specialization": "frontend",
+      "grade": "junior",
+      "form": "C",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "В макете нет состояния ошибки формы. Что сделать?",
+      "correct": "Согласовать состояние ошибки с дизайнером до релиза",
+      "rationale": "Отсутствующее в макете состояние нужно согласовать, иначе пользователь останется без обратной связи.",
+      "difficulty": "junior-basic",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-javascript-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Задача setTimeout(cb, 0) и промис, разрешённый в той же задаче. Что выполнится раньше?",
+      "correct": "Callback промиса, потому что микротаски обрабатываются до макротасок",
+      "rationale": "Микротаски (промисы) опустошаются до следующей макротаски (таймера).",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-javascript-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Чем Promise.allSettled отличается от Promise.all?",
+      "correct": "allSettled дожидается всех промисов и возвращает статус каждого, не отклоняясь",
+      "rationale": "allSettled собирает результат и причины для всех входов.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-javascript-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Что происходит с кодом после await внутри async-функции?",
+      "correct": "Остаток функции продолжается как микротаска после разрешения промиса",
+      "rationale": "await приостанавливает функцию, а продолжение планируется в микрозадаче.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-javascript-4",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Чем debounce отличается от throttle?",
+      "correct": "debounce откладывает вызов до паузы в событиях, throttle ограничивает частоту",
+      "rationale": "debounce ждёт затишья, throttle пропускает не более одного вызова за интервал.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-typescript-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Зачем моделировать состояние как дискриминированное объединение по полю kind?",
+      "correct": "Это делает невозможными комбинации полей, недопустимые для конкретного состояния",
+      "rationale": "Сужение по дискриминанту даёт компилятору знание о допустимых полях каждого варианта.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-typescript-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Что делают условные типы вида T extends string ? A : B?",
+      "correct": "Выбирают тип-результат в зависимости от совместимости T",
+      "rationale": "Условные типы вычисляются компилятором и не влияют на рантайм.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-typescript-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Что даёт связка keyof T и mapped types?",
+      "correct": "Позволяет вывести новый тип, перебирая ключи исходного",
+      "rationale": "Mapped types строят типы по ключам; перебор значений в рантайме они не выполняют.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-typescript-4",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Зачем ограничивать generic через <T extends { id: string }>?",
+      "correct": "Чтобы внутри функции были гарантированы нужные свойства T",
+      "rationale": "Ограничение описывает минимальный контракт, на который может опираться реализация.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-react-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Чем useCallback отличается от useMemo?",
+      "correct": "useCallback мемоизирует функцию, useMemo — результат вычисления",
+      "rationale": "useCallback возвращает ту же ссылку на функцию, useMemo — вычисленное значение.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-react-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Когда useReducer уместнее useState?",
+      "correct": "Когда переходы состояния многочисленны и зависят от предыдущего состояния и действия",
+      "rationale": "useReducer централизует переходы и делает их проверяемыми по отдельности.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-react-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Когда React.memo не предотвратит лишний рендер?",
+      "correct": "Когда родитель передаёт каждый раз новую функцию или объект в props",
+      "rationale": "Сравнение props по ссылке не проходит, если ссылки меняются на каждом рендере родителя.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-react-4",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Почему хуки нельзя вызывать условно?",
+      "correct": "React сопоставляет хуки по порядку вызова, и ветвление ломает это сопоставление",
+      "rationale": "Порядок хуков должен быть одинаковым между рендерами, иначе состояние сдвигается.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-pair-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Как типизировать функцию, которая возвращает результат или ошибку без исключений?",
+      "correct": "Объединением типа результата и типа ошибки с дискриминантом",
+      "rationale": "Дискриминированное объединение заставляет обработать оба исхода.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-pair-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Компонент должен показывать события, приходящие по WebSocket. Как оформить подписку?",
+      "correct": "Подписаться в эффекте и отписываться в его очистке",
+      "rationale": "Подписка в эффекте и её очистка исключают дубли соединений и утечки.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-pair-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Чем неудобен контекст с начальным значением null?",
+      "correct": "Потребителям приходится проверять null, хотя провайдер всегда его передаёт",
+      "rationale": "Отдельный хук с проверкой на null убирает обязательные проверки в каждом потребителе.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-all-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Интерфейс получает данные из API, кэширует их и показывает список. Где задавать источник типов?",
+      "correct": "В одном описании контракта, которое используют и запрос, и компоненты",
+      "rationale": "Единое описание контракта исключает расхождение между слоями.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-all-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Список тормозит при прокрутке, хотя данных немного. Что проверить в первую очередь?",
+      "correct": "Создание новых объектов и функций в props, из-за которых мемоизация не работает",
+      "rationale": "Нестабильные ссылки отменяют эффект мемоизации и вызывают лишние перерисовки.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-all-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-18",
+      "prompt": "После сохранения формы нужно обновить список без полной перезагрузки. Что делать?",
+      "correct": "Обновить кэш списка и при необходимости инвалидировать запрос данных",
+      "rationale": "Согласованное обновление кэша сохраняет корректность и отзывчивость.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-teamwork-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Компонент из общей библиотеки не подходит для нового экрана. Как действовать?",
+      "correct": "Обсудить доработку с владельцем библиотеки и оценить влияние на других потребителей",
+      "rationale": "Изменения в общей библиотеке влияют на всех потребителей, поэтому нужен владелец решения.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-A-teamwork-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "A",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Дизайнер и продукт расходятся в приоритете доработок интерфейса. Что уместно?",
+      "correct": "Зафиксировать критерии приоритизации и сравнить варианты по ним",
+      "rationale": "Явные критерии делают выбор объяснимым для обеих сторон.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-javascript-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Компонент подписывается на событие window и размонтируется. Что предотвратит утечку?",
+      "correct": "Снятие подписки в очистке эффекта тем же обработчиком",
+      "rationale": "Без removeEventListener ссылка на компонент остаётся живой.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-javascript-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Что делает queueMicrotask(callback)?",
+      "correct": "Планирует callback в очередь микрозадач после текущей задачи",
+      "rationale": "queueMicrotask использует ту же очередь, что и продолжения промисов.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-javascript-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Для чего Map предпочтительнее обычного объекта при частых добавлениях и удалениях ключей?",
+      "correct": "Map сохраняет производительность при динамических ключах и допускает ключи любого типа",
+      "rationale": "Map оптимизирован под частые изменения набора ключей и не ограничен строками.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-javascript-4",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Что делает structuredClone?",
+      "correct": "Создаёт глубокую копию поддерживаемых структур данных",
+      "rationale": "structuredClone не преобразует в JSON и умеет работать с вложенными структурами.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-typescript-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Что даёт пользовательская функция-предикат с подписью value is User?",
+      "correct": "Сужение типа в ветке, где предикат истинен",
+      "rationale": "Type guard сообщает компилятору результат проверки и включает сужение.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-typescript-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Что делает оператор satisfies?",
+      "correct": "Проверяет соответствие значения типу, сохраняя более узкий выведенный тип",
+      "rationale": "satisfies проверяет совместимость на этапе компиляции, не расширяя тип.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-typescript-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Зачем объявлять перегрузки функции?",
+      "correct": "Чтобы описать разные наборы параметров и соответствующие типы результата",
+      "rationale": "Перегрузки уточняют контракт вызова для каждого варианта аргументов.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-typescript-4",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Как типизировать результат функции, которая может завершиться ошибкой, без исключений?",
+      "correct": "Объединением успешного и ошибочного вариантов с общим дискриминантом",
+      "rationale": "Явное объединение заставляет вызывающий код обработать оба исхода.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-react-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Контекст обновляется часто, и перерисовываются все потребители. Что помогает?",
+      "correct": "Разделить контекст по назначению и мемоизировать значение провайдера",
+      "rationale": "Разделение контекстов и стабильная ссылка значения сокращают число обновляемых потребителей.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-react-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Что делает функция очистки, возвращённая из useEffect?",
+      "correct": "Выполняется перед следующим запуском эффекта и при размонтировании",
+      "rationale": "Очистка освобождает подписки и отменяет незавершённую работу.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-react-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Пользователь быстро меняет фильтр, и на экране оказывается результат старого запроса. Как исправить?",
+      "correct": "Отменять предыдущий запрос или игнорировать ответы, не соответствующие последнему запросу",
+      "rationale": "Управление актуальностью ответа (AbortController или счётчик запросов) убирает гонку.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-react-4",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Почему индекс массива как key ломает состояние при сортировке?",
+      "correct": "React связывает состояние с позицией, а элементы при сортировке меняются местами",
+      "rationale": "Стабильный идентификатор сохраняет связь между элементом и его состоянием.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-pair-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Сторонняя библиотека поставляет неполные типы. Как поступить?",
+      "correct": "Добавить локальное объявление типов для используемой части API",
+      "rationale": "Локальные declaration-файлы описывают используемый контракт, не отключая проверки.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-pair-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Список содержит тысячи элементов и прокручивается с задержкой. Что применить?",
+      "correct": "Виртуализацию списка, рендеря только видимые элементы",
+      "rationale": "Виртуализация сокращает число одновременно смонтированных узлов.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-pair-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Как типизировать reducer с несколькими видами действий?",
+      "correct": "Дискриминированным объединением действий по полю type",
+      "rationale": "Дискриминант даёт проверку полноты обработки всех вариантов.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-all-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Пользователь уходит со страницы во время загрузки. Что предотвратит обновление состояния после перехода?",
+      "correct": "Отмена запроса при размонтировании компонента",
+      "rationale": "Отмена в очистке эффекта устраняет обновление снятого компонента.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-all-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Нужно мгновенно показать результат изменения, пока идёт запрос. Как поступить?",
+      "correct": "Сделать оптимистичное обновление и откатить его при ошибке",
+      "rationale": "Оптимистичное обновление требует обязательного отката при неуспехе.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-all-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Сервер вернул 409 при сохранении, потому что запись уже изменили. Что показать пользователю?",
+      "correct": "Сообщение о конфликте с предложением перечитать актуальные данные",
+      "rationale": "Пользователю нужна причина, чтобы выбрать способ разрешения конфликта.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-teamwork-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Вы нашли, что общий хук работает некорректно в одном сценарии. Что делать?",
+      "correct": "Воспроизвести сценарий и сообщить владельцу с деталями",
+      "rationale": "Проблема общего кода затрагивает другие команды, поэтому нужен видимый фикс.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-B-teamwork-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "B",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Тестировщик сообщил о баге, который не воспроизводится у вас. Как ответить?",
+      "correct": "Уточнить окружение и шаги и вместе воспроизвести проблему",
+      "rationale": "Совместное воспроизведение отделяет различие окружений от реального дефекта.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-javascript-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-1",
+      "prompt": "Как работает поиск свойства при обращении obj.foo?",
+      "correct": "Сначала по собственным свойствам, затем по цепочке прототипов",
+      "rationale": "Поиск идёт вверх по цепочке прототипов до null.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-javascript-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-2",
+      "prompt": "Что означает ключевое слово this в обычной функции, вызванной как метод объекта?",
+      "correct": "Объект, у которого вызван метод",
+      "rationale": "Для вызова obj.method() this привязан к obj; стрелочные функции this не переопределяют.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-javascript-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-3",
+      "prompt": "Зачем добавлять 'use strict' или использовать ES-модули?",
+      "correct": "Они отключают неявные глобальные переменные и часть опасных приёмов",
+      "rationale": "Строгий режим превращает часть тихих ошибок в исключения.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-javascript-4",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "javascript"
+      ],
+      "slotId": "slot-4",
+      "prompt": "Что делает Object.freeze(obj)?",
+      "correct": "Запрещает изменение и удаление собственных свойств верхнего уровня",
+      "rationale": "freeze поверхностный: вложенные объекты остаются изменяемыми.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-typescript-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-5",
+      "prompt": "Чем опасна индексная сигнатура { [key: string]: string }?",
+      "correct": "Она разрешает любой ключ и не ловит опечатки в известных полях",
+      "rationale": "Известные поля лучше описывать явно, оставляя индексную сигнатуру для динамической части.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-typescript-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-6",
+      "prompt": "Как безопасно обработать данные JSON.parse в TypeScript?",
+      "correct": "Принять результат как unknown и проверить форму перед использованием",
+      "rationale": "JSON.parse не проверяет структуру, поэтому нужна явная валидация.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-typescript-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-7",
+      "prompt": "Чем readonly string[] отличается от ReadonlyArray<string>?",
+      "correct": "Оба запрещают изменение массива, различаются только синтаксисом",
+      "rationale": "Обе формы описывают неизменяемый массив и эквивалентны.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-typescript-4",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "typescript"
+      ],
+      "slotId": "slot-8",
+      "prompt": "Для чего применяют Pick и Omit?",
+      "correct": "Чтобы получить подтип с выбранными или исключёнными свойствами",
+      "rationale": "Pick и Omit формируют новый тип из ключей существующего.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-react-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-9",
+      "prompt": "Состояние нужно двум соседним компонентам. Что выбрать?",
+      "correct": "Поднять состояние до общего родителя и передать вниз через props",
+      "rationale": "Общий источник истины выше по дереву исключает рассинхронизацию.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-react-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-10",
+      "prompt": "Когда нужен useLayoutEffect вместо useEffect?",
+      "correct": "Когда измерение или синхронное изменение DOM нужно до отрисовки браузером",
+      "rationale": "useLayoutEffect выполняется синхронно после изменений DOM и до отрисовки.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-react-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-11",
+      "prompt": "Что означает предупреждение о переходе поля от uncontrolled к controlled?",
+      "correct": "Значение value меняется с undefined на конкретное значение между рендерами",
+      "rationale": "Поле должно иметь стабильное значение с самого первого рендера.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-react-4",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "react"
+      ],
+      "slotId": "slot-12",
+      "prompt": "Как тестировать кастомный хук?",
+      "correct": "Через тестовый компонент-обёртку или renderHook, проверяя возвращаемые значения",
+      "rationale": "Хуки работают в контексте рендера, поэтому тестируются через рендер.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-pair-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "slotId": "slot-13",
+      "prompt": "Данные из localStorage нужно преобразовать в доменный тип. Что делать?",
+      "correct": "Разобрать значение и проверить его форму через явную валидацию",
+      "rationale": "Хранилище возвращает произвольные данные, поэтому нужна проверка формы.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-pair-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "slotId": "slot-14",
+      "prompt": "Зачем предусматривать отмену запроса в очистке эффекта в React 18?",
+      "correct": "StrictMode в разработке монтирует компонент дважды, и без отмены появляются лишние запросы",
+      "rationale": "Двойной монтаж в режиме разработки выявляет эффекты без корректной очистки.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-pair-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-15",
+      "prompt": "Как описать компонент списка, работающий с элементами любого типа?",
+      "correct": "Объявить generic-параметр компонента и использовать его в props",
+      "rationale": "Generic сохраняет связь типа элемента с обработчиками и рендером.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-all-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-16",
+      "prompt": "Часть данных сохранилась, часть нет, сервер вернул детали по каждому элементу. Что делать интерфейсу?",
+      "correct": "Показать частичный результат и отметить неуспешные элементы отдельно",
+      "rationale": "Разделение успешных и неуспешных элементов позволяет доработать только проблемные.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-all-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-17",
+      "prompt": "Как надёжно проверить асинхронное состояние интерфейса в тестах?",
+      "correct": "Дождаться исчезновения индикатора загрузки и появления данных или ошибки",
+      "rationale": "Тест должен проверять конечное состояние, иначе результат нестабилен.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-all-3",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "slotId": "slot-18",
+      "prompt": "Форма показывает индикатор загрузки, но кнопка остаётся активной. Почему это проблема?",
+      "correct": "Пользователь может отправить дублирующий запрос во время выполнения",
+      "rationale": "Блокировка повторной отправки на время запроса предотвращает дубли.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "javascript+typescript+react",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-teamwork-1",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-19",
+      "prompt": "Вы уходите с проекта, и часть контекста не задокументирована. Что сделать?",
+      "correct": "Передать состояние работ, риски и открытые вопросы преемнику",
+      "rationale": "Передача контекста сокращает риск потери знаний и повторных решений.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    },
+    {
+      "id": "frontend-middle-C-teamwork-2",
+      "specialization": "frontend",
+      "grade": "middle",
+      "form": "C",
+      "skillTags": [
+        "teamwork"
+      ],
+      "slotId": "slot-20",
+      "prompt": "Заказчик просит срочную доработку, которая сломает согласованный срок другой задачи. Что делать?",
+      "correct": "Оценить влияние обеих работ и предложить варианты с последствиями",
+      "rationale": "Явная оценка влияния позволяет заказчику принять решение осознанно.",
+      "difficulty": "middle-applied",
+      "measurableSkill": "teamwork",
+      "status": "DEMO-authored, pending expert review"
+    }
+  ]
+}
