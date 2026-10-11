@@ -46,7 +46,7 @@ def evaluate(agent: str, cell: str, questions: list[dict]) -> tuple[int, dict[st
     return correct,evidence,verdict
 
 def main() -> int:
-    pool=json.loads(POOL.read_text())
+    pool=json.loads(POOL.read_text(encoding="utf-8"))
     failures=[]
     for cell,forms in pool.items():
         spec=cell.split("-",1)[0]

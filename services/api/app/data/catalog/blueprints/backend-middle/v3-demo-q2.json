@@ -1,0 +1,2085 @@
+{
+  "schemaVersion": 3,
+  "id": "backend-middle",
+  "version": "v3-demo-q2",
+  "catalogVersion": "v3-demo",
+  "status": "DEMO",
+  "provenance": "DEMO",
+  "specialization": "backend",
+  "grade": "middle",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "backend-middle-A-python-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "Что произойдёт с файлом, если внутри блока with open(...) возникнет исключение?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Исключение будет проглочено контекстным менеджером"
+            },
+            {
+              "id": "o2",
+              "text": "Файл будет закрыт, исключение распространится дальше"
+            },
+            {
+              "id": "o3",
+              "text": "Блок with выполнится повторно"
+            },
+            {
+              "id": "o4",
+              "text": "Файл останется открытым до сборки мусора"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-A-python-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "Почему изменяемый аргумент по умолчанию (def f(items=[])) считается ошибкой?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Список становится неизменяемым после первого вызова"
+            },
+            {
+              "id": "o2",
+              "text": "Интерпретатор запрещает изменяемые значения в сигнатуре"
+            },
+            {
+              "id": "o3",
+              "text": "Один и тот же объект переиспользуется между вызовами"
+            },
+            {
+              "id": "o4",
+              "text": "Копия списка создаётся на каждый вызов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-A-python-3",
+          "slotId": "slot-3",
+          "type": "single_choice",
+          "prompt": "Что именно ограничивает GIL в CPython?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Одновременное выполнение байт-кода Python в нескольких потоках"
+            },
+            {
+              "id": "o2",
+              "text": "Количество открытых файловых дескрипторов"
+            },
+            {
+              "id": "o3",
+              "text": "Параллельные сетевые операции"
+            },
+            {
+              "id": "o4",
+              "text": "Размер адресуемой памяти процесса"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-A-python-4",
+          "slotId": "slot-4",
+          "type": "single_choice",
+          "prompt": "Чем asyncio выгоднее потоков для множества сетевых ожиданий?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Он автоматически повторяет неудачные запросы"
+            },
+            {
+              "id": "o2",
+              "text": "Он выполняет вычисления параллельно на всех ядрах"
+            },
+            {
+              "id": "o3",
+              "text": "Один поток обслуживает много ожиданий за счёт кооперативного переключения"
+            },
+            {
+              "id": "o4",
+              "text": "Он заменяет необходимость таймаутов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-A-sql-1",
+          "slotId": "slot-5",
+          "type": "single_choice",
+          "prompt": "Чем HAVING отличается от WHERE в агрегирующем запросе?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "HAVING фильтрует результат агрегации, WHERE — строки до неё"
+            },
+            {
+              "id": "o2",
+              "text": "HAVING работает только с JOIN, WHERE — с GROUP BY"
+            },
+            {
+              "id": "o3",
+              "text": "HAVING фильтрует строки до агрегации, WHERE — после"
+            },
+            {
+              "id": "o4",
+              "text": "Они взаимозаменяемы при любом запросе"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-A-sql-2",
+          "slotId": "slot-6",
+          "type": "single_choice",
+          "prompt": "Что делает оконная функция ROW_NUMBER() OVER (PARTITION BY user_id ORDER BY created_at)?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Возвращает только первую строку каждого пользователя"
+            },
+            {
+              "id": "o2",
+              "text": "Сворачивает строки пользователя в одну"
+            },
+            {
+              "id": "o3",
+              "text": "Удаляет дубликаты строк пользователя"
+            },
+            {
+              "id": "o4",
+              "text": "Нумерует строки внутри каждого user_id по дате создания"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-A-sql-3",
+          "slotId": "slot-7",
+          "type": "single_choice",
+          "prompt": "Зачем запускать EXPLAIN ANALYZE для медленного запроса?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Чтобы проверить права доступа к таблицам"
+            },
+            {
+              "id": "o2",
+              "text": "Чтобы закэшировать результат запроса"
+            },
+            {
+              "id": "o3",
+              "text": "Чтобы увидеть фактический план и время выполнения по узлам"
+            },
+            {
+              "id": "o4",
+              "text": "Чтобы ускорить запрос при следующем запуске"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-A-sql-4",
+          "slotId": "slot-8",
+          "type": "single_choice",
+          "prompt": "Как снизить риск взаимных блокировок (deadlock) в транзакциях?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Отключить индексы на время нагрузочного теста"
+            },
+            {
+              "id": "o2",
+              "text": "Использовать подсказки индексов в запросах"
+            },
+            {
+              "id": "o3",
+              "text": "Увеличить таймаут ожидания блокировки"
+            },
+            {
+              "id": "o4",
+              "text": "Обращаться к таблицам и строкам в одном и том же порядке во всех транзакциях"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-A-api-1",
+          "slotId": "slot-9",
+          "type": "single_choice",
+          "prompt": "Зачем клиент передаёт Idempotency-Key при POST?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Чтобы повтор запроса не создал вторую сущность"
+            },
+            {
+              "id": "o2",
+              "text": "Чтобы зашифровать тело запроса"
+            },
+            {
+              "id": "o3",
+              "text": "Чтобы заменить аутентификацию по токену"
+            },
+            {
+              "id": "o4",
+              "text": "Чтобы сервер быстрее обработал запрос"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-A-api-2",
+          "slotId": "slot-10",
+          "type": "single_choice",
+          "prompt": "Клиент отправил тело с неверным типом поля. Какой код точнее описывает ситуацию?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "409"
+            },
+            {
+              "id": "o2",
+              "text": "422"
+            },
+            {
+              "id": "o3",
+              "text": "500"
+            },
+            {
+              "id": "o4",
+              "text": "404"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-A-api-3",
+          "slotId": "slot-11",
+          "type": "single_choice",
+          "prompt": "Для каких ответов уместен автоматический повтор запроса с backoff?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Для 404 и 410"
+            },
+            {
+              "id": "o2",
+              "text": "Для 400 и 422"
+            },
+            {
+              "id": "o3",
+              "text": "Для 401 и 403"
+            },
+            {
+              "id": "o4",
+              "text": "Для 503 и сетевых таймаутов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-A-api-4",
+          "slotId": "slot-12",
+          "type": "single_choice",
+          "prompt": "Что означает ответ 429 вместе с заголовком Retry-After?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Требуется новый токен доступа"
+            },
+            {
+              "id": "o2",
+              "text": "Сервер перегружен и не обработает запрос вообще"
+            },
+            {
+              "id": "o3",
+              "text": "Запрос отклонён навсегда"
+            },
+            {
+              "id": "o4",
+              "text": "Слишком много запросов; повтор допустим после указанного времени"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-A-pair-1",
+          "slotId": "slot-13",
+          "type": "single_choice",
+          "prompt": "Сервис выполняет несколько связанных изменений в БД. Где границы транзакции?",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "COMMIT после каждого запроса для освобождения блокировок"
+            },
+            {
+              "id": "o2",
+              "text": "Вокруг всего набора изменений, с COMMIT в конце и откатом при исключении"
+            },
+            {
+              "id": "o3",
+              "text": "Вокруг каждого отдельного INSERT"
+            },
+            {
+              "id": "o4",
+              "text": "Транзакция не нужна, если запросы быстрые"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-A-pair-2",
+          "slotId": "slot-14",
+          "type": "single_choice",
+          "prompt": "Внешний сервис периодически отвечает 503. Как организовать повторы?",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Повторять после каждой ошибки без ограничения попыток"
+            },
+            {
+              "id": "o2",
+              "text": "Ограниченное число попыток с экспоненциальной задержкой и учётом идемпотентности"
+            },
+            {
+              "id": "o3",
+              "text": "Повторять немедленно в цикле до успеха"
+            },
+            {
+              "id": "o4",
+              "text": "Повторять один раз при любом коде ответа"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-A-pair-3",
+          "slotId": "slot-15",
+          "type": "single_choice",
+          "prompt": "Нужен эндпоинт «создать или обновить» по уникальному коду. Как защититься от гонки?",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Сначала SELECT, затем INSERT или UPDATE без ограничения"
+            },
+            {
+              "id": "o2",
+              "text": "Проверять существование записи только на клиенте"
+            },
+            {
+              "id": "o3",
+              "text": "Выполнить upsert с уникальным ограничением в БД"
+            },
+            {
+              "id": "o4",
+              "text": "Использовать блокировку на уровне приложения"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-A-all-1",
+          "slotId": "slot-16",
+          "type": "single_choice",
+          "prompt": "Обработчик отвечает 500, в логах только трассировка без контекста запроса. Что улучшить первым делом?",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Добавить в лог идентификатор запроса, параметры и причину ошибки"
+            },
+            {
+              "id": "o2",
+              "text": "Возвращать стек клиенту для диагностики"
+            },
+            {
+              "id": "o3",
+              "text": "Обернуть обработчик в try/except и отвечать 200"
+            },
+            {
+              "id": "o4",
+              "text": "Понизить уровень логирования ошибок до warning"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-A-all-2",
+          "slotId": "slot-17",
+          "type": "single_choice",
+          "prompt": "Где размещать бизнес-валидацию входных данных?",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "На границе API, с дополнительными ограничениями целостности в БД"
+            },
+            {
+              "id": "o2",
+              "text": "Только в клиенте перед отправкой"
+            },
+            {
+              "id": "o3",
+              "text": "Только в БД через триггеры"
+            },
+            {
+              "id": "o4",
+              "text": "Только в логах после сохранения"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-A-all-3",
+          "slotId": "slot-18",
+          "type": "single_choice",
+          "prompt": "Как сделать фоновую задачу наблюдаемой?",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Логировать только успешные запуски"
+            },
+            {
+              "id": "o2",
+              "text": "Публиковать метрики обработки и структурированные логи с идентификатором задачи"
+            },
+            {
+              "id": "o3",
+              "text": "Проверять состояние вручную через подключение к БД"
+            },
+            {
+              "id": "o4",
+              "text": "Писать отчёт о завершении в локальный файл"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-A-teamwork-1",
+          "slotId": "slot-19",
+          "type": "single_choice",
+          "prompt": "Вы меняете контракт ответа API, которым пользуется другая команда. Что сделать до реализации?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Реализовать изменение и сообщить после релиза"
+            },
+            {
+              "id": "o2",
+              "text": "Согласовать изменения с потребителем и договориться о совместимом переходе"
+            },
+            {
+              "id": "o3",
+              "text": "Сменить формат ответа, оставив документацию прежней"
+            },
+            {
+              "id": "o4",
+              "text": "Добавить поле и не сообщать, если оно опционально"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-A-teamwork-2",
+          "slotId": "slot-20",
+          "type": "single_choice",
+          "prompt": "Ваша команда первой заметила деградацию сервиса. Что уместно взять на себя?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Работать над причиной, не сообщая о текущем состоянии"
+            },
+            {
+              "id": "o2",
+              "text": "Вести статус инцидента и обновлять его по мере выяснения причин"
+            },
+            {
+              "id": "o3",
+              "text": "Ограничиться сообщением «мы смотрим» без последующих обновлений"
+            },
+            {
+              "id": "o4",
+              "text": "Ожидать, что статусом займётся сторона, отвечающая за сервис"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "backend-middle-B-python-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "Что делает dict.setdefault('k', []) при отсутствии ключа 'k'?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Записывает значение по умолчанию и возвращает его"
+            },
+            {
+              "id": "o2",
+              "text": "Удаляет ключ после возврата значения"
+            },
+            {
+              "id": "o3",
+              "text": "Выбрасывает KeyError"
+            },
+            {
+              "id": "o4",
+              "text": "Возвращает None и не изменяет словарь"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-B-python-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "Как корректно залогировать исключение с трассировкой внутри except?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Вызвать logger.error(str(exception))"
+            },
+            {
+              "id": "o2",
+              "text": "Записать logger.info('ошибка') без объекта исключения"
+            },
+            {
+              "id": "o3",
+              "text": "Вызвать logger.exception(...) внутри блока except"
+            },
+            {
+              "id": "o4",
+              "text": "Напечатать исключение через print"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-B-python-3",
+          "slotId": "slot-3",
+          "type": "single_choice",
+          "prompt": "Что вернёт выражение {**a, **b} при совпадающих ключах?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Значения из a"
+            },
+            {
+              "id": "o2",
+              "text": "Ошибку о конфликте ключей"
+            },
+            {
+              "id": "o3",
+              "text": "Список обоих значений по ключу"
+            },
+            {
+              "id": "o4",
+              "text": "Значения из b, так как они переопределяют значения a"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-B-python-4",
+          "slotId": "slot-4",
+          "type": "single_choice",
+          "prompt": "Зачем объявлять __slots__ в классе с большим числом экземпляров?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Чтобы запретить наследование"
+            },
+            {
+              "id": "o2",
+              "text": "Чтобы сделать атрибуты приватными"
+            },
+            {
+              "id": "o3",
+              "text": "Чтобы ускорить импорт модуля"
+            },
+            {
+              "id": "o4",
+              "text": "Чтобы ограничить набор атрибутов и уменьшить память на объект"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-B-sql-1",
+          "slotId": "slot-5",
+          "type": "single_choice",
+          "prompt": "Какое чтение допускает уровень изоляции READ COMMITTED?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Транзакция видит только свою версию строки до конца"
+            },
+            {
+              "id": "o2",
+              "text": "Повторный запрос может прочитать незафиксированные данные другой транзакции"
+            },
+            {
+              "id": "o3",
+              "text": "Повторный запрос в той же транзакции может увидеть новые подтверждённые данные"
+            },
+            {
+              "id": "o4",
+              "text": "Строки нельзя обновлять параллельно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-B-sql-2",
+          "slotId": "slot-6",
+          "type": "single_choice",
+          "prompt": "Для чего полезен составной индекс (user_id, created_at)?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Для ускорения всех запросов к таблице"
+            },
+            {
+              "id": "o2",
+              "text": "Для запрета дубликатов по created_at"
+            },
+            {
+              "id": "o3",
+              "text": "Для фильтра по user_id и сортировки по created_at внутри него"
+            },
+            {
+              "id": "o4",
+              "text": "Для поиска только по created_at без user_id"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-B-sql-3",
+          "slotId": "slot-7",
+          "type": "single_choice",
+          "prompt": "Как найти пользователей с более чем одной активной подпиской?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Сгруппировать по user_id и отфильтровать группы через HAVING COUNT(*) > 1"
+            },
+            {
+              "id": "o2",
+              "text": "Выбрать DISTINCT user_id из таблицы подписок"
+            },
+            {
+              "id": "o3",
+              "text": "Отсортировать подписки по user_id и взять первую строку"
+            },
+            {
+              "id": "o4",
+              "text": "Соединить таблицу подписок с самой собой без условий"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-B-sql-4",
+          "slotId": "slot-8",
+          "type": "single_choice",
+          "prompt": "Что вернёт COALESCE(NULLIF(flag, ''), 'unset') для flag = ''?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "''"
+            },
+            {
+              "id": "o2",
+              "text": "'unset'"
+            },
+            {
+              "id": "o3",
+              "text": "NULL"
+            },
+            {
+              "id": "o4",
+              "text": "Ошибку типа"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-B-api-1",
+          "slotId": "slot-9",
+          "type": "single_choice",
+          "prompt": "Как организовать условную проверку кэша у клиента?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Указывать Cache-Control: no-store в запросе"
+            },
+            {
+              "id": "o2",
+              "text": "Отправлять заголовок Accept: no-cache"
+            },
+            {
+              "id": "o3",
+              "text": "Повторять запрос каждые несколько секунд"
+            },
+            {
+              "id": "o4",
+              "text": "Отправлять If-None-Match с полученным ранее ETag"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-B-api-2",
+          "slotId": "slot-10",
+          "type": "single_choice",
+          "prompt": "В чём основное преимущество курсорной пагинации над offset-пагинацией?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Она позволяет вернуться на произвольную страницу"
+            },
+            {
+              "id": "o2",
+              "text": "Она не пропускает и не дублирует строки при вставках во время листания"
+            },
+            {
+              "id": "o3",
+              "text": "Она не требует индексов"
+            },
+            {
+              "id": "o4",
+              "text": "Она всегда возвращает больше строк за запрос"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-B-api-3",
+          "slotId": "slot-11",
+          "type": "single_choice",
+          "prompt": "Зачем версионировать публичный HTTP API?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Чтобы уменьшить размер ответов"
+            },
+            {
+              "id": "o2",
+              "text": "Чтобы отключить кэширование"
+            },
+            {
+              "id": "o3",
+              "text": "Чтобы ускорить выполнение запросов"
+            },
+            {
+              "id": "o4",
+              "text": "Чтобы менять контракт, не ломая существующих клиентов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-B-api-4",
+          "slotId": "slot-12",
+          "type": "single_choice",
+          "prompt": "Чем таймаут соединения отличается от таймаута чтения?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Второй применяется только к HTTPS"
+            },
+            {
+              "id": "o2",
+              "text": "Первый ограничивает размер ответа, второй — размер запроса"
+            },
+            {
+              "id": "o3",
+              "text": "Первый ограничивает установку соединения, второй — ожидание данных"
+            },
+            {
+              "id": "o4",
+              "text": "Они всегда равны"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-B-pair-1",
+          "slotId": "slot-13",
+          "type": "single_choice",
+          "prompt": "Перед записью в БД сервис вызывает внешний HTTP API. Как избежать долгого удержания транзакции?",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Отключить блокировки на время вызова"
+            },
+            {
+              "id": "o2",
+              "text": "Увеличить таймаут БД на время внешнего вызова"
+            },
+            {
+              "id": "o3",
+              "text": "Оставить вызов внутри транзакции и добавить повтор"
+            },
+            {
+              "id": "o4",
+              "text": "Выполнить внешний вызов до открытия транзакции или вне её"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-B-pair-2",
+          "slotId": "slot-14",
+          "type": "single_choice",
+          "prompt": "Внешний API вернул 200, но структура тела не соответствует ожидаемой схеме. Что делать?",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Использовать доступные поля и продолжить работу"
+            },
+            {
+              "id": "o2",
+              "text": "Записать тело в лог и вернуть пустой результат"
+            },
+            {
+              "id": "o3",
+              "text": "Повторить запрос до получения корректного тела"
+            },
+            {
+              "id": "o4",
+              "text": "Отклонить ответ как ошибку контракта и обработать её явно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-B-pair-3",
+          "slotId": "slot-15",
+          "type": "single_choice",
+          "prompt": "Клиент листает список и видит разное общее число на соседних страницах. Что исправить?",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Считать элементы и страницу в одном согласованном снимке данных"
+            },
+            {
+              "id": "o2",
+              "text": "Игнорировать расхождение как ожидаемое"
+            },
+            {
+              "id": "o3",
+              "text": "Возвращать общее число только на первой странице"
+            },
+            {
+              "id": "o4",
+              "text": "Кэшировать только первый ответ"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-B-all-1",
+          "slotId": "slot-16",
+          "type": "single_choice",
+          "prompt": "Как корректно тестировать код, работающий с реальными SQL-запросами?",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Подменять слой БД мок-объектами во всех тестах"
+            },
+            {
+              "id": "o2",
+              "text": "Поднимать изолированную тестовую БД, применять миграции и выполнять настоящие запросы"
+            },
+            {
+              "id": "o3",
+              "text": "Сравнивать SQL как строки без выполнения"
+            },
+            {
+              "id": "o4",
+              "text": "Проверять запросы только на production-реплике"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-B-all-2",
+          "slotId": "slot-17",
+          "type": "single_choice",
+          "prompt": "Как избежать частичных состояний, когда локальная запись прошла, а вызов внешней системы — нет?",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Игнорировать ошибку внешнего вызова и считать операцию успешной"
+            },
+            {
+              "id": "o2",
+              "text": "Записать намерение в транзакции и выполнить внешний вызов асинхронно по outbox-шаблону"
+            },
+            {
+              "id": "o3",
+              "text": "Выполнить внешний вызов первым, не сохраняя намерение"
+            },
+            {
+              "id": "o4",
+              "text": "Повторять всю операцию по таймеру без учёта выполненных шагов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-B-all-3",
+          "slotId": "slot-18",
+          "type": "single_choice",
+          "prompt": "Когда синхронный вызов предпочтительнее очереди?",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Когда клиенту нужен ответ по этому же запросу и задержка допустима"
+            },
+            {
+              "id": "o2",
+              "text": "Когда важна максимальная устойчивость к недоступности потребителя"
+            },
+            {
+              "id": "o3",
+              "text": "Когда обработка длится десятки минут"
+            },
+            {
+              "id": "o4",
+              "text": "Когда система должна выдержать пиковую нагрузку без потерь"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-B-teamwork-1",
+          "slotId": "slot-19",
+          "type": "single_choice",
+          "prompt": "Коллега прислал pull request на 1200 строк. Как провести полезное ревью?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Отклонить без комментариев и попросить переписать"
+            },
+            {
+              "id": "o2",
+              "text": "Одобрить изменения, если тесты зелёные"
+            },
+            {
+              "id": "o3",
+              "text": "Проверить только форматирование и стиль"
+            },
+            {
+              "id": "o4",
+              "text": "Попросить разбить изменения по смыслу и проверять по частям с описанием ожидаемого поведения"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-B-teamwork-2",
+          "slotId": "slot-20",
+          "type": "single_choice",
+          "prompt": "Внутренний инструмент требует доработки, и мнения о приоритете расходятся. Как решать?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Выбрать мнение более опытного участника без обсуждения критериев"
+            },
+            {
+              "id": "o2",
+              "text": "Сравнить затраты и влияние на команду и зафиксировать критерий приоритизации"
+            },
+            {
+              "id": "o3",
+              "text": "Реализовать оба варианта параллельно силами команды"
+            },
+            {
+              "id": "o4",
+              "text": "Отложить доработку до момента, когда инструмент перестанет работать"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "backend-middle-C-python-1",
+          "slotId": "slot-1",
+          "type": "single_choice",
+          "prompt": "В чём преимущество генератора над построением списка при обработке большого файла?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Значения вычисляются лениво и не занимают память под весь набор"
+            },
+            {
+              "id": "o2",
+              "text": "Генератор автоматически распараллеливает обработку"
+            },
+            {
+              "id": "o3",
+              "text": "Генератор позволяет изменять элементы на лету"
+            },
+            {
+              "id": "o4",
+              "text": "Генератор быстрее читает файл с диска"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-C-python-2",
+          "slotId": "slot-2",
+          "type": "single_choice",
+          "prompt": "Что выведет набор лямбд, созданных в цикле for i in range(3): f = lambda: i?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Все лямбды вернут последнее значение i"
+            },
+            {
+              "id": "o2",
+              "text": "Лямбды вернут None"
+            },
+            {
+              "id": "o3",
+              "text": "Возникнет NameError при первом вызове"
+            },
+            {
+              "id": "o4",
+              "text": "Каждая лямбда вернёт своё значение i"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-C-python-3",
+          "slotId": "slot-3",
+          "type": "single_choice",
+          "prompt": "Что делает сравнение двух словарей через ==?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Сравнивает объекты по идентичности"
+            },
+            {
+              "id": "o2",
+              "text": "Сравнивает только наборы ключей"
+            },
+            {
+              "id": "o3",
+              "text": "Сравнивает наборы пар ключ-значение независимо от порядка вставки"
+            },
+            {
+              "id": "o4",
+              "text": "Всегда возвращает False для словарей"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-C-python-4",
+          "slotId": "slot-4",
+          "type": "single_choice",
+          "prompt": "В конструкции try/except/else/finally когда выполняется блок else?",
+          "skillTags": [
+            "python"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Только при перехвате исключения"
+            },
+            {
+              "id": "o2",
+              "text": "Только если сработал finally"
+            },
+            {
+              "id": "o3",
+              "text": "Если в try не возникло исключения"
+            },
+            {
+              "id": "o4",
+              "text": "Всегда после блока try"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-C-sql-1",
+          "slotId": "slot-5",
+          "type": "single_choice",
+          "prompt": "Что делает ON CONFLICT (code) DO UPDATE SET name = EXCLUDED.name?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Удаляет конфликтующую строку перед вставкой"
+            },
+            {
+              "id": "o2",
+              "text": "Игнорирует вставку при конфликте"
+            },
+            {
+              "id": "o3",
+              "text": "Обновляет существующую строку значениями из вставляемой"
+            },
+            {
+              "id": "o4",
+              "text": "Создаёт вторую строку с тем же code"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-C-sql-2",
+          "slotId": "slot-6",
+          "type": "single_choice",
+          "prompt": "Почему SELECT * нежелателен в коде приложения?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Он тянет лишние столбцы и ломается при изменении схемы"
+            },
+            {
+              "id": "o2",
+              "text": "Он не поддерживается PostgreSQL"
+            },
+            {
+              "id": "o3",
+              "text": "Он блокирует изменение схемы таблицы"
+            },
+            {
+              "id": "o4",
+              "text": "Он всегда медленнее любого другого запроса"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-C-sql-3",
+          "slotId": "slot-7",
+          "type": "single_choice",
+          "prompt": "Как одним запросом найти заказы без позиций?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "LEFT JOIN позиций и фильтр WHERE positions.id IS NULL"
+            },
+            {
+              "id": "o2",
+              "text": "INNER JOIN позиций и фильтр WHERE positions.id IS NULL"
+            },
+            {
+              "id": "o3",
+              "text": "RIGHT JOIN позиций с фильтром по заказам"
+            },
+            {
+              "id": "o4",
+              "text": "CROSS JOIN позиций с группировкой"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-C-sql-4",
+          "slotId": "slot-8",
+          "type": "single_choice",
+          "prompt": "Зачем создавать индекс по выражению, например lower(email)?",
+          "skillTags": [
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Чтобы поиск по lower(email) использовал индекс, а не последовательное сканирование"
+            },
+            {
+              "id": "o2",
+              "text": "Чтобы уменьшить размер таблицы"
+            },
+            {
+              "id": "o3",
+              "text": "Чтобы автоматически приводить email к нижнему регистру при вставке"
+            },
+            {
+              "id": "o4",
+              "text": "Чтобы запретить разные регистры в столбце"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-C-api-1",
+          "slotId": "slot-9",
+          "type": "single_choice",
+          "prompt": "Какой код уместен, если запрошенная сущность существует, но недоступна текущему пользователю?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "404, чтобы не раскрывать существование объекта"
+            },
+            {
+              "id": "o2",
+              "text": "500"
+            },
+            {
+              "id": "o3",
+              "text": "403 с описанием владельца объекта"
+            },
+            {
+              "id": "o4",
+              "text": "200 с пустым телом"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-C-api-2",
+          "slotId": "slot-10",
+          "type": "single_choice",
+          "prompt": "Что делает клиентский circuit breaker?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Увеличивает таймаут при ошибках"
+            },
+            {
+              "id": "o2",
+              "text": "Кэширует успешные ответы"
+            },
+            {
+              "id": "o3",
+              "text": "Повторяет запрос немедленно при каждой ошибке"
+            },
+            {
+              "id": "o4",
+              "text": "Прекращает вызовы к сбоящему сервису на время после серии ошибок"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-C-api-3",
+          "slotId": "slot-11",
+          "type": "single_choice",
+          "prompt": "Что означает требование, что PUT и DELETE — идемпотентные методы?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Метод нельзя вызывать дважды подряд"
+            },
+            {
+              "id": "o2",
+              "text": "Метод не изменяет состояние сервера"
+            },
+            {
+              "id": "o3",
+              "text": "Повторный вызов с тем же телом даёт то же состояние ресурса"
+            },
+            {
+              "id": "o4",
+              "text": "Повторный вызов всегда возвращает 200"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-C-api-4",
+          "slotId": "slot-12",
+          "type": "single_choice",
+          "prompt": "Клиент получает 502 от прокси. Чей это сбой и что делать вызывающей стороне?",
+          "skillTags": [
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Ошибка в теле запроса клиента; повтор бессмысленен"
+            },
+            {
+              "id": "o2",
+              "text": "Ошибка вышестоящего слоя; запрос стоит повторить с ограничениями"
+            },
+            {
+              "id": "o3",
+              "text": "Успешный ответ с частичными данными"
+            },
+            {
+              "id": "o4",
+              "text": "Ошибка прав доступа; нужен новый токен"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          }
+        },
+        {
+          "id": "backend-middle-C-pair-1",
+          "slotId": "slot-13",
+          "type": "single_choice",
+          "prompt": "Нужно вставить 10 000 строк из списка Python. Какой подход разумен?",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Сборка одной строки SQL конкатенацией на 10 000 VALUES"
+            },
+            {
+              "id": "o2",
+              "text": "По одному INSERT в отдельной транзакции на каждую строку"
+            },
+            {
+              "id": "o3",
+              "text": "Batch-вставка одним executemany или COPY в одной транзакции"
+            },
+            {
+              "id": "o4",
+              "text": "По одному INSERT с COMMIT после каждой строки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          }
+        },
+        {
+          "id": "backend-middle-C-pair-2",
+          "slotId": "slot-14",
+          "type": "single_choice",
+          "prompt": "Асинхронный обработчик должен вызвать синхронную библиотеку с блокирующим I/O. Как поступить?",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Выполнить вызов в отдельном исполнителе (executor), не блокируя цикл событий"
+            },
+            {
+              "id": "o2",
+              "text": "Вызвать функцию напрямую внутри корутинов"
+            },
+            {
+              "id": "o3",
+              "text": "Заменить await на синхронный вызов"
+            },
+            {
+              "id": "o4",
+              "text": "Увеличить число воркеров, оставив вызов прямым"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        },
+        {
+          "id": "backend-middle-C-pair-3",
+          "slotId": "slot-15",
+          "type": "single_choice",
+          "prompt": "COUNT(*) по большой таблице выполняется долго на каждом запросе страницы. Что разумно?",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Заменить COUNT(*) на COUNT(1)"
+            },
+            {
+              "id": "o2",
+              "text": "Перенести подсчёт на клиент"
+            },
+            {
+              "id": "o3",
+              "text": "Увеличить TTL кэша до нескольких часов"
+            },
+            {
+              "id": "o4",
+              "text": "Перейти на keyset-пагинацию без полного подсчёта"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-C-all-1",
+          "slotId": "slot-16",
+          "type": "single_choice",
+          "prompt": "Время ответа выросло, нагрузка не изменилась. Что проверить?",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Версию HTTP-протокола"
+            },
+            {
+              "id": "o2",
+              "text": "Количество строк в справочных таблицах"
+            },
+            {
+              "id": "o3",
+              "text": "Только настройки клиентского таймаута"
+            },
+            {
+              "id": "o4",
+              "text": "Планы выполнения запросов, блокировки и размер рабочих наборов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-C-all-2",
+          "slotId": "slot-17",
+          "type": "single_choice",
+          "prompt": "Нужно изменить схему таблицы на работающей системе. Как безопасно?",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Остановить запись в таблицу на всё время миграции"
+            },
+            {
+              "id": "o2",
+              "text": "Изменить тип столбца одной миграцией во время пика"
+            },
+            {
+              "id": "o3",
+              "text": "Изменять схему вручную вне миграций"
+            },
+            {
+              "id": "o4",
+              "text": "Расширить схему совместимо, перенести данные, затем удалить старое отдельным шагом"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-C-all-3",
+          "slotId": "slot-18",
+          "type": "single_choice",
+          "prompt": "Пакетная обработка упала на 20-й записи из 1000. Что предусмотреть?",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Ручной разбор оставшихся записей"
+            },
+            {
+              "id": "o2",
+              "text": "Откат всей пачки и ожидание следующего окна"
+            },
+            {
+              "id": "o3",
+              "text": "Повторный запуск всего пакета с начала"
+            },
+            {
+              "id": "o4",
+              "text": "Учёт обработанных записей и идемпотентный повтор с той же точки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-C-teamwork-1",
+          "slotId": "slot-19",
+          "type": "single_choice",
+          "prompt": "Вы уходите в отпуск и завершаете работу над задачей. Что важно оставить?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Ссылку на переписку без вывода о текущем состоянии"
+            },
+            {
+              "id": "o2",
+              "text": "Личные заметки без передачи контекста"
+            },
+            {
+              "id": "o3",
+              "text": "Ничего: код в репозитории говорит сам за себя"
+            },
+            {
+              "id": "o4",
+              "text": "Краткое описание состояния задачи, рисков и следующих шагов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          }
+        },
+        {
+          "id": "backend-middle-C-teamwork-2",
+          "slotId": "slot-20",
+          "type": "single_choice",
+          "prompt": "Скорее всего команда не успеет к обещанному сроку. Что делать?",
+          "skillTags": [
+            "teamwork"
+          ],
+          "options": [
+            {
+              "id": "o1",
+              "text": "Сообщить о риске заранее с оценкой и вариантами сокращения объёма"
+            },
+            {
+              "id": "o2",
+              "text": "Сообщить в день сдачи о фактическом состоянии"
+            },
+            {
+              "id": "o3",
+              "text": "Перераспределить сроки внутри команды без согласования с заказчиком"
+            },
+            {
+              "id": "o4",
+              "text": "Увеличить темп без изменения объёма и молчать"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          }
+        }
+      ]
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    },
+    "scaleMin": 0,
+    "scaleMax": 100.0
+  }
+}

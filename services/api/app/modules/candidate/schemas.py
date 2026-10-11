@@ -3,6 +3,8 @@ from typing import Literal
 
 from pydantic import BaseModel, ConfigDict, Field, StrictBool, model_validator
 
+from app.modules.fsp.demo import Achievement
+
 Grade = Literal["junior", "middle", "senior"]
 
 
@@ -55,6 +57,8 @@ class CandidateProfilePatch(BaseModel):
 class SelfCandidateDTO(BaseModel):
     verifiedGrade: Grade | None = None
     verifiedSpecialization: str | None = None
+    fspSource: Literal["synthetic-demo-not-fsp"] | None = None
+    fspAchievements: list[Achievement] = Field(default_factory=list)
     fullName: str | None = None
     email: str
     phone: str | None = None

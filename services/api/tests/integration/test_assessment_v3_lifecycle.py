@@ -22,17 +22,23 @@ from conftest import alembic_config
 
 @pytest.fixture
 def approved(monkeypatch, tmp_path):
-    """Explicit TEST-ONLY expert approval; never modifies published artifacts."""
+    """Explicit TEST-ONLY expert approval; never modifies published artifacts.
+
+    The fixture approves whatever the manifest currently makes active for the v3
+    schema, so bumping the blueprint version (content quality pass) does not
+    silently leave the active content DEMO and break qualification flows.
+    """
     root = tmp_path / "approved"
     shutil.copytree(DATA_ROOT, root)
     manifest = json.loads((root / "manifest.json").read_bytes())
+    active = set(manifest["activeBlueprints"]) | {manifest["activeCatalog"]}
     for ref in manifest["artifacts"]:
-        if ref["version"] != "v3-demo": continue
-        path = root / ref["path"]
-        data = json.loads(path.read_bytes())
+        data = json.loads((root / ref["path"]).read_bytes())
+        if ref["key"] not in active and data.get("schemaVersion") != 3:
+            continue
         data.update(status="APPROVED", provenance="DS", approval={"reference": "TEST-ONLY", "approvedBy": "fixture"})
         raw = json.dumps(data).encode()
-        path.write_bytes(raw)
+        (root / ref["path"]).write_bytes(raw)
         ref["sha256"] = hashlib.sha256(raw).hexdigest()
     (root / "manifest.json").write_text(json.dumps(manifest))
     monkeypatch.setattr(service, "CatalogRepository", lambda: CatalogRepository(root))

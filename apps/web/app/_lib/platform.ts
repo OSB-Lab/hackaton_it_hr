@@ -13,6 +13,9 @@ export interface Profile {
   specialization: string | null; selfDeclaredGrade: string | null;
   verifiedGrade: string | null; verifiedSpecialization: string | null;
   consents: { processing: boolean; publication: boolean }; privacy: { showContacts: boolean };
+  fspSource: 'synthetic-demo-not-fsp' | null;
+  fspAchievements: { recordId: string; kind: 'competition_result' | 'sport_rank'; result: string;
+    role: string; skillIds: string[]; achievedAt: string }[];
   eligibleForEmployerSearch: boolean;
 }
 export interface Attempt {
@@ -35,6 +38,9 @@ export interface Item {
   candidate: { id: number; specialization?: string | null; grade?: string | null; stack?: string[]; hasFspAchievements?: boolean };
   rank: number | null; score: number;
   components: { skillFit: number; assessmentStrength: number; fspBonus: number } | null;
+  filterFit?: number; rankingFit?: number; qualityScore?: number;
+  filterFactors?: {code:string; coefficient:number; reason:string}[];
+  taxonomyVersion?: string; filterPolicyVersion?: string;
   reasons?: string[];
 }
 export interface Snapshot { id: number; needId: number; algorithmVersion: string | null; items: Item[] }
@@ -43,9 +49,22 @@ export interface Invitation {
   salaryMin: string; salaryMax: string; currency: string; status: 'sent' | 'viewed' | 'accepted' | 'declined';
   contacts?: { email: string; phone: string | null } | null;
 }
+export interface Eligibility {
+  eligible: boolean;
+  reasonCodes: string[];
+  missingRequiredSkills: string[];
+  policyVersion: string;
+}
 export const get = <T,>(path: string) => request<T>(path, { auth: true });
 export const send = <T,>(path: string, body: unknown, method: 'POST' | 'PATCH' | 'PUT' = 'POST', errors?: Record<number, string>) =>
   request<T>(path, { auth: true, method, body, errors });
+// Формальный фильтр допуска. Скрытые причины (email/публикация/квалификация/профиль)
+// сервер закрывает за 404 — сообщение нейтральное и не раскрывает приватность.
+export const checkEligibility = (needId: number, candidateId: number) =>
+  request<Eligibility>(`/employer/needs/${needId}/eligibility/${candidateId}`, {
+    auth: true,
+    errors: { 404: 'Кандидат не виден или недоступен работодателю.', 403: 'Недостаточно прав для этой проверки.' },
+  });
 export function remember(key: string, value: string) { try { localStorage.setItem(key, value); } catch {} }
 export function recalled(key: string) { try { return localStorage.getItem(key) || ''; } catch { return ''; } }
 export async function downloadPdf() {

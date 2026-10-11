@@ -1,0 +1,1571 @@
+{
+  "schema_version": 1,
+  "catalog_version": "talent-taxonomy-v1",
+  "sources": [
+    "onet31",
+    "esco121",
+    "so2025",
+    "fsp_ref",
+    "sopranos_v3"
+  ],
+  "scope_note": "Curated runtime subset, not a full copy of O*NET or ESCO. Alias normalization is exact; only explicit edges permit partial substitution.",
+  "skills": [
+    {
+      "id": "python",
+      "label": "Python",
+      "category": "language",
+      "aliases": [
+        "python",
+        "питон",
+        "пайтон"
+      ],
+      "role_ids": [
+        "backend",
+        "ml_engineer",
+        "data_scientist",
+        "data_engineer",
+        "qa_automation",
+        "devops",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "javascript",
+      "label": "JavaScript",
+      "category": "language",
+      "aliases": [
+        "javascript",
+        "js",
+        "ecmascript"
+      ],
+      "role_ids": [
+        "frontend",
+        "fullstack",
+        "backend",
+        "qa_automation"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "typescript",
+      "label": "TypeScript",
+      "category": "language",
+      "aliases": [
+        "typescript",
+        "ts"
+      ],
+      "role_ids": [
+        "frontend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "java",
+      "label": "Java",
+      "category": "language",
+      "aliases": [
+        "java",
+        "oracle java"
+      ],
+      "role_ids": [
+        "backend",
+        "mobile",
+        "qa_automation"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "kotlin",
+      "label": "Kotlin",
+      "category": "language",
+      "aliases": [
+        "kotlin",
+        "котлин"
+      ],
+      "role_ids": [
+        "mobile",
+        "backend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "swift",
+      "label": "Swift",
+      "category": "language",
+      "aliases": [
+        "swift"
+      ],
+      "role_ids": [
+        "mobile"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "go",
+      "label": "Go",
+      "category": "language",
+      "aliases": [
+        "go",
+        "golang"
+      ],
+      "role_ids": [
+        "backend",
+        "devops",
+        "data_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "csharp",
+      "label": "C#",
+      "category": "language",
+      "aliases": [
+        "c#",
+        "c sharp"
+      ],
+      "role_ids": [
+        "backend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "cpp",
+      "label": "C++",
+      "category": "language",
+      "aliases": [
+        "c++",
+        "cpp"
+      ],
+      "role_ids": [
+        "backend",
+        "ml_engineer",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "php",
+      "label": "PHP",
+      "category": "language",
+      "aliases": [
+        "php"
+      ],
+      "role_ids": [
+        "backend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "sql",
+      "label": "SQL",
+      "category": "database_language",
+      "aliases": [
+        "sql",
+        "structured query language"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer",
+        "data_scientist",
+        "system_analyst",
+        "qa_automation"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "html",
+      "label": "HTML",
+      "category": "frontend",
+      "aliases": [
+        "html",
+        "html5"
+      ],
+      "role_ids": [
+        "frontend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "css",
+      "label": "CSS",
+      "category": "frontend",
+      "aliases": [
+        "css",
+        "css3",
+        "scss",
+        "sass"
+      ],
+      "role_ids": [
+        "frontend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "react",
+      "label": "React",
+      "category": "frontend_framework",
+      "aliases": [
+        "react",
+        "react.js",
+        "reactjs"
+      ],
+      "role_ids": [
+        "frontend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "vue",
+      "label": "Vue.js",
+      "category": "frontend_framework",
+      "aliases": [
+        "vue",
+        "vue.js",
+        "vuejs"
+      ],
+      "role_ids": [
+        "frontend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "angular",
+      "label": "Angular",
+      "category": "frontend_framework",
+      "aliases": [
+        "angular",
+        "angularjs"
+      ],
+      "role_ids": [
+        "frontend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "nextjs",
+      "label": "Next.js",
+      "category": "frontend_framework",
+      "aliases": [
+        "next.js",
+        "nextjs"
+      ],
+      "role_ids": [
+        "frontend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "redux",
+      "label": "Redux",
+      "category": "frontend_state",
+      "aliases": [
+        "redux",
+        "redux toolkit"
+      ],
+      "role_ids": [
+        "frontend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "nodejs",
+      "label": "Node.js",
+      "category": "backend_runtime",
+      "aliases": [
+        "node.js",
+        "nodejs",
+        "node"
+      ],
+      "role_ids": [
+        "backend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "django",
+      "label": "Django",
+      "category": "backend_framework",
+      "aliases": [
+        "django",
+        "джанго"
+      ],
+      "role_ids": [
+        "backend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "fastapi",
+      "label": "FastAPI",
+      "category": "backend_framework",
+      "aliases": [
+        "fastapi",
+        "fast api"
+      ],
+      "role_ids": [
+        "backend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "flask",
+      "label": "Flask",
+      "category": "backend_framework",
+      "aliases": [
+        "flask"
+      ],
+      "role_ids": [
+        "backend",
+        "data_scientist"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "spring",
+      "label": "Spring",
+      "category": "backend_framework",
+      "aliases": [
+        "spring",
+        "spring boot",
+        "spring framework"
+      ],
+      "role_ids": [
+        "backend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "dotnet",
+      "label": ".NET",
+      "category": "backend_framework",
+      "aliases": [
+        ".net",
+        "dotnet",
+        "asp.net"
+      ],
+      "role_ids": [
+        "backend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "rest",
+      "label": "REST API",
+      "category": "api",
+      "aliases": [
+        "rest",
+        "rest api",
+        "restful"
+      ],
+      "role_ids": [
+        "backend",
+        "frontend",
+        "fullstack",
+        "mobile",
+        "system_analyst",
+        "qa_automation"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "graphql",
+      "label": "GraphQL",
+      "category": "api",
+      "aliases": [
+        "graphql"
+      ],
+      "role_ids": [
+        "backend",
+        "frontend",
+        "fullstack"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "grpc",
+      "label": "gRPC",
+      "category": "api",
+      "aliases": [
+        "grpc"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "postgresql",
+      "label": "PostgreSQL",
+      "category": "database",
+      "aliases": [
+        "postgresql",
+        "postgres",
+        "постгрес",
+        "pg"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer",
+        "data_scientist"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "mysql",
+      "label": "MySQL",
+      "category": "database",
+      "aliases": [
+        "mysql"
+      ],
+      "role_ids": [
+        "backend",
+        "fullstack",
+        "data_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "mssql",
+      "label": "Microsoft SQL Server",
+      "category": "database",
+      "aliases": [
+        "mssql",
+        "sql server",
+        "microsoft sql server"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer",
+        "system_analyst"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "oracle_db",
+      "label": "Oracle Database",
+      "category": "database",
+      "aliases": [
+        "oracle",
+        "oracle database"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "mongodb",
+      "label": "MongoDB",
+      "category": "database",
+      "aliases": [
+        "mongodb",
+        "mongo"
+      ],
+      "role_ids": [
+        "backend",
+        "fullstack",
+        "data_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "redis",
+      "label": "Redis",
+      "category": "database",
+      "aliases": [
+        "redis"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "clickhouse",
+      "label": "ClickHouse",
+      "category": "database",
+      "aliases": [
+        "clickhouse",
+        "кликхаус"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer",
+        "data_scientist"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "elasticsearch",
+      "label": "Elasticsearch",
+      "category": "search",
+      "aliases": [
+        "elasticsearch",
+        "elastic"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer",
+        "devops"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "kafka",
+      "label": "Apache Kafka",
+      "category": "messaging",
+      "aliases": [
+        "kafka",
+        "apache kafka",
+        "кафка"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer",
+        "devops"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "rabbitmq",
+      "label": "RabbitMQ",
+      "category": "messaging",
+      "aliases": [
+        "rabbitmq",
+        "rabbit mq"
+      ],
+      "role_ids": [
+        "backend",
+        "devops"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "git",
+      "label": "Git",
+      "category": "vcs",
+      "aliases": [
+        "git"
+      ],
+      "role_ids": [
+        "backend",
+        "frontend",
+        "fullstack",
+        "mobile",
+        "ml_engineer",
+        "data_scientist",
+        "data_engineer",
+        "qa_automation",
+        "devops",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "docker",
+      "label": "Docker",
+      "category": "containers",
+      "aliases": [
+        "docker",
+        "докер"
+      ],
+      "role_ids": [
+        "backend",
+        "fullstack",
+        "ml_engineer",
+        "data_engineer",
+        "qa_automation",
+        "devops",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "kubernetes",
+      "label": "Kubernetes",
+      "category": "orchestration",
+      "aliases": [
+        "kubernetes",
+        "k8s",
+        "кубернетес"
+      ],
+      "role_ids": [
+        "devops",
+        "backend",
+        "ml_engineer",
+        "data_engineer",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "terraform",
+      "label": "Terraform",
+      "category": "iac",
+      "aliases": [
+        "terraform",
+        "ibm terraform"
+      ],
+      "role_ids": [
+        "devops",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "ansible",
+      "label": "Ansible",
+      "category": "iac",
+      "aliases": [
+        "ansible"
+      ],
+      "role_ids": [
+        "devops",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "linux",
+      "label": "Linux",
+      "category": "os",
+      "aliases": [
+        "linux",
+        "линукс",
+        "unix"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer",
+        "qa_automation",
+        "devops",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "jenkins",
+      "label": "Jenkins",
+      "category": "ci_cd",
+      "aliases": [
+        "jenkins",
+        "jenkins ci"
+      ],
+      "role_ids": [
+        "devops",
+        "qa_automation",
+        "backend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "gitlab_ci",
+      "label": "GitLab CI",
+      "category": "ci_cd",
+      "aliases": [
+        "gitlab ci",
+        "gitlab-ci"
+      ],
+      "role_ids": [
+        "devops",
+        "qa_automation",
+        "backend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "aws",
+      "label": "AWS",
+      "category": "cloud",
+      "aliases": [
+        "aws",
+        "amazon web services"
+      ],
+      "role_ids": [
+        "backend",
+        "ml_engineer",
+        "data_engineer",
+        "devops",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "azure",
+      "label": "Microsoft Azure",
+      "category": "cloud",
+      "aliases": [
+        "azure",
+        "microsoft azure"
+      ],
+      "role_ids": [
+        "backend",
+        "data_engineer",
+        "devops",
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "gcp",
+      "label": "Google Cloud",
+      "category": "cloud",
+      "aliases": [
+        "gcp",
+        "google cloud"
+      ],
+      "role_ids": [
+        "backend",
+        "ml_engineer",
+        "data_engineer",
+        "devops"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "airflow",
+      "label": "Apache Airflow",
+      "category": "data_platform",
+      "aliases": [
+        "airflow",
+        "apache airflow"
+      ],
+      "role_ids": [
+        "data_engineer",
+        "ml_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "spark",
+      "label": "Apache Spark",
+      "category": "data_platform",
+      "aliases": [
+        "spark",
+        "apache spark",
+        "pyspark"
+      ],
+      "role_ids": [
+        "data_engineer",
+        "data_scientist",
+        "ml_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "hadoop",
+      "label": "Apache Hadoop",
+      "category": "data_platform",
+      "aliases": [
+        "hadoop",
+        "apache hadoop"
+      ],
+      "role_ids": [
+        "data_engineer",
+        "data_scientist"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "dbt",
+      "label": "dbt",
+      "category": "data_platform",
+      "aliases": [
+        "dbt"
+      ],
+      "role_ids": [
+        "data_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "snowflake",
+      "label": "Snowflake",
+      "category": "data_platform",
+      "aliases": [
+        "snowflake"
+      ],
+      "role_ids": [
+        "data_engineer",
+        "data_scientist"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "pandas",
+      "label": "pandas",
+      "category": "data_ml",
+      "aliases": [
+        "pandas"
+      ],
+      "role_ids": [
+        "data_scientist",
+        "ml_engineer",
+        "data_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "numpy",
+      "label": "NumPy",
+      "category": "data_ml",
+      "aliases": [
+        "numpy"
+      ],
+      "role_ids": [
+        "data_scientist",
+        "ml_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "sklearn",
+      "label": "scikit-learn",
+      "category": "data_ml",
+      "aliases": [
+        "scikit-learn",
+        "sklearn"
+      ],
+      "role_ids": [
+        "data_scientist",
+        "ml_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "pytorch",
+      "label": "PyTorch",
+      "category": "data_ml",
+      "aliases": [
+        "pytorch",
+        "torch"
+      ],
+      "role_ids": [
+        "ml_engineer",
+        "data_scientist"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "tensorflow",
+      "label": "TensorFlow",
+      "category": "data_ml",
+      "aliases": [
+        "tensorflow"
+      ],
+      "role_ids": [
+        "ml_engineer",
+        "data_scientist"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "mlflow",
+      "label": "MLflow",
+      "category": "mlops",
+      "aliases": [
+        "mlflow"
+      ],
+      "role_ids": [
+        "ml_engineer",
+        "data_scientist"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "pytest",
+      "label": "pytest",
+      "category": "testing",
+      "aliases": [
+        "pytest"
+      ],
+      "role_ids": [
+        "qa_automation",
+        "backend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "selenium",
+      "label": "Selenium",
+      "category": "testing",
+      "aliases": [
+        "selenium"
+      ],
+      "role_ids": [
+        "qa_automation"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "playwright",
+      "label": "Playwright",
+      "category": "testing",
+      "aliases": [
+        "playwright"
+      ],
+      "role_ids": [
+        "qa_automation",
+        "frontend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "postman",
+      "label": "Postman",
+      "category": "testing",
+      "aliases": [
+        "postman"
+      ],
+      "role_ids": [
+        "qa_manual",
+        "qa_automation",
+        "system_analyst"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "junit",
+      "label": "JUnit",
+      "category": "testing",
+      "aliases": [
+        "junit"
+      ],
+      "role_ids": [
+        "qa_automation",
+        "backend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "test_design",
+      "label": "Тест-дизайн",
+      "category": "testing_method",
+      "aliases": [
+        "тест-дизайн",
+        "test design"
+      ],
+      "role_ids": [
+        "qa_manual",
+        "qa_automation"
+      ],
+      "sources": [
+        "esco121",
+        "fsp_ref"
+      ]
+    },
+    {
+      "id": "bpmn",
+      "label": "BPMN",
+      "category": "analysis",
+      "aliases": [
+        "bpmn"
+      ],
+      "role_ids": [
+        "system_analyst"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "uml",
+      "label": "UML",
+      "category": "analysis",
+      "aliases": [
+        "uml"
+      ],
+      "role_ids": [
+        "system_analyst",
+        "backend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "jira",
+      "label": "Jira",
+      "category": "collaboration",
+      "aliases": [
+        "jira",
+        "atlassian jira"
+      ],
+      "role_ids": [
+        "system_analyst",
+        "qa_manual",
+        "qa_automation",
+        "devops"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "confluence",
+      "label": "Confluence",
+      "category": "collaboration",
+      "aliases": [
+        "confluence",
+        "atlassian confluence"
+      ],
+      "role_ids": [
+        "system_analyst",
+        "qa_manual",
+        "qa_automation"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "owasp",
+      "label": "OWASP",
+      "category": "security",
+      "aliases": [
+        "owasp",
+        "owasp top 10"
+      ],
+      "role_ids": [
+        "security_engineer",
+        "backend"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "wireshark",
+      "label": "Wireshark",
+      "category": "security",
+      "aliases": [
+        "wireshark"
+      ],
+      "role_ids": [
+        "security_engineer",
+        "devops"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "nmap",
+      "label": "Nmap",
+      "category": "security",
+      "aliases": [
+        "nmap"
+      ],
+      "role_ids": [
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "burp_suite",
+      "label": "Burp Suite",
+      "category": "security",
+      "aliases": [
+        "burp",
+        "burp suite"
+      ],
+      "role_ids": [
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "siem",
+      "label": "SIEM",
+      "category": "security",
+      "aliases": [
+        "siem",
+        "splunk",
+        "qradar",
+        "sentinel"
+      ],
+      "role_ids": [
+        "security_engineer"
+      ],
+      "sources": [
+        "onet31",
+        "so2025"
+      ]
+    },
+    {
+      "id": "api",
+      "label": "API design and HTTP",
+      "category": "technical_skill",
+      "aliases": [
+        "api",
+        "api design",
+        "http api",
+        "проектирование api"
+      ],
+      "role_ids": [
+        "backend",
+        "fullstack",
+        "system_analyst",
+        "qa_automation"
+      ],
+      "sources": [
+        "sopranos_v3",
+        "esco121"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "a": "javascript",
+      "b": "typescript",
+      "coefficient": 0.88,
+      "relation": "language_superset",
+      "symmetric": true
+    },
+    {
+      "a": "react",
+      "b": "nextjs",
+      "coefficient": 0.92,
+      "relation": "framework_extension",
+      "symmetric": true
+    },
+    {
+      "a": "react",
+      "b": "vue",
+      "coefficient": 0.74,
+      "relation": "same_frontend_family",
+      "symmetric": true
+    },
+    {
+      "a": "react",
+      "b": "angular",
+      "coefficient": 0.7,
+      "relation": "same_frontend_family",
+      "symmetric": true
+    },
+    {
+      "a": "vue",
+      "b": "angular",
+      "coefficient": 0.68,
+      "relation": "same_frontend_family",
+      "symmetric": true
+    },
+    {
+      "a": "django",
+      "b": "fastapi",
+      "coefficient": 0.78,
+      "relation": "same_language_web_framework",
+      "symmetric": true
+    },
+    {
+      "a": "django",
+      "b": "flask",
+      "coefficient": 0.82,
+      "relation": "same_language_web_framework",
+      "symmetric": true
+    },
+    {
+      "a": "fastapi",
+      "b": "flask",
+      "coefficient": 0.84,
+      "relation": "same_language_web_framework",
+      "symmetric": true
+    },
+    {
+      "a": "java",
+      "b": "kotlin",
+      "coefficient": 0.82,
+      "relation": "jvm_languages",
+      "symmetric": true
+    },
+    {
+      "a": "csharp",
+      "b": "dotnet",
+      "coefficient": 0.95,
+      "relation": "platform_language",
+      "symmetric": true
+    },
+    {
+      "a": "postgresql",
+      "b": "mysql",
+      "coefficient": 0.82,
+      "relation": "relational_database",
+      "symmetric": true
+    },
+    {
+      "a": "postgresql",
+      "b": "mssql",
+      "coefficient": 0.76,
+      "relation": "relational_database",
+      "symmetric": true
+    },
+    {
+      "a": "postgresql",
+      "b": "oracle_db",
+      "coefficient": 0.75,
+      "relation": "relational_database",
+      "symmetric": true
+    },
+    {
+      "a": "sql",
+      "b": "postgresql",
+      "coefficient": 0.92,
+      "relation": "language_to_product",
+      "symmetric": true
+    },
+    {
+      "a": "sql",
+      "b": "mysql",
+      "coefficient": 0.92,
+      "relation": "language_to_product",
+      "symmetric": true
+    },
+    {
+      "a": "sql",
+      "b": "mssql",
+      "coefficient": 0.92,
+      "relation": "language_to_product",
+      "symmetric": true
+    },
+    {
+      "a": "sql",
+      "b": "oracle_db",
+      "coefficient": 0.9,
+      "relation": "language_to_product",
+      "symmetric": true
+    },
+    {
+      "a": "sql",
+      "b": "clickhouse",
+      "coefficient": 0.74,
+      "relation": "sql_database",
+      "symmetric": true
+    },
+    {
+      "a": "kafka",
+      "b": "rabbitmq",
+      "coefficient": 0.68,
+      "relation": "messaging_platform",
+      "symmetric": true
+    },
+    {
+      "a": "pytorch",
+      "b": "tensorflow",
+      "coefficient": 0.82,
+      "relation": "deep_learning_framework",
+      "symmetric": true
+    },
+    {
+      "a": "selenium",
+      "b": "playwright",
+      "coefficient": 0.84,
+      "relation": "browser_automation",
+      "symmetric": true
+    },
+    {
+      "a": "jenkins",
+      "b": "gitlab_ci",
+      "coefficient": 0.82,
+      "relation": "ci_cd",
+      "symmetric": true
+    },
+    {
+      "a": "aws",
+      "b": "azure",
+      "coefficient": 0.72,
+      "relation": "cloud_provider",
+      "symmetric": true
+    },
+    {
+      "a": "aws",
+      "b": "gcp",
+      "coefficient": 0.72,
+      "relation": "cloud_provider",
+      "symmetric": true
+    },
+    {
+      "a": "azure",
+      "b": "gcp",
+      "coefficient": 0.72,
+      "relation": "cloud_provider",
+      "symmetric": true
+    },
+    {
+      "a": "docker",
+      "b": "kubernetes",
+      "coefficient": 0.62,
+      "relation": "container_to_orchestrator",
+      "symmetric": true
+    },
+    {
+      "a": "spark",
+      "b": "hadoop",
+      "coefficient": 0.72,
+      "relation": "big_data_ecosystem",
+      "symmetric": true
+    },
+    {
+      "a": "airflow",
+      "b": "dbt",
+      "coefficient": 0.64,
+      "relation": "data_pipeline_ecosystem",
+      "symmetric": true
+    },
+    {
+      "a": "rest",
+      "b": "graphql",
+      "coefficient": 0.62,
+      "relation": "api_style",
+      "symmetric": true
+    },
+    {
+      "a": "rest",
+      "b": "grpc",
+      "coefficient": 0.6,
+      "relation": "api_style",
+      "symmetric": true
+    },
+    {
+      "a": "api",
+      "b": "rest",
+      "coefficient": 0.95,
+      "relation": "general_skill_to_api_style",
+      "symmetric": true
+    },
+    {
+      "a": "api",
+      "b": "graphql",
+      "coefficient": 0.72,
+      "relation": "general_skill_to_api_style",
+      "symmetric": true
+    },
+    {
+      "a": "api",
+      "b": "grpc",
+      "coefficient": 0.72,
+      "relation": "general_skill_to_api_style",
+      "symmetric": true
+    }
+  ]
+}

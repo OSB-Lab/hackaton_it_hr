@@ -33,7 +33,18 @@ const FOUND_PATH: [number, number][] = [
 
 const EMPLOYER_NODE = 5;
 
-export function NetworkArt({ className = '' }: { className?: string }) {
+// tone="dark" — белые линии и точки (для фиолетового/тёмного фона);
+// tone="light" — фиолетовые линии и точки (для светлого фона, как в брендбуке).
+export function NetworkArt({
+  className = '',
+  tone = 'dark',
+}: {
+  className?: string;
+  tone?: 'dark' | 'light';
+}) {
+  const node = tone === 'dark' ? '#ffffff' : '#402FFF';
+  const edge = tone === 'dark' ? '#ffffff' : '#402FFF';
+  const edgeOpacity = tone === 'dark' ? 0.22 : 0.3;
   return (
     <svg
       viewBox="0 0 600 520"
@@ -49,8 +60,8 @@ export function NetworkArt({ className = '' }: { className?: string }) {
           y1={NODES[a][1]}
           x2={NODES[b][0]}
           y2={NODES[b][1]}
-          stroke="#ffffff"
-          strokeOpacity="0.22"
+          stroke={edge}
+          strokeOpacity={edgeOpacity}
         />
       ))}
       {FOUND_PATH.map(([a, b]) => (
@@ -60,18 +71,18 @@ export function NetworkArt({ className = '' }: { className?: string }) {
           y1={NODES[a][1]}
           x2={NODES[b][0]}
           y2={NODES[b][1]}
-          stroke="#ffffff"
+          stroke={edge}
           strokeWidth="2.5"
         />
       ))}
       {NODES.map(([x, y, r], index) =>
         index === EMPLOYER_NODE ? (
           <g key={index}>
-            <circle cx={x} cy={y} r={r + 9} stroke="#ffffff" strokeOpacity="0.5" />
+            <circle cx={x} cy={y} r={r + 9} stroke={node} strokeOpacity="0.5" />
             <circle cx={x} cy={y} r={r} fill="#EC1D35" />
           </g>
         ) : (
-          <circle key={index} cx={x} cy={y} r={r} fill="#ffffff" fillOpacity={r > 5 ? 0.95 : 0.5} />
+          <circle key={index} cx={x} cy={y} r={r} fill={node} fillOpacity={r > 5 ? 0.95 : 0.5} />
         ),
       )}
     </svg>

@@ -6,6 +6,7 @@ from app.modules.auth.dependencies import AuthSession
 from app.modules.employer.router import EmployerUser
 from app.modules.recommendations.schemas import SnapshotDTO
 from app.modules.recommendations.service import create_snapshot, read_snapshot
+from app.modules.recommendations.similar_service import SimilarCriteria, create_similar_snapshot
 from app.modules.recommendations.talent_schemas import TalentFilters, TalentViewDTO
 from app.modules.recommendations.talent_service import read_items
 from app.modules.employer.needs_service import get_need
@@ -30,6 +31,13 @@ def eligibility(need_id: int, candidate_id: int, user: EmployerUser, session: Au
 @router.post("", response_model=SnapshotDTO, responses={503: {"description": "Ranking unavailable"}})
 def create(need_id: int, user: EmployerUser, session: AuthSession):
     return create_snapshot(session, user.id, need_id)
+
+
+@router.post("/similar", response_model=SnapshotDTO,
+             responses={503: {"description": "Taxonomy or ranking unavailable"}})
+def create_similar(need_id: int, user: EmployerUser, session: AuthSession,
+                   criteria: SimilarCriteria | None = None):
+    return create_similar_snapshot(session, user.id, need_id, criteria)
 
 
 @router.get("/{snapshot_id}", response_model=SnapshotDTO,

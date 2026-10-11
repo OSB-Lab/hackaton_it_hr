@@ -1,8 +1,8 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { ApiError } from '../_lib/api';
-import { get, send, recalled, remember, type Catalog, type Company, type Need, type Snapshot, type Item } from '../_lib/platform';
-import { Button, Field, Alert } from './ui';
+import { checkEligibility, get, send, recalled, remember, type Catalog, type Company, type Eligibility, type Need, type Snapshot, type Item } from '../_lib/platform';
+import { Badge, Button, Field, Alert, MetricBar, Tag } from './ui';
 import { Empty, Panel, Select, Skills, Textarea, useAction } from './workspace';
 import { Offer } from './InvitationsWorkspace';
 
@@ -55,10 +55,40 @@ export function TalentBank({catalog,userId}:{catalog:Catalog;userId:number}) {
       <form className="space-y-4" onSubmit={e=>{e.preventDefault();void action.run(async()=>{setItems([]);setOffer(null);const query=new URLSearchParams();if(specialization)query.set('specialization',specialization);if(grade)query.set('grade',grade);stack.forEach(s=>query.append('stack',s));if(fsp)query.set('hasFspAchievements',fsp);setItems((await get<{items:Item[]}>(`${base}/${snapshot.id}/items?${query}`)).items);});}}>
         <div className="workspace-grid"><Select label="Специализация" value={specialization} onChange={setSpecialization}><option value="">Все</option>{catalog.specializations.map(s=><option key={s.id} value={s.id}>{s.name}</option>)}</Select><Select label="Подтверждённый грейд" value={grade} onChange={setGrade}><option value="">Все</option>{catalog.grades.map(g=><option key={g.id} value={g.id}>{g.name}</option>)}</Select><Select label="История достижений ФСП" value={fsp} onChange={setFsp}><option value="">Не важно</option><option value="true">Есть история</option><option value="false">Нет истории</option></Select></div>
         <Skills label="Навыки: все выбранные (AND)" choices={catalog.skills.filter(s=>s.id!=='teamwork')} values={stack} onChange={setStack}/><p className="text-xs text-ink/60">Отдельный фильтр category недоступен: его справочник ещё не определён.</p><div className="flex gap-3"><Button type="submit" loading={action.busy}>Применить фильтры</Button><Button type="button" variant="secondary" loading={action.busy} onClick={()=>void action.run(async()=>{resetFields();setItems([]);setOffer(null);setItems((await get<{items:Item[]}>(`${base}/${snapshot.id}/items`)).items);})}>Сбросить фильтры</Button></div></form>
-      <div className="mt-6 space-y-4">{!items.length?<Empty>{action.busy?'Загрузка…':snapshot.items.length?'Нет кандидатов по выбранным фильтрам или доступ к данным изменился.':'Подходящих кандидатов пока нет. Нужны подтверждённые email и квалификация, публикация профиля и соответствие потребности. Результат DEMO не даёт допуска к подбору.'}</Empty>:items.map(item=><article key={item.candidate.id} className="rounded-xl border border-muted/60 p-5"><div className="flex flex-wrap items-start justify-between gap-3"><div><span className="workspace-badge">Место {item.rank??'—'}</span><h3 className="mt-3 text-lg font-bold">Кандидат №{item.candidate.id}</h3><p className="mt-1 text-sm text-ink/65">{item.candidate.specialization||'Специализация не указана'} · {item.candidate.grade||'Нет подтверждённого грейда'}</p></div><div className="text-right"><span className="text-xs text-ink/60">Сохранённый балл</span><p className="text-2xl font-bold text-brand">{item.score.toFixed(3)}</p></div></div>
-        <div className="my-4 flex flex-wrap gap-2">{item.candidate.stack?.map(s=><span key={s} className="workspace-badge">{s}</span>)}</div>
-        {item.components&&<div className="grid gap-2 text-xs sm:grid-cols-3"><p>Навыки: {item.components.skillFit.toFixed(3)}</p><p>Сила теста: {item.components.assessmentStrength.toFixed(3)}</p><p>Бонус ФСП: {item.components.fspBonus.toFixed(3)}</p></div>}
-        <ul className="my-4 space-y-1 text-xs text-ink/65">{(snapshot.items.find(i=>i.candidate.id===item.candidate.id)?.reasons||[]).map((r,i)=><li key={i}>{r.replace('Required skill evidence:','Подтверждённое покрытие навыков:').replace('Technical test:','Технический тест:').replace('Verified FSP bonus:','Подтверждённый бонус ФСП:')}</li>)}</ul>
-        <p className="mb-4 text-xs text-ink/60">Контакты скрыты. Доступ возможен только через принятое приглашение и действующие согласия.</p><Button variant="accent" onClick={()=>setOffer(item.candidate.id)}>Пригласить кандидата</Button>{offer===item.candidate.id&&<Offer candidateId={offer} onClose={()=>setOffer(null)}/>}</article>)}</div></Panel>}
+      <div className="mt-6 space-y-4">{!items.length?<Empty>{action.busy?'Загрузка…':snapshot.items.length?'Нет кандидатов по выбранным фильтрам или доступ к данным изменился.':'Подходящих кандидатов пока нет. Нужны подтверждённые email и квалификация, публикация профиля и соответствие потребности. Результат DEMO не даёт допуска к подбору.'}</Empty>:items.map(item=><article key={item.candidate.id} className="rounded-xl border border-muted/60 p-5"><div className="flex flex-wrap items-start justify-between gap-3"><div><Badge tone="brand">Место {item.rank??'—'}</Badge><h3 className="mt-3 text-lg font-bold">Кандидат <span className="font-mono">№{item.candidate.id}</span></h3><p className="mt-1 text-sm text-ink/65">{item.candidate.specialization||'Специализация не указана'} · {item.candidate.grade||'Нет подтверждённого грейда'}</p></div><div className="text-right"><span className="text-xs text-ink/60">Сохранённый балл</span><p className="text-2xl font-bold tabular-nums text-brand">{item.score.toFixed(3)}</p></div></div>
+        <div className="my-4 flex flex-wrap gap-2">{item.candidate.stack?.map(s=><Tag key={s}>{s}</Tag>)}</div>
+        {item.components&&<div className="space-y-2.5"><MetricBar label="Навыки" value={item.components.skillFit} /><MetricBar label="Сила теста" value={item.components.assessmentStrength} className="bg-brand-dark" /><MetricBar label="Бонус ФСП" value={item.components.fspBonus} className="bg-accent" /></div>}
+        {item.filterFit !== undefined&&<div className="mt-3 text-xs text-ink/65"><p>Похожие кандидаты · соответствие фильтру: {item.filterFit.toFixed(3)} · балл качества: {item.qualityScore?.toFixed(3)} · коэффициент порядка: {item.rankingFit?.toFixed(3)}</p><ul>{item.filterFactors?.filter(f=>f.coefficient<1).map(f=><li key={f.code}>{f.code}: {f.coefficient.toFixed(2)} — {f.reason}</li>)}</ul><p>Стек используется для поиска, но не умножает балл повторно; достижения учтены только в бонусе.</p></div>}
+        <ul className="my-4 space-y-1 text-xs text-ink/65">{(snapshot.items.find(i=>i.candidate.id===item.candidate.id)?.reasons||[]).map((r,i)=><li key={i}>{r.replace('Required skill evidence:','Подтверждённое покрытие навыков:').replace('Technical test:','Технический тест:').replace('Verified FSP bonus:','Подтверждённый бонус ФСП:').replace('Demo FSP bonus:','Демо-бонус ФСП (синтетические данные):')}</li>)}</ul>
+        <p className="mb-4 text-xs text-ink/60">Контакты скрыты. Доступ возможен только через принятое приглашение и действующие согласия.</p><Button variant="accent" onClick={()=>setOffer(item.candidate.id)}>Пригласить кандидата</Button><CandidateEligibility needId={Number(needId)} candidateId={item.candidate.id} />{offer===item.candidate.id&&<Offer candidateId={offer} onClose={()=>setOffer(null)}/>}</article>)}</div></Panel>}
   </div>;
+}
+
+const REASON_LABELS: Record<string, string> = {
+  SPECIALIZATION_MISMATCH: 'Специализация кандидата не совпадает с потребностью.',
+  GRADE_BELOW_MINIMUM: 'Подтверждённый грейд ниже минимального для потребности.',
+  REQUIRED_SKILL_EVIDENCE_MISSING: 'Нет подтверждённых данных по обязательным навыкам.',
+  REQUIRED_SKILL_EVIDENCE_INVALID: 'Данные по обязательному навыку некорректны.',
+  REQUIRED_SKILL_BELOW_THRESHOLD: 'Подтверждённое покрытие обязательного навыка ниже порога.',
+};
+
+// Диагностика формального фильтра для конкретного кандидата из подборки.
+// candidateId приходит из API (TalentItemDTO.candidate.id), а не из ручного ввода.
+function CandidateEligibility({ needId, candidateId }: { needId: number; candidateId: number }) {
+  const [result, setResult] = useState<Eligibility | null>(null);
+  const action = useAction();
+  return (
+    <div className="mt-3 space-y-3">
+      <Button className="!w-auto" variant="secondary" loading={action.busy} onClick={() => void action.run(async () => { setResult(await checkEligibility(needId, candidateId)); })}>Проверить соответствие</Button>
+      {action.feedback}
+      {result && (
+        <div className="space-y-2 rounded-lg bg-surface/60 p-4 text-sm">
+          <Alert kind={result.eligible ? 'success' : 'info'}>{result.eligible ? 'Кандидат проходит формальный фильтр потребности.' : 'Кандидат не проходит формальный фильтр по причинам ниже.'}</Alert>
+          {result.reasonCodes.length > 0 && <ul className="space-y-1 text-xs text-ink/70">{result.reasonCodes.map(code => <li key={code} className="flex gap-2"><span className="mt-1 h-1.5 w-1.5 shrink-0 bg-accent" aria-hidden="true" />{REASON_LABELS[code] ?? code}</li>)}</ul>}
+          {result.missingRequiredSkills.length > 0 && <div><p className="mb-1 text-xs font-semibold uppercase tracking-wide text-ink/60">Неподтверждённые обязательные навыки</p><div className="flex flex-wrap gap-2">{result.missingRequiredSkills.map(s => <span key={s} className="workspace-badge">{s}</span>)}</div></div>}
+          <p className="text-xs text-ink/60">Версия политики: {result.policyVersion}</p>
+        </div>
+      )}
+    </div>
+  );
 }
