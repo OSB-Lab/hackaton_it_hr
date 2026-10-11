@@ -13,6 +13,9 @@ export interface Profile {
   specialization: string | null; selfDeclaredGrade: string | null;
   verifiedGrade: string | null; verifiedSpecialization: string | null;
   consents: { processing: boolean; publication: boolean }; privacy: { showContacts: boolean };
+  fspSource: 'synthetic-demo-not-fsp' | null;
+  fspAchievements: { recordId: string; kind: 'competition_result' | 'sport_rank'; result: string;
+    role: string; skillIds: string[]; achievedAt: string }[];
   eligibleForEmployerSearch: boolean;
 }
 export interface Attempt {

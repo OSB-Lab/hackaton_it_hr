@@ -24,7 +24,7 @@ class ItemDTO(FrozenDTO):
     rank: Annotated[int, Field(strict=True, gt=0)] | None
     score: FiniteFloat
     components: Components | None
-    reasons: tuple[Annotated[str, Field(pattern=r"^(Required skill evidence|Technical test|Verified FSP bonus): (?:100|[0-9]{1,2})\.[0-9]%$")], ...] = ()
+    reasons: tuple[Annotated[str, Field(pattern=r"^(Required skill evidence|Technical test|Verified FSP bonus|Demo FSP bonus): (?:100|[0-9]{1,2})\.[0-9]%$")], ...] = ()
 
 
 def ranking_order_key(score: float, candidate_id: int) -> tuple[float, int]:

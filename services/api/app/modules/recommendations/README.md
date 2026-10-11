@@ -6,7 +6,7 @@ Missing/foreign need is 404; incomplete legacy need (specialization/minGrade) or
 nontechnical/duplicate/unknown skills is 422, unavailable catalog/evidence is 503.
 No client candidate IDs, scores or qualifications are accepted.
 
-Algorithm `v3-mvp-coverage-1`: LOCKED weights 0.50 skillFit + 0.35 testStrength +
+Algorithm `v3-mvp-coverage-fsp-demo-2`: LOCKED weights 0.50 skillFit + 0.35 testStrength +
 0.15 fspBonus. Public `assessmentStrength` remains the name for testStrength.
 All components and final score are 0..1. Sort score DESC, assessmentStrength DESC,
 candidate_id ASC, with contiguous one-based rank. Old algorithm versions retain
@@ -22,13 +22,14 @@ the immutable result of the attempt pointed to by verified_attempt_id, not that 
 or any later attempt. testStrength = that result's technicalTotal / 100.
 No assessment rules are changed and no self-reported stack contributes to score.
 
-FSP limitation: existing FspAchievement/FspLink do not record trustworthy confirmation
-or provenance and include demo seed rows. Production fspBonus is conservatively 0;
-linked history or a winner string is NOT proof. The pure calculation supports the
-temporary binary policy (confirmed achievement=1, otherwise=0), tested in isolation,
-but no production provider asserts confirmation. A trustworthy source and explicit
-team decision are needed before enabling it, with a new algorithm version. This
-limitation does not exclude candidates without FSP and does not redistribute weights.
+FSP demo: `FSP_DEMO_MODE=true` enables the synthetic JSON registry. Only a linked ID
+present in that file contributes a bounded type × role × stack × recency bonus;
+missing history scores 0. Persisted FspAchievement/seed rows alone never certify
+anything. This is simulated evidence, labelled `Demo FSP bonus`, NOT official FSP
+verification. Outside demo mode the bonus is 0. See
+[`docs/FSP_DEMO_ACHIEVEMENTS.md`](../../../docs/FSP_DEMO_ACHIEVEMENTS.md)
+for schema, formula, constraints and validation. Real FSP integration and proof of
+ID ownership remain future work. No weight redistribution or gate relaxation.
 
 `eligible_for_ranking` checks current email/publication/privacy + authoritative v3
 qualification/matches_need before scores. Qualification must reference a successful
@@ -134,11 +135,12 @@ Optional query parameters:
 - stack: repeat the parameter, e.g. stack=python&stack=sql. ALL requested skill IDs
   must match (AND); each ID is validated against catalog skills. No comma splitting,
   display-label mapping or normalization. Duplicates do not change the result.
-- hasFspAchievements: boolean, true or false. True requires a linked FspLink with
-  fsp_id and linked_at and at least one persisted FspAchievement for the candidate.
-  No link/no_history/no achievements => false. This uses server-owned FSP history,
-  not free-text CV/profile claims; it does not independently authenticate an external
-  provider or promote demo evidence to a verified qualification.
+- hasFspAchievements: boolean, true or false. For new snapshots the flag is
+  `saved components.fspBonus > 0`, so it remains consistent with ranking even if
+  the file changes later. For historical snapshots it is derived from a linked ID
+  and nonempty achievements in the active synthetic registry; legacy history rows
+  alone cannot set the flag. No link/no_history/empty record => false. The flag is
+  not a claim of real FSP certification.
 
 All filters combine with AND; a valid nonmatching combination returns 200/items=[].
 Unknown catalog values, invalid booleans or extra query parameters return 422.

@@ -83,4 +83,19 @@ export function Assessment({ catalog, userId }: { catalog: Catalog; userId: numb
   </Panel></div>;
 }
 
-export function FspInfo() { return <Panel title="Достижения ФСП"><Empty>Подключение подтверждённой истории соревнований пока не доступно через API. Мы не выдаём demo-достижения за подтверждённые. Отсутствие истории ФСП не мешает пройти тестирование и участвовать в подборе при выполнении остальных условий.</Empty></Panel>; }
+export function FspInfo() {
+  const [profile, setProfile] = useState<Profile | null>(null);
+  const action = useAction();
+  async function load() { setProfile(await get<Profile>('/me/candidate-profile')); }
+  useEffect(() => { void action.run(load); }, []);
+  return <Panel title="Достижения ФСП" description="Данные в демо — синтетический файл, не официальный реестр ФСП.">
+    {action.feedback}
+    <Button variant="secondary" loading={action.busy} onClick={() => void action.run(load)}>Обновить</Button>
+    {profile && (!profile.fspSource ? <Empty>Демо-источник отключён. Интеграция с ФСП пока недоступна.</Empty>
+      : !profile.fspAchievements.length ? <Empty>Истории в демо-реестре нет. Это не препятствует тестированию и подбору.</Empty>
+      : <ul className="mt-5 space-y-3">{profile.fspAchievements.map(a => <li key={a.recordId} className="rounded-xl border border-muted/60 p-4">
+        <p className="font-semibold">{a.kind === 'sport_rank' ? 'Спортивный разряд (демо)' : 'Результат соревнования (демо)'} · {a.result}</p>
+        <p className="mt-1 text-sm text-ink/65">Роль: {a.role} · Навыки: {a.skillIds.join(', ')} · Дата: {a.achievedAt}</p>
+      </li>)}</ul>)}
+  </Panel>;
+}

@@ -25,6 +25,8 @@ class Settings(BaseSettings):
     SMTP_HOST: str = "mailpit"
     SMTP_PORT: int = Field(default=1025, ge=1, le=65535)
     SMTP_FROM: str = "noreply@fsp.example"
+    FSP_DEMO_MODE: bool = False
+    FSP_DEMO_REGISTRY_PATH: Path | None = None
 
     @property
     def DATABASE_URL(self) -> str:

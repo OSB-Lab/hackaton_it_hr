@@ -14,13 +14,16 @@ from test_employer_company import company_env
 
 
 @pytest.fixture
-def talent_env(recommendation_env):
+def talent_env(recommendation_env, monkeypatch):
+    from app.modules.fsp.demo import load_registry
+    from app.modules.recommendations import talent_service
+    monkeypatch.setattr(talent_service, "active_registry", lambda: load_registry())
     env, (need, other, candidate, snapshot) = recommendation_env
     client, headers, user_ids, engine = env
     with Session(engine) as session, session.begin():
         first = session.get(CandidateProfile, candidate)
         first.specialization, first.stack = "backend", ["python", "sql", "secret@example.com", "+79991234567"]
-        session.add(FspLink(candidate_id=candidate, status="linked", fsp_id="fixture-1", linked_at=datetime.now(timezone.utc)))
+        session.add(FspLink(candidate_id=candidate, status="linked", fsp_id="demo-fsp-002", linked_at=datetime.now(timezone.utc)))
         session.add(FspAchievement(candidate_id=candidate, discipline="fixture", result="secret@example.com"))
         candidates = [candidate]
         for i, spec, stack in [(2, "backend", ["python"]), (3, "frontend", ["react"])]:
@@ -147,7 +150,7 @@ def test_fsp_requires_linked_history(talent_env, missing):
     with Session(engine) as session, session.begin():
         link = session.scalar(select(FspLink).where(FspLink.candidate_id == candidates[0]))
         if missing == "link": session.delete(link)
-        elif missing == "history": session.delete(session.scalar(select(FspAchievement)))
+        elif missing == "history": link.fsp_id = "not-in-registry"
         elif missing == "linked_status": link.status = "no_history"
         else: setattr(link, missing, None)
     response = client.get(url(need, snapshot), headers=headers[0], params={"hasFspAchievements": "true"})

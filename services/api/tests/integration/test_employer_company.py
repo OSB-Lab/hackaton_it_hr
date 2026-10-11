@@ -116,6 +116,7 @@ def test_company_openapi(company_env):
         "/employer/needs/{need_id}/recommendations",
         "/employer/needs/{need_id}/recommendations/{snapshot_id}",
         "/employer/needs/{need_id}/recommendations/{snapshot_id}/items",
+        "/employer/needs/{need_id}/eligibility/{candidate_id}",
     }
     assert set(schema["paths"][URL]) == {"get", "put"}
     for method in ("get", "put"):

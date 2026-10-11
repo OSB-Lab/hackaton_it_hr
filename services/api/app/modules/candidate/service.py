@@ -39,7 +39,12 @@ def self_profile(session: Session, user: User) -> SelfCandidateDTO:
     privacy = {"showContacts": bool(profile and (profile.privacy_settings or {}).get("show_contacts") is True)}
     from app.modules.assessments.qualification import qualification
     proof = qualification(session, profile.id) if profile else None
-    return SelfCandidateDTO(verifiedGrade=profile.verified_grade if proof else None,
+    from app.modules.fsp.demo import active_registry, achievements_for
+    registry = active_registry()
+    achievements = achievements_for(session, profile.id, registry) if profile else ()
+    return SelfCandidateDTO(fspSource="synthetic-demo-not-fsp" if registry else None,
+                            fspAchievements=list(achievements),
+                            verifiedGrade=profile.verified_grade if proof else None,
                             verifiedSpecialization=profile.verified_specialization if proof else None,
                             email=user.email, **values, privacy=privacy, consents=consent_state(session, user.id),
                             eligibleForEmployerSearch=bool(proof and user.is_verified and eligible_for_employer_search(session, user.id)))

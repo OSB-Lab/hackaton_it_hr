@@ -30,6 +30,7 @@ services:
     env_file: ../.env
     environment:
       WATCHFILES_FORCE_POLLING: "true"
+      FSP_DEMO_MODE: ${FSP_DEMO_MODE:-true}
     depends_on:
       postgres:
         condition: service_healthy
