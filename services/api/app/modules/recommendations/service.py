@@ -1,3 +1,5 @@
+from datetime import date
+
 from fastapi import HTTPException
 from pydantic import ValidationError
 from sqlalchemy import select
@@ -30,9 +32,15 @@ def create_snapshot(session: Session, user_id: int, need_id: int):
     from app.modules.assessments.schemas import ResultDTO
     from app.modules.catalog.repository import CatalogRepository
     from app.modules.catalog.validators import validate_grade, validate_skills, validate_specialization
+    from app.modules.fsp.demo import active_registry, achievements_for, score_achievements
     from app.modules.recommendations.ranking import ALGORITHM_VERSION, WEIGHTS, calculate
 
     need = get_need(session, user_id, need_id, lock=True)
+    try:
+        registry = active_registry()
+    except ValueError:
+        raise HTTPException(503, "Synthetic FSP registry unavailable") from None
+    as_of = date.today()
     try:
         catalog = CatalogRepository().catalog().document
     except (ValueError, OSError):
@@ -59,8 +67,9 @@ def create_snapshot(session: Session, user_id: int, need_id: int):
         technical = {tag for slot in saved.blueprint.slots for tag in slot.skillTags} - {"teamwork"}
         evidence = {s: result.subscores[s] for s in technical if (result.evidenceCounts or {}).get(s, 0) > 0}
         try:
-            # No trusted FSP confirmation source exists yet; never promote seed/linked rows.
-            score, components, reasons = calculate(required, optional, evidence, result.technicalTotal)
+            bonus = score_achievements(achievements_for(session, profile.id, registry), required, as_of)
+            score, components, reasons = calculate(required, optional, evidence, result.technicalTotal,
+                                                    fsp_bonus=bonus)
         except ValueError:
             raise HTTPException(503, "Certified evidence unavailable") from None
         items.append(ItemDTO(candidate=CandidateDTO(id=profile.id), rank=1, score=score,

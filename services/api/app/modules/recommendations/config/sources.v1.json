@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "catalog_version": "talent-taxonomy-v1",
+  "generated_at": "2026-10-11",
+  "sources": {
+    "onet31": {
+      "title": "O*NET 31.0 Database — Software Skills / Occupation Data / Related Occupations",
+      "url": "https://www.onetcenter.org/database.html",
+      "version": "31.0",
+      "license": "CC BY 4.0",
+      "usage": "occupation anchors, workplace technology names, role adjacency reference"
+    },
+    "esco121": {
+      "title": "ESCO classification and API",
+      "url": "https://esco.ec.europa.eu/en/structure-esco-downloadable-datasets",
+      "version": "1.2.1",
+      "license": "European Commission reuse notice; verify attribution in distribution",
+      "usage": "occupation identifiers, labels and occupation/skill mapping reference"
+    },
+    "so2025": {
+      "title": "Stack Overflow Developer Survey 2025",
+      "url": "https://survey.stackoverflow.co/2025/",
+      "version": "2025",
+      "license": "Use as aggregate reference only; raw respondent data is not embedded",
+      "usage": "technology vocabulary and market-plausibility sanity check"
+    },
+    "fsp_ref": {
+      "title": "SergeLyamin/fsp-talent public implementation",
+      "url": "https://github.com/SergeLyamin/fsp-talent",
+      "version": "commit 3965f656d80bc2780ccf540a303b02083d8473b2",
+      "license": "repository license must be checked before copying code; only mechanics were compared",
+      "usage": "aliases and explainable related-technology mechanics reference"
+    },
+    "sopranos_v3": {
+      "title": "Sopranos locked v3 assessment and matching contract",
+      "url": "../../business-logic/ASSESSMENT_AND_MATCHING_CONTRACT.md",
+      "version": "v3",
+      "license": "internal",
+      "usage": "canonical MVP roles/skills and verified-category constraints"
+    }
+  }
+}

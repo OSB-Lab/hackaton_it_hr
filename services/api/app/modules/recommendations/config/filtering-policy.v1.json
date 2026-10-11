@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "policy_version": "formal-filter-v1",
+  "coefficient_precision": "0.000001",
+  "minimum_filter_fit": 0.12,
+  "maximum_role_hops": 2,
+  "hard_gates": [
+    "verified_email",
+    "publication_consent",
+    "submitted_category_attempt",
+    "known_role",
+    "known_grade"
+  ],
+  "factor_order": [
+    "role",
+    "grade",
+    "experience",
+    "stack",
+    "achievements",
+    "salary",
+    "work_format",
+    "location"
+  ],
+  "formula": "filter_fit = product(applicable factor coefficients)",
+  "unknown_values": {
+    "experience": 0.9,
+    "salary": 0.9,
+    "work_format": 0.88,
+    "location": 0.9
+  },
+  "experience": {
+    "minimum_deficit_bands": [
+      {
+        "max_years": 0.5,
+        "coefficient": 0.96
+      },
+      {
+        "max_years": 1.0,
+        "coefficient": 0.9
+      },
+      {
+        "max_years": 2.0,
+        "coefficient": 0.76
+      },
+      {
+        "max_years": 999,
+        "coefficient": 0.55
+      }
+    ],
+    "maximum_excess_bands": [
+      {
+        "max_years": 1.0,
+        "coefficient": 0.98
+      },
+      {
+        "max_years": 3.0,
+        "coefficient": 0.92
+      },
+      {
+        "max_years": 999,
+        "coefficient": 0.82
+      }
+    ]
+  },
+  "stack": {
+    "required_missing": 0.45,
+    "optional_missing": 0.78,
+    "optional_weight_multiplier": 0.35,
+    "aggregation": "weighted_geometric_mean",
+    "relation_max_hops": 1
+  },
+  "achievements": {
+    "required_missing": 0.62,
+    "optional_missing": 0.88,
+    "optional_weight_multiplier": 0.35,
+    "aggregation": "weighted_geometric_mean",
+    "no_requirements_is_neutral": true
+  },
+  "salary": {
+    "unknown": 0.9,
+    "over_budget_bands": [
+      {
+        "max_ratio": 1.1,
+        "coefficient": 0.95
+      },
+      {
+        "max_ratio": 1.2,
+        "coefficient": 0.85
+      },
+      {
+        "max_ratio": 1.35,
+        "coefficient": 0.65
+      },
+      {
+        "max_ratio": 999,
+        "coefficient": 0.4
+      }
+    ]
+  },
+  "work_format": {
+    "unknown": 0.88,
+    "matrix": {
+      "remote": {
+        "remote": 1.0,
+        "hybrid": 0.8,
+        "office": 0.45
+      },
+      "hybrid": {
+        "remote": 0.8,
+        "hybrid": 1.0,
+        "office": 0.86
+      },
+      "office": {
+        "remote": 0.45,
+        "hybrid": 0.86,
+        "office": 1.0
+      }
+    }
+  },
+  "location": {
+    "unknown": 0.9,
+    "different": 0.62,
+    "remote_is_neutral": true
+  },
+  "downstream_contract": {
+    "recommended_v4": "final_score = filter_fit * (0.50 * skill_fit + 0.35 * test_strength + 0.15 * fsp_bonus)",
+    "legacy_v3": "Keep strict eligibility and do not apply this policy until the contract is versioned."
+  }
+}

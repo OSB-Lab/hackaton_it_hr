@@ -525,7 +525,10 @@ rankScore = 0.50 * skillFit + 0.35 * testStrength + 0.15 * fspBonus
   Teamwork не входит.
 - `fspBonus` — только подтверждённые достижения; 0 при `no_history`. Может включать опубликованную mapping
   «дисциплина ФСП → специализация» и давность, но fallback без mapping — общий небольшой бонус. Он ограничен 0..1
-  и не может преодолеть eligibility gate.
+  и не может преодолеть eligibility gate. Демо-нормализация описана в
+  [`../../FSP_DEMO_ACHIEVEMENTS.md`](../../FSP_DEMO_ACHIEVEMENTS.md): синтетический файл,
+  явный флаг `FSP_DEMO_MODE`, тип/роль/стек/давность, максимум одного рекорда.
+  Это **имитация реестра**, не реальная верификация ФСП; в production бонус отключён.
 
 Tie-breaker: `rankScore DESC`, затем `technical_score DESC`, затем стабильный `candidate_id ASC`. Snapshot хранит
 версии алгоритма, исходные компоненты, причины и порядок; фильтры применяются к нему, не создавая новый ranking.

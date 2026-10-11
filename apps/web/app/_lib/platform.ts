@@ -13,6 +13,9 @@ export interface Profile {
   specialization: string | null; selfDeclaredGrade: string | null;
   verifiedGrade: string | null; verifiedSpecialization: string | null;
   consents: { processing: boolean; publication: boolean }; privacy: { showContacts: boolean };
+  fspSource: 'synthetic-demo-not-fsp' | null;
+  fspAchievements: { recordId: string; kind: 'competition_result' | 'sport_rank'; result: string;
+    role: string; skillIds: string[]; achievedAt: string }[];
   eligibleForEmployerSearch: boolean;
 }
 export interface Attempt {
@@ -35,6 +38,9 @@ export interface Item {
   candidate: { id: number; specialization?: string | null; grade?: string | null; stack?: string[]; hasFspAchievements?: boolean };
   rank: number | null; score: number;
   components: { skillFit: number; assessmentStrength: number; fspBonus: number } | null;
+  filterFit?: number; rankingFit?: number; qualityScore?: number;
+  filterFactors?: {code:string; coefficient:number; reason:string}[];
+  taxonomyVersion?: string; filterPolicyVersion?: string;
   reasons?: string[];
 }
 export interface Snapshot { id: number; needId: number; algorithmVersion: string | null; items: Item[] }
