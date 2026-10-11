@@ -2,28 +2,37 @@
 
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type ReactNode } from 'react';
 import { ApiError, authApi, cabinetPath, tokenStore, type Role, type User } from '../_lib/api';
-import { Alert, Logo } from './ui';
+import { Alert, Spinner } from './ui';
 import { get, type Catalog } from '../_lib/platform';
+import { ErrorBoundary } from './workspace';
 import { CandidateProfile, Assessment, FspInfo } from './CandidateWorkspace';
 import { CompanyProfile, Needs, TalentBank } from './EmployerWorkspace';
 import { Invitations } from './InvitationsWorkspace';
+import { CabinetShell } from './cabinet/CabinetShell';
+import { CandidateDashboard } from './cabinet/CandidateDashboard';
+import { EmployerDashboard } from './cabinet/EmployerDashboard';
 
-// Разделы будущих кабинетов (задачи 3.2–3.7). Пока это заглушки, но они показывают,
-// как будет устроена навигация, и защищают маршрут по роли.
-const SECTIONS: Record<Role, { id: string; title: string; text: string }[]> = {
+// Разделы кабинетов с иконками для боковой навигации.
+const Svg = ({ children }: { children: ReactNode }) => (
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{children}</svg>
+);
+
+const SECTIONS: Record<Role, { id: string; title: string; text: string; icon: ReactNode }[]> = {
   candidate: [
-    { id: 'profile', title: 'Профиль и согласия', text: 'Данные и приватность' },
-    { id: 'assessment', title: 'Тест и квалификация', text: 'Вопросы и результаты' },
-    { id: 'invitations', title: 'Приглашения', text: 'Предложения с зарплатой' },
-    { id: 'fsp', title: 'Достижения ФСП', text: 'Статус интеграции' },
+    { id: 'dashboard', title: 'Обзор', text: 'Состояние и следующие шаги', icon: <Svg><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></Svg> },
+    { id: 'profile', title: 'Профиль', text: 'Редактирование данных', icon: <Svg><circle cx="12" cy="8" r="4" /><path d="M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1" /></Svg> },
+    { id: 'assessment', title: 'Тест и квалификация', text: 'Вопросы и результаты', icon: <Svg><rect x="4" y="3" width="16" height="18" rx="2" /><path d="M8 7h8M8 12h5M8 17h3" /></Svg> },
+    { id: 'invitations', title: 'Приглашения', text: 'Предложения с зарплатой', icon: <Svg><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></Svg> },
+    { id: 'fsp', title: 'Достижения ФСП', text: 'Статус интеграции', icon: <Svg><circle cx="12" cy="9" r="6" /><path d="M9 14l-1.5 6L12 18l4.5 2L15 14" /></Svg> },
   ],
   employer: [
-    { id: 'company', title: 'Компания', text: 'Описание и контакты' },
-    { id: 'needs', title: 'Потребности', text: 'Роли и технические навыки' },
-    { id: 'talent', title: 'Банк талантов', text: 'Подборки и объяснения' },
-    { id: 'invitations', title: 'Приглашения', text: 'Предложения и контакты' },
+    { id: 'dashboard', title: 'Обзор', text: 'Компания и подбор', icon: <Svg><rect x="3" y="3" width="7" height="7" rx="1.5" /><rect x="14" y="3" width="7" height="7" rx="1.5" /><rect x="3" y="14" width="7" height="7" rx="1.5" /><rect x="14" y="14" width="7" height="7" rx="1.5" /></Svg> },
+    { id: 'company', title: 'Компания', text: 'Описание и контакты', icon: <Svg><rect x="4" y="3" width="16" height="18" rx="1" /><path d="M8 7h2M14 7h2M8 11h2M14 11h2M8 15h2M14 15h2" /></Svg> },
+    { id: 'needs', title: 'Потребности', text: 'Роли и технические навыки', icon: <Svg><rect x="3" y="7" width="18" height="13" rx="2" /><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2" /></Svg> },
+    { id: 'talent', title: 'Банк талантов', text: 'Подборки и объяснения', icon: <Svg><circle cx="9" cy="8" r="3" /><path d="M3 20v-1a5 5 0 0 1 5-5h2a5 5 0 0 1 5 5v1" /><circle cx="17" cy="9" r="2" /><path d="M17 14a4 4 0 0 1 4 4v1" /></Svg> },
+    { id: 'invitations', title: 'Приглашения', text: 'Предложения и контакты', icon: <Svg><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></Svg> },
   ],
 };
 
@@ -99,64 +108,59 @@ export function CabinetStub({ role, section }: { role: Role; section?: string })
 
   if (!user) {
     return (
-      <main className="grid min-h-screen place-items-center text-sm text-ink/70">Загрузка…</main>
+      <main className="grid min-h-screen place-items-center">
+        <Spinner label="Загрузка кабинета…" />
+      </main>
     );
   }
 
-  return (
-    <div className="min-h-screen">
-      <header className="border-b border-ink bg-white">
-        <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-4">
-          <Logo />
-          <div className="flex items-center gap-4 text-sm">
-            <span className="hidden text-ink/70 sm:inline">{user.email}</span>
-            <button
-              type="button"
-              onClick={logout}
-              className="font-semibold text-brand hover:underline"
-            >
-              Выйти
-            </button>
-          </div>
+  const renderSection = () => {
+    if (active === 'invitations') return <Invitations role={role} />;
+    if (role === 'candidate' && active === 'fsp') return <FspInfo />;
+    if (role === 'employer' && active === 'company') return <CompanyProfile />;
+    if (!catalog) {
+      return (
+        <div className="workspace-panel">
+          {catalogError ? (
+            <>
+              <Alert kind="error">{catalogError}</Alert>
+              <button className="mt-4 text-brand underline" onClick={() => void loadCatalog()}>Повторить загрузку каталога</button>
+            </>
+          ) : (
+            <p role="status" className="text-sm text-ink/70">Загрузка справочника…</p>
+          )}
         </div>
-      </header>
+      );
+    }
+    if (active === 'dashboard') return role === 'candidate' ? <CandidateDashboard user={user} catalog={catalog} /> : <EmployerDashboard catalog={catalog} />;
+    if (role === 'candidate' && active === 'profile') return <CandidateProfile catalog={catalog} />;
+    if (role === 'candidate' && active === 'assessment') return <Assessment catalog={catalog} userId={user.id} />;
+    if (role === 'employer' && active === 'needs') return <Needs catalog={catalog} />;
+    if (role === 'employer' && active === 'talent') return <TalentBank catalog={catalog} userId={user.id} />;
+    return <Alert kind="error">Раздел не найден.</Alert>;
+  };
 
-      <main className="mx-auto max-w-7xl px-5 py-8 sm:py-10">
-        <h1 className="text-2xl font-bold sm:text-3xl">{ROLE_TITLE[role]}</h1>
-        <p className="mt-3 max-w-xl text-sm leading-relaxed text-ink/75">{WELCOME[role]}</p>
-
-        {!user.is_verified && (
-          <div className="mt-6">
-            <Alert kind="info">
-              Email не подтверждён.{' '}
-              <Link
-                href={`/verify-email?email=${encodeURIComponent(user.email)}`}
-                className="font-semibold underline"
-              >
-                Подтвердить
-              </Link>
-            </Alert>
-          </div>
-        )}
-
-        <div className="mt-8 grid items-start gap-6 lg:grid-cols-[240px_minmax(0,1fr)]"><nav aria-label="Разделы кабинета" className="grid grid-cols-2 gap-2 lg:sticky lg:top-5 lg:grid-cols-1">
-          {SECTIONS[role].map((section) => (
-            <Link
-              key={section.title}
-              href={`/${role}/${section.id}`}
-              aria-current={active===section.id?'page':undefined}
-              className={`rounded-xl border p-4 transition ${active===section.id?'border-brand bg-brand text-white shadow-sm':'border-muted/50 bg-white hover:border-brand'}`}
-            >
-              <div>
-                <h2 className="font-bold">{section.title}</h2>
-                <p className="mt-1 text-xs leading-relaxed opacity-70">{section.text}</p>
-              </div>
+  return (
+    <CabinetShell
+      role={role}
+      roleTitle={ROLE_TITLE[role]}
+      welcome={WELCOME[role]}
+      email={user.email}
+      sections={SECTIONS[role]}
+      active={active}
+      onLogout={logout}
+    >
+      {!user.is_verified && (
+        <div className="mb-6">
+          <Alert kind="info">
+            Email не подтверждён.{' '}
+            <Link href={`/verify-email?email=${encodeURIComponent(user.email)}`} className="font-semibold underline">
+              Подтвердить
             </Link>
-          ))}
-        </nav><div className="min-w-0">
-          {active==='invitations' ? <Invitations role={role}/> : role==='candidate'&&active==='fsp' ? <FspInfo/> : role==='employer'&&active==='company' ? <CompanyProfile/> : !catalog ? <div className="workspace-panel">{catalogError?<><Alert kind="error">{catalogError}</Alert><button className="mt-4 text-brand underline" onClick={()=>void loadCatalog()}>Повторить загрузку каталога</button></>:<p role="status">Загрузка справочника…</p>}</div> : role==='candidate'&&active==='profile' ? <CandidateProfile catalog={catalog}/> : role==='candidate'&&active==='assessment' ? <Assessment catalog={catalog} userId={user.id}/> : role==='employer'&&active==='needs' ? <Needs catalog={catalog}/> : role==='employer'&&active==='talent' ? <TalentBank catalog={catalog} userId={user.id}/> : <Alert kind="error">Раздел не найден.</Alert>}
-        </div></div>
-      </main>
-    </div>
+          </Alert>
+        </div>
+      )}
+      <ErrorBoundary key={active}>{renderSection()}</ErrorBoundary>
+    </CabinetShell>
   );
 }

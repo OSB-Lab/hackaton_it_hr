@@ -4,17 +4,20 @@ import { NetworkArt } from './NetworkArt';
 
 // Общие элементы интерфейса. Радиусы небольшие, линии тонкие: стиль «турнирной таблицы».
 
-export function Logo({ light = false }: { light?: boolean }) {
+// Фирменный логотип ФСП — SVG из брендбука. На светлом фоне цветной вариант,
+// на тёмном/фиолетовом — белый (logo-white.svg получен перекрашиванием logo-color.svg).
+export function Logo({ light = false, className = '' }: { light?: boolean; className?: string }) {
   return (
-    <Link href="/" className="inline-flex items-center gap-2.5 font-bold">
-      <span
-        className={`grid h-9 w-9 place-items-center rounded-md text-xs ${
-          light ? 'bg-white text-brand' : 'bg-brand text-white'
-        }`}
-      >
-        ФСП
-      </span>
-      <span className={`text-sm ${light ? 'text-white' : 'text-ink'}`}>ИТ-подбор</span>
+    <Link href="/" aria-label="ФСП — на главную" className={`inline-flex items-center gap-2.5 ${className}`}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={light ? '/brand/logo-white.svg' : '/brand/logo-color.svg'}
+        alt="Федерация спортивного программирования"
+        width={119}
+        height={40}
+        className="h-8 w-auto sm:h-9"
+      />
+      <span className={`text-sm font-semibold ${light ? 'text-white' : 'text-ink'}`}>ИТ-подбор</span>
     </Link>
   );
 }
@@ -64,7 +67,7 @@ export function AuthShell({
           <div className="mb-6 lg:hidden">
             <Logo />
           </div>
-          <div className="rounded-lg border border-muted bg-white p-6 sm:p-8">
+          <div className="rounded-2xl border border-border bg-canvas p-6 shadow-card sm:p-8">
             <h1 className="text-2xl font-bold">{title}</h1>
             {subtitle && <p className="mt-2 text-sm leading-relaxed text-ink/70">{subtitle}</p>}
             <div className="mt-7">{children}</div>
@@ -87,15 +90,15 @@ export function Field({ id, label, error, hint, className = '', ...props }: Fiel
   const describedBy = error ? `${id}-error` : hint ? `${id}-hint` : undefined;
   return (
     <div>
-      <label htmlFor={id} className="mb-1.5 block text-sm font-medium">
+      <label htmlFor={id} className="mb-1.5 block text-sm font-medium text-ink">
         {label}
       </label>
       <input
         id={id}
         aria-invalid={error ? true : undefined}
         aria-describedby={describedBy}
-        className={`w-full rounded-md border bg-white px-3.5 py-2.5 text-sm outline-none transition focus:border-brand focus:ring-2 focus:ring-brand/25 ${
-          error ? 'border-accent' : 'border-muted'
+        className={`w-full rounded-lg border bg-canvas px-3.5 py-2.5 text-sm text-ink outline-none transition placeholder:text-ink/60 focus:border-brand focus:ring-2 focus:ring-brand/20 ${
+          error ? 'border-accent' : 'border-border'
         } ${className}`}
         {...props}
       />
@@ -115,27 +118,42 @@ export function Field({ id, label, error, hint, className = '', ...props }: Fiel
 export function Button({
   loading = false,
   variant = 'primary',
+  size = 'md',
   className = '',
   disabled,
   children,
   ...props
 }: ButtonHTMLAttributes<HTMLButtonElement> & {
   loading?: boolean;
-  variant?: 'primary' | 'secondary' | 'accent';
+  variant?: 'primary' | 'secondary' | 'accent' | 'ghost' | 'danger';
+  size?: 'sm' | 'md';
 }) {
-  const styles = {
+  const variants = {
     primary: 'bg-brand text-white hover:bg-brand-dark',
-    // Красный используется только для действий работодателя (например, «Отправить предложение»).
+    // Красный — редкий смысловой акцент (например, «Отправить предложение»).
     accent: 'bg-accent text-white hover:bg-accent-dark',
-    secondary: 'border border-ink bg-white text-ink hover:bg-surface',
+    secondary: 'border border-border bg-canvas text-ink hover:bg-surface',
+    ghost: 'text-brand hover:bg-brand-soft',
+    danger: 'bg-accent text-white hover:bg-accent-dark',
   }[variant];
+  const sizes = {
+    sm: 'px-3 py-2 text-xs',
+    md: 'px-4 py-2.5 text-sm',
+  }[size];
   return (
     <button
       {...props}
       disabled={disabled || loading}
-      className={`inline-flex w-full items-center justify-center rounded-md px-4 py-3 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-60 ${styles} ${className}`}
+      className={`inline-flex w-full items-center justify-center gap-2 rounded-lg font-semibold transition disabled:cursor-not-allowed disabled:opacity-60 ${variants} ${sizes} ${className}`}
     >
-      {loading ? 'Подождите…' : children}
+      {loading ? (
+        <>
+          <span aria-hidden="true" className="h-4 w-4 animate-spin rounded-full border-2 border-current/30 border-t-current" />
+          Подождите…
+        </>
+      ) : (
+        children
+      )}
     </button>
   );
 }
@@ -144,20 +162,150 @@ export function Alert({
   kind,
   children,
 }: {
-  kind: 'error' | 'success' | 'info';
+  kind: 'error' | 'success' | 'info' | 'warning';
   children: ReactNode;
 }) {
   const styles = {
-    error: 'border-accent/40 bg-accent/10 text-accent-dark',
-    success: 'border-green-700/30 bg-green-50 text-green-900',
+    error: 'border-accent/40 bg-accent-soft text-accent-dark',
+    success: 'border-success/30 bg-success-soft text-success',
     info: 'border-brand/30 bg-brand-soft text-brand-dark',
+    warning: 'border-warning/30 bg-warning-soft text-warning',
   }[kind];
   return (
     <div
       role={kind === 'error' ? 'alert' : 'status'}
-      className={`rounded-md border px-4 py-3 text-sm leading-relaxed ${styles}`}
+      className={`rounded-lg border px-4 py-3 text-sm leading-relaxed ${styles}`}
     >
       {children}
     </div>
+  );
+}
+
+export function Spinner({ label = 'Загрузка…' }: { label?: string }) {
+  return (
+    <span role="status" className="inline-flex items-center gap-2 text-sm text-ink/70">
+      <span aria-hidden="true" className="h-4 w-4 animate-spin rounded-full border-2 border-brand/30 border-t-brand" />
+      {label}
+    </span>
+  );
+}
+
+export function Skeleton({ className = '' }: { className?: string }) {
+  return <div aria-hidden="true" className={`animate-pulse rounded-md bg-muted/40 ${className}`} />;
+}
+
+export type Tone = 'neutral' | 'brand' | 'success' | 'warning' | 'danger';
+
+const TONE_STYLES: Record<Tone, string> = {
+  neutral: 'border-border bg-surface text-ink/70',
+  brand: 'border-brand/20 bg-brand-soft text-brand-dark',
+  success: 'border-success/20 bg-success-soft text-success',
+  warning: 'border-warning/20 bg-warning-soft text-warning',
+  danger: 'border-accent/20 bg-accent-soft text-accent-dark',
+};
+
+export function Badge({ tone = 'neutral', dot = false, children, className = '' }: { tone?: Tone; dot?: boolean; children: ReactNode; className?: string }) {
+  return (
+    <span className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-xs font-medium ${TONE_STYLES[tone]} ${className}`}>
+      {dot && <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-current" />}
+      {children}
+    </span>
+  );
+}
+
+export function Card({ className = '', children }: { className?: string; children: ReactNode }) {
+  return <div className={`rounded-2xl border border-border bg-canvas shadow-card ${className}`}>{children}</div>;
+}
+
+export function Stat({ label, value, hint }: { label: string; value: ReactNode; hint?: ReactNode }) {
+  return (
+    <div className="rounded-xl border border-border bg-canvas p-5 shadow-card">
+      <span className="block text-xs font-medium text-ink/70">{label}</span>
+      <strong className="mt-2 block text-2xl font-bold text-ink">{value}</strong>
+      {hint && <span className="mt-1 block text-xs text-ink/70">{hint}</span>}
+    </div>
+  );
+}
+
+export function ProgressBar({ value, max = 100, className = '' }: { value: number; max?: number; className?: string }) {
+  const pct = max > 0 ? Math.min(100, Math.max(0, (value / max) * 100)) : 0;
+  return (
+    <div role="progressbar" aria-valuenow={Math.round(pct)} aria-valuemin={0} aria-valuemax={100} className={`h-2 w-full overflow-hidden rounded-full bg-surface ${className}`}>
+      <div className="h-full rounded-full bg-brand transition-all" style={{ width: `${pct}%` }} />
+    </div>
+  );
+}
+
+export function Tag({ children, className = '' }: { children: ReactNode; className?: string }) {
+  return <span className={`inline-flex items-center rounded-md border border-border bg-surface px-2.5 py-1 text-xs font-medium text-ink/80 ${className}`}>{children}</span>;
+}
+
+export function SectionHeader({ title, description }: { title: string; description?: string }) {
+  return (
+    <div className="mb-4">
+      <h3 className="text-base font-semibold text-ink">{title}</h3>
+      {description && <p className="mt-1 text-sm text-ink/60">{description}</p>}
+    </div>
+  );
+}
+
+// Кольцевой индикатор (0..100). Трек и заполнение заданы палитрой; value
+// вычисляется из реальных данных, а не из фиктивных метрик.
+export function ProgressRing({ value, size = 92, stroke = 8, label }: { value: number; size?: number; stroke?: number; label?: ReactNode }) {
+  const pct = Math.min(100, Math.max(0, value));
+  const r = (size - stroke) / 2;
+  const c = 2 * Math.PI * r;
+  const offset = c - (pct / 100) * c;
+  return (
+    <div className="relative inline-flex shrink-0 items-center justify-center" style={{ width: size, height: size }}>
+      <svg width={size} height={size} className="-rotate-90">
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#D9DADB" strokeWidth={stroke} />
+        <circle cx={size / 2} cy={size / 2} r={r} fill="none" stroke="#402FFF" strokeWidth={stroke} strokeLinecap="round" strokeDasharray={c} strokeDashoffset={offset} className="transition-all duration-500" />
+      </svg>
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+        <span className="text-lg font-bold leading-none text-ink">{Math.round(pct)}%</span>
+        {label && <span className="mt-0.5 px-1 text-[10px] leading-tight text-ink/70">{label}</span>}
+      </div>
+    </div>
+  );
+}
+
+// Подписанная горизонтальная метрика (0..max), для оценки компонент подбора.
+export function MetricBar({ label, value, max = 1, className = '' }: { label: string; value: number; max?: number; className?: string }) {
+  const pct = max > 0 ? Math.min(100, Math.max(0, (value / max) * 100)) : 0;
+  return (
+    <div>
+      <div className="mb-1 flex items-baseline justify-between gap-2 text-xs">
+        <span className="text-ink/60">{label}</span>
+        <span className="font-semibold tabular-nums text-ink">{Math.round(pct)}%</span>
+      </div>
+      <div className="h-2 w-full overflow-hidden rounded-full bg-surface">
+        <div className={`h-full rounded-full transition-all ${className || 'bg-brand'}`} style={{ width: `${pct}%` }} />
+      </div>
+    </div>
+  );
+}
+
+// Горизонтальный степпер чекпоинтов: done / current / todo.
+export function Stepper({ steps }: { steps: { id: string; label: string; state: 'done' | 'current' | 'todo' }[] }) {
+  return (
+    <ol className="flex flex-col gap-4 sm:flex-row sm:items-start">
+      {steps.map((s, i) => (
+        <li key={s.id} className="flex flex-1 items-start gap-3 sm:flex-col sm:items-center sm:gap-2 sm:text-center">
+          <div className="relative flex items-center">
+            {i > 0 && <span className="absolute right-full top-1/2 hidden h-0.5 w-8 -translate-y-1/2 bg-border sm:block" aria-hidden="true" />}
+            <span
+              aria-hidden="true"
+              className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold ${
+                s.state === 'done' ? 'bg-brand text-white' : s.state === 'current' ? 'border-2 border-brand text-brand' : 'border-2 border-border text-ink/55'
+              }`}
+            >
+              {s.state === 'done' ? '✓' : i + 1}
+            </span>
+          </div>
+          <p className={`text-sm font-semibold ${s.state === 'todo' ? 'text-ink/70' : 'text-ink'}`}>{s.label}</p>
+        </li>
+      ))}
+    </ol>
   );
 }
