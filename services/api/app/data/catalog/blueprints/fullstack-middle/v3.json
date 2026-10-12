@@ -1,0 +1,2083 @@
+{
+  "schemaVersion": 3,
+  "id": "fullstack-middle",
+  "version": "v3",
+  "catalogVersion": "v3",
+  "specialization": "fullstack",
+  "grade": "middle",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "javascript",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "react",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "javascript",
+        "react",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "javascript",
+        "react",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "javascript",
+        "react",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "scaleMin": 0,
+    "scaleMax": 100.0,
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    }
+  },
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "fullstack-middle-A-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое замыкание (closure)?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "функция без имени"
+            },
+            {
+              "id": "o2",
+              "text": "функция с доступом к внешней области видимости после возврата"
+            },
+            {
+              "id": "o3",
+              "text": "класс"
+            },
+            {
+              "id": "o4",
+              "text": "цикл"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "fullstack-middle-A-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "В стрелочной функции `this` …?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "динамический, от вызова"
+            },
+            {
+              "id": "o2",
+              "text": "всегда undefined"
+            },
+            {
+              "id": "o3",
+              "text": "лексический, из внешней области"
+            },
+            {
+              "id": "o4",
+              "text": "всегда window"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "fullstack-middle-A-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что выполнится раньше: setTimeout или Promise.then?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "зависит от браузера"
+            },
+            {
+              "id": "o2",
+              "text": "одновременно"
+            },
+            {
+              "id": "o3",
+              "text": "Promise.then (microtask) раньше таймера"
+            },
+            {
+              "id": "o4",
+              "text": "setTimeout всегда"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "fullstack-middle-A-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Хойстятся ли let/const?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "да, но в temporal dead zone до инициализации (ReferenceError)"
+            },
+            {
+              "id": "o2",
+              "text": "только const"
+            },
+            {
+              "id": "o3",
+              "text": "да, как var"
+            },
+            {
+              "id": "o4",
+              "text": "нет, вообще"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "fullstack-middle-A-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает useMemo?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "подписку на события"
+            },
+            {
+              "id": "o2",
+              "text": "мемоизирует вычисленное значение"
+            },
+            {
+              "id": "o3",
+              "text": "мемоизирует функцию"
+            },
+            {
+              "id": "o4",
+              "text": "создаёт состояние"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "fullstack-middle-A-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое prop drilling и как его избежать?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ошибка типов"
+            },
+            {
+              "id": "o2",
+              "text": "передача стилей через props"
+            },
+            {
+              "id": "o3",
+              "text": "проброс props через много уровней; Context/композиция"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизация"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "fullstack-middle-A-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает useCallback?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "мемоизирует значение"
+            },
+            {
+              "id": "o2",
+              "text": "подписку на события"
+            },
+            {
+              "id": "o3",
+              "text": "вызывает колбэк"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует ссылку на функцию"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "fullstack-middle-A-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает React.memo?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "пропускает ре-рендер при shallow-equal пропсах"
+            },
+            {
+              "id": "o2",
+              "text": "мемоизирует состояние"
+            },
+            {
+              "id": "o3",
+              "text": "кэширует запросы"
+            },
+            {
+              "id": "o4",
+              "text": "создаёт контекст"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "fullstack-middle-A-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего заголовок Idempotency-Key?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ускорить ответ"
+            },
+            {
+              "id": "o2",
+              "text": "заменить авторизацию"
+            },
+            {
+              "id": "o3",
+              "text": "безопасно повторить неидемпотентную операцию (например POST)"
+            },
+            {
+              "id": "o4",
+              "text": "зашифровать запрос"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "fullstack-middle-A-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какие HTTP-методы идемпотентны по спецификации?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "только GET"
+            },
+            {
+              "id": "o2",
+              "text": "все методы"
+            },
+            {
+              "id": "o3",
+              "text": "POST и PATCH"
+            },
+            {
+              "id": "o4",
+              "text": "GET, PUT, DELETE"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "fullstack-middle-A-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт HATEOAS в REST API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ссылки в ответах для навигации по ресурсам"
+            },
+            {
+              "id": "o2",
+              "text": "кэширование"
+            },
+            {
+              "id": "o3",
+              "text": "авторизацию"
+            },
+            {
+              "id": "o4",
+              "text": "сжатие ответов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "fullstack-middle-A-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой код означает превышение rate limit?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "503"
+            },
+            {
+              "id": "o2",
+              "text": "404"
+            },
+            {
+              "id": "o3",
+              "text": "401"
+            },
+            {
+              "id": "o4",
+              "text": "429"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "fullstack-middle-A-pair-1",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как избежать лишних запросов и повторных рендеров при загрузке данных?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать кэш"
+            },
+            {
+              "id": "o2",
+              "text": "запрашивать на каждый рендер"
+            },
+            {
+              "id": "o3",
+              "text": "кэширование и дедупликация запросов"
+            },
+            {
+              "id": "o4",
+              "text": "глобальный state"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "fullstack-middle-A-pair-2",
+          "skillTags": [
+            "javascript",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как обработать двойную отправку формы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удалить форму"
+            },
+            {
+              "id": "o2",
+              "text": "отправлять дважды"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать вторую"
+            },
+            {
+              "id": "o4",
+              "text": "блокировка/идемпотентность повторной отправки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "fullstack-middle-A-pair-3",
+          "skillTags": [
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как синхронизировать контракт ответа API с React-состоянием?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "общий тип и валидация на границе"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o3",
+              "text": "дублировать типы"
+            },
+            {
+              "id": "o4",
+              "text": "везде any"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "fullstack-middle-A-all-1",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как ограничить влияние медленного API на UI?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорирование ошибок"
+            },
+            {
+              "id": "o2",
+              "text": "синхронные блокировки"
+            },
+            {
+              "id": "o3",
+              "text": "бесконечное ожидание"
+            },
+            {
+              "id": "o4",
+              "text": "таймауты, состояния загрузки и отмена запросов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "fullstack-middle-A-all-2",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как согласовать повторную отправку данных между клиентом и сервером?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "идемпотентность и блокировка повторной отправки"
+            },
+            {
+              "id": "o2",
+              "text": "создавать дубликаты"
+            },
+            {
+              "id": "o3",
+              "text": "удалить обработчик"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать повторы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "fullstack-middle-A-all-3",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как типизировать сквозной контракт между React и API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "общий тип на границе и валидация ответа"
+            },
+            {
+              "id": "o2",
+              "text": "дублировать типы"
+            },
+            {
+              "id": "o3",
+              "text": "везде any"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать ошибки типов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "fullstack-middle-A-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Бизнес требует фичу, а вы видите критический техдолг. Как поступить?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отказаться от фичи"
+            },
+            {
+              "id": "o2",
+              "text": "зафиксировать риски и варианты, согласовать приоритет на данных"
+            },
+            {
+              "id": "o3",
+              "text": "сделать фичу молча"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать техдолг"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "fullstack-middle-A-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как правильно провести разбор инцидента?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "не разбирать"
+            },
+            {
+              "id": "o2",
+              "text": "blameless-разбор: причины и процессы, а не поиск виноватых"
+            },
+            {
+              "id": "o3",
+              "text": "найти и наказать виновного"
+            },
+            {
+              "id": "o4",
+              "text": "списать на случайность"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "fullstack-middle-B-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "В стрелочной функции `this` …?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "всегда undefined"
+            },
+            {
+              "id": "o2",
+              "text": "динамический, от вызова"
+            },
+            {
+              "id": "o3",
+              "text": "лексический, из внешней области"
+            },
+            {
+              "id": "o4",
+              "text": "всегда window"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "fullstack-middle-B-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что выполнится раньше: setTimeout или Promise.then?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "setTimeout всегда"
+            },
+            {
+              "id": "o2",
+              "text": "зависит от браузера"
+            },
+            {
+              "id": "o3",
+              "text": "одновременно"
+            },
+            {
+              "id": "o4",
+              "text": "Promise.then (microtask) раньше таймера"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "fullstack-middle-B-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Хойстятся ли let/const?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "да, но в temporal dead zone до инициализации (ReferenceError)"
+            },
+            {
+              "id": "o2",
+              "text": "да, как var"
+            },
+            {
+              "id": "o3",
+              "text": "нет, вообще"
+            },
+            {
+              "id": "o4",
+              "text": "только const"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "fullstack-middle-B-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Promise.all при reject одного промиса?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отклоняет весь результат"
+            },
+            {
+              "id": "o2",
+              "text": "повторяет запрос"
+            },
+            {
+              "id": "o3",
+              "text": "возвращает null"
+            },
+            {
+              "id": "o4",
+              "text": "игнорирует ошибку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "fullstack-middle-B-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое prop drilling и как его избежать?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "мемоизация"
+            },
+            {
+              "id": "o2",
+              "text": "передача стилей через props"
+            },
+            {
+              "id": "o3",
+              "text": "ошибка типов"
+            },
+            {
+              "id": "o4",
+              "text": "проброс props через много уровней; Context/композиция"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "fullstack-middle-B-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает useCallback?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "мемоизирует значение"
+            },
+            {
+              "id": "o2",
+              "text": "вызывает колбэк"
+            },
+            {
+              "id": "o3",
+              "text": "подписку на события"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует ссылку на функцию"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "fullstack-middle-B-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает React.memo?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "пропускает ре-рендер при shallow-equal пропсах"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт контекст"
+            },
+            {
+              "id": "o3",
+              "text": "кэширует запросы"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует состояние"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "fullstack-middle-B-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего useRef?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "вызывает эффект"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт состояние"
+            },
+            {
+              "id": "o3",
+              "text": "хранит изменяемое значение/ссылку без ре-рендера"
+            },
+            {
+              "id": "o4",
+              "text": "создаёт контекст"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "fullstack-middle-B-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какие HTTP-методы идемпотентны по спецификации?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "все методы"
+            },
+            {
+              "id": "o2",
+              "text": "POST и PATCH"
+            },
+            {
+              "id": "o3",
+              "text": "только GET"
+            },
+            {
+              "id": "o4",
+              "text": "GET, PUT, DELETE"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "fullstack-middle-B-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт HATEOAS в REST API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "кэширование"
+            },
+            {
+              "id": "o2",
+              "text": "ссылки в ответах для навигации по ресурсам"
+            },
+            {
+              "id": "o3",
+              "text": "авторизацию"
+            },
+            {
+              "id": "o4",
+              "text": "сжатие ответов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "fullstack-middle-B-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой код означает превышение rate limit?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "401"
+            },
+            {
+              "id": "o2",
+              "text": "503"
+            },
+            {
+              "id": "o3",
+              "text": "429"
+            },
+            {
+              "id": "o4",
+              "text": "404"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "fullstack-middle-B-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего заголовок Retry-After?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "шифрует тело"
+            },
+            {
+              "id": "o2",
+              "text": "ускоряет ответ"
+            },
+            {
+              "id": "o3",
+              "text": "заменяет авторизацию"
+            },
+            {
+              "id": "o4",
+              "text": "подсказывает, когда безопасно повторить запрос"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "fullstack-middle-B-pair-1",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как избежать лишних запросов и повторных рендеров при загрузке данных?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальный state"
+            },
+            {
+              "id": "o2",
+              "text": "кэширование и дедупликация запросов"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать кэш"
+            },
+            {
+              "id": "o4",
+              "text": "запрашивать на каждый рендер"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "fullstack-middle-B-pair-2",
+          "skillTags": [
+            "javascript",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как обработать двойную отправку формы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удалить форму"
+            },
+            {
+              "id": "o2",
+              "text": "блокировка/идемпотентность повторной отправки"
+            },
+            {
+              "id": "o3",
+              "text": "отправлять дважды"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать вторую"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "fullstack-middle-B-pair-3",
+          "skillTags": [
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как синхронизировать контракт ответа API с React-состоянием?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "общий тип и валидация на границе"
+            },
+            {
+              "id": "o2",
+              "text": "дублировать типы"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o4",
+              "text": "везде any"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "fullstack-middle-B-all-1",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как ограничить влияние медленного API на UI?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "синхронные блокировки"
+            },
+            {
+              "id": "o2",
+              "text": "бесконечное ожидание"
+            },
+            {
+              "id": "o3",
+              "text": "игнорирование ошибок"
+            },
+            {
+              "id": "o4",
+              "text": "таймауты, состояния загрузки и отмена запросов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "fullstack-middle-B-all-2",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как согласовать повторную отправку данных между клиентом и сервером?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удалить обработчик"
+            },
+            {
+              "id": "o2",
+              "text": "идемпотентность и блокировка повторной отправки"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать повторы"
+            },
+            {
+              "id": "o4",
+              "text": "создавать дубликаты"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "fullstack-middle-B-all-3",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как типизировать сквозной контракт между React и API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "везде any"
+            },
+            {
+              "id": "o2",
+              "text": "общий тип на границе и валидация ответа"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки типов"
+            },
+            {
+              "id": "o4",
+              "text": "дублировать типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "fullstack-middle-B-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Бизнес требует фичу, а вы видите критический техдолг. Как поступить?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать техдолг"
+            },
+            {
+              "id": "o2",
+              "text": "сделать фичу молча"
+            },
+            {
+              "id": "o3",
+              "text": "зафиксировать риски и варианты, согласовать приоритет на данных"
+            },
+            {
+              "id": "o4",
+              "text": "отказаться от фичи"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "fullstack-middle-B-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как правильно провести разбор инцидента?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "найти и наказать виновного"
+            },
+            {
+              "id": "o2",
+              "text": "списать на случайность"
+            },
+            {
+              "id": "o3",
+              "text": "не разбирать"
+            },
+            {
+              "id": "o4",
+              "text": "blameless-разбор: причины и процессы, а не поиск виноватых"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "fullstack-middle-C-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что выполнится раньше: setTimeout или Promise.then?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Promise.then (microtask) раньше таймера"
+            },
+            {
+              "id": "o2",
+              "text": "setTimeout всегда"
+            },
+            {
+              "id": "o3",
+              "text": "одновременно"
+            },
+            {
+              "id": "o4",
+              "text": "зависит от браузера"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "fullstack-middle-C-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Хойстятся ли let/const?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "только const"
+            },
+            {
+              "id": "o2",
+              "text": "да, но в temporal dead zone до инициализации (ReferenceError)"
+            },
+            {
+              "id": "o3",
+              "text": "да, как var"
+            },
+            {
+              "id": "o4",
+              "text": "нет, вообще"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "fullstack-middle-C-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Promise.all при reject одного промиса?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отклоняет весь результат"
+            },
+            {
+              "id": "o2",
+              "text": "возвращает null"
+            },
+            {
+              "id": "o3",
+              "text": "игнорирует ошибку"
+            },
+            {
+              "id": "o4",
+              "text": "повторяет запрос"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "fullstack-middle-C-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем Promise.allSettled отличается от Promise.all?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "дожидается всех и возвращает статус каждого"
+            },
+            {
+              "id": "o2",
+              "text": "работает синхронно"
+            },
+            {
+              "id": "o3",
+              "text": "отклоняется при первой ошибке"
+            },
+            {
+              "id": "o4",
+              "text": "возвращает только первый"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "fullstack-middle-C-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает useCallback?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "вызывает колбэк"
+            },
+            {
+              "id": "o2",
+              "text": "мемоизирует значение"
+            },
+            {
+              "id": "o3",
+              "text": "мемоизирует ссылку на функцию"
+            },
+            {
+              "id": "o4",
+              "text": "подписку на события"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "fullstack-middle-C-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает React.memo?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "пропускает ре-рендер при shallow-equal пропсах"
+            },
+            {
+              "id": "o2",
+              "text": "кэширует запросы"
+            },
+            {
+              "id": "o3",
+              "text": "мемоизирует состояние"
+            },
+            {
+              "id": "o4",
+              "text": "создаёт контекст"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "fullstack-middle-C-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего useRef?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт контекст"
+            },
+            {
+              "id": "o2",
+              "text": "вызывает эффект"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт состояние"
+            },
+            {
+              "id": "o4",
+              "text": "хранит изменяемое значение/ссылку без ре-рендера"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "fullstack-middle-C-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Когда useReducer предпочтительнее useState?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "для CSS"
+            },
+            {
+              "id": "o2",
+              "text": "для роутинга"
+            },
+            {
+              "id": "o3",
+              "text": "для простого счётчика"
+            },
+            {
+              "id": "o4",
+              "text": "для сложных взаимосвязанных переходов состояния"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "fullstack-middle-C-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт HATEOAS в REST API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ссылки в ответах для навигации по ресурсам"
+            },
+            {
+              "id": "o2",
+              "text": "кэширование"
+            },
+            {
+              "id": "o3",
+              "text": "сжатие ответов"
+            },
+            {
+              "id": "o4",
+              "text": "авторизацию"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "fullstack-middle-C-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой код означает превышение rate limit?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "503"
+            },
+            {
+              "id": "o2",
+              "text": "429"
+            },
+            {
+              "id": "o3",
+              "text": "401"
+            },
+            {
+              "id": "o4",
+              "text": "404"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "fullstack-middle-C-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего заголовок Retry-After?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "шифрует тело"
+            },
+            {
+              "id": "o2",
+              "text": "подсказывает, когда безопасно повторить запрос"
+            },
+            {
+              "id": "o3",
+              "text": "ускоряет ответ"
+            },
+            {
+              "id": "o4",
+              "text": "заменяет авторизацию"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "fullstack-middle-C-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем ETag в REST API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "авторизация"
+            },
+            {
+              "id": "o2",
+              "text": "сжатие ответов"
+            },
+            {
+              "id": "o3",
+              "text": "условные запросы и кэширование без гонок"
+            },
+            {
+              "id": "o4",
+              "text": "ротация ключей"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "fullstack-middle-C-pair-1",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как избежать лишних запросов и повторных рендеров при загрузке данных?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "запрашивать на каждый рендер"
+            },
+            {
+              "id": "o2",
+              "text": "глобальный state"
+            },
+            {
+              "id": "o3",
+              "text": "кэширование и дедупликация запросов"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать кэш"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "fullstack-middle-C-pair-2",
+          "skillTags": [
+            "javascript",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как обработать двойную отправку формы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отправлять дважды"
+            },
+            {
+              "id": "o2",
+              "text": "блокировка/идемпотентность повторной отправки"
+            },
+            {
+              "id": "o3",
+              "text": "удалить форму"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать вторую"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "fullstack-middle-C-pair-3",
+          "skillTags": [
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как синхронизировать контракт ответа API с React-состоянием?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать ошибки"
+            },
+            {
+              "id": "o2",
+              "text": "везде any"
+            },
+            {
+              "id": "o3",
+              "text": "общий тип и валидация на границе"
+            },
+            {
+              "id": "o4",
+              "text": "дублировать типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "fullstack-middle-C-all-1",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как ограничить влияние медленного API на UI?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорирование ошибок"
+            },
+            {
+              "id": "o2",
+              "text": "бесконечное ожидание"
+            },
+            {
+              "id": "o3",
+              "text": "синхронные блокировки"
+            },
+            {
+              "id": "o4",
+              "text": "таймауты, состояния загрузки и отмена запросов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "fullstack-middle-C-all-2",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как согласовать повторную отправку данных между клиентом и сервером?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать повторы"
+            },
+            {
+              "id": "o2",
+              "text": "идемпотентность и блокировка повторной отправки"
+            },
+            {
+              "id": "o3",
+              "text": "удалить обработчик"
+            },
+            {
+              "id": "o4",
+              "text": "создавать дубликаты"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "fullstack-middle-C-all-3",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как типизировать сквозной контракт между React и API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "общий тип на границе и валидация ответа"
+            },
+            {
+              "id": "o2",
+              "text": "дублировать типы"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки типов"
+            },
+            {
+              "id": "o4",
+              "text": "везде any"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "fullstack-middle-C-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Бизнес требует фичу, а вы видите критический техдолг. Как поступить?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "зафиксировать риски и варианты, согласовать приоритет на данных"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать техдолг"
+            },
+            {
+              "id": "o3",
+              "text": "сделать фичу молча"
+            },
+            {
+              "id": "o4",
+              "text": "отказаться от фичи"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "fullstack-middle-C-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как правильно провести разбор инцидента?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "не разбирать"
+            },
+            {
+              "id": "o2",
+              "text": "blameless-разбор: причины и процессы, а не поиск виноватых"
+            },
+            {
+              "id": "o3",
+              "text": "списать на случайность"
+            },
+            {
+              "id": "o4",
+              "text": "найти и наказать виновного"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    }
+  ]
+}

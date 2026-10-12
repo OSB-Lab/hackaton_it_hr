@@ -20,6 +20,7 @@ class TalentCandidateDTO(CandidateDTO):
     grade: ID | None = None
     category: None = None
     hasFspAchievements: bool
+    verifiedSkills: dict[ID, float] = Field(default_factory=dict)
 
 
 class TalentItemDTO(ItemDTO):

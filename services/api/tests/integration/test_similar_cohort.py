@@ -50,7 +50,7 @@ def test_forty_diverse_candidates_joint_filter_fsp_ranking_and_snapshot(env, app
             session.add(Consent(user_id=user.id, kind='publish_profile', granted=i not in (33, 34)))
             session.flush()
             copied = AssessmentAttempt(candidate_id=profile.id, test_id=attempt.test_id, status='submitted',
-                content_status=attempt.content_status, submitted_at=datetime.now(timezone.utc),
+                submitted_at=datetime.now(timezone.utc),
                 specialization=attempt.specialization, requested_grade=attempt.requested_grade,
                 blueprint_version=attempt.blueprint_version, catalog_version=attempt.catalog_version,
                 snapshot=deepcopy(attempt.snapshot), result=deepcopy(attempt.result), variant=attempt.variant)

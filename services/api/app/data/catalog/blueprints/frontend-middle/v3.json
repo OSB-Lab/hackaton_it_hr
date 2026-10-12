@@ -1,0 +1,2083 @@
+{
+  "schemaVersion": 3,
+  "id": "frontend-middle",
+  "version": "v3",
+  "catalogVersion": "v3",
+  "specialization": "frontend",
+  "grade": "middle",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "scaleMin": 0,
+    "scaleMax": 100.0,
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    }
+  },
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "frontend-middle-A-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое замыкание (closure)?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "цикл"
+            },
+            {
+              "id": "o2",
+              "text": "функция без имени"
+            },
+            {
+              "id": "o3",
+              "text": "функция с доступом к внешней области видимости после возврата"
+            },
+            {
+              "id": "o4",
+              "text": "класс"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "frontend-middle-A-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "В стрелочной функции `this` …?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "динамический, от вызова"
+            },
+            {
+              "id": "o2",
+              "text": "лексический, из внешней области"
+            },
+            {
+              "id": "o3",
+              "text": "всегда window"
+            },
+            {
+              "id": "o4",
+              "text": "всегда undefined"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "frontend-middle-A-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что выполнится раньше: setTimeout или Promise.then?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "зависит от браузера"
+            },
+            {
+              "id": "o2",
+              "text": "одновременно"
+            },
+            {
+              "id": "o3",
+              "text": "Promise.then (microtask) раньше таймера"
+            },
+            {
+              "id": "o4",
+              "text": "setTimeout всегда"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "frontend-middle-A-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Хойстятся ли let/const?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "да, как var"
+            },
+            {
+              "id": "o2",
+              "text": "да, но в temporal dead zone до инициализации (ReferenceError)"
+            },
+            {
+              "id": "o3",
+              "text": "нет, вообще"
+            },
+            {
+              "id": "o4",
+              "text": "только const"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "frontend-middle-A-typescript-1",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем нужны generics <T>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "переиспользуемый код с сохранением типов"
+            },
+            {
+              "id": "o2",
+              "text": "обфусцировать"
+            },
+            {
+              "id": "o3",
+              "text": "ускорить компиляцию"
+            },
+            {
+              "id": "o4",
+              "text": "заменить any"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "frontend-middle-A-typescript-2",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт Partial<T>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "readonly-версию"
+            },
+            {
+              "id": "o2",
+              "text": "только выбранные ключи"
+            },
+            {
+              "id": "o3",
+              "text": "объединение типов"
+            },
+            {
+              "id": "o4",
+              "text": "все свойства необязательные"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "frontend-middle-A-typescript-3",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что возвращает keyof T?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "объединение ключей типа"
+            },
+            {
+              "id": "o2",
+              "text": "строку"
+            },
+            {
+              "id": "o3",
+              "text": "массив значений"
+            },
+            {
+              "id": "o4",
+              "text": "количество ключей"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "frontend-middle-A-typescript-4",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт Pick<T, K>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "readonly-версию"
+            },
+            {
+              "id": "o2",
+              "text": "все ключи"
+            },
+            {
+              "id": "o3",
+              "text": "исключает выбранные ключи"
+            },
+            {
+              "id": "o4",
+              "text": "тип только с выбранными ключами"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "frontend-middle-A-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает useMemo?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "подписку на события"
+            },
+            {
+              "id": "o2",
+              "text": "мемоизирует вычисленное значение"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт состояние"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует функцию"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "frontend-middle-A-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое prop drilling и как его избежать?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ошибка типов"
+            },
+            {
+              "id": "o2",
+              "text": "проброс props через много уровней; Context/композиция"
+            },
+            {
+              "id": "o3",
+              "text": "передача стилей через props"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизация"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "frontend-middle-A-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает useCallback?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "вызывает колбэк"
+            },
+            {
+              "id": "o2",
+              "text": "подписку на события"
+            },
+            {
+              "id": "o3",
+              "text": "мемоизирует ссылку на функцию"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует значение"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "frontend-middle-A-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает React.memo?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "пропускает ре-рендер при shallow-equal пропсах"
+            },
+            {
+              "id": "o2",
+              "text": "мемоизирует состояние"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт контекст"
+            },
+            {
+              "id": "o4",
+              "text": "кэширует запросы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "frontend-middle-A-pair-1",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Как сузить union-тип без ошибок в рантайме?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "приведение через any"
+            },
+            {
+              "id": "o2",
+              "text": "type guard / дискриминирующее поле"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибку компилятора"
+            },
+            {
+              "id": "o4",
+              "text": "удалить тип"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "frontend-middle-A-pair-2",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как избежать лишних ре-рендеров при передаче колбэков в React?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "useCallback + memo по необходимости"
+            },
+            {
+              "id": "o2",
+              "text": "отключить reconciliation"
+            },
+            {
+              "id": "o3",
+              "text": "пересоздавать функцию всегда"
+            },
+            {
+              "id": "o4",
+              "text": "глобальный state"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "frontend-middle-A-pair-3",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как типизировать сложный state с несколькими вариантами в React+TS?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "убрать типы"
+            },
+            {
+              "id": "o2",
+              "text": "отдельный useState на всё"
+            },
+            {
+              "id": "o3",
+              "text": "только any"
+            },
+            {
+              "id": "o4",
+              "text": "discriminated union"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "frontend-middle-A-all-1",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как гарантировать согласованность типа и поведения в крупном React+TS-приложении?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "единые доменные типы и strict-режим"
+            },
+            {
+              "id": "o2",
+              "text": "отключить strict"
+            },
+            {
+              "id": "o3",
+              "text": "глобальный state на всё"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать ошибки типов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "frontend-middle-A-all-2",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что позволяет поддерживать большую кодовую базу JS/TS/React без деградации?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключение линтера"
+            },
+            {
+              "id": "o2",
+              "text": "строгие типы и явные контракты между модулями"
+            },
+            {
+              "id": "o3",
+              "text": "дублирование типов"
+            },
+            {
+              "id": "o4",
+              "text": "везде any"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "frontend-middle-A-all-3",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как снизить риск регрессий при изменении типов в React+TS?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удалить тесты"
+            },
+            {
+              "id": "o2",
+              "text": "приведения через any"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибки компиляции"
+            },
+            {
+              "id": "o4",
+              "text": "единый источник типов и строгие проверки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "frontend-middle-A-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Бизнес требует фичу, а вы видите критический техдолг. Как поступить?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сделать фичу молча"
+            },
+            {
+              "id": "o2",
+              "text": "зафиксировать риски и варианты, согласовать приоритет на данных"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать техдолг"
+            },
+            {
+              "id": "o4",
+              "text": "отказаться от фичи"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "frontend-middle-A-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как правильно провести разбор инцидента?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "blameless-разбор: причины и процессы, а не поиск виноватых"
+            },
+            {
+              "id": "o2",
+              "text": "не разбирать"
+            },
+            {
+              "id": "o3",
+              "text": "найти и наказать виновного"
+            },
+            {
+              "id": "o4",
+              "text": "списать на случайность"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "frontend-middle-B-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "В стрелочной функции `this` …?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "всегда window"
+            },
+            {
+              "id": "o2",
+              "text": "всегда undefined"
+            },
+            {
+              "id": "o3",
+              "text": "лексический, из внешней области"
+            },
+            {
+              "id": "o4",
+              "text": "динамический, от вызова"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "frontend-middle-B-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что выполнится раньше: setTimeout или Promise.then?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Promise.then (microtask) раньше таймера"
+            },
+            {
+              "id": "o2",
+              "text": "setTimeout всегда"
+            },
+            {
+              "id": "o3",
+              "text": "зависит от браузера"
+            },
+            {
+              "id": "o4",
+              "text": "одновременно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "frontend-middle-B-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Хойстятся ли let/const?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "да, но в temporal dead zone до инициализации (ReferenceError)"
+            },
+            {
+              "id": "o2",
+              "text": "да, как var"
+            },
+            {
+              "id": "o3",
+              "text": "только const"
+            },
+            {
+              "id": "o4",
+              "text": "нет, вообще"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "frontend-middle-B-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Promise.all при reject одного промиса?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторяет запрос"
+            },
+            {
+              "id": "o2",
+              "text": "отклоняет весь результат"
+            },
+            {
+              "id": "o3",
+              "text": "возвращает null"
+            },
+            {
+              "id": "o4",
+              "text": "игнорирует ошибку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "frontend-middle-B-typescript-1",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт Partial<T>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "все свойства необязательные"
+            },
+            {
+              "id": "o2",
+              "text": "объединение типов"
+            },
+            {
+              "id": "o3",
+              "text": "только выбранные ключи"
+            },
+            {
+              "id": "o4",
+              "text": "readonly-версию"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "frontend-middle-B-typescript-2",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что возвращает keyof T?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "массив значений"
+            },
+            {
+              "id": "o2",
+              "text": "объединение ключей типа"
+            },
+            {
+              "id": "o3",
+              "text": "количество ключей"
+            },
+            {
+              "id": "o4",
+              "text": "строку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "frontend-middle-B-typescript-3",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт Pick<T, K>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "readonly-версию"
+            },
+            {
+              "id": "o2",
+              "text": "все ключи"
+            },
+            {
+              "id": "o3",
+              "text": "исключает выбранные ключи"
+            },
+            {
+              "id": "o4",
+              "text": "тип только с выбранными ключами"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "frontend-middle-B-typescript-4",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем unknown безопаснее any?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт класс"
+            },
+            {
+              "id": "o2",
+              "text": "запрещает null"
+            },
+            {
+              "id": "o3",
+              "text": "требует narrowing перед использованием"
+            },
+            {
+              "id": "o4",
+              "text": "работает быстрее"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "frontend-middle-B-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое prop drilling и как его избежать?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ошибка типов"
+            },
+            {
+              "id": "o2",
+              "text": "мемоизация"
+            },
+            {
+              "id": "o3",
+              "text": "передача стилей через props"
+            },
+            {
+              "id": "o4",
+              "text": "проброс props через много уровней; Context/композиция"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "frontend-middle-B-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает useCallback?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "подписку на события"
+            },
+            {
+              "id": "o2",
+              "text": "вызывает колбэк"
+            },
+            {
+              "id": "o3",
+              "text": "мемоизирует ссылку на функцию"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует значение"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "frontend-middle-B-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает React.memo?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт контекст"
+            },
+            {
+              "id": "o2",
+              "text": "мемоизирует состояние"
+            },
+            {
+              "id": "o3",
+              "text": "кэширует запросы"
+            },
+            {
+              "id": "o4",
+              "text": "пропускает ре-рендер при shallow-equal пропсах"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "frontend-middle-B-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего useRef?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт контекст"
+            },
+            {
+              "id": "o2",
+              "text": "хранит изменяемое значение/ссылку без ре-рендера"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт состояние"
+            },
+            {
+              "id": "o4",
+              "text": "вызывает эффект"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "frontend-middle-B-pair-1",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Как сузить union-тип без ошибок в рантайме?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать ошибку компилятора"
+            },
+            {
+              "id": "o2",
+              "text": "type guard / дискриминирующее поле"
+            },
+            {
+              "id": "o3",
+              "text": "удалить тип"
+            },
+            {
+              "id": "o4",
+              "text": "приведение через any"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "frontend-middle-B-pair-2",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как избежать лишних ре-рендеров при передаче колбэков в React?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальный state"
+            },
+            {
+              "id": "o2",
+              "text": "пересоздавать функцию всегда"
+            },
+            {
+              "id": "o3",
+              "text": "useCallback + memo по необходимости"
+            },
+            {
+              "id": "o4",
+              "text": "отключить reconciliation"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "frontend-middle-B-pair-3",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как типизировать сложный state с несколькими вариантами в React+TS?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "только any"
+            },
+            {
+              "id": "o2",
+              "text": "отдельный useState на всё"
+            },
+            {
+              "id": "o3",
+              "text": "discriminated union"
+            },
+            {
+              "id": "o4",
+              "text": "убрать типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "frontend-middle-B-all-1",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как гарантировать согласованность типа и поведения в крупном React+TS-приложении?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключить strict"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать ошибки типов"
+            },
+            {
+              "id": "o3",
+              "text": "глобальный state на всё"
+            },
+            {
+              "id": "o4",
+              "text": "единые доменные типы и strict-режим"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "frontend-middle-B-all-2",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что позволяет поддерживать большую кодовую базу JS/TS/React без деградации?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "дублирование типов"
+            },
+            {
+              "id": "o2",
+              "text": "строгие типы и явные контракты между модулями"
+            },
+            {
+              "id": "o3",
+              "text": "отключение линтера"
+            },
+            {
+              "id": "o4",
+              "text": "везде any"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "frontend-middle-B-all-3",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как снизить риск регрессий при изменении типов в React+TS?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "приведения через any"
+            },
+            {
+              "id": "o2",
+              "text": "удалить тесты"
+            },
+            {
+              "id": "o3",
+              "text": "единый источник типов и строгие проверки"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать ошибки компиляции"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "frontend-middle-B-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Бизнес требует фичу, а вы видите критический техдолг. Как поступить?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать техдолг"
+            },
+            {
+              "id": "o2",
+              "text": "зафиксировать риски и варианты, согласовать приоритет на данных"
+            },
+            {
+              "id": "o3",
+              "text": "отказаться от фичи"
+            },
+            {
+              "id": "o4",
+              "text": "сделать фичу молча"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "frontend-middle-B-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как правильно провести разбор инцидента?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "blameless-разбор: причины и процессы, а не поиск виноватых"
+            },
+            {
+              "id": "o2",
+              "text": "найти и наказать виновного"
+            },
+            {
+              "id": "o3",
+              "text": "не разбирать"
+            },
+            {
+              "id": "o4",
+              "text": "списать на случайность"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "frontend-middle-C-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что выполнится раньше: setTimeout или Promise.then?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Promise.then (microtask) раньше таймера"
+            },
+            {
+              "id": "o2",
+              "text": "setTimeout всегда"
+            },
+            {
+              "id": "o3",
+              "text": "одновременно"
+            },
+            {
+              "id": "o4",
+              "text": "зависит от браузера"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "frontend-middle-C-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Хойстятся ли let/const?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "нет, вообще"
+            },
+            {
+              "id": "o2",
+              "text": "только const"
+            },
+            {
+              "id": "o3",
+              "text": "да, как var"
+            },
+            {
+              "id": "o4",
+              "text": "да, но в temporal dead zone до инициализации (ReferenceError)"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "frontend-middle-C-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Promise.all при reject одного промиса?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорирует ошибку"
+            },
+            {
+              "id": "o2",
+              "text": "отклоняет весь результат"
+            },
+            {
+              "id": "o3",
+              "text": "возвращает null"
+            },
+            {
+              "id": "o4",
+              "text": "повторяет запрос"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "frontend-middle-C-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем Promise.allSettled отличается от Promise.all?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "возвращает только первый"
+            },
+            {
+              "id": "o2",
+              "text": "дожидается всех и возвращает статус каждого"
+            },
+            {
+              "id": "o3",
+              "text": "отклоняется при первой ошибке"
+            },
+            {
+              "id": "o4",
+              "text": "работает синхронно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "frontend-middle-C-typescript-1",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что возвращает keyof T?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "количество ключей"
+            },
+            {
+              "id": "o2",
+              "text": "строку"
+            },
+            {
+              "id": "o3",
+              "text": "объединение ключей типа"
+            },
+            {
+              "id": "o4",
+              "text": "массив значений"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "frontend-middle-C-typescript-2",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт Pick<T, K>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "readonly-версию"
+            },
+            {
+              "id": "o2",
+              "text": "тип только с выбранными ключами"
+            },
+            {
+              "id": "o3",
+              "text": "исключает выбранные ключи"
+            },
+            {
+              "id": "o4",
+              "text": "все ключи"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "frontend-middle-C-typescript-3",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем unknown безопаснее any?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "работает быстрее"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт класс"
+            },
+            {
+              "id": "o3",
+              "text": "требует narrowing перед использованием"
+            },
+            {
+              "id": "o4",
+              "text": "запрещает null"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "frontend-middle-C-typescript-4",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает Omit<T, K>?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "readonly-версию"
+            },
+            {
+              "id": "o2",
+              "text": "все ключи"
+            },
+            {
+              "id": "o3",
+              "text": "только выбранные ключи"
+            },
+            {
+              "id": "o4",
+              "text": "тип без указанных ключей"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "frontend-middle-C-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает useCallback?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "вызывает колбэк"
+            },
+            {
+              "id": "o2",
+              "text": "мемоизирует ссылку на функцию"
+            },
+            {
+              "id": "o3",
+              "text": "подписку на события"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует значение"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "frontend-middle-C-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает React.memo?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "пропускает ре-рендер при shallow-equal пропсах"
+            },
+            {
+              "id": "o2",
+              "text": "кэширует запросы"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт контекст"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует состояние"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "frontend-middle-C-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего useRef?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт состояние"
+            },
+            {
+              "id": "o2",
+              "text": "вызывает эффект"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт контекст"
+            },
+            {
+              "id": "o4",
+              "text": "хранит изменяемое значение/ссылку без ре-рендера"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "frontend-middle-C-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Когда useReducer предпочтительнее useState?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "для простого счётчика"
+            },
+            {
+              "id": "o2",
+              "text": "для роутинга"
+            },
+            {
+              "id": "o3",
+              "text": "для CSS"
+            },
+            {
+              "id": "o4",
+              "text": "для сложных взаимосвязанных переходов состояния"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "frontend-middle-C-pair-1",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Как сузить union-тип без ошибок в рантайме?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать ошибку компилятора"
+            },
+            {
+              "id": "o2",
+              "text": "удалить тип"
+            },
+            {
+              "id": "o3",
+              "text": "type guard / дискриминирующее поле"
+            },
+            {
+              "id": "o4",
+              "text": "приведение через any"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "frontend-middle-C-pair-2",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как избежать лишних ре-рендеров при передаче колбэков в React?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "useCallback + memo по необходимости"
+            },
+            {
+              "id": "o2",
+              "text": "пересоздавать функцию всегда"
+            },
+            {
+              "id": "o3",
+              "text": "глобальный state"
+            },
+            {
+              "id": "o4",
+              "text": "отключить reconciliation"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "frontend-middle-C-pair-3",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как типизировать сложный state с несколькими вариантами в React+TS?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "убрать типы"
+            },
+            {
+              "id": "o2",
+              "text": "только any"
+            },
+            {
+              "id": "o3",
+              "text": "discriminated union"
+            },
+            {
+              "id": "o4",
+              "text": "отдельный useState на всё"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "frontend-middle-C-all-1",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как гарантировать согласованность типа и поведения в крупном React+TS-приложении?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключить strict"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать ошибки типов"
+            },
+            {
+              "id": "o3",
+              "text": "единые доменные типы и strict-режим"
+            },
+            {
+              "id": "o4",
+              "text": "глобальный state на всё"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "frontend-middle-C-all-2",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что позволяет поддерживать большую кодовую базу JS/TS/React без деградации?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "строгие типы и явные контракты между модулями"
+            },
+            {
+              "id": "o2",
+              "text": "везде any"
+            },
+            {
+              "id": "o3",
+              "text": "дублирование типов"
+            },
+            {
+              "id": "o4",
+              "text": "отключение линтера"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "frontend-middle-C-all-3",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как снизить риск регрессий при изменении типов в React+TS?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать ошибки компиляции"
+            },
+            {
+              "id": "o2",
+              "text": "удалить тесты"
+            },
+            {
+              "id": "o3",
+              "text": "единый источник типов и строгие проверки"
+            },
+            {
+              "id": "o4",
+              "text": "приведения через any"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "frontend-middle-C-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Бизнес требует фичу, а вы видите критический техдолг. Как поступить?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отказаться от фичи"
+            },
+            {
+              "id": "o2",
+              "text": "зафиксировать риски и варианты, согласовать приоритет на данных"
+            },
+            {
+              "id": "o3",
+              "text": "сделать фичу молча"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать техдолг"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "frontend-middle-C-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как правильно провести разбор инцидента?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "списать на случайность"
+            },
+            {
+              "id": "o2",
+              "text": "blameless-разбор: причины и процессы, а не поиск виноватых"
+            },
+            {
+              "id": "o3",
+              "text": "не разбирать"
+            },
+            {
+              "id": "o4",
+              "text": "найти и наказать виновного"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    }
+  ]
+}

@@ -84,16 +84,7 @@ def test_create_persist_replay_no_latest_attempt_or_seed_boost(env, approved):
         assert session.get(RecommendationSnapshot, saved["id"]).ordered_items == original
 
 
-def test_demo_and_empty_cohort(env):
-    client, headers, _, _ = env
-    url, _ = setup(env)
-    certify(env, 0, 18)  # Real DEMO submit; no fixture approval.
-    response = client.post(url, headers=headers[2])
-    assert response.status_code == 200 and response.json()["items"] == []
-    assert client.get(f"{url}/{response.json()['id']}", headers=headers[2]).json() == response.json()
-
-
-@pytest.mark.parametrize("gate", ["email", "publication", "privacy", "specialization", "grade", "proof", "skill_count"])
+@pytest.mark.parametrize("gate", ["email", "publication", "privacy", "specialization", "grade", "skill_count"])
 def test_filters_before_ranking(env, approved, gate):
     client, headers, ids, engine = env
     url, need = setup(env)
@@ -109,7 +100,6 @@ def test_filters_before_ranking(env, approved, gate):
             session.get(HiringNeed, need).stack = ["react"]
             session.get(HiringNeed, need).optional_skills = []
         if gate == "grade": session.get(HiringNeed, need).min_grade = "middle"
-        if gate == "proof": session.get(Attempt, aid).content_status = "DEMO"
         if gate == "skill_count":
             attempt = session.get(Attempt, aid)
             result = deepcopy(attempt.result)

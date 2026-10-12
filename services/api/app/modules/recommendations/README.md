@@ -30,7 +30,7 @@ No assessment rules are changed and no self-reported stack contributes to score.
 FSP demo: `FSP_DEMO_MODE=true` enables the synthetic JSON registry. Only a linked ID
 present in that file contributes a bounded type × role × stack × recency bonus;
 missing history scores 0. Persisted FspAchievement/seed rows alone never certify
-anything. This is simulated evidence, labelled `Demo FSP bonus`, NOT official FSP
+anything. This is simulated evidence, labelled `FSP bonus`, NOT official FSP
 verification. Outside demo mode the bonus is 0. See
 [`docs/FSP_DEMO_ACHIEVEMENTS.md`](../../../docs/FSP_DEMO_ACHIEVEMENTS.md)
 for schema, formula, constraints and validation. Real FSP integration and proof of
@@ -38,33 +38,31 @@ ID ownership remain future work. No weight redistribution or gate relaxation.
 
 `eligible_for_ranking` checks current email/publication/privacy + authoritative v3
 qualification/matches_need before scores. Qualification must reference a successful
-submitted APPROVED v3 attempt with matching candidate/catalog/blueprint metadata.
-DEMO remains ineligible. User/profile locks serialize creation with privacy changes;
+submitted v3 attempt with matching candidate/catalog/blueprint metadata.
+User/profile locks serialize creation with privacy changes;
 need is locked while calculating. This deliberately simple MVP scans candidate users;
 batching/query optimization is deferred until measured scale requires it.
 
 Creation atomically stores RecommendationSnapshot plus RecommendationItem rows.
 GET replays saved values and rechecks disclosure gates without ranking again.
 Each item adds optional `reasons` (empty for legacy) with three bounded numeric
-templates: required evidence %, technical test %, verified FSP bonus %. These are
+templates: required evidence %, technical test %, FSP bonus %. These are
 allowlisted strings, never candidate text, raw answers or contact fields. Existing
 legacy free-text RecommendationItem.reason remains hidden; ranks/scores unchanged.
 Talent Bank continues to use saved rank/score and current privacy checks.
 
-Tests use controlled test-only APPROVED fixtures, never approve production artifacts.
-The active pool is still DEMO: production needs normally produce empty cohorts until
-real expert approval and successful qualification. Ranking execution is not evidence
-of production accuracy; independent labels/Precision@3 remain outstanding.
+Tests use isolated copies of the catalog, never mutating production artifacts.
+Ranking execution is not evidence of production accuracy; independent
+labels/Precision@3 remain outstanding.
 
 ## Historical SPR-18.1 implementation notes (superseded for POST)
 
 # v3 qualification integration
 
 The authoritative provider is now assessments/qualification.py. It validates the
-profile pointer to a successful submitted APPROVED v3 attempt, including candidate,
+profile pointer to a successful submitted v3 attempt, including candidate,
 catalog and blueprint metadata. eligible_for_ranking(session, candidate_id, need)
 checks verified specialization/minGrade as well as the existing disclosure gates.
-The active v3 question pool is DEMO pending expert review, so it does not qualify.
 Talent Bank can display/filter grade from this proof; without proof grade stays null.
 Category taxonomy remains unavailable. No ranking implementation is enabled by this
 change: POST recommendations remains 503. v3 fixes the rank weights, but FSP evidence
@@ -149,7 +147,7 @@ Optional query parameters:
 
 All filters combine with AND; a valid nonmatching combination returns 200/items=[].
 Unknown catalog values, invalid booleans or extra query parameters return 422.
-Catalog unavailable/corrupt => 503. The catalog remains DEMO, without new DS values.
+Catalog unavailable/corrupt => 503.
 
 Example request:
 GET /employer/needs/7/recommendations/12/items?specialization=backend&stack=python&hasFspAchievements=true

@@ -13,7 +13,7 @@ DOMAIN_COLUMNS = {
     "candidate_profiles": "id user_id full_name stack grade specialization privacy_settings created_at updated_at phone professional_role experience_months soft_skills self_declared_grade verified_grade verified_specialization verified_attempt_id last_grade_change_at",
     "companies": "id user_id name description contacts created_at",
     "hiring_needs": "id company_id title stack grade specialization created_at team_description min_grade optional_skills",
-    "test_attempts": "id candidate_id test_id answers score result grade created_at specialization requested_grade blueprint_version catalog_version blueprint_checksum catalog_checksum snapshot_schema_version snapshot variant content_status status submitted_at",
+    "test_attempts": "id candidate_id test_id answers score result grade created_at specialization requested_grade blueprint_version catalog_version blueprint_checksum catalog_checksum snapshot_schema_version snapshot variant status submitted_at",
     "competency_scores": "id candidate_id competency score source created_at evidence_count blueprint_version attempt_id",
     "fsp_links": "id candidate_id fsp_id linked_at status",
     "fsp_achievements": "id candidate_id discipline competition result role rank created_at",
@@ -22,6 +22,7 @@ DOMAIN_COLUMNS = {
     "invitations": "id company_id candidate_id title salary_from salary_to status created_at updated_at contact_method currency",
     "contact_disclosures": "id invitation_id revealed_at",
     "audit_events": "id user_id action payload created_at",
+    "taxonomy_question_forms": "id role_id grade_id variant version skill_ids questions checksum active created_at",
 }
 
 
@@ -116,7 +117,7 @@ def test_migrations(migration_connection):
     command.upgrade(config, "head")
     assert migration_connection.scalar(
         text("SELECT version_num FROM alembic_version")
-    ) == "0010"
+    ) == "0012"
     inspector = inspect(migration_connection)
     assert set(inspector.get_table_names()) == set(DOMAIN_COLUMNS) | {"alembic_version"}
     assert set(Base.metadata.tables) == set(DOMAIN_COLUMNS)
@@ -129,7 +130,7 @@ def test_migrations(migration_connection):
     command.upgrade(config, "head")
     assert migration_connection.scalar(
         text("SELECT version_num FROM alembic_version")
-    ) == "0010"
+    ) == "0012"
     migration_connection.commit()
 
     command.downgrade(config, "base")

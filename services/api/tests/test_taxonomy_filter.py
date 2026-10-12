@@ -16,7 +16,7 @@ def test_related_roles_grades_skills_and_aliases_are_directional():
     need = FilterNeed('backend', 'middle', skills=(SkillRequirement('python'), SkillRequirement('postgres')))
     candidates = [Candidate('exact', ('backend',), 'middle', skill_ids=('Python', 'PostgreSQL')),
                   Candidate('near', ('fullstack',), 'junior', skill_ids=('python', 'mysql')),
-                  Candidate('remote-role', ('qa_manual',), 'middle', skill_ids=('python',))]
+                  Candidate('remote-role', ('data_engineer',), 'middle', skill_ids=('python',))]
     result = filter_candidates(need, candidates, taxonomy, policy)
     assert [c.candidate_id for c in result.selected] == ['exact', 'near', 'remote-role']
     assert result.selected[0].filter_fit == D('1.000000')
@@ -25,7 +25,7 @@ def test_related_roles_grades_skills_and_aliases_are_directional():
     assert factors['role'] == D('.9') and factors['grade'] == D('.8')
     assert D('0') < factors['stack'] < D('1')
     assert taxonomy.grade_fit['middle']['junior'] > taxonomy.grade_fit['junior']['middle']
-    assert filter_candidates(FilterNeed('ml_engineer', 'middle'), [candidates[2]], taxonomy, policy).excluded
+    assert filter_candidates(FilterNeed('frontend', 'middle'), [candidates[2]], taxonomy, policy).excluded
     role_alias = filter_candidates(FilterNeed('back-end', 'mid', skills=(SkillRequirement('postgres'),)),
         [Candidate('alias', ('бэкенд',), 'middle', skill_ids=('postgresql',))], taxonomy, policy)
     assert role_alias.selected[0].filter_fit == D('1.000000')

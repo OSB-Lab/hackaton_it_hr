@@ -63,5 +63,5 @@ def test_downgrade_refuses_money_loss(migration_connection):
     with pytest.raises(RuntimeError, match="monetary precision"):
         command.downgrade(config, "0007")
     c.rollback()
-    assert c.scalar(text("SELECT version_num FROM alembic_version")) == "0010"
+    assert c.scalar(text("SELECT version_num FROM alembic_version")) == "0012"
     assert c.scalar(text("SELECT salary_from FROM invitations LIMIT 1")) == Decimal("100.01")

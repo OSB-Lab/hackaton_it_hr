@@ -3,8 +3,6 @@
   "id": "backend-junior",
   "version": "v3-demo",
   "catalogVersion": "v3-demo",
-  "status": "DEMO",
-  "provenance": "DEMO",
   "specialization": "backend",
   "grade": "junior",
   "slots": [

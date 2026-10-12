@@ -1,0 +1,2083 @@
+{
+  "schemaVersion": 3,
+  "id": "fullstack-junior",
+  "version": "v3",
+  "catalogVersion": "v3",
+  "specialization": "fullstack",
+  "grade": "junior",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "javascript",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "react",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "javascript",
+        "react",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "javascript",
+        "react",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "javascript",
+        "react",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "scaleMin": 0,
+    "scaleMax": 100.0,
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    }
+  },
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "fullstack-junior-A-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое ключевое слово объявляет блочную переменную?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "def"
+            },
+            {
+              "id": "o2",
+              "text": "var"
+            },
+            {
+              "id": "o3",
+              "text": "int"
+            },
+            {
+              "id": "o4",
+              "text": "let"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "fullstack-junior-A-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод возвращает новый массив из прошедших проверку элементов?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "filter"
+            },
+            {
+              "id": "o2",
+              "text": "map"
+            },
+            {
+              "id": "o3",
+              "text": "forEach"
+            },
+            {
+              "id": "o4",
+              "text": "reduce"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "fullstack-junior-A-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое ключевое слово не блочное и допускает переприсвоение?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "static"
+            },
+            {
+              "id": "o2",
+              "text": "var"
+            },
+            {
+              "id": "o3",
+              "text": "let"
+            },
+            {
+              "id": "o4",
+              "text": "const"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "fullstack-junior-A-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод применяет функцию к каждому элементу и возвращает новый массив?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "forEach"
+            },
+            {
+              "id": "o2",
+              "text": "some"
+            },
+            {
+              "id": "o3",
+              "text": "map"
+            },
+            {
+              "id": "o4",
+              "text": "filter"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "fullstack-junior-A-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой hook хранит локальное состояние?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "useEffect"
+            },
+            {
+              "id": "o2",
+              "text": "useMemo"
+            },
+            {
+              "id": "o3",
+              "text": "useContext"
+            },
+            {
+              "id": "o4",
+              "text": "useState"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "fullstack-junior-A-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем key в списках?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "задать CSS"
+            },
+            {
+              "id": "o2",
+              "text": "сопоставить элементы при reconciliation"
+            },
+            {
+              "id": "o3",
+              "text": "кэшировать fetch"
+            },
+            {
+              "id": "o4",
+              "text": "создать DOM id"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "fullstack-junior-A-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой hook выполняет side effects после рендера?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "useEffect"
+            },
+            {
+              "id": "o2",
+              "text": "useCallback"
+            },
+            {
+              "id": "o3",
+              "text": "useRef"
+            },
+            {
+              "id": "o4",
+              "text": "useState"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "fullstack-junior-A-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно обновить состояние, зависящее от предыдущего?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "setCount(count + 1) всегда"
+            },
+            {
+              "id": "o2",
+              "text": "менять переменную напрямую"
+            },
+            {
+              "id": "o3",
+              "text": "setCount(prev => prev + 1)"
+            },
+            {
+              "id": "o4",
+              "text": "через useEffect"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "fullstack-junior-A-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой статус означает Not Found?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "404"
+            },
+            {
+              "id": "o2",
+              "text": "500"
+            },
+            {
+              "id": "o3",
+              "text": "302"
+            },
+            {
+              "id": "o4",
+              "text": "201"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "fullstack-junior-A-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод идемпотентен и безопасен?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "GET"
+            },
+            {
+              "id": "o2",
+              "text": "POST"
+            },
+            {
+              "id": "o3",
+              "text": "DELETE"
+            },
+            {
+              "id": "o4",
+              "text": "PATCH"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "fullstack-junior-A-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод создаёт ресурс?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "POST"
+            },
+            {
+              "id": "o2",
+              "text": "HEAD"
+            },
+            {
+              "id": "o3",
+              "text": "GET"
+            },
+            {
+              "id": "o4",
+              "text": "PUT"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "fullstack-junior-A-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой код означает «Создано»?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "204"
+            },
+            {
+              "id": "o2",
+              "text": "200"
+            },
+            {
+              "id": "o3",
+              "text": "201"
+            },
+            {
+              "id": "o4",
+              "text": "400"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "fullstack-junior-A-pair-1",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делать, чтобы данные из API отображались в React корректно?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "хранить ответ в state и обновлять через setState"
+            },
+            {
+              "id": "o2",
+              "text": "менять DOM напрямую"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать данные"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "fullstack-junior-A-pair-2",
+          "skillTags": [
+            "javascript",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как отправить данные на сервер из JS-приложения?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "в cookie"
+            },
+            {
+              "id": "o2",
+              "text": "ничего не отправлять"
+            },
+            {
+              "id": "o3",
+              "text": "через CSS"
+            },
+            {
+              "id": "o4",
+              "text": "fetch/POST с JSON и проверкой статуса"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "fullstack-junior-A-pair-3",
+          "skillTags": [
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как показать состояние загрузки при запросе к API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать статус"
+            },
+            {
+              "id": "o2",
+              "text": "зашитый спиннер"
+            },
+            {
+              "id": "o3",
+              "text": "отслеживать loading/error в state"
+            },
+            {
+              "id": "o4",
+              "text": "убрать запрос"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "fullstack-junior-A-all-1",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает fullstack-приложение предсказуемым при связке UI + API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "жёстко зашитые значения"
+            },
+            {
+              "id": "o2",
+              "text": "скрытие ошибок"
+            },
+            {
+              "id": "o3",
+              "text": "глобальные переменные"
+            },
+            {
+              "id": "o4",
+              "text": "явный контракт данных и обработка ошибок"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "fullstack-junior-A-all-2",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как безопасно связать React-UI и backend API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорирование ответов"
+            },
+            {
+              "id": "o2",
+              "text": "общий контракт данных и состояния загрузки/ошибки"
+            },
+            {
+              "id": "o3",
+              "text": "глобальный mutable state"
+            },
+            {
+              "id": "o4",
+              "text": "отключение валидации"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "fullstack-junior-A-all-3",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что помогает избежать рассинхрона между UI и сервером?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "явные состояния загрузки/успеха/ошибки"
+            },
+            {
+              "id": "o2",
+              "text": "скрытие статусов"
+            },
+            {
+              "id": "o3",
+              "text": "повтор без проверки"
+            },
+            {
+              "id": "o4",
+              "text": "зашитые значения"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "fullstack-junior-A-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o2",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o3",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o4",
+              "text": "обвинить коллегу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "fullstack-junior-A-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Коллега просит отревьюить его PR. Лучший первый шаг?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "переписать код самому"
+            },
+            {
+              "id": "o2",
+              "text": "отмолчаться"
+            },
+            {
+              "id": "o3",
+              "text": "сразу аппрувнуть"
+            },
+            {
+              "id": "o4",
+              "text": "разобраться в изменении и дать конкретный фидбек"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "fullstack-junior-B-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод возвращает новый массив из прошедших проверку элементов?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "map"
+            },
+            {
+              "id": "o2",
+              "text": "filter"
+            },
+            {
+              "id": "o3",
+              "text": "forEach"
+            },
+            {
+              "id": "o4",
+              "text": "reduce"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "fullstack-junior-B-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое ключевое слово не блочное и допускает переприсвоение?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "var"
+            },
+            {
+              "id": "o2",
+              "text": "static"
+            },
+            {
+              "id": "o3",
+              "text": "let"
+            },
+            {
+              "id": "o4",
+              "text": "const"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "fullstack-junior-B-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод применяет функцию к каждому элементу и возвращает новый массив?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "forEach"
+            },
+            {
+              "id": "o2",
+              "text": "some"
+            },
+            {
+              "id": "o3",
+              "text": "filter"
+            },
+            {
+              "id": "o4",
+              "text": "map"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "fullstack-junior-B-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему === предпочтительнее ==?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "нет неявного приведения типов"
+            },
+            {
+              "id": "o2",
+              "text": "меняет scope"
+            },
+            {
+              "id": "o3",
+              "text": "работает быстрее по сети"
+            },
+            {
+              "id": "o4",
+              "text": "создаёт новый тип"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "fullstack-junior-B-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем key в списках?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сопоставить элементы при reconciliation"
+            },
+            {
+              "id": "o2",
+              "text": "задать CSS"
+            },
+            {
+              "id": "o3",
+              "text": "создать DOM id"
+            },
+            {
+              "id": "o4",
+              "text": "кэшировать fetch"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "fullstack-junior-B-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой hook выполняет side effects после рендера?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "useEffect"
+            },
+            {
+              "id": "o2",
+              "text": "useRef"
+            },
+            {
+              "id": "o3",
+              "text": "useState"
+            },
+            {
+              "id": "o4",
+              "text": "useCallback"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "fullstack-junior-B-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно обновить состояние, зависящее от предыдущего?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "через useEffect"
+            },
+            {
+              "id": "o2",
+              "text": "setCount(count + 1) всегда"
+            },
+            {
+              "id": "o3",
+              "text": "setCount(prev => prev + 1)"
+            },
+            {
+              "id": "o4",
+              "text": "менять переменную напрямую"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "fullstack-junior-B-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое controlled input?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "server component"
+            },
+            {
+              "id": "o2",
+              "text": "input без value"
+            },
+            {
+              "id": "o3",
+              "text": "value управляется state"
+            },
+            {
+              "id": "o4",
+              "text": "browser cache"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "fullstack-junior-B-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод идемпотентен и безопасен?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "GET"
+            },
+            {
+              "id": "o2",
+              "text": "DELETE"
+            },
+            {
+              "id": "o3",
+              "text": "POST"
+            },
+            {
+              "id": "o4",
+              "text": "PATCH"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "fullstack-junior-B-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод создаёт ресурс?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "PUT"
+            },
+            {
+              "id": "o2",
+              "text": "GET"
+            },
+            {
+              "id": "o3",
+              "text": "HEAD"
+            },
+            {
+              "id": "o4",
+              "text": "POST"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "fullstack-junior-B-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой код означает «Создано»?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "204"
+            },
+            {
+              "id": "o2",
+              "text": "201"
+            },
+            {
+              "id": "o3",
+              "text": "400"
+            },
+            {
+              "id": "o4",
+              "text": "200"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "fullstack-junior-B-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Где передают bearer token?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "response body"
+            },
+            {
+              "id": "o2",
+              "text": "Authorization header"
+            },
+            {
+              "id": "o3",
+              "text": "URL path"
+            },
+            {
+              "id": "o4",
+              "text": "cookie name"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "fullstack-junior-B-pair-1",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делать, чтобы данные из API отображались в React корректно?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "хранить ответ в state и обновлять через setState"
+            },
+            {
+              "id": "o2",
+              "text": "менять DOM напрямую"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать данные"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "fullstack-junior-B-pair-2",
+          "skillTags": [
+            "javascript",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как отправить данные на сервер из JS-приложения?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ничего не отправлять"
+            },
+            {
+              "id": "o2",
+              "text": "fetch/POST с JSON и проверкой статуса"
+            },
+            {
+              "id": "o3",
+              "text": "через CSS"
+            },
+            {
+              "id": "o4",
+              "text": "в cookie"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "fullstack-junior-B-pair-3",
+          "skillTags": [
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как показать состояние загрузки при запросе к API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "зашитый спиннер"
+            },
+            {
+              "id": "o2",
+              "text": "отслеживать loading/error в state"
+            },
+            {
+              "id": "o3",
+              "text": "убрать запрос"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать статус"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "fullstack-junior-B-all-1",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает fullstack-приложение предсказуемым при связке UI + API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "скрытие ошибок"
+            },
+            {
+              "id": "o2",
+              "text": "жёстко зашитые значения"
+            },
+            {
+              "id": "o3",
+              "text": "явный контракт данных и обработка ошибок"
+            },
+            {
+              "id": "o4",
+              "text": "глобальные переменные"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "fullstack-junior-B-all-2",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как безопасно связать React-UI и backend API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключение валидации"
+            },
+            {
+              "id": "o2",
+              "text": "общий контракт данных и состояния загрузки/ошибки"
+            },
+            {
+              "id": "o3",
+              "text": "глобальный mutable state"
+            },
+            {
+              "id": "o4",
+              "text": "игнорирование ответов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "fullstack-junior-B-all-3",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что помогает избежать рассинхрона между UI и сервером?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "скрытие статусов"
+            },
+            {
+              "id": "o2",
+              "text": "явные состояния загрузки/успеха/ошибки"
+            },
+            {
+              "id": "o3",
+              "text": "повтор без проверки"
+            },
+            {
+              "id": "o4",
+              "text": "зашитые значения"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "fullstack-junior-B-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o2",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o3",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o4",
+              "text": "молчать до дедлайна"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "fullstack-junior-B-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Коллега просит отревьюить его PR. Лучший первый шаг?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сразу аппрувнуть"
+            },
+            {
+              "id": "o2",
+              "text": "отмолчаться"
+            },
+            {
+              "id": "o3",
+              "text": "разобраться в изменении и дать конкретный фидбек"
+            },
+            {
+              "id": "o4",
+              "text": "переписать код самому"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "fullstack-junior-C-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какое ключевое слово не блочное и допускает переприсвоение?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "var"
+            },
+            {
+              "id": "o2",
+              "text": "static"
+            },
+            {
+              "id": "o3",
+              "text": "let"
+            },
+            {
+              "id": "o4",
+              "text": "const"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "fullstack-junior-C-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод применяет функцию к каждому элементу и возвращает новый массив?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "map"
+            },
+            {
+              "id": "o2",
+              "text": "some"
+            },
+            {
+              "id": "o3",
+              "text": "forEach"
+            },
+            {
+              "id": "o4",
+              "text": "filter"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "fullstack-junior-C-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему === предпочтительнее ==?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "нет неявного приведения типов"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт новый тип"
+            },
+            {
+              "id": "o3",
+              "text": "меняет scope"
+            },
+            {
+              "id": "o4",
+              "text": "работает быстрее по сети"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "fullstack-junior-C-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает spread для массива?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сортирует массив"
+            },
+            {
+              "id": "o2",
+              "text": "замораживает объект"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт поверхностную копию"
+            },
+            {
+              "id": "o4",
+              "text": "удаляет null"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "fullstack-junior-C-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой hook выполняет side effects после рендера?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "useEffect"
+            },
+            {
+              "id": "o2",
+              "text": "useRef"
+            },
+            {
+              "id": "o3",
+              "text": "useState"
+            },
+            {
+              "id": "o4",
+              "text": "useCallback"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "fullstack-junior-C-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно обновить состояние, зависящее от предыдущего?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "setCount(prev => prev + 1)"
+            },
+            {
+              "id": "o2",
+              "text": "менять переменную напрямую"
+            },
+            {
+              "id": "o3",
+              "text": "setCount(count + 1) всегда"
+            },
+            {
+              "id": "o4",
+              "text": "через useEffect"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "fullstack-junior-C-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое controlled input?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "browser cache"
+            },
+            {
+              "id": "o2",
+              "text": "value управляется state"
+            },
+            {
+              "id": "o3",
+              "text": "input без value"
+            },
+            {
+              "id": "o4",
+              "text": "server component"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "fullstack-junior-C-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Почему index плохой key в изменяемом списке?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "state может перейти не тому item"
+            },
+            {
+              "id": "o2",
+              "text": "ломает TypeScript"
+            },
+            {
+              "id": "o3",
+              "text": "React не рендерит list"
+            },
+            {
+              "id": "o4",
+              "text": "index не number"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "fullstack-junior-C-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод создаёт ресурс?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "POST"
+            },
+            {
+              "id": "o2",
+              "text": "HEAD"
+            },
+            {
+              "id": "o3",
+              "text": "GET"
+            },
+            {
+              "id": "o4",
+              "text": "PUT"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "fullstack-junior-C-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой код означает «Создано»?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "201"
+            },
+            {
+              "id": "o2",
+              "text": "204"
+            },
+            {
+              "id": "o3",
+              "text": "200"
+            },
+            {
+              "id": "o4",
+              "text": "400"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "fullstack-junior-C-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Где передают bearer token?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "Authorization header"
+            },
+            {
+              "id": "o2",
+              "text": "cookie name"
+            },
+            {
+              "id": "o3",
+              "text": "URL path"
+            },
+            {
+              "id": "o4",
+              "text": "response body"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "fullstack-junior-C-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что означает 204?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ресурс создан"
+            },
+            {
+              "id": "o2",
+              "text": "успех без тела"
+            },
+            {
+              "id": "o3",
+              "text": "ошибка схемы"
+            },
+            {
+              "id": "o4",
+              "text": "redirect"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "fullstack-junior-C-pair-1",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делать, чтобы данные из API отображались в React корректно?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "хранить ответ в state и обновлять через setState"
+            },
+            {
+              "id": "o2",
+              "text": "менять DOM напрямую"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать данные"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "fullstack-junior-C-pair-2",
+          "skillTags": [
+            "javascript",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как отправить данные на сервер из JS-приложения?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "через CSS"
+            },
+            {
+              "id": "o2",
+              "text": "fetch/POST с JSON и проверкой статуса"
+            },
+            {
+              "id": "o3",
+              "text": "в cookie"
+            },
+            {
+              "id": "o4",
+              "text": "ничего не отправлять"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "fullstack-junior-C-pair-3",
+          "skillTags": [
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как показать состояние загрузки при запросе к API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "зашитый спиннер"
+            },
+            {
+              "id": "o2",
+              "text": "отслеживать loading/error в state"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать статус"
+            },
+            {
+              "id": "o4",
+              "text": "убрать запрос"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "fullstack-junior-C-all-1",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает fullstack-приложение предсказуемым при связке UI + API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "явный контракт данных и обработка ошибок"
+            },
+            {
+              "id": "o2",
+              "text": "скрытие ошибок"
+            },
+            {
+              "id": "o3",
+              "text": "глобальные переменные"
+            },
+            {
+              "id": "o4",
+              "text": "жёстко зашитые значения"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "fullstack-junior-C-all-2",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как безопасно связать React-UI и backend API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорирование ответов"
+            },
+            {
+              "id": "o2",
+              "text": "отключение валидации"
+            },
+            {
+              "id": "o3",
+              "text": "глобальный mutable state"
+            },
+            {
+              "id": "o4",
+              "text": "общий контракт данных и состояния загрузки/ошибки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "fullstack-junior-C-all-3",
+          "skillTags": [
+            "javascript",
+            "react",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что помогает избежать рассинхрона между UI и сервером?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "зашитые значения"
+            },
+            {
+              "id": "o2",
+              "text": "явные состояния загрузки/успеха/ошибки"
+            },
+            {
+              "id": "o3",
+              "text": "скрытие статусов"
+            },
+            {
+              "id": "o4",
+              "text": "повтор без проверки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "fullstack-junior-C-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o2",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o3",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o4",
+              "text": "молчать до дедлайна"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "fullstack-junior-C-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Коллега просит отревьюить его PR. Лучший первый шаг?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сразу аппрувнуть"
+            },
+            {
+              "id": "o2",
+              "text": "отмолчаться"
+            },
+            {
+              "id": "o3",
+              "text": "разобраться в изменении и дать конкретный фидбек"
+            },
+            {
+              "id": "o4",
+              "text": "переписать код самому"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    }
+  ]
+}

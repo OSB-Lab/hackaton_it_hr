@@ -88,13 +88,11 @@ def test_disclosure_rechecks_current_privacy(recommendation_env, condition):
         assert session.scalar(select(func.count()).select_from(RecommendationItem)) == 1
 
 
-@pytest.mark.parametrize("content_status", [None, "DEMO", "APPROVED"])
-def test_no_false_qualification(recommendation_env, content_status):
+def test_no_false_qualification(recommendation_env):
     (_, _, _, engine), (_, _, candidate, _) = recommendation_env
     with Session(engine) as session, session.begin():
         session.add(AssessmentAttempt(candidate_id=candidate, test_id="fixture", status="submitted",
-                    content_status=content_status, grade="senior", score=100,
-                    result={"outcome": "high", "status": content_status}))
+                    grade="senior", score=100, result={"outcome": "high"}))
     with Session(engine) as session:
         assert service.can_disclose_candidate(session, candidate)
         assert not service.has_verified_qualification(session, candidate)

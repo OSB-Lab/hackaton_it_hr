@@ -30,6 +30,5 @@ Changing specialization or either skills list validates their entire effective g
 legacy labels then need explicit replacement by valid IDs in the same PATCH.
 There is no invented alias mapping or implicit seed/data rewrite.
 
-Current catalog is DEMO. Validation is real against that catalog, but DS approval
-and complete production coverage remain outstanding. No scoring/ranking or SPR-15
-changes are introduced, and catalog version is not persisted on HiringNeed.
+Validation is real against the catalog. No scoring/ranking changes are introduced,
+and catalog version is not persisted on HiringNeed.

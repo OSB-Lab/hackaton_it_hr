@@ -1,0 +1,2083 @@
+{
+  "schemaVersion": 3,
+  "id": "backend-senior",
+  "version": "v3",
+  "catalogVersion": "v3",
+  "specialization": "backend",
+  "grade": "senior",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "scaleMin": 0,
+    "scaleMax": 100.0,
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    }
+  },
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "backend-senior-A-python-1",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `__slots__`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "экономит память, запрещая `__dict__` и ad-hoc атрибуты"
+            },
+            {
+              "id": "o2",
+              "text": "кэширует импорты"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт потоки"
+            },
+            {
+              "id": "o4",
+              "text": "ускоряет сеть"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "backend-senior-A-python-2",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое метакласс в Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "менеджер контекста"
+            },
+            {
+              "id": "o2",
+              "text": "функция-декоратор"
+            },
+            {
+              "id": "o3",
+              "text": "класс, экземплярами которого являются классы"
+            },
+            {
+              "id": "o4",
+              "text": "встроенный тип данных"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "backend-senior-A-python-3",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем asyncio лучше threading для IO-bound задач?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "уменьшает память"
+            },
+            {
+              "id": "o2",
+              "text": "обходит GC"
+            },
+            {
+              "id": "o3",
+              "text": "параллелит CPU"
+            },
+            {
+              "id": "o4",
+              "text": "кооперативная многозадачность в одном потоке без конкуренции за GIL"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "backend-senior-A-python-4",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Когда `functools.lru_cache` опасен?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "для чистых функций"
+            },
+            {
+              "id": "o2",
+              "text": "для рекурсии"
+            },
+            {
+              "id": "o3",
+              "text": "для нечистых функций или изменяемых аргументов"
+            },
+            {
+              "id": "o4",
+              "text": "при большом объёме данных"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "backend-senior-A-sql-1",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое покрывающий индекс?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "индекс, содержащий все столбцы запроса — чтение без обращения к таблице"
+            },
+            {
+              "id": "o2",
+              "text": "уникальный индекс"
+            },
+            {
+              "id": "o3",
+              "text": "индекс по внешнему ключу"
+            },
+            {
+              "id": "o4",
+              "text": "индекс на каждой колонке"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "backend-senior-A-sql-2",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Как MVCC обеспечивает согласованность чтения в PostgreSQL?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "кэшированием"
+            },
+            {
+              "id": "o2",
+              "text": "версиями строк и snapshot-изоляцией"
+            },
+            {
+              "id": "o3",
+              "text": "только на диске"
+            },
+            {
+              "id": "o4",
+              "text": "блокировками всей таблицы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "backend-senior-A-sql-3",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `FOR UPDATE SKIP LOCKED`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "блокирует всю таблицу"
+            },
+            {
+              "id": "o2",
+              "text": "удаляет строки"
+            },
+            {
+              "id": "o3",
+              "text": "берёт только незаблокированные строки — для очередей задач"
+            },
+            {
+              "id": "o4",
+              "text": "создаёт индекс"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "backend-senior-A-sql-4",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Когда нужен `LATERAL JOIN`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "когда подзапрос ссылается на столбцы предыдущих элементов FROM"
+            },
+            {
+              "id": "o2",
+              "text": "для сортировки"
+            },
+            {
+              "id": "o3",
+              "text": "для удаления дубликатов"
+            },
+            {
+              "id": "o4",
+              "text": "для транзакций"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "backend-senior-A-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем circuit breaker отличается от простого retry?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повторяет чаще"
+            },
+            {
+              "id": "o2",
+              "text": "шифрует"
+            },
+            {
+              "id": "o3",
+              "text": "разрывает цепь и не шлёт запросы при устойчивых сбоях"
+            },
+            {
+              "id": "o4",
+              "text": "кэширует ответ"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "backend-senior-A-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое backpressure?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сжатие ответов"
+            },
+            {
+              "id": "o2",
+              "text": "повтор запросов"
+            },
+            {
+              "id": "o3",
+              "text": "авторизация"
+            },
+            {
+              "id": "o4",
+              "text": "сигнал потребителя о перегрузке, замедляющий производителя"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "backend-senior-A-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как работает token bucket rate limiting?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "по времени суток"
+            },
+            {
+              "id": "o2",
+              "text": "по IP-адресу"
+            },
+            {
+              "id": "o3",
+              "text": "бюджет токенов пополняется с фиксированной скоростью и расходуется на запросы"
+            },
+            {
+              "id": "o4",
+              "text": "по размеру тела"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "backend-senior-A-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое saga pattern?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "тип индекса"
+            },
+            {
+              "id": "o2",
+              "text": "алгоритм сортировки"
+            },
+            {
+              "id": "o3",
+              "text": "вид базы данных"
+            },
+            {
+              "id": "o4",
+              "text": "распределённая транзакция из цепочки компенсируемых локальных шагов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "backend-senior-A-pair-1",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Как безопасно выполнить конкурентное обновление строки из нескольких процессов?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "оптимистичная блокировка или SELECT ... FOR UPDATE"
+            },
+            {
+              "id": "o2",
+              "text": "повтор без проверки"
+            },
+            {
+              "id": "o3",
+              "text": "удалить строку"
+            },
+            {
+              "id": "o4",
+              "text": "без блокировок"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "backend-senior-A-pair-2",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как гарантировать обработку сообщения ровно один раз в асинхронном сервисе?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "идемпотентность потребителя и дедупликация"
+            },
+            {
+              "id": "o2",
+              "text": "удалить очередь"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать повторы"
+            },
+            {
+              "id": "o4",
+              "text": "обработать как есть"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "backend-senior-A-pair-3",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как согласовать запись в БД и побочный эффект внешнего API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать API"
+            },
+            {
+              "id": "o2",
+              "text": "в произвольном порядке"
+            },
+            {
+              "id": "o3",
+              "text": "только в БД"
+            },
+            {
+              "id": "o4",
+              "text": "transactional outbox с ретраями"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "backend-senior-A-all-1",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как обеспечить надёжную доставку события из Python-сервиса в БД и соседние сервисы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальная переменная"
+            },
+            {
+              "id": "o2",
+              "text": "outbox + идемпотентность потребителей"
+            },
+            {
+              "id": "o3",
+              "text": "игнорирование ошибок"
+            },
+            {
+              "id": "o4",
+              "text": "прямая запись без транзакции"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "backend-senior-A-all-2",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как изолировать сбой одного медленного вызова от всего запроса?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "бесконечные повторы"
+            },
+            {
+              "id": "o2",
+              "text": "circuit breaker, таймауты и bulkhead"
+            },
+            {
+              "id": "o3",
+              "text": "удаление логов"
+            },
+            {
+              "id": "o4",
+              "text": "синхронный sleep"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "backend-senior-A-all-3",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как добиться горизонтального масштабирования stateful-обработки?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "увеличение одной машины"
+            },
+            {
+              "id": "o2",
+              "text": "одна глобальная блокировка"
+            },
+            {
+              "id": "o3",
+              "text": "партиционирование и независимые воркеры"
+            },
+            {
+              "id": "o4",
+              "text": "отключение БД"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "backend-senior-A-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как выстроить onboarding/менторинг, чтобы junior росли без потери качества?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "делать всё за них"
+            },
+            {
+              "id": "o2",
+              "text": "не тратить на это время"
+            },
+            {
+              "id": "o3",
+              "text": "бросить в бой без поддержки"
+            },
+            {
+              "id": "o4",
+              "text": "поэтапный план, ревью и измеримые цели"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "backend-senior-A-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Команда хронически перерабатывает. Как устранить причину, а не симптом?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "просто нанять людей"
+            },
+            {
+              "id": "o2",
+              "text": "снизить планку качества"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать"
+            },
+            {
+              "id": "o4",
+              "text": "найти корень (оценки/процессы/требования) и перестроить процесс"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "backend-senior-B-python-1",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое метакласс в Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "менеджер контекста"
+            },
+            {
+              "id": "o2",
+              "text": "класс, экземплярами которого являются классы"
+            },
+            {
+              "id": "o3",
+              "text": "функция-декоратор"
+            },
+            {
+              "id": "o4",
+              "text": "встроенный тип данных"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "backend-senior-B-python-2",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем asyncio лучше threading для IO-bound задач?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "параллелит CPU"
+            },
+            {
+              "id": "o2",
+              "text": "обходит GC"
+            },
+            {
+              "id": "o3",
+              "text": "уменьшает память"
+            },
+            {
+              "id": "o4",
+              "text": "кооперативная многозадачность в одном потоке без конкуренции за GIL"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "backend-senior-B-python-3",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Когда `functools.lru_cache` опасен?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "для чистых функций"
+            },
+            {
+              "id": "o2",
+              "text": "при большом объёме данных"
+            },
+            {
+              "id": "o3",
+              "text": "для рекурсии"
+            },
+            {
+              "id": "o4",
+              "text": "для нечистых функций или изменяемых аргументов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "backend-senior-B-python-4",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое дескриптор в Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "объект с `__get__`/`__set__`/`__delete__`, управляющий атрибутом"
+            },
+            {
+              "id": "o2",
+              "text": "тип исключения"
+            },
+            {
+              "id": "o3",
+              "text": "синоним словаря"
+            },
+            {
+              "id": "o4",
+              "text": "функция с yield"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "backend-senior-B-sql-1",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Как MVCC обеспечивает согласованность чтения в PostgreSQL?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "блокировками всей таблицы"
+            },
+            {
+              "id": "o2",
+              "text": "только на диске"
+            },
+            {
+              "id": "o3",
+              "text": "версиями строк и snapshot-изоляцией"
+            },
+            {
+              "id": "o4",
+              "text": "кэшированием"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "backend-senior-B-sql-2",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `FOR UPDATE SKIP LOCKED`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удаляет строки"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт индекс"
+            },
+            {
+              "id": "o3",
+              "text": "блокирует всю таблицу"
+            },
+            {
+              "id": "o4",
+              "text": "берёт только незаблокированные строки — для очередей задач"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "backend-senior-B-sql-3",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Когда нужен `LATERAL JOIN`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "для транзакций"
+            },
+            {
+              "id": "o2",
+              "text": "для сортировки"
+            },
+            {
+              "id": "o3",
+              "text": "для удаления дубликатов"
+            },
+            {
+              "id": "o4",
+              "text": "когда подзапрос ссылается на столбцы предыдущих элементов FROM"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "backend-senior-B-sql-4",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего `VACUUM` в PostgreSQL?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "очищает dead tuples и предотвращает bloat таблиц"
+            },
+            {
+              "id": "o2",
+              "text": "делает резервную копию"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт индексы"
+            },
+            {
+              "id": "o4",
+              "text": "шифрует данные"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "backend-senior-B-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое backpressure?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "авторизация"
+            },
+            {
+              "id": "o2",
+              "text": "сигнал потребителя о перегрузке, замедляющий производителя"
+            },
+            {
+              "id": "o3",
+              "text": "сжатие ответов"
+            },
+            {
+              "id": "o4",
+              "text": "повтор запросов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "backend-senior-B-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как работает token bucket rate limiting?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "по времени суток"
+            },
+            {
+              "id": "o2",
+              "text": "по размеру тела"
+            },
+            {
+              "id": "o3",
+              "text": "бюджет токенов пополняется с фиксированной скоростью и расходуется на запросы"
+            },
+            {
+              "id": "o4",
+              "text": "по IP-адресу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "backend-senior-B-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое saga pattern?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "тип индекса"
+            },
+            {
+              "id": "o2",
+              "text": "алгоритм сортировки"
+            },
+            {
+              "id": "o3",
+              "text": "вид базы данных"
+            },
+            {
+              "id": "o4",
+              "text": "распределённая транзакция из цепочки компенсируемых локальных шагов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "backend-senior-B-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем API gateway?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "единая точка аутентификации, роутинга и лимитов"
+            },
+            {
+              "id": "o2",
+              "text": "хранение паролей"
+            },
+            {
+              "id": "o3",
+              "text": "сжатие ответов"
+            },
+            {
+              "id": "o4",
+              "text": "кэширование DNS"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "backend-senior-B-pair-1",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Как безопасно выполнить конкурентное обновление строки из нескольких процессов?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "без блокировок"
+            },
+            {
+              "id": "o2",
+              "text": "оптимистичная блокировка или SELECT ... FOR UPDATE"
+            },
+            {
+              "id": "o3",
+              "text": "повтор без проверки"
+            },
+            {
+              "id": "o4",
+              "text": "удалить строку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "backend-senior-B-pair-2",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как гарантировать обработку сообщения ровно один раз в асинхронном сервисе?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удалить очередь"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать повторы"
+            },
+            {
+              "id": "o3",
+              "text": "обработать как есть"
+            },
+            {
+              "id": "o4",
+              "text": "идемпотентность потребителя и дедупликация"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "backend-senior-B-pair-3",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как согласовать запись в БД и побочный эффект внешнего API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать API"
+            },
+            {
+              "id": "o2",
+              "text": "в произвольном порядке"
+            },
+            {
+              "id": "o3",
+              "text": "только в БД"
+            },
+            {
+              "id": "o4",
+              "text": "transactional outbox с ретраями"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "backend-senior-B-all-1",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как обеспечить надёжную доставку события из Python-сервиса в БД и соседние сервисы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "outbox + идемпотентность потребителей"
+            },
+            {
+              "id": "o2",
+              "text": "прямая запись без транзакции"
+            },
+            {
+              "id": "o3",
+              "text": "игнорирование ошибок"
+            },
+            {
+              "id": "o4",
+              "text": "глобальная переменная"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "backend-senior-B-all-2",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как изолировать сбой одного медленного вызова от всего запроса?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "синхронный sleep"
+            },
+            {
+              "id": "o2",
+              "text": "удаление логов"
+            },
+            {
+              "id": "o3",
+              "text": "бесконечные повторы"
+            },
+            {
+              "id": "o4",
+              "text": "circuit breaker, таймауты и bulkhead"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "backend-senior-B-all-3",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как добиться горизонтального масштабирования stateful-обработки?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "партиционирование и независимые воркеры"
+            },
+            {
+              "id": "o2",
+              "text": "увеличение одной машины"
+            },
+            {
+              "id": "o3",
+              "text": "отключение БД"
+            },
+            {
+              "id": "o4",
+              "text": "одна глобальная блокировка"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "backend-senior-B-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как выстроить onboarding/менторинг, чтобы junior росли без потери качества?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "делать всё за них"
+            },
+            {
+              "id": "o2",
+              "text": "поэтапный план, ревью и измеримые цели"
+            },
+            {
+              "id": "o3",
+              "text": "бросить в бой без поддержки"
+            },
+            {
+              "id": "o4",
+              "text": "не тратить на это время"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "backend-senior-B-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Команда хронически перерабатывает. Как устранить причину, а не симптом?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "просто нанять людей"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать"
+            },
+            {
+              "id": "o3",
+              "text": "найти корень (оценки/процессы/требования) и перестроить процесс"
+            },
+            {
+              "id": "o4",
+              "text": "снизить планку качества"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "backend-senior-C-python-1",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем asyncio лучше threading для IO-bound задач?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "обходит GC"
+            },
+            {
+              "id": "o2",
+              "text": "уменьшает память"
+            },
+            {
+              "id": "o3",
+              "text": "параллелит CPU"
+            },
+            {
+              "id": "o4",
+              "text": "кооперативная многозадачность в одном потоке без конкуренции за GIL"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "backend-senior-C-python-2",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Когда `functools.lru_cache` опасен?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "для чистых функций"
+            },
+            {
+              "id": "o2",
+              "text": "для нечистых функций или изменяемых аргументов"
+            },
+            {
+              "id": "o3",
+              "text": "при большом объёме данных"
+            },
+            {
+              "id": "o4",
+              "text": "для рекурсии"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "backend-senior-C-python-3",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое дескриптор в Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "объект с `__get__`/`__set__`/`__delete__`, управляющий атрибутом"
+            },
+            {
+              "id": "o2",
+              "text": "тип исключения"
+            },
+            {
+              "id": "o3",
+              "text": "функция с yield"
+            },
+            {
+              "id": "o4",
+              "text": "синоним словаря"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "backend-senior-C-python-4",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего `weakref`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "кэширование байтов"
+            },
+            {
+              "id": "o2",
+              "text": "ускорение доступа"
+            },
+            {
+              "id": "o3",
+              "text": "сериализация"
+            },
+            {
+              "id": "o4",
+              "text": "ссылка, которая не удерживает объект от сборки мусора"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "backend-senior-C-sql-1",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `FOR UPDATE SKIP LOCKED`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удаляет строки"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт индекс"
+            },
+            {
+              "id": "o3",
+              "text": "блокирует всю таблицу"
+            },
+            {
+              "id": "o4",
+              "text": "берёт только незаблокированные строки — для очередей задач"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "backend-senior-C-sql-2",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Когда нужен `LATERAL JOIN`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "для сортировки"
+            },
+            {
+              "id": "o2",
+              "text": "когда подзапрос ссылается на столбцы предыдущих элементов FROM"
+            },
+            {
+              "id": "o3",
+              "text": "для удаления дубликатов"
+            },
+            {
+              "id": "o4",
+              "text": "для транзакций"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "backend-senior-C-sql-3",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего `VACUUM` в PostgreSQL?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "делает резервную копию"
+            },
+            {
+              "id": "o2",
+              "text": "шифрует данные"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт индексы"
+            },
+            {
+              "id": "o4",
+              "text": "очищает dead tuples и предотвращает bloat таблиц"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "backend-senior-C-sql-4",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Как низкая селективность индекса влияет на план?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "индекс удаляется"
+            },
+            {
+              "id": "o2",
+              "text": "ничего не меняется"
+            },
+            {
+              "id": "o3",
+              "text": "оптимизатор выбирает seq scan вместо index scan"
+            },
+            {
+              "id": "o4",
+              "text": "запрос падает"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "backend-senior-C-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как работает token bucket rate limiting?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "бюджет токенов пополняется с фиксированной скоростью и расходуется на запросы"
+            },
+            {
+              "id": "o2",
+              "text": "по IP-адресу"
+            },
+            {
+              "id": "o3",
+              "text": "по времени суток"
+            },
+            {
+              "id": "o4",
+              "text": "по размеру тела"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "backend-senior-C-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое saga pattern?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "вид базы данных"
+            },
+            {
+              "id": "o2",
+              "text": "тип индекса"
+            },
+            {
+              "id": "o3",
+              "text": "алгоритм сортировки"
+            },
+            {
+              "id": "o4",
+              "text": "распределённая транзакция из цепочки компенсируемых локальных шагов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "backend-senior-C-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем API gateway?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сжатие ответов"
+            },
+            {
+              "id": "o2",
+              "text": "кэширование DNS"
+            },
+            {
+              "id": "o3",
+              "text": "единая точка аутентификации, роутинга и лимитов"
+            },
+            {
+              "id": "o4",
+              "text": "хранение паролей"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "backend-senior-C-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что даёт distributed tracing (trace/span)?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сквозную корреляцию запроса через несколько сервисов"
+            },
+            {
+              "id": "o2",
+              "text": "сжатие"
+            },
+            {
+              "id": "o3",
+              "text": "шифрование"
+            },
+            {
+              "id": "o4",
+              "text": "ускорение сети"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "backend-senior-C-pair-1",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Как безопасно выполнить конкурентное обновление строки из нескольких процессов?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "без блокировок"
+            },
+            {
+              "id": "o2",
+              "text": "оптимистичная блокировка или SELECT ... FOR UPDATE"
+            },
+            {
+              "id": "o3",
+              "text": "удалить строку"
+            },
+            {
+              "id": "o4",
+              "text": "повтор без проверки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "backend-senior-C-pair-2",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как гарантировать обработку сообщения ровно один раз в асинхронном сервисе?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать повторы"
+            },
+            {
+              "id": "o2",
+              "text": "обработать как есть"
+            },
+            {
+              "id": "o3",
+              "text": "удалить очередь"
+            },
+            {
+              "id": "o4",
+              "text": "идемпотентность потребителя и дедупликация"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "backend-senior-C-pair-3",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как согласовать запись в БД и побочный эффект внешнего API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "только в БД"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать API"
+            },
+            {
+              "id": "o3",
+              "text": "transactional outbox с ретраями"
+            },
+            {
+              "id": "o4",
+              "text": "в произвольном порядке"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "backend-senior-C-all-1",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как обеспечить надёжную доставку события из Python-сервиса в БД и соседние сервисы?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальная переменная"
+            },
+            {
+              "id": "o2",
+              "text": "игнорирование ошибок"
+            },
+            {
+              "id": "o3",
+              "text": "outbox + идемпотентность потребителей"
+            },
+            {
+              "id": "o4",
+              "text": "прямая запись без транзакции"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "backend-senior-C-all-2",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как изолировать сбой одного медленного вызова от всего запроса?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удаление логов"
+            },
+            {
+              "id": "o2",
+              "text": "бесконечные повторы"
+            },
+            {
+              "id": "o3",
+              "text": "синхронный sleep"
+            },
+            {
+              "id": "o4",
+              "text": "circuit breaker, таймауты и bulkhead"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "backend-senior-C-all-3",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как добиться горизонтального масштабирования stateful-обработки?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключение БД"
+            },
+            {
+              "id": "o2",
+              "text": "увеличение одной машины"
+            },
+            {
+              "id": "o3",
+              "text": "партиционирование и независимые воркеры"
+            },
+            {
+              "id": "o4",
+              "text": "одна глобальная блокировка"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "backend-senior-C-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как выстроить onboarding/менторинг, чтобы junior росли без потери качества?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "не тратить на это время"
+            },
+            {
+              "id": "o2",
+              "text": "поэтапный план, ревью и измеримые цели"
+            },
+            {
+              "id": "o3",
+              "text": "бросить в бой без поддержки"
+            },
+            {
+              "id": "o4",
+              "text": "делать всё за них"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "backend-senior-C-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Команда хронически перерабатывает. Как устранить причину, а не симптом?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать"
+            },
+            {
+              "id": "o2",
+              "text": "снизить планку качества"
+            },
+            {
+              "id": "o3",
+              "text": "найти корень (оценки/процессы/требования) и перестроить процесс"
+            },
+            {
+              "id": "o4",
+              "text": "просто нанять людей"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    }
+  ]
+}

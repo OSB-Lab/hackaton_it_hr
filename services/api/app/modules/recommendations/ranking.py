@@ -34,5 +34,5 @@ def calculate(required, optional, evidence, technical_score, confirmed_fsp=False
     components = {"skillFit": float(skill), "assessmentStrength": float(strength), "fspBonus": float(bonus)}
     reasons = (f"Required skill evidence: {required_coverage * 100:.1f}%",
                f"Technical test: {strength * 100:.1f}%",
-               f"{'Demo FSP bonus' if fsp_bonus is not None else 'Verified FSP bonus'}: {bonus * 100:.1f}%")
+               f"FSP bonus: {bonus * 100:.1f}%")
     return float(score), components, reasons

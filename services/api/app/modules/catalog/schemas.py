@@ -17,26 +17,10 @@ def unique(values, label):
         raise ValueError(f"Duplicate {label}")
 
 
-class Approval(FrozenModel):
-    reference: Text
-    approvedBy: Text
-
-
 class Versioned(FrozenModel):
     schemaVersion: Literal[1]
     id: ID
     version: ID
-    status: Literal["DEMO", "APPROVED"]
-    provenance: Literal["DEMO", "DS"]
-    approval: Approval | None = None
-
-    @model_validator(mode="after")
-    def approval_required(self):
-        if self.status == "APPROVED" and (self.provenance != "DS" or self.approval is None):
-            raise ValueError("APPROVED requires DS provenance and explicit approval")
-        if self.status == "DEMO" and self.approval is not None:
-            raise ValueError("DEMO cannot carry approval")
-        return self
 
 
 class Skill(FrozenModel):

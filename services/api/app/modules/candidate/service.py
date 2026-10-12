@@ -3,7 +3,7 @@ from datetime import datetime, timezone
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 
-from app.models import CandidateProfile, Consent, User
+from app.models import CandidateProfile, Consent, TestAttempt, User
 from app.modules.candidate.schemas import (
     CandidateProfilePatch, ConsentDTO, HiringCandidateDTO, SelfCandidateDTO, contact_free,
 )
@@ -42,8 +42,30 @@ def self_profile(session: Session, user: User) -> SelfCandidateDTO:
     from app.modules.fsp.demo import active_registry, achievements_for
     registry = active_registry()
     achievements = achievements_for(session, profile.id, registry) if profile else ()
-    return SelfCandidateDTO(fspSource="synthetic-demo-not-fsp" if registry else None,
-                            fspAchievements=list(achievements),
+    from app.modules.assessments.schemas import ResultDTO
+    verified_skills = {}
+    if proof:
+        _, attempt, saved = proof
+        result = ResultDTO.model_validate(attempt.result)
+        technical = {tag for slot in saved.blueprint.slots for tag in slot.skillTags} - {'teamwork'}
+        verified_skills = {tag: result.subscores[tag] for tag in sorted(technical)
+                           if (result.evidenceCounts or {}).get(tag, 0) > 0}
+    diagnostic = {}
+    if profile:
+        from app.modules.assessments.taxonomy_service import _unpack
+        attempts = session.scalars(select(TestAttempt).where(
+            TestAttempt.candidate_id == profile.id, TestAttempt.snapshot_schema_version == 2,
+            TestAttempt.status == 'submitted').order_by(TestAttempt.submitted_at.desc(), TestAttempt.id.desc()))
+        for attempt in attempts:
+            cell, _ = _unpack(attempt)
+            result = ResultDTO.model_validate(attempt.result)
+            if result.outcome in ('pass', 'high'):
+                diagnostic = dict(diagnosticRole=cell.role, diagnosticGrade=cell.grade,
+                                  diagnosticSkills={s: result.subscores[s] for s in cell.skillIds})
+                break
+    return SelfCandidateDTO(fspSource="fsp" if registry else None,
+                            fspAchievements=list(achievements), verifiedSkills=verified_skills,
+                            **diagnostic,
                             verifiedGrade=profile.verified_grade if proof else None,
                             verifiedSpecialization=profile.verified_specialization if proof else None,
                             email=user.email, **values, privacy=privacy, consents=consent_state(session, user.id),

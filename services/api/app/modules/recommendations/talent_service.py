@@ -36,8 +36,8 @@ def read_items(session: Session, user_id: int, need_id: int, snapshot_id: int,
     ids = [item.candidate.id for item in snapshot.items]
     profiles = {p.id: p for p in session.scalars(select(CandidateProfile).where(CandidateProfile.id.in_(ids)))}
     from app.modules.recommendations.ranking import ALGORITHM_VERSION
-    from app.modules.recommendations.similar_service import SIMILAR_VERSION
-    if snapshot.algorithmVersion in (ALGORITHM_VERSION, SIMILAR_VERSION):
+    from app.modules.recommendations.similar_service import SIMILAR_VERSION, LEGACY_SIMILAR_VERSION
+    if snapshot.algorithmVersion in (ALGORITHM_VERSION, SIMILAR_VERSION, LEGACY_SIMILAR_VERSION):
         achieved = {item.candidate.id for item in snapshot.items
                     if item.components and item.components.fspBonus > 0}
     else:
@@ -61,13 +61,17 @@ def read_items(session: Session, user_id: int, need_id: int, snapshot_id: int,
             specialization=(profile.verified_specialization if proof else
                             profile.specialization if profile.specialization in specializations else None),
             stack=tuple(dict.fromkeys(skill for skill in profile.stack if skill in skills)),
+            verifiedSkills=item.verifiedSkillLevels or {} if snapshot.algorithmVersion in (SIMILAR_VERSION, LEGACY_SIMILAR_VERSION) else {},
             hasFspAchievements=profile.id in achieved,
         )
         if filters.grade is not None and candidate.grade != filters.grade:
             continue
         if filters.specialization is not None and candidate.specialization != filters.specialization:
             continue
-        if not set(filters.stack) <= set(candidate.stack):
+        if snapshot.algorithmVersion in (SIMILAR_VERSION, LEGACY_SIMILAR_VERSION) and item.verifiedSkillLevels is not None:
+            if not set(filters.stack) <= {skill for skill, level in candidate.verifiedSkills.items() if level >= 50}:
+                continue
+        elif not set(filters.stack) <= set(candidate.stack):
             continue
         if (filters.hasFspAchievements is not None
                 and candidate.hasFspAchievements != filters.hasFspAchievements):

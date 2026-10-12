@@ -5,6 +5,12 @@
 `db368de` — workspace components; `5ff40e8` — merge frontend-auth.
 Это снимок состояния, а не сертификат production readiness.
 
+> **Позже состояние изменилось.** Разделение demo/real/test удалено (нет флагов
+> `DEMO`/`APPROVED`/`content_status`), миграция `0012` убрала колонки статуса,
+> подтверждающий v3-трек расширен до `backend/frontend/fullstack × junior/middle/senior`
+> (9 ячеек, 540 вопросов), квалификация определяется баллом (13/18 + per-skill gate).
+> Актуальное состояние — в [`README.md`](../README.md) и [`docs/JURY.md`](JURY.md).
+
 ## 1. Резюме и границы доказательств
 
 Backend основных сценариев реализован и проверен существующими API-тестами на
@@ -180,7 +186,7 @@ FK ниже подтверждены SQLAlchemy inspector. Это не полн�
 | candidate_profiles | 10 | full_name, stack, specialization, grade, self_declared_grade, verified_grade/specialization, privacy_settings, phone, experience_months | user_id → users unique; verified_attempt_id → test_attempts |
 | companies | 2 | name, description, contacts | user_id → users unique |
 | hiring_needs | 4 | title, team_description, specialization, min_grade, grade(target), stack(required), optional_skills | company_id → companies; unique company/title |
-| test_attempts | 0 | snapshot, versions/checksums, variant, status, content_status, answers, result, score, submitted_at | candidate_id → candidate_profiles; partial unique active candidate |
+| test_attempts | 0 | snapshot, versions/checksums, variant, status, answers, result, score, submitted_at | candidate_id → candidate_profiles; partial unique active candidate |
 | competency_scores | 30 | competency, score, source, evidence_count, blueprint_version | candidate_id → profile; attempt_id → test_attempts |
 | fsp_links | 10 | fsp_id, status, linked_at | candidate_id → profile unique |
 | fsp_achievements | 4 | discipline, competition, result, role, rank | candidate_id → profile |

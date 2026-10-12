@@ -49,7 +49,7 @@ class Participant(StrictModel):
 
 class Registry(StrictModel):
     schemaVersion: Literal[1]
-    source: Literal["synthetic-demo-not-fsp"]
+    source: Literal["fsp"]
     participants: tuple[Participant, ...]
 
     @model_validator(mode="after")

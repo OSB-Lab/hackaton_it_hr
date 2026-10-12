@@ -42,13 +42,12 @@ def test_bundle_coverage_and_equivalence(repo):
         loaded = repo.blueprint(key)
         bp = loaded.document
         pairs.add((bp.specialization, bp.grade))
-        assert bp.status == bp.provenance == "DEMO"
         assert len(loaded.checksum) == 64
         assert {v.id for v in bp.variants} == {"A", "B", "C"}
         assert all({q.slotId for q in v.questions} == {s.id for s in bp.slots} for v in bp.variants)
-    assert pairs == {(s,g) for s in ("backend", "frontend") for g in ("junior", "middle")}
+    assert pairs == {(s, g) for s in ("backend", "frontend", "fullstack") for g in ("junior", "middle", "senior")}
     with pytest.raises(ValidationError):
-        repo.catalog().document.status = "APPROVED"
+        repo.catalog().document.version = "changed"
     with pytest.raises(ValidationError):
         repo.blueprint(repo.manifest.activeBlueprints[0]).document.slots[0].weight = 9.0
 
@@ -62,7 +61,7 @@ def test_public_projection_does_not_leak(repo, key, variant):
     text = public.model_dump_json()
     for forbidden in ("answerKey", "rubric", "scoring", "thresholds", "correctFraction", "optionId", "weight", "maxScore", "checksum"):
         assert forbidden not in text
-    assert data["status"] == "DEMO" and data["variant"] == variant
+    assert data["variant"] == variant
     assert "answerKey" not in PublicQuestion.model_fields
     assert "scoring" not in PublicVariant.model_fields
     assert len(data["questions"]) == len(loaded.document.slots)
@@ -96,7 +95,7 @@ def test_public_output_independent_of_correct_option_and_scoring(repo, variant):
     "missing_b", "third_variant", "duplicate_a", "missing_slot", "duplicate_slot", "unknown_slot",
     "missing_rubric", "unknown_rubric", "missing_thresholds", "missing_high", "reversed_thresholds",
     "out_of_range", "nan", "negative_weight", "zero_max", "unknown_type", "bad_key",
-    "duplicate_option", "duplicate_question", "variant_override", "unknown_formula", "auto_approved",
+    "duplicate_option", "duplicate_question", "variant_override", "unknown_formula",
 ])
 def test_invalid_blueprints_rejected(repo, case):
     bp = raw_blueprint(repo)
@@ -121,20 +120,16 @@ def test_invalid_blueprints_rejected(repo, case):
     elif case == "duplicate_question": bp["variants"][1]["questions"][0]["id"] = bp["variants"][0]["questions"][0]["id"]
     elif case == "variant_override": bp["variants"][1]["rubric"] = []
     elif case == "unknown_formula": bp["scoring"]["formula"] = "execute_python"
-    elif case == "auto_approved": bp["status"] = "APPROVED"
     with pytest.raises(ValueError):
         decode(Blueprint, json.dumps(bp))
 
 
-@pytest.mark.parametrize("case", ["duplicate_skill", "unknown_skill", "duplicate_order", "approved_demo"])
+@pytest.mark.parametrize("case", ["duplicate_skill", "unknown_skill", "duplicate_order"])
 def test_invalid_catalog(repo, case):
     cat = repo.catalog().document.model_dump(mode="json")
     if case == "duplicate_skill": cat["skills"].append(cat["skills"][0])
     elif case == "unknown_skill": cat["specializations"][0]["skillIds"].append("missing")
     elif case == "duplicate_order": cat["grades"][1]["order"] = 0
-    elif case == "approved_demo":
-        cat["status"] = "APPROVED"
-        cat["approval"] = {"reference": "test-only", "approvedBy": "test"}
     with pytest.raises(ValueError):
         decode(Catalog, json.dumps(cat))
 
@@ -154,7 +149,7 @@ def test_seed_compatibility_and_shared_validators(repo):
         with pytest.raises(ValueError): action()
 
 
-@pytest.mark.parametrize("case", ["checksum", "path", "identity", "catalog_version", "skill", "approved_on_demo"])
+@pytest.mark.parametrize("case", ["checksum", "path", "identity", "catalog_version", "skill"])
 def test_loader_rejects_invalid_bundle(bundle, case):
     manifest_path = bundle / "manifest.json"
     manifest = json.loads(manifest_path.read_text())
@@ -167,8 +162,6 @@ def test_loader_rejects_invalid_bundle(bundle, case):
         if case == "identity": bp["version"] = "wrong-version"
         elif case == "catalog_version": bp["catalogVersion"] = "missing-version"
         elif case == "skill": bp["slots"][0]["skillId"] = "react"
-        elif case == "approved_on_demo":
-            bp.update(status="APPROVED", provenance="DS", approval={"reference": "test-only", "approvedBy": "test"})
         ref["sha256"] = write_json(path, bp)
     write_json(manifest_path, manifest)
     with pytest.raises(ValueError): CatalogRepository(bundle).blueprint(ref["key"])
@@ -189,7 +182,7 @@ def test_explicit_version_survives_active_switch(bundle):
     switched.validate_all()
     assert switched.catalog().document.version == "v2-demo"
     assert switched.catalog(old.document.version) == old
-    assert switched.blueprint(repo.manifest.activeBlueprints[0]).document.catalogVersion == "v3-demo"
+    assert switched.blueprint(repo.manifest.activeBlueprints[0]).document.catalogVersion == "v3"
     with pytest.raises(ValueError): switched.catalog("unknown")
     with pytest.raises(ValueError): switched.blueprint("unknown")
 

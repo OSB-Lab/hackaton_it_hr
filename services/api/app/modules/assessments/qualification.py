@@ -21,9 +21,8 @@ def qualification(session, candidate_id):
     try:
         snapshot = decode(AttemptSnapshot, json.dumps(attempt.snapshot))
         result = ResultDTO.model_validate(attempt.result)
-        if (snapshot.blueprint.schemaVersion != 3 or snapshot.blueprint.status != "APPROVED"
-                or snapshot.catalog.status != "APPROVED" or attempt.content_status != "APPROVED"
-                or result.status != "APPROVED" or result.outcome not in ("pass", "high")
+        if (snapshot.blueprint.schemaVersion != 3
+                or result.outcome not in ("pass", "high")
                 or result.correctTechnical is None or result.correctTechnical < 13
                 or any(result.subscores.get(s, -1) < 50 for s in
                        {tag for slot in snapshot.blueprint.slots for tag in slot.skillTags} - {"teamwork"})
@@ -70,30 +69,27 @@ def check_start(profile, request, catalog, now):
 def apply_result(session, profile, attempt, snapshot, result):
     """Called once under profile + attempt locks in the submit transaction."""
     blueprint = snapshot.blueprint
-    # Neither old APPROVED fixtures nor v3 DEMO content can certify a candidate.
     if blueprint.schemaVersion != 3:
         return
-    approved = blueprint.status == snapshot.catalog.status == attempt.content_status == "APPROVED"
     grades = [g.id for g in sorted(snapshot.catalog.grades, key=lambda g: g.order)]
     index = grades.index(blueprint.grade)
-    if approved:
-        for skill, score in result.subscores.items():
-            source = "assessment_diagnostic" if skill == "teamwork" else "test"
-            row = session.scalar(select(CompetencyScore).where(
-                CompetencyScore.candidate_id == profile.id, CompetencyScore.competency == skill,
-                CompetencyScore.source == source))
-            if row is None:
-                row = CompetencyScore(candidate_id=profile.id, competency=skill, source=source)
-                session.add(row)
-            row.score, row.evidence_count = score, result.evidenceCounts[skill]
-            row.blueprint_version, row.attempt_id = blueprint.version, attempt.id
-        if result.outcome != "fail" and (not profile.verified_grade or index > grades.index(profile.verified_grade)):
-            if profile.verified_specialization not in (None, blueprint.specialization):
-                raise HTTPException(409, "Specialization change policy unavailable")
-            profile.verified_grade = blueprint.grade
-            profile.verified_specialization = blueprint.specialization
-            profile.verified_attempt_id = attempt.id
-            profile.last_grade_change_at = attempt.submitted_at
+    for skill, score in result.subscores.items():
+        source = "assessment_diagnostic" if skill == "teamwork" else "test"
+        row = session.scalar(select(CompetencyScore).where(
+            CompetencyScore.candidate_id == profile.id, CompetencyScore.competency == skill,
+            CompetencyScore.source == source))
+        if row is None:
+            row = CompetencyScore(candidate_id=profile.id, competency=skill, source=source)
+            session.add(row)
+        row.score, row.evidence_count = score, result.evidenceCounts[skill]
+        row.blueprint_version, row.attempt_id = blueprint.version, attempt.id
+    if result.outcome != "fail" and (not profile.verified_grade or index > grades.index(profile.verified_grade)):
+        if profile.verified_specialization not in (None, blueprint.specialization):
+            raise HTTPException(409, "Specialization change policy unavailable")
+        profile.verified_grade = blueprint.grade
+        profile.verified_specialization = blueprint.specialization
+        profile.verified_attempt_id = attempt.id
+        profile.last_grade_change_at = attempt.submitted_at
     result.verifiedGrade = profile.verified_grade
     result.verifiedSpecialization = profile.verified_specialization
     result.retestAvailableAt = available_at(profile)

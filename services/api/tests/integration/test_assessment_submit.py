@@ -42,7 +42,7 @@ def test_submit_boundaries_and_persistence(assessment_env, monkeypatch, correct,
     response = client.post(path, headers=headers[0], json=body)
     assert response.status_code == 200
     result = response.json()['result']
-    assert result['totalScore'] == total and result['outcome'] == outcome and result['status'] == 'DEMO'
+    assert result['totalScore'] == total and result['outcome'] == outcome
     expected = {slot['skillId']: (100 if i < correct else 0) for i, slot in enumerate(snapshot['blueprint']['slots'])}
     assert result['subscores'] == expected
     for forbidden in ('answerKey', 'rubric', 'scoring', 'threshold', 'weight', 'maxScore', 'optionId'):

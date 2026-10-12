@@ -7,9 +7,9 @@ Query parameters не поддерживаются; ID берётся исклю
 
 Экспорт: имя, специализация профиля (не объявляется подтверждённой), стек.
 Подтверждённые specialization/grade выводятся только через существующий `qualification()`:
-сохранённая успешная APPROVED v3 submitted attempt. Иначе «Квалификация не подтверждена».
+сохранённая успешная v3 submitted attempt. Иначе «Квалификация не подтверждена».
 Отдельного подтверждённого поля category в модели нет; категория не выдумывается.
-Self-declared/legacy grade, результаты DEMO и внутренности assessment не экспортируются.
+Self-declared/legacy grade и внутренности assessment не экспортируются.
 
 Email/phone исключены **всегда**, независимо от showContacts: текущий контракт раскрытия
 контактов разрешает их origin employer через invitation, но не определяет portable export.
@@ -47,4 +47,4 @@ setTimeout(() => URL.revokeObjectURL(url), 1000);
 `/api` — существующий Next proxy; при прямом API вызове путь `/me/profile-pdf`.
 Frontend-команда добавляет ProfilePdfButton.tsx и browser E2E скачивания в candidate session,
 проверяет 401/403 и открытие файла. Образ API требуется пересобрать для новых зависимостей.
-Миграций нет; production DEMO-пул по-прежнему не даёт verified qualification.
+Миграций нет.

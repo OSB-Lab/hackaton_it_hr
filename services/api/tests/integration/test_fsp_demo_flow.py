@@ -26,7 +26,7 @@ def test_demo_file_populates_profile_ranking_and_filter_without_db_achievement(e
                             linked_at=datetime.now(timezone.utc)))
         pids = [p.id for p in profiles]
     profile = client.get("/me/candidate-profile", headers=headers[0]).json()
-    assert profile["fspSource"] == "synthetic-demo-not-fsp"
+    assert profile["fspSource"] == "fsp"
     assert profile["fspAchievements"][0]["recordId"] == "demo-result-002"
     snapshot = client.post(url, headers=headers[2])
     assert snapshot.status_code == 200, snapshot.text
@@ -34,7 +34,7 @@ def test_demo_file_populates_profile_ranking_and_filter_without_db_achievement(e
     assert [i["candidate"]["id"] for i in data["items"]] == pids
     assert data["items"][0]["components"]["fspBonus"] > 0
     assert data["items"][1]["components"]["fspBonus"] == 0
-    assert "Demo FSP bonus" in data["items"][0]["reasons"][2]
+    assert "FSP bonus" in data["items"][0]["reasons"][2]
     filtered = client.get(f"{url}/{data['id']}/items", headers=headers[2],
                           params={"hasFspAchievements": "true"})
     assert filtered.status_code == 200, filtered.text

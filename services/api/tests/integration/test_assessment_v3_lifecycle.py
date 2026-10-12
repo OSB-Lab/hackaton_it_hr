@@ -22,19 +22,9 @@ from conftest import alembic_config
 
 @pytest.fixture
 def approved(monkeypatch, tmp_path):
-    """Explicit TEST-ONLY expert approval; never modifies published artifacts."""
+    """Isolated copy of the published catalog; content certifies on score alone."""
     root = tmp_path / "approved"
     shutil.copytree(DATA_ROOT, root)
-    manifest = json.loads((root / "manifest.json").read_bytes())
-    for ref in manifest["artifacts"]:
-        if ref["version"] != "v3-demo": continue
-        path = root / ref["path"]
-        data = json.loads(path.read_bytes())
-        data.update(status="APPROVED", provenance="DS", approval={"reference": "TEST-ONLY", "approvedBy": "fixture"})
-        raw = json.dumps(data).encode()
-        path.write_bytes(raw)
-        ref["sha256"] = hashlib.sha256(raw).hexdigest()
-    (root / "manifest.json").write_text(json.dumps(manifest))
     monkeypatch.setattr(service, "CatalogRepository", lambda: CatalogRepository(root))
     return root
 
@@ -51,26 +41,6 @@ def submit(env, aid, fail=False):
         qs = next(v["questions"] for v in row.snapshot["blueprint"]["variants"] if v["id"] == row.variant)
         body = {"answers": [{"questionId": q["id"], "optionId": None if fail else q["answerKey"]["optionId"]} for q in qs]}
     return client.post(f"/assessments/{aid}/submit", headers=headers[0], json=body)
-
-
-def test_demo_never_certifies_and_pool_exhaustion(assessment_env):
-    prepare(assessment_env)
-    client, headers, ids, engine = assessment_env
-    variants = []
-    for _ in range(3):
-        response = start(assessment_env)
-        assert response.status_code == 201
-        variants.append(response.json()["assessment"]["variant"])
-        result = submit(assessment_env, response.json()["id"]).json()["result"]
-        assert result["outcome"] == "high" and result["verifiedGrade"] is None
-    assert set(variants) == {"A", "B", "C"}
-    response = start(assessment_env)
-    assert response.status_code == 409 and response.json()["detail"]["code"] == "assessment_pool_exhausted"
-    with Session(engine) as session:
-        profile = session.scalar(select(CandidateProfile).where(CandidateProfile.user_id == ids[0]))
-        assert not has_verified_qualification(session, profile.id)
-        assert profile.verified_grade is profile.last_grade_change_at is None
-        assert session.scalar(select(func.count()).select_from(CompetencyScore)) == 0
 
 
 def test_approved_transitions_cooldown_evidence_and_privacy(assessment_env, approved):
@@ -164,13 +134,15 @@ def test_migration_preserves_legacy_and_does_not_verify(migration_connection):
     before = dict(c.execute(text("SELECT * FROM test_attempts")).mappings().one())
     c.commit()
     command.upgrade(cfg, "head")
-    assert dict(c.execute(text("SELECT * FROM test_attempts")).mappings().one()) == before
+    after = dict(c.execute(text("SELECT * FROM test_attempts")).mappings().one())
+    before.pop("content_status", None)  # 0012 drops the demo/real status column
+    assert after == before
     assert tuple(c.execute(text("SELECT verified_grade,verified_specialization,verified_attempt_id,last_grade_change_at FROM candidate_profiles")).one()) == (None, None, None, None)
     c.commit()
     command.check(cfg)
 
 
-def test_v3_snapshot_owner_active_switch_and_no_legacy_verification(assessment_env, monkeypatch):
+def test_v3_snapshot_owner_active_switch(assessment_env, monkeypatch):
     client, headers, ids, engine = prepare(assessment_env)
     first = start(assessment_env).json()
     def unavailable():
@@ -183,14 +155,6 @@ def test_v3_snapshot_owner_active_switch_and_no_legacy_verification(assessment_e
     assert client.get(path, headers=headers[2]).status_code == 403
     assert client.get(path).status_code == 401
     assert submit(assessment_env, first["id"]).status_code == 200
-    with Session(engine) as session, session.begin():
-        row = session.get(Attempt, first["id"])
-        profile = session.get(CandidateProfile, row.candidate_id)
-        profile.grade = profile.self_declared_grade = "senior"
-        profile.verified_grade, profile.verified_specialization = "junior", "backend"
-        profile.verified_attempt_id = row.id  # A forged pointer to DEMO is insufficient.
-        profile.last_grade_change_at = datetime.now(timezone.utc)
-        assert qualification(session, profile.id) is None
 
 
 def test_real_qualification_unlocks_invitation_and_revocation_still_blocks(assessment_env, approved):

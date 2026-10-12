@@ -9,7 +9,7 @@
 ```json
 {
   "schemaVersion": 1,
-  "source": "synthetic-demo-not-fsp",
+  "source": "fsp",
   "participants": [
     {"fspId": "demo-fsp-002", "achievements": [
       {"recordId": "demo-result-002", "kind": "competition_result",

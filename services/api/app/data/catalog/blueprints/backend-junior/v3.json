@@ -1,0 +1,2083 @@
+{
+  "schemaVersion": 3,
+  "id": "backend-junior",
+  "version": "v3",
+  "catalogVersion": "v3",
+  "specialization": "backend",
+  "grade": "junior",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "python"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "python",
+        "sql"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "python",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "python",
+        "sql",
+        "api"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "scaleMin": 0,
+    "scaleMax": 100.0,
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    }
+  },
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "backend-junior-A-python-1",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой тип Python неизменяем?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "set"
+            },
+            {
+              "id": "o2",
+              "text": "tuple"
+            },
+            {
+              "id": "o3",
+              "text": "list"
+            },
+            {
+              "id": "o4",
+              "text": "dict"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "backend-junior-A-python-2",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что возвращает list.pop()?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "последний элемент и удаляет его"
+            },
+            {
+              "id": "o2",
+              "text": "индекс"
+            },
+            {
+              "id": "o3",
+              "text": "копию списка"
+            },
+            {
+              "id": "o4",
+              "text": "ничего"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "backend-junior-A-python-3",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод добавляет элемент в конец списка?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "append()"
+            },
+            {
+              "id": "o2",
+              "text": "add()"
+            },
+            {
+              "id": "o3",
+              "text": "insert()"
+            },
+            {
+              "id": "o4",
+              "text": "push()"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "backend-junior-A-python-4",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой тип Python изменяем?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "int"
+            },
+            {
+              "id": "o2",
+              "text": "list"
+            },
+            {
+              "id": "o3",
+              "text": "tuple"
+            },
+            {
+              "id": "o4",
+              "text": "str"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "backend-junior-A-sql-1",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что фильтрует строки до агрегации?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "LIMIT"
+            },
+            {
+              "id": "o2",
+              "text": "HAVING"
+            },
+            {
+              "id": "o3",
+              "text": "ORDER BY"
+            },
+            {
+              "id": "o4",
+              "text": "WHERE"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "backend-junior-A-sql-2",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой JOIN требует совпадения с обеих сторон?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "LEFT JOIN"
+            },
+            {
+              "id": "o2",
+              "text": "FULL JOIN"
+            },
+            {
+              "id": "o3",
+              "text": "INNER JOIN"
+            },
+            {
+              "id": "o4",
+              "text": "CROSS JOIN"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "backend-junior-A-sql-3",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какая конструкция сортирует результат?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "GROUP BY"
+            },
+            {
+              "id": "o2",
+              "text": "ORDER BY"
+            },
+            {
+              "id": "o3",
+              "text": "WHERE"
+            },
+            {
+              "id": "o4",
+              "text": "LIMIT"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "backend-junior-A-sql-4",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой JOIN вернёт все строки левой таблицы плюс совпадения справа?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "INNER JOIN"
+            },
+            {
+              "id": "o2",
+              "text": "RIGHT JOIN"
+            },
+            {
+              "id": "o3",
+              "text": "CROSS JOIN"
+            },
+            {
+              "id": "o4",
+              "text": "LEFT JOIN"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "backend-junior-A-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой статус означает Not Found?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "500"
+            },
+            {
+              "id": "o2",
+              "text": "404"
+            },
+            {
+              "id": "o3",
+              "text": "302"
+            },
+            {
+              "id": "o4",
+              "text": "201"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "backend-junior-A-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод идемпотентен и безопасен?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "DELETE"
+            },
+            {
+              "id": "o2",
+              "text": "GET"
+            },
+            {
+              "id": "o3",
+              "text": "POST"
+            },
+            {
+              "id": "o4",
+              "text": "PATCH"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "backend-junior-A-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод создаёт ресурс?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "PUT"
+            },
+            {
+              "id": "o2",
+              "text": "GET"
+            },
+            {
+              "id": "o3",
+              "text": "HEAD"
+            },
+            {
+              "id": "o4",
+              "text": "POST"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "backend-junior-A-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой код означает «Создано»?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "204"
+            },
+            {
+              "id": "o2",
+              "text": "200"
+            },
+            {
+              "id": "o3",
+              "text": "400"
+            },
+            {
+              "id": "o4",
+              "text": "201"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "backend-junior-A-pair-1",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно передать пользовательский ввод в SQL-запрос из Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "вставить в URL"
+            },
+            {
+              "id": "o2",
+              "text": "хранить в cookie"
+            },
+            {
+              "id": "o3",
+              "text": "склейкой строк"
+            },
+            {
+              "id": "o4",
+              "text": "параметризованный запрос (плейсхолдеры)"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "backend-junior-A-pair-2",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как обработать ошибку при вызове внешнего API из Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать ошибку"
+            },
+            {
+              "id": "o2",
+              "text": "повторять бесконечно"
+            },
+            {
+              "id": "o3",
+              "text": "всегда отдавать 200"
+            },
+            {
+              "id": "o4",
+              "text": "проверить код ответа и обработать ошибку явно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "backend-junior-A-pair-3",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что проверить, чтобы API не отдавал чужие данные из БД?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "добавить индекс"
+            },
+            {
+              "id": "o2",
+              "text": "увеличить лимит"
+            },
+            {
+              "id": "o3",
+              "text": "включить кэш"
+            },
+            {
+              "id": "o4",
+              "text": "авторизацию и принадлежность записей"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "backend-junior-A-all-1",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает систему надёжнее при связке Python + БД + HTTP API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "скрытие ошибок"
+            },
+            {
+              "id": "o2",
+              "text": "жёсткие задержки"
+            },
+            {
+              "id": "o3",
+              "text": "явные контракты, валидация и обработка ошибок"
+            },
+            {
+              "id": "o4",
+              "text": "глобальные переменные"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "backend-junior-A-all-2",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как безопасно связать Python, БД и API в одном сервисе?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальный mutable state"
+            },
+            {
+              "id": "o2",
+              "text": "отключение валидации"
+            },
+            {
+              "id": "o3",
+              "text": "единые типы/контракты и обработка ошибок на границах"
+            },
+            {
+              "id": "o4",
+              "text": "игнорирование ошибок"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "backend-junior-A-all-3",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что помогает избежать ошибок интеграции Python↔БД↔API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "жёстко зашитые значения"
+            },
+            {
+              "id": "o2",
+              "text": "повтор без разбора"
+            },
+            {
+              "id": "o3",
+              "text": "скрытие исключений"
+            },
+            {
+              "id": "o4",
+              "text": "валидация входных данных и явные границы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "backend-junior-A-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o2",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o3",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o4",
+              "text": "удалить задачу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "backend-junior-A-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Коллега просит отревьюить его PR. Лучший первый шаг?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "сразу аппрувнуть"
+            },
+            {
+              "id": "o2",
+              "text": "разобраться в изменении и дать конкретный фидбек"
+            },
+            {
+              "id": "o3",
+              "text": "отмолчаться"
+            },
+            {
+              "id": "o4",
+              "text": "переписать код самому"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "backend-junior-B-python-1",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Что возвращает list.pop()?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "последний элемент и удаляет его"
+            },
+            {
+              "id": "o2",
+              "text": "индекс"
+            },
+            {
+              "id": "o3",
+              "text": "копию списка"
+            },
+            {
+              "id": "o4",
+              "text": "ничего"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "backend-junior-B-python-2",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод добавляет элемент в конец списка?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "insert()"
+            },
+            {
+              "id": "o2",
+              "text": "append()"
+            },
+            {
+              "id": "o3",
+              "text": "push()"
+            },
+            {
+              "id": "o4",
+              "text": "add()"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "backend-junior-B-python-3",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой тип Python изменяем?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "int"
+            },
+            {
+              "id": "o2",
+              "text": "list"
+            },
+            {
+              "id": "o3",
+              "text": "tuple"
+            },
+            {
+              "id": "o4",
+              "text": "str"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "backend-junior-B-python-4",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод возвращает количество элементов списка?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "length()"
+            },
+            {
+              "id": "o2",
+              "text": "count()"
+            },
+            {
+              "id": "o3",
+              "text": "len()"
+            },
+            {
+              "id": "o4",
+              "text": "size()"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "backend-junior-B-sql-1",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой JOIN требует совпадения с обеих сторон?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "INNER JOIN"
+            },
+            {
+              "id": "o2",
+              "text": "FULL JOIN"
+            },
+            {
+              "id": "o3",
+              "text": "CROSS JOIN"
+            },
+            {
+              "id": "o4",
+              "text": "LEFT JOIN"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "backend-junior-B-sql-2",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какая конструкция сортирует результат?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "LIMIT"
+            },
+            {
+              "id": "o2",
+              "text": "GROUP BY"
+            },
+            {
+              "id": "o3",
+              "text": "WHERE"
+            },
+            {
+              "id": "o4",
+              "text": "ORDER BY"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "backend-junior-B-sql-3",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой JOIN вернёт все строки левой таблицы плюс совпадения справа?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "LEFT JOIN"
+            },
+            {
+              "id": "o2",
+              "text": "INNER JOIN"
+            },
+            {
+              "id": "o3",
+              "text": "RIGHT JOIN"
+            },
+            {
+              "id": "o4",
+              "text": "CROSS JOIN"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "backend-junior-B-sql-4",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что предотвращает unique constraint?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "deadlock"
+            },
+            {
+              "id": "o2",
+              "text": "дубликаты ключа"
+            },
+            {
+              "id": "o3",
+              "text": "slow query"
+            },
+            {
+              "id": "o4",
+              "text": "NULL"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "backend-junior-B-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод идемпотентен и безопасен?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "GET"
+            },
+            {
+              "id": "o2",
+              "text": "PATCH"
+            },
+            {
+              "id": "o3",
+              "text": "DELETE"
+            },
+            {
+              "id": "o4",
+              "text": "POST"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "backend-junior-B-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод создаёт ресурс?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "HEAD"
+            },
+            {
+              "id": "o2",
+              "text": "GET"
+            },
+            {
+              "id": "o3",
+              "text": "PUT"
+            },
+            {
+              "id": "o4",
+              "text": "POST"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "backend-junior-B-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой код означает «Создано»?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "201"
+            },
+            {
+              "id": "o2",
+              "text": "400"
+            },
+            {
+              "id": "o3",
+              "text": "200"
+            },
+            {
+              "id": "o4",
+              "text": "204"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "backend-junior-B-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Где передают bearer token?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "response body"
+            },
+            {
+              "id": "o2",
+              "text": "Authorization header"
+            },
+            {
+              "id": "o3",
+              "text": "cookie name"
+            },
+            {
+              "id": "o4",
+              "text": "URL path"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "backend-junior-B-pair-1",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно передать пользовательский ввод в SQL-запрос из Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "склейкой строк"
+            },
+            {
+              "id": "o2",
+              "text": "параметризованный запрос (плейсхолдеры)"
+            },
+            {
+              "id": "o3",
+              "text": "хранить в cookie"
+            },
+            {
+              "id": "o4",
+              "text": "вставить в URL"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "backend-junior-B-pair-2",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как обработать ошибку при вызове внешнего API из Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "всегда отдавать 200"
+            },
+            {
+              "id": "o2",
+              "text": "проверить код ответа и обработать ошибку явно"
+            },
+            {
+              "id": "o3",
+              "text": "повторять бесконечно"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать ошибку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "backend-junior-B-pair-3",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что проверить, чтобы API не отдавал чужие данные из БД?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "авторизацию и принадлежность записей"
+            },
+            {
+              "id": "o2",
+              "text": "добавить индекс"
+            },
+            {
+              "id": "o3",
+              "text": "увеличить лимит"
+            },
+            {
+              "id": "o4",
+              "text": "включить кэш"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "backend-junior-B-all-1",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает систему надёжнее при связке Python + БД + HTTP API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальные переменные"
+            },
+            {
+              "id": "o2",
+              "text": "жёсткие задержки"
+            },
+            {
+              "id": "o3",
+              "text": "явные контракты, валидация и обработка ошибок"
+            },
+            {
+              "id": "o4",
+              "text": "скрытие ошибок"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "backend-junior-B-all-2",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как безопасно связать Python, БД и API в одном сервисе?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорирование ошибок"
+            },
+            {
+              "id": "o2",
+              "text": "глобальный mutable state"
+            },
+            {
+              "id": "o3",
+              "text": "единые типы/контракты и обработка ошибок на границах"
+            },
+            {
+              "id": "o4",
+              "text": "отключение валидации"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "backend-junior-B-all-3",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что помогает избежать ошибок интеграции Python↔БД↔API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "повтор без разбора"
+            },
+            {
+              "id": "o2",
+              "text": "жёстко зашитые значения"
+            },
+            {
+              "id": "o3",
+              "text": "валидация входных данных и явные границы"
+            },
+            {
+              "id": "o4",
+              "text": "скрытие исключений"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "backend-junior-B-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o2",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o3",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            },
+            {
+              "id": "o4",
+              "text": "обвинить коллегу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "backend-junior-B-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Коллега просит отревьюить его PR. Лучший первый шаг?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "разобраться в изменении и дать конкретный фидбек"
+            },
+            {
+              "id": "o2",
+              "text": "отмолчаться"
+            },
+            {
+              "id": "o3",
+              "text": "сразу аппрувнуть"
+            },
+            {
+              "id": "o4",
+              "text": "переписать код самому"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "backend-junior-C-python-1",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод добавляет элемент в конец списка?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "push()"
+            },
+            {
+              "id": "o2",
+              "text": "add()"
+            },
+            {
+              "id": "o3",
+              "text": "append()"
+            },
+            {
+              "id": "o4",
+              "text": "insert()"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "backend-junior-C-python-2",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой тип Python изменяем?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "str"
+            },
+            {
+              "id": "o2",
+              "text": "tuple"
+            },
+            {
+              "id": "o3",
+              "text": "int"
+            },
+            {
+              "id": "o4",
+              "text": "list"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "backend-junior-C-python-3",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой метод возвращает количество элементов списка?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "length()"
+            },
+            {
+              "id": "o2",
+              "text": "size()"
+            },
+            {
+              "id": "o3",
+              "text": "len()"
+            },
+            {
+              "id": "o4",
+              "text": "count()"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "backend-junior-C-python-4",
+          "skillTags": [
+            "python"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой оператор проверяет равенство двух значений?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "=="
+            },
+            {
+              "id": "o2",
+              "text": "="
+            },
+            {
+              "id": "o3",
+              "text": "==="
+            },
+            {
+              "id": "o4",
+              "text": ":="
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "backend-junior-C-sql-1",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какая конструкция сортирует результат?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ORDER BY"
+            },
+            {
+              "id": "o2",
+              "text": "WHERE"
+            },
+            {
+              "id": "o3",
+              "text": "GROUP BY"
+            },
+            {
+              "id": "o4",
+              "text": "LIMIT"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "backend-junior-C-sql-2",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой JOIN вернёт все строки левой таблицы плюс совпадения справа?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "RIGHT JOIN"
+            },
+            {
+              "id": "o2",
+              "text": "INNER JOIN"
+            },
+            {
+              "id": "o3",
+              "text": "LEFT JOIN"
+            },
+            {
+              "id": "o4",
+              "text": "CROSS JOIN"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "backend-junior-C-sql-3",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Что предотвращает unique constraint?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "NULL"
+            },
+            {
+              "id": "o2",
+              "text": "deadlock"
+            },
+            {
+              "id": "o3",
+              "text": "дубликаты ключа"
+            },
+            {
+              "id": "o4",
+              "text": "slow query"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "backend-junior-C-sql-4",
+          "skillTags": [
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Для чего нужна transaction?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "форматирование SQL"
+            },
+            {
+              "id": "o2",
+              "text": "кэширование"
+            },
+            {
+              "id": "o3",
+              "text": "атомарность согласованных изменений"
+            },
+            {
+              "id": "o4",
+              "text": "сжатие данных"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "backend-junior-C-api-1",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой HTTP-метод создаёт ресурс?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "HEAD"
+            },
+            {
+              "id": "o2",
+              "text": "PUT"
+            },
+            {
+              "id": "o3",
+              "text": "GET"
+            },
+            {
+              "id": "o4",
+              "text": "POST"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "backend-junior-C-api-2",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Какой код означает «Создано»?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "201"
+            },
+            {
+              "id": "o2",
+              "text": "204"
+            },
+            {
+              "id": "o3",
+              "text": "200"
+            },
+            {
+              "id": "o4",
+              "text": "400"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "backend-junior-C-api-3",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Где передают bearer token?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "cookie name"
+            },
+            {
+              "id": "o2",
+              "text": "response body"
+            },
+            {
+              "id": "o3",
+              "text": "URL path"
+            },
+            {
+              "id": "o4",
+              "text": "Authorization header"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "backend-junior-C-api-4",
+          "skillTags": [
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что означает 204?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ресурс создан"
+            },
+            {
+              "id": "o2",
+              "text": "ошибка схемы"
+            },
+            {
+              "id": "o3",
+              "text": "успех без тела"
+            },
+            {
+              "id": "o4",
+              "text": "redirect"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "backend-junior-C-pair-1",
+          "skillTags": [
+            "python",
+            "sql"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно передать пользовательский ввод в SQL-запрос из Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "вставить в URL"
+            },
+            {
+              "id": "o2",
+              "text": "хранить в cookie"
+            },
+            {
+              "id": "o3",
+              "text": "склейкой строк"
+            },
+            {
+              "id": "o4",
+              "text": "параметризованный запрос (плейсхолдеры)"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "backend-junior-C-pair-2",
+          "skillTags": [
+            "python",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как обработать ошибку при вызове внешнего API из Python?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "всегда отдавать 200"
+            },
+            {
+              "id": "o2",
+              "text": "проверить код ответа и обработать ошибку явно"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать ошибку"
+            },
+            {
+              "id": "o4",
+              "text": "повторять бесконечно"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "backend-junior-C-pair-3",
+          "skillTags": [
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что проверить, чтобы API не отдавал чужие данные из БД?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "авторизацию и принадлежность записей"
+            },
+            {
+              "id": "o2",
+              "text": "добавить индекс"
+            },
+            {
+              "id": "o3",
+              "text": "увеличить лимит"
+            },
+            {
+              "id": "o4",
+              "text": "включить кэш"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "backend-junior-C-all-1",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает систему надёжнее при связке Python + БД + HTTP API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "жёсткие задержки"
+            },
+            {
+              "id": "o2",
+              "text": "явные контракты, валидация и обработка ошибок"
+            },
+            {
+              "id": "o3",
+              "text": "скрытие ошибок"
+            },
+            {
+              "id": "o4",
+              "text": "глобальные переменные"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "backend-junior-C-all-2",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Как безопасно связать Python, БД и API в одном сервисе?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальный mutable state"
+            },
+            {
+              "id": "o2",
+              "text": "отключение валидации"
+            },
+            {
+              "id": "o3",
+              "text": "единые типы/контракты и обработка ошибок на границах"
+            },
+            {
+              "id": "o4",
+              "text": "игнорирование ошибок"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "backend-junior-C-all-3",
+          "skillTags": [
+            "python",
+            "sql",
+            "api"
+          ],
+          "type": "single_choice",
+          "prompt": "Что помогает избежать ошибок интеграции Python↔БД↔API?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "скрытие исключений"
+            },
+            {
+              "id": "o2",
+              "text": "жёстко зашитые значения"
+            },
+            {
+              "id": "o3",
+              "text": "повтор без разбора"
+            },
+            {
+              "id": "o4",
+              "text": "валидация входных данных и явные границы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "backend-junior-C-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как корректно сообщить о блокере?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удалить задачу"
+            },
+            {
+              "id": "o2",
+              "text": "молчать до дедлайна"
+            },
+            {
+              "id": "o3",
+              "text": "обвинить коллегу"
+            },
+            {
+              "id": "o4",
+              "text": "сразу: контекст, влияние и следующий шаг"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "backend-junior-C-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Коллега просит отревьюить его PR. Лучший первый шаг?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "разобраться в изменении и дать конкретный фидбек"
+            },
+            {
+              "id": "o2",
+              "text": "переписать код самому"
+            },
+            {
+              "id": "o3",
+              "text": "отмолчаться"
+            },
+            {
+              "id": "o4",
+              "text": "сразу аппрувнуть"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    }
+  ]
+}

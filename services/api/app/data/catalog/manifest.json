@@ -1,11 +1,16 @@
 {
   "schemaVersion": 1,
-  "activeCatalog": "fsp-catalog-v3-demo",
+  "activeCatalog": "fsp-catalog-v3",
   "activeBlueprints": [
-    "backend-junior-v3-demo",
-    "backend-middle-v3-demo",
-    "frontend-junior-v3-demo",
-    "frontend-middle-v3-demo"
+    "backend-junior-v3",
+    "backend-middle-v3",
+    "backend-senior-v3",
+    "frontend-junior-v3",
+    "frontend-middle-v3",
+    "frontend-senior-v3",
+    "fullstack-junior-v3",
+    "fullstack-middle-v3",
+    "fullstack-senior-v3"
   ],
   "artifacts": [
     {
@@ -14,7 +19,7 @@
       "id": "fsp-catalog",
       "version": "v1-demo",
       "path": "v1-demo/catalog.json",
-      "sha256": "cfccc313b2289bc657550f1e52050556034c7ada2038cfc205f615ddd773ce0f"
+      "sha256": "0ec5ae6f96c7d8386a52140911921b0a1175e13d65176d3e34c95fbabfd67795"
     },
     {
       "key": "backend-junior-v1-demo",
@@ -22,7 +27,7 @@
       "id": "backend-junior",
       "version": "v1-demo",
       "path": "v1-demo/blueprints/backend/junior/v1.json",
-      "sha256": "fb78aa5d184ae1bd371a76d92b4e3d9ef59152d1dd0c168c9bd7086d34e58a1f"
+      "sha256": "a553f8b07951e8643b5c7214f7ff772ea7bc9d5031d4d9dd9e831b8cee865815"
     },
     {
       "key": "backend-middle-v1-demo",
@@ -30,7 +35,7 @@
       "id": "backend-middle",
       "version": "v1-demo",
       "path": "v1-demo/blueprints/backend/middle/v1.json",
-      "sha256": "7d0bcfdd5485d749fb4345ba8ad9e95df2bd603371eb265d6cdc80a66cfdb637"
+      "sha256": "a394bee8b96ef9109442afa765633b8fbe29e61dd97927e2b4f81f3756de4c9a"
     },
     {
       "key": "frontend-junior-v1-demo",
@@ -38,7 +43,7 @@
       "id": "frontend-junior",
       "version": "v1-demo",
       "path": "v1-demo/blueprints/frontend/junior/v1.json",
-      "sha256": "488325ca4c66971700abcac2cb8a77aec6f52a6090a49eaacb99ffeac33bb3d4"
+      "sha256": "f779e544e26c305779bae2ae8d8507597f45960e80d818503991c28cbec8dac7"
     },
     {
       "key": "frontend-middle-v1-demo",
@@ -46,7 +51,7 @@
       "id": "frontend-middle",
       "version": "v1-demo",
       "path": "v1-demo/blueprints/frontend/middle/v1.json",
-      "sha256": "86be9453c237238de0daad9a8d3fc3333435fe234f4968b50686098565f9573a"
+      "sha256": "94cc65243b81af29a9e45512618c8614e78b503d9108c4b68148fad21665ac44"
     },
     {
       "key": "fsp-catalog-v3-demo",
@@ -54,7 +59,7 @@
       "id": "fsp-catalog",
       "version": "v3-demo",
       "path": "catalog/v3-demo.json",
-      "sha256": "c712dfb2a810bd186fde550b12c10aad9f0a811855ae3992d66a4a8a122347d0"
+      "sha256": "33af31dec1646fa4517aa62342a15a19f60c3181ce3c3ec53127f1904441e8ee"
     },
     {
       "key": "backend-junior-v3-demo",
@@ -62,7 +67,7 @@
       "id": "backend-junior",
       "version": "v3-demo",
       "path": "blueprints/backend-junior/v3-demo.json",
-      "sha256": "02bb7880a73c2d194b31fc73a1bc3b6eada52ebeb65e0249b542aa40cd4e25f2"
+      "sha256": "418ceae389bbe0b1f13b2a862642bf49319b3b0c849f14981bc6f085f9fb9c89"
     },
     {
       "key": "backend-middle-v3-demo",
@@ -70,7 +75,7 @@
       "id": "backend-middle",
       "version": "v3-demo",
       "path": "blueprints/backend-middle/v3-demo.json",
-      "sha256": "5f2854b89f99283bf480061f2053efff095b64503446ff2035104236ea5af95b"
+      "sha256": "be48c3db809842f8cbd86f31224d63ec822c7a7e5b37df2f1da0132f28d5409b"
     },
     {
       "key": "frontend-junior-v3-demo",
@@ -78,7 +83,7 @@
       "id": "frontend-junior",
       "version": "v3-demo",
       "path": "blueprints/frontend-junior/v3-demo.json",
-      "sha256": "bf1f4fb7f673e2b552b0c24701bf40d9fa6804d1957b16f9d1cd91d58d2d84f9"
+      "sha256": "690117ed30ca9425ff92138662ac986943607bd35d0c20f992efa8093a0b361e"
     },
     {
       "key": "frontend-middle-v3-demo",
@@ -86,7 +91,87 @@
       "id": "frontend-middle",
       "version": "v3-demo",
       "path": "blueprints/frontend-middle/v3-demo.json",
-      "sha256": "91357353eab60419a12f0d71d67c56f775d025a81e5e65af4961429bd0c3c83f"
+      "sha256": "d6eafc981ff8d857c325e61947f6bbe3f1b2fc838cf0b9dbca55ac39149114e4"
+    },
+    {
+      "key": "fsp-catalog-v3",
+      "kind": "catalog",
+      "id": "fsp-catalog",
+      "version": "v3",
+      "path": "catalog/v3.json",
+      "sha256": "4b7b20a39b788b2a34633d1d2f0a22dc34b099ebbeacb08fa9fc7a8d6e4b9b07"
+    },
+    {
+      "key": "backend-junior-v3",
+      "kind": "blueprint",
+      "id": "backend-junior",
+      "version": "v3",
+      "path": "blueprints/backend-junior/v3.json",
+      "sha256": "888bb007e51980ef2a72bd9c29ff4823f03ca1ccf69e2e61812fc6a8fc590f39"
+    },
+    {
+      "key": "backend-middle-v3",
+      "kind": "blueprint",
+      "id": "backend-middle",
+      "version": "v3",
+      "path": "blueprints/backend-middle/v3.json",
+      "sha256": "ed8717be7aede73ca55ab4daf5322e607a8925241422d76c1cae6ec36f5a2674"
+    },
+    {
+      "key": "backend-senior-v3",
+      "kind": "blueprint",
+      "id": "backend-senior",
+      "version": "v3",
+      "path": "blueprints/backend-senior/v3.json",
+      "sha256": "94600f7e54288a766febd494b439ca175578026c57059babd0206e45e70be5a2"
+    },
+    {
+      "key": "frontend-junior-v3",
+      "kind": "blueprint",
+      "id": "frontend-junior",
+      "version": "v3",
+      "path": "blueprints/frontend-junior/v3.json",
+      "sha256": "a416f8c65d42240bb5218f427efadb5011ae255ab9ae8d965472827caf426014"
+    },
+    {
+      "key": "frontend-middle-v3",
+      "kind": "blueprint",
+      "id": "frontend-middle",
+      "version": "v3",
+      "path": "blueprints/frontend-middle/v3.json",
+      "sha256": "a7f8f363f8c3cb8e884a42be37c3a1c4b3ddba3368b2946052ddf717cd8f9ecc"
+    },
+    {
+      "key": "frontend-senior-v3",
+      "kind": "blueprint",
+      "id": "frontend-senior",
+      "version": "v3",
+      "path": "blueprints/frontend-senior/v3.json",
+      "sha256": "df36cf12a20c1c17c3a4fc19d5d4c49e1384d6e60c5032eea00478e02e8a0b1f"
+    },
+    {
+      "key": "fullstack-junior-v3",
+      "kind": "blueprint",
+      "id": "fullstack-junior",
+      "version": "v3",
+      "path": "blueprints/fullstack-junior/v3.json",
+      "sha256": "8af31b0886480c0128643a6db854727696af75842ec7f7b60057dea2f4db8088"
+    },
+    {
+      "key": "fullstack-middle-v3",
+      "kind": "blueprint",
+      "id": "fullstack-middle",
+      "version": "v3",
+      "path": "blueprints/fullstack-middle/v3.json",
+      "sha256": "9c3ce588625e90cc4042a7f1962281c8f8cca294c2f3282eb294fe1849a89e72"
+    },
+    {
+      "key": "fullstack-senior-v3",
+      "kind": "blueprint",
+      "id": "fullstack-senior",
+      "version": "v3",
+      "path": "blueprints/fullstack-senior/v3.json",
+      "sha256": "014ef0d4c5daa3ba011a6e1ff8b25f74daa0be4646f13a99b40e998927136b98"
     }
   ]
 }

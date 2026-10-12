@@ -1,0 +1,40 @@
+{
+ "schemaVersion": 1,
+ "roles": {
+  "backend": [
+   "python",
+   "sql",
+   "api",
+   "postgresql",
+   "docker"
+  ],
+  "frontend": [
+   "javascript",
+   "typescript",
+   "react",
+   "html",
+   "css"
+  ],
+  "fullstack": [
+   "javascript",
+   "react",
+   "nodejs",
+   "api",
+   "docker"
+  ],
+  "ml_engineer": [
+   "python",
+   "numpy",
+   "pandas",
+   "sklearn",
+   "pytorch"
+  ],
+  "data_engineer": [
+   "python",
+   "sql",
+   "postgresql",
+   "kafka",
+   "airflow"
+  ]
+ }
+}

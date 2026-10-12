@@ -154,7 +154,7 @@ def _validate_configs(roles, grades, skills, policy, sources):
     version = roles.get("catalog_version")
     if not version or any(d.get("catalog_version") != version for d in (grades, skills, sources)):
         raise FilterInputError("taxonomy versions differ")
-    if policy.get("policy_version") != "formal-filter-v1" or version != "talent-taxonomy-v1":
+    if policy.get("policy_version") != "formal-filter-v2" or version != "talent-taxonomy-v2":
         raise FilterInputError("unsupported taxonomy policy version")
     source_ids = set(sources["sources"])
     for document in (roles, grades, skills):

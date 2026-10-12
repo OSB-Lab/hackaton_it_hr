@@ -2,8 +2,8 @@
 set -euo pipefail
 
 usage() {
-  echo "Usage: bash demo-reset.sh [--purge]"
-  echo "  --purge  Stop all services and delete Compose volumes before reset."
+  echo "Usage: SYNTHETIC_PASSWORD=<min-12-chars> bash demo-reset.sh --purge"
+  echo "  --purge  Delete the Compose PostgreSQL volume, migrate, import 45 question forms, and seed 30 synthetic candidates + 5 employers/needs."
 }
 
 purge=false
@@ -20,10 +20,13 @@ fi
 
 cd "$(dirname "${BASH_SOURCE[0]}")"
 compose=(docker compose -f infra/docker-compose.yml)
-
-if [[ "$purge" == true ]]; then
-  "${compose[@]}" down -v
+password="${SYNTHETIC_PASSWORD:-}"
+if [[ "$purge" != true || ${#password} -lt 12 ]]; then
+  usage >&2
+  exit 2
 fi
+
+"${compose[@]}" down -v
 
 "${compose[@]}" up -d postgres
 
@@ -50,4 +53,5 @@ if [[ "$healthy" != true ]]; then
 fi
 
 "${compose[@]}" run --build --rm api alembic upgrade head
-"${compose[@]}" run --rm api python -m app.commands.seed_demo
+"${compose[@]}" run --rm -e SYNTHETIC_PASSWORD -e CONFIRM_SYNTHETIC_RESET=RESET_FSP_DEMO_ONLY api python -m app.commands.populate_taxonomy_demo_db
+"${compose[@]}" up -d api web mailpit

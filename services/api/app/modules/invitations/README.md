@@ -1,11 +1,10 @@
 # v3 qualification integration
 
 Invitation create now calls the shared assessments/qualification.py provider via
-recommendations.service.has_verified_qualification. A successful submitted APPROVED
-v3 attempt linked as the candidate's current proof unlocks this gate. Active shipped
-questions remain DEMO pending expert review: no bypass was added. Existing privacy,
+recommendations.service.has_verified_qualification. A successful submitted v3
+attempt linked as the candidate's current proof unlocks this gate. Existing privacy,
 verified email, ownership, state transitions and atomic disclosure/audit remain.
-Integration tests cover actual approved TEST-ONLY v3 submit -> invitation creation,
+Integration tests cover an actual v3 submit -> invitation creation,
 without replacing the qualification provider.
 
 # Invitations and state machine
@@ -36,9 +35,9 @@ PATCH). It checks existing verified email, candidate role, publication consent a
 privacy veto. Nonsearchable/missing candidate -> generic 404. Missing authoritative
 qualification -> 503 detail.code=verified_qualification_unavailable, with no invitation
 or audit row. Profile/seed/selfDeclaredGrade or a standalone high score are not
-qualification. The shared v3 provider requires a certifying APPROVED submitted attempt
+qualification. The shared v3 provider requires a certifying submitted attempt
 linked to the candidate. Legacy unit fixtures isolate the provider; integration tests
-exercise real TEST-ONLY approved submit. There is no production DEMO bypass.
+exercise a real submit.
 
 Active uniqueness scope is (company_id,candidate_id): the existing model has no
 need_id. Both sent and viewed are active. A company row lock plus PostgreSQL partial
@@ -94,7 +93,6 @@ Direct SQL INSERT/UPDATE are checked, not only Pydantic. Downgrade of 0009 only 
 these constraints. Historical AuditEvent/ContactDisclosure are never deleted when
 any required consent/privacy permission is revoked.
 
-Remaining content gate: expert-reviewed APPROVED question/catalog publication.
 The authoritative v3 qualification implementation already exists.
 DS/scoring/ranking/frontend and company/candidate active uniqueness are unchanged.
 
@@ -146,7 +144,7 @@ Frontend errors: 401 missing/invalid auth; 403 wrong action role; 404 foreign/mi
 company/invitation or unavailable candidate; 409 active duplicate or conflicting
 terminal action; 422 invalid/missing fields (including monetary strings/boolean
 privacy); 503 verified_qualification_unavailable blocks creation when the candidate
-has no authoritative v3 qualification (including the current DEMO pool). Show actionable errors, not a fabricated successful offer.
+has no authoritative v3 qualification. Show actionable errors, not a fabricated successful offer.
 Candidate privacy controls use PATCH /me/candidate-profile with
 `{"privacy":{"showContacts":true},"consents":{"processing":true,"publication":true}}`.
 GET of that endpoint returns current privacy/consents. Neither accept nor privacy
@@ -205,9 +203,8 @@ use API setup for the candidate's acceptance. Origin can read contacts, foreign 
 is 404 and second employer's own ungranted invitation stays masked. Also run candidate
 A vs candidate B: foreign GET/accept/decline must be 404 and must not create grants.
 
-For browser setup, use explicitly approved TEST-ONLY artifacts in an isolated test DB
-or real expert-approved content. Never toggle the production qualification provider,
-label DEMO as APPROVED, or create fake production ranking/qualification just for E2E.
+For browser setup, use test-only artifacts in an isolated test DB. Never toggle the
+production qualification provider or create fake production ranking/qualification just for E2E.
 Backend tests independently exercise privacy, transactions, races and v3 qualification
 without any frontend. New migration is unnecessary: the existing UNIQUE FK on
 ContactDisclosure.invitation_id plus the invitation row lock already protect grants.

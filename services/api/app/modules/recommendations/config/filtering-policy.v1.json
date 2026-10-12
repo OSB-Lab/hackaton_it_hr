@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "policy_version": "formal-filter-v1",
+  "policy_version": "formal-filter-v2",
   "coefficient_precision": "0.000001",
   "minimum_filter_fit": 0.12,
   "maximum_role_hops": 2,

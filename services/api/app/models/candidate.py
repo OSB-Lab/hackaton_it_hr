@@ -43,7 +43,6 @@ class TestAttempt(CreatedAtMixin, Base):
     __table_args__ = (
         CheckConstraint("status IN ('legacy', 'active', 'submitted')", name="ck_test_attempts_status"),
         CheckConstraint("variant IN ('A', 'B', 'C')", name="ck_test_attempts_variant"),
-        CheckConstraint("content_status IN ('DEMO', 'APPROVED')", name="ck_test_attempts_content_status"),
         Index("uq_test_attempts_active_candidate", "candidate_id", unique=True,
               postgresql_where=text("status = 'active'")),
     )
@@ -64,7 +63,6 @@ class TestAttempt(CreatedAtMixin, Base):
     snapshot_schema_version: Mapped[int | None]
     snapshot: Mapped[dict[str, Any] | None] = mapped_column(JSON(none_as_null=True))
     variant: Mapped[str | None]
-    content_status: Mapped[str | None]
     status: Mapped[str] = mapped_column(default="legacy", server_default="legacy")
     submitted_at: Mapped[datetime | None] = mapped_column(DateTime(timezone=True))
 

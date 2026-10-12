@@ -32,4 +32,4 @@ def score_v3(blueprint: BlueprintV3, variant: str, request: SubmitRequest) -> Re
                      evidenceCounts=counts, correctTechnical=technical,
                      totalScore=technical / 18 * 100, technicalTotal=technical / 18 * 100,
                      teamworkSubscore=100 * correct["teamwork"] / counts["teamwork"],
-                     outcome=outcome, status=blueprint.status)
+                     outcome=outcome)

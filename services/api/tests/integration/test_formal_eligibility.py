@@ -11,7 +11,7 @@ from test_assessment_v3_lifecycle import approved
 from test_ranking_create import setup, certify
 
 
-@pytest.mark.parametrize("mutation", [None, "missing", "zero", "wrong-id", "demo", "self-declared"])
+@pytest.mark.parametrize("mutation", [None, "missing", "zero", "wrong-id", "self-declared"])
 def test_formal_gate_and_read_only_api(env, approved, monkeypatch, mutation):
     client, headers, ids, engine = env
     ranking_url, need = setup(env)
@@ -24,7 +24,6 @@ def test_formal_gate_and_read_only_api(env, approved, monkeypatch, mutation):
         if mutation == "missing": result["evidenceCounts"].pop("python")
         if mutation == "zero": result["evidenceCounts"]["python"] = 0
         if mutation == "wrong-id": result["evidenceCounts"]["Python"] = result["evidenceCounts"].pop("python")
-        if mutation == "demo": attempt.content_status = "DEMO"
         if mutation == "self-declared":
             profile.stack = ["python", "sql"]
             profile.verified_attempt_id = None
@@ -41,7 +40,7 @@ def test_formal_gate_and_read_only_api(env, approved, monkeypatch, mutation):
         assert not writes
     finally:
         event.remove(engine, "before_cursor_execute", capture)
-    if mutation in {"demo", "self-declared"}:
+    if mutation in {"self-declared"}:
         assert response.status_code == 404
         assert response.json() == client.get(f"/employer/needs/{need}/eligibility/999999", headers=headers[2]).json()
     else:

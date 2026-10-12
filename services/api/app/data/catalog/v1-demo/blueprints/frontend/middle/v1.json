@@ -1,8 +1,6 @@
 {
   "schemaVersion": 1,
   "version": "v1-demo",
-  "status": "DEMO",
-  "provenance": "DEMO",
   "id": "frontend-middle",
   "catalogVersion": "v1-demo",
   "specialization": "frontend",

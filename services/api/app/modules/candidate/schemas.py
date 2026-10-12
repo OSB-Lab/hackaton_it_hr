@@ -57,7 +57,11 @@ class CandidateProfilePatch(BaseModel):
 class SelfCandidateDTO(BaseModel):
     verifiedGrade: Grade | None = None
     verifiedSpecialization: str | None = None
-    fspSource: Literal["synthetic-demo-not-fsp"] | None = None
+    verifiedSkills: dict[str, float] = Field(default_factory=dict)
+    diagnosticRole: str | None = None
+    diagnosticGrade: str | None = None
+    diagnosticSkills: dict[str, float] = Field(default_factory=dict)
+    fspSource: Literal["fsp"] | None = None
     fspAchievements: list[Achievement] = Field(default_factory=list)
     fullName: str | None = None
     email: str

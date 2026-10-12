@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "catalog_version": "talent-taxonomy-v1",
+  "catalog_version": "talent-taxonomy-v2",
   "sources": [
     "sopranos_v3",
     "onet31"
@@ -8,24 +8,8 @@
   "important_note": "Experience ranges are search hints, not evidence of grade. Verified grade comes only from assessment. Matrix keys are candidate_grade -> requested_grade.",
   "grades": [
     {
-      "id": "intern",
-      "order": 0,
-      "label_ru": "Стажёр",
-      "aliases": [
-        "intern",
-        "internship",
-        "стажер",
-        "стажёр"
-      ],
-      "experience_reference_years": {
-        "min": 0,
-        "max": 0.5
-      },
-      "assessment_status": "not_tested"
-    },
-    {
       "id": "junior",
-      "order": 1,
+      "order": 0,
       "label_ru": "Junior",
       "aliases": [
         "junior",
@@ -41,7 +25,7 @@
     },
     {
       "id": "middle",
-      "order": 2,
+      "order": 1,
       "label_ru": "Middle",
       "aliases": [
         "middle",
@@ -56,7 +40,7 @@
     },
     {
       "id": "senior",
-      "order": 3,
+      "order": 2,
       "label_ru": "Senior",
       "aliases": [
         "senior",
@@ -70,60 +54,23 @@
         "max": 7
       },
       "assessment_status": "catalog_only"
-    },
-    {
-      "id": "lead",
-      "order": 4,
-      "label_ru": "Lead",
-      "aliases": [
-        "lead",
-        "team lead",
-        "tech lead",
-        "тимлид",
-        "техлид"
-      ],
-      "experience_reference_years": {
-        "min": 6,
-        "max": null
-      },
-      "assessment_status": "catalog_only"
     }
   ],
   "candidate_to_requested_fit": {
-    "intern": {
-      "intern": 1.0,
-      "junior": 0.76,
-      "middle": 0.42,
-      "senior": 0.0,
-      "lead": 0.0
-    },
     "junior": {
-      "intern": 0.96,
       "junior": 1.0,
       "middle": 0.8,
-      "senior": 0.48,
-      "lead": 0.3
+      "senior": 0.48
     },
     "middle": {
-      "intern": 0.88,
       "junior": 0.98,
       "middle": 1.0,
-      "senior": 0.84,
-      "lead": 0.58
+      "senior": 0.84
     },
     "senior": {
-      "intern": 0.76,
       "junior": 0.92,
       "middle": 0.98,
-      "senior": 1.0,
-      "lead": 0.88
-    },
-    "lead": {
-      "intern": 0.64,
-      "junior": 0.82,
-      "middle": 0.92,
-      "senior": 0.98,
-      "lead": 1.0
+      "senior": 1.0
     }
   }
 }

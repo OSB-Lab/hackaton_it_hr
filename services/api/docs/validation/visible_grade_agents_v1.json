@@ -1,0 +1,35 @@
+{
+  "agents": {
+    "junior": {
+      "answeredUsingVisibleCategory": 0,
+      "juniorMeanScore": 28.0,
+      "juniorPassRate": 0.0,
+      "middleMeanScore": 28.0,
+      "middlePassRate": 0.0,
+      "seniorMeanScore": 25.0,
+      "seniorPassRate": 0.0
+    },
+    "middle": {
+      "answeredUsingVisibleCategory": 0,
+      "juniorMeanScore": 30.33,
+      "juniorPassRate": 0.0,
+      "middleMeanScore": 28.0,
+      "middlePassRate": 0.0,
+      "seniorMeanScore": 25.0,
+      "seniorPassRate": 0.0
+    },
+    "senior": {
+      "answeredUsingVisibleCategory": 0,
+      "juniorMeanScore": 30.33,
+      "juniorPassRate": 0.0,
+      "middleMeanScore": 28.0,
+      "middlePassRate": 0.0,
+      "seniorMeanScore": 25.0,
+      "seniorPassRate": 0.0
+    }
+  },
+  "bankVersion": "taxonomy-curated-demo-v4-683ff1d69aa7",
+  "forms": 45,
+  "method": "Rules see public question text/options and taxonomy label/category; never hidden key/tag. This is a shortcut negative control, not an LLM or expert human.",
+  "semanticStatus": "NOT_VALIDATED"
+}

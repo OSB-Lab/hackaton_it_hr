@@ -110,19 +110,6 @@ def test_missing_profile_and_openapi(env):
     assert "application/pdf" in app.openapi()["paths"][URL]["get"]["responses"]["200"]["content"]
 
 
-def test_demo_and_legacy_grades_are_not_qualification(env):
-    client, headers, ids, engine = env
-    client.patch(PROFILE, headers=headers[0], json={"fullName": "Демо", "selfDeclaredGrade": "senior"})
-    with Session(engine) as session, session.begin():
-        profile = session.scalar(select(CandidateProfile).where(CandidateProfile.user_id == ids[0]))
-        profile.grade = "senior"
-    attempt = start(env).json()
-    assert submit(env, attempt["id"]).status_code == 200
-    _, text = read(client.get(URL, headers=headers[0]))
-    assert "Квалификация не подтверждена" in text
-    assert "senior" not in text and "junior" not in text
-
-
 def test_qualification_requires_approved_submitted_evidence(env, approved):
     client, headers, _, _ = env
     client.patch(PROFILE, headers=headers[0], json={"fullName": "Кандидат"})

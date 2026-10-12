@@ -20,7 +20,7 @@ def test_0009_preserves_legacy_and_validates_constraints(migration_connection):
     before = [dict(row) for row in c.execute(text("SELECT * FROM invitations ORDER BY id")).mappings()]
     c.commit()
     command.upgrade(config, "head")
-    assert c.scalar(text("SELECT version_num FROM alembic_version")) == "0010"
+    assert c.scalar(text("SELECT version_num FROM alembic_version")) == "0012"
     assert [dict(row) for row in c.execute(text("SELECT * FROM invitations ORDER BY id")).mappings()] == before
     assert all(row["currency"] is None for row in before)  # No invented RUB backfill.
     checks = {row["name"] for row in inspect(c).get_check_constraints("invitations")}

@@ -1,8 +1,6 @@
 {
   "schemaVersion": 1,
   "version": "v3-demo",
-  "status": "DEMO",
-  "provenance": "DEMO",
   "id": "fsp-catalog",
   "specializations": [
     {

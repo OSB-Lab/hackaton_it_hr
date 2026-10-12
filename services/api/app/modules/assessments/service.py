@@ -19,6 +19,8 @@ from app.modules.catalog.repository import CatalogRepository, Loaded, decode
 def attempt_dto(attempt: TestAttempt) -> AttemptDTO:
     if attempt.status == "legacy":
         raise HTTPException(status_code=409, detail="Historical attempt has no snapshot")
+    if attempt.snapshot_schema_version == 2:
+        raise HTTPException(status_code=409, detail="Use the taxonomy diagnostic endpoint")
     try:
         if attempt.snapshot_schema_version != 1:
             raise ValueError("Unsupported snapshot")
@@ -67,7 +69,7 @@ def score_answers(snapshot: AttemptSnapshot, variant: str, request: SubmitReques
     outcome = ("high" if total >= Decimal(str(thresholds.highScore)) else
                "pass" if total >= Decimal(str(thresholds.passScore)) else "fail")
     return ResultDTO(subscores={skill: float(scale * value / weights[skill]) for skill, value in earned.items()},
-                     totalScore=float(total), outcome=outcome, status=blueprint.status)
+                     totalScore=float(total), outcome=outcome)
 
 
 def submit_attempt(session: Session, user_id: int, attempt_id: int, request: SubmitRequest) -> SubmitDTO:
@@ -78,6 +80,8 @@ def submit_attempt(session: Session, user_id: int, attempt_id: int, request: Sub
         ).with_for_update(of=TestAttempt))
         if attempt is None:
             raise HTTPException(status_code=404, detail="Attempt not found")
+        if attempt.snapshot_schema_version == 2:
+            raise HTTPException(status_code=409, detail="Use the taxonomy diagnostic endpoint")
         if attempt.snapshot is None or attempt.status == "legacy":
             raise HTTPException(status_code=409, detail="Historical attempt has no snapshot")
         if attempt.status == "active":
@@ -117,6 +121,8 @@ def start_attempt(session: Session, user_id: int, request: StartRequest) -> tupl
         active = session.scalar(select(TestAttempt).where(
             TestAttempt.candidate_id == profile.id, TestAttempt.status == "active"))
         if active is not None:
+            if active.snapshot_schema_version != 1:
+                raise HTTPException(status_code=409, detail="Another assessment is active")
             if (active.specialization, active.requested_grade) != (request.specialization, request.grade):
                 raise HTTPException(status_code=409, detail="Another assessment is active")
             response = attempt_dto(active)
@@ -159,7 +165,7 @@ def start_attempt(session: Session, user_id: int, request: StartRequest) -> tupl
             blueprint_version=blueprint.document.version, catalog_version=catalog.document.version,
             blueprint_checksum=blueprint.checksum, catalog_checksum=catalog.checksum,
             snapshot_schema_version=1, snapshot=snapshot.model_dump(mode="json"),
-            variant=secrets.choice(variants), content_status=blueprint.document.status,
+            variant=secrets.choice(variants),
             status="active", submitted_at=None,
         )
         session.add(attempt)

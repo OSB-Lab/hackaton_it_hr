@@ -1,11 +1,12 @@
 # Current v3 publication
 
-See ../assessments/README.md for the active v3 contract. New v3-demo artifacts use
+See ../assessments/README.md for the active v3 contract. New v3 artifacts use
 schemaVersion=3, skillTags, A/B/C and 20 questions. The locked thresholds are 13/16
-with 50/70 core gates. Content remains DEMO pending expert review. v3.py validates
-the exact shared incidence matrix; it cannot prove semantic difficulty equivalence.
-The sections below describe retained schemaVersion=1 artifacts for legacy attempts.
-Their two-question DEMO thresholds never apply to new v3 attempts.
+with 50/70 core gates. v3.py validates the exact shared incidence matrix; it cannot
+prove semantic difficulty equivalence. Nine blueprints cover
+backend/frontend/fullstack x junior/middle/senior. The sections below describe
+retained schemaVersion=1 artifacts for legacy attempts.
+Their two-question thresholds never apply to new v3 attempts.
 
 # SPR-14 versioned catalog and blueprints
 
@@ -48,19 +49,12 @@ highScore inclusive. No result is calculated by SPR-14. Missing rubric/scoring/
 thresholds fail validation. Finite positive max scores/weights, finite thresholds and
 0 < passScore < highScore <= scaleMax are required. No silent numerical defaults.
 
-All shipped data is DEMO, including catalog ordering/associations and every question,
-weight, rubric and threshold. Four blueprints cover backend/frontend x junior/middle,
-with two slots each. DEMO examples are reused across grades and are not calibrated.
-The catalog also retains senior for seed compatibility; no senior blueprint exists.
-DEMO thresholds 50/100 and scale 100 are fixtures, not approved DS policy.
+Nine blueprints cover backend/frontend/fullstack x junior/middle/senior (20 questions
+per form). There is no demo/approved flag on artifacts: qualification is decided by
+score and per-skill gates, not by a status field.
 
-DEMO cannot automatically become APPROVED. APPROVED requires provenance=DS and a
-nonempty approval reference/reviewer; an approved blueprint also requires an approved
-catalog. There is no promote operation. DS approval should be published as a new
-reviewed version. Approval metadata records a decision; it does not authenticate it.
-
-public_variant(loaded, 'A'|'B') returns a separate allowlisted DTO: identity/version,
-status, selected variant and questions/options only. No answerKey, rubric, weights,
+public_variant(loaded, 'A'|'B'|'C') returns a separate allowlisted DTO: identity/version,
+selected variant and questions/options only. No answerKey, rubric, weights,
 thresholds or other variant is exposed. Internal artifact checksums stay server-side.
 Never serve raw files/internal models or mount this directory as public static data.
 

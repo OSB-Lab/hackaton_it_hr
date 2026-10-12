@@ -17,7 +17,7 @@ def catalog(user: Annotated[User, Depends(current_user)]):
         for key in repo.manifest.activeBlueprints:
             bp = repo.blueprint(key).document
             tests.append({"specialization": bp.specialization, "grade": bp.grade,
-                          "status": bp.status, "version": bp.version})
+                          "version": bp.version})
         return {"version": data.version,
                 "specializations": [{"id": s.id, "name": s.name, "skillIds": s.skillIds} for s in data.specializations],
                 "grades": [{"id": g.id, "name": g.name, "order": g.order} for g in data.grades],

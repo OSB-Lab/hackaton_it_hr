@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "catalog_version": "talent-taxonomy-v1",
+  "catalog_version": "talent-taxonomy-v2",
   "sources": [
     "onet31",
     "esco121",
@@ -22,11 +22,7 @@
       "role_ids": [
         "backend",
         "ml_engineer",
-        "data_scientist",
-        "data_engineer",
-        "qa_automation",
-        "devops",
-        "security_engineer"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -45,8 +41,7 @@
       "role_ids": [
         "frontend",
         "fullstack",
-        "backend",
-        "qa_automation"
+        "backend"
       ],
       "sources": [
         "onet31",
@@ -79,9 +74,7 @@
         "oracle java"
       ],
       "role_ids": [
-        "backend",
-        "mobile",
-        "qa_automation"
+        "backend"
       ],
       "sources": [
         "onet31",
@@ -97,23 +90,7 @@
         "котлин"
       ],
       "role_ids": [
-        "mobile",
         "backend"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "swift",
-      "label": "Swift",
-      "category": "language",
-      "aliases": [
-        "swift"
-      ],
-      "role_ids": [
-        "mobile"
       ],
       "sources": [
         "onet31",
@@ -130,7 +107,6 @@
       ],
       "role_ids": [
         "backend",
-        "devops",
         "data_engineer"
       ],
       "sources": [
@@ -165,8 +141,7 @@
       ],
       "role_ids": [
         "backend",
-        "ml_engineer",
-        "security_engineer"
+        "ml_engineer"
       ],
       "sources": [
         "onet31",
@@ -199,10 +174,7 @@
       ],
       "role_ids": [
         "backend",
-        "data_engineer",
-        "data_scientist",
-        "system_analyst",
-        "qa_automation"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -391,8 +363,7 @@
         "flask"
       ],
       "role_ids": [
-        "backend",
-        "data_scientist"
+        "backend"
       ],
       "sources": [
         "onet31",
@@ -446,10 +417,7 @@
       "role_ids": [
         "backend",
         "frontend",
-        "fullstack",
-        "mobile",
-        "system_analyst",
-        "qa_automation"
+        "fullstack"
       ],
       "sources": [
         "onet31",
@@ -501,8 +469,7 @@
       ],
       "role_ids": [
         "backend",
-        "data_engineer",
-        "data_scientist"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -537,8 +504,7 @@
       ],
       "role_ids": [
         "backend",
-        "data_engineer",
-        "system_analyst"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -606,8 +572,7 @@
       ],
       "role_ids": [
         "backend",
-        "data_engineer",
-        "data_scientist"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -624,8 +589,7 @@
       ],
       "role_ids": [
         "backend",
-        "data_engineer",
-        "devops"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -643,8 +607,7 @@
       ],
       "role_ids": [
         "backend",
-        "data_engineer",
-        "devops"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -660,8 +623,7 @@
         "rabbit mq"
       ],
       "role_ids": [
-        "backend",
-        "devops"
+        "backend"
       ],
       "sources": [
         "onet31",
@@ -679,13 +641,8 @@
         "backend",
         "frontend",
         "fullstack",
-        "mobile",
         "ml_engineer",
-        "data_scientist",
-        "data_engineer",
-        "qa_automation",
-        "devops",
-        "security_engineer"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -704,10 +661,7 @@
         "backend",
         "fullstack",
         "ml_engineer",
-        "data_engineer",
-        "qa_automation",
-        "devops",
-        "security_engineer"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -724,44 +678,9 @@
         "кубернетес"
       ],
       "role_ids": [
-        "devops",
         "backend",
         "ml_engineer",
-        "data_engineer",
-        "security_engineer"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "terraform",
-      "label": "Terraform",
-      "category": "iac",
-      "aliases": [
-        "terraform",
-        "ibm terraform"
-      ],
-      "role_ids": [
-        "devops",
-        "security_engineer"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "ansible",
-      "label": "Ansible",
-      "category": "iac",
-      "aliases": [
-        "ansible"
-      ],
-      "role_ids": [
-        "devops",
-        "security_engineer"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -779,10 +698,7 @@
       ],
       "role_ids": [
         "backend",
-        "data_engineer",
-        "qa_automation",
-        "devops",
-        "security_engineer"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -798,8 +714,6 @@
         "jenkins ci"
       ],
       "role_ids": [
-        "devops",
-        "qa_automation",
         "backend"
       ],
       "sources": [
@@ -816,8 +730,6 @@
         "gitlab-ci"
       ],
       "role_ids": [
-        "devops",
-        "qa_automation",
         "backend"
       ],
       "sources": [
@@ -836,9 +748,7 @@
       "role_ids": [
         "backend",
         "ml_engineer",
-        "data_engineer",
-        "devops",
-        "security_engineer"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -855,9 +765,7 @@
       ],
       "role_ids": [
         "backend",
-        "data_engineer",
-        "devops",
-        "security_engineer"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -875,8 +783,7 @@
       "role_ids": [
         "backend",
         "ml_engineer",
-        "data_engineer",
-        "devops"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -911,7 +818,6 @@
       ],
       "role_ids": [
         "data_engineer",
-        "data_scientist",
         "ml_engineer"
       ],
       "sources": [
@@ -928,8 +834,7 @@
         "apache hadoop"
       ],
       "role_ids": [
-        "data_engineer",
-        "data_scientist"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -959,8 +864,7 @@
         "snowflake"
       ],
       "role_ids": [
-        "data_engineer",
-        "data_scientist"
+        "data_engineer"
       ],
       "sources": [
         "onet31",
@@ -975,7 +879,6 @@
         "pandas"
       ],
       "role_ids": [
-        "data_scientist",
         "ml_engineer",
         "data_engineer"
       ],
@@ -992,7 +895,6 @@
         "numpy"
       ],
       "role_ids": [
-        "data_scientist",
         "ml_engineer"
       ],
       "sources": [
@@ -1009,7 +911,6 @@
         "sklearn"
       ],
       "role_ids": [
-        "data_scientist",
         "ml_engineer"
       ],
       "sources": [
@@ -1026,8 +927,7 @@
         "torch"
       ],
       "role_ids": [
-        "ml_engineer",
-        "data_scientist"
+        "ml_engineer"
       ],
       "sources": [
         "onet31",
@@ -1042,8 +942,7 @@
         "tensorflow"
       ],
       "role_ids": [
-        "ml_engineer",
-        "data_scientist"
+        "ml_engineer"
       ],
       "sources": [
         "onet31",
@@ -1058,8 +957,7 @@
         "mlflow"
       ],
       "role_ids": [
-        "ml_engineer",
-        "data_scientist"
+        "ml_engineer"
       ],
       "sources": [
         "onet31",
@@ -1074,23 +972,7 @@
         "pytest"
       ],
       "role_ids": [
-        "qa_automation",
         "backend"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "selenium",
-      "label": "Selenium",
-      "category": "testing",
-      "aliases": [
-        "selenium"
-      ],
-      "role_ids": [
-        "qa_automation"
       ],
       "sources": [
         "onet31",
@@ -1105,25 +987,7 @@
         "playwright"
       ],
       "role_ids": [
-        "qa_automation",
         "frontend"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "postman",
-      "label": "Postman",
-      "category": "testing",
-      "aliases": [
-        "postman"
-      ],
-      "role_ids": [
-        "qa_manual",
-        "qa_automation",
-        "system_analyst"
       ],
       "sources": [
         "onet31",
@@ -1138,40 +1002,7 @@
         "junit"
       ],
       "role_ids": [
-        "qa_automation",
         "backend"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "test_design",
-      "label": "Тест-дизайн",
-      "category": "testing_method",
-      "aliases": [
-        "тест-дизайн",
-        "test design"
-      ],
-      "role_ids": [
-        "qa_manual",
-        "qa_automation"
-      ],
-      "sources": [
-        "esco121",
-        "fsp_ref"
-      ]
-    },
-    {
-      "id": "bpmn",
-      "label": "BPMN",
-      "category": "analysis",
-      "aliases": [
-        "bpmn"
-      ],
-      "role_ids": [
-        "system_analyst"
       ],
       "sources": [
         "onet31",
@@ -1186,45 +1017,7 @@
         "uml"
       ],
       "role_ids": [
-        "system_analyst",
         "backend"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "jira",
-      "label": "Jira",
-      "category": "collaboration",
-      "aliases": [
-        "jira",
-        "atlassian jira"
-      ],
-      "role_ids": [
-        "system_analyst",
-        "qa_manual",
-        "qa_automation",
-        "devops"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "confluence",
-      "label": "Confluence",
-      "category": "collaboration",
-      "aliases": [
-        "confluence",
-        "atlassian confluence"
-      ],
-      "role_ids": [
-        "system_analyst",
-        "qa_manual",
-        "qa_automation"
       ],
       "sources": [
         "onet31",
@@ -1240,73 +1033,7 @@
         "owasp top 10"
       ],
       "role_ids": [
-        "security_engineer",
         "backend"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "wireshark",
-      "label": "Wireshark",
-      "category": "security",
-      "aliases": [
-        "wireshark"
-      ],
-      "role_ids": [
-        "security_engineer",
-        "devops"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "nmap",
-      "label": "Nmap",
-      "category": "security",
-      "aliases": [
-        "nmap"
-      ],
-      "role_ids": [
-        "security_engineer"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "burp_suite",
-      "label": "Burp Suite",
-      "category": "security",
-      "aliases": [
-        "burp",
-        "burp suite"
-      ],
-      "role_ids": [
-        "security_engineer"
-      ],
-      "sources": [
-        "onet31",
-        "so2025"
-      ]
-    },
-    {
-      "id": "siem",
-      "label": "SIEM",
-      "category": "security",
-      "aliases": [
-        "siem",
-        "splunk",
-        "qradar",
-        "sentinel"
-      ],
-      "role_ids": [
-        "security_engineer"
       ],
       "sources": [
         "onet31",
@@ -1325,9 +1052,7 @@
       ],
       "role_ids": [
         "backend",
-        "fullstack",
-        "system_analyst",
-        "qa_automation"
+        "fullstack"
       ],
       "sources": [
         "sopranos_v3",
@@ -1474,13 +1199,6 @@
       "b": "tensorflow",
       "coefficient": 0.82,
       "relation": "deep_learning_framework",
-      "symmetric": true
-    },
-    {
-      "a": "selenium",
-      "b": "playwright",
-      "coefficient": 0.84,
-      "relation": "browser_automation",
       "symmetric": true
     },
     {

@@ -21,9 +21,10 @@ from app.modules.recommendations.taxonomy_filter import (
     Candidate, FilterInputError, FilterNeed, SkillRequirement, filter_candidates, load_runtime,
 )
 
-SIMILAR_VERSION = "v4-similar-taxonomy-v1"
-TAXONOMY_VERSION = "talent-taxonomy-v1"
-FILTER_VERSION = "formal-filter-v1"
+SIMILAR_VERSION = "v4-similar-taxonomy-v2"
+LEGACY_SIMILAR_VERSION = "v4-similar-taxonomy-v1"
+TAXONOMY_VERSION = "talent-taxonomy-v2"
+FILTER_VERSION = "formal-filter-v2"
 FACTOR_CODES = ("role", "grade", "experience", "stack", "achievements",
                 "salary", "work_format", "location")
 
@@ -111,6 +112,7 @@ def create_similar_snapshot(session: Session, user_id: int, need_id: int,
         items.append(ItemDTO(candidate=CandidateDTO(id=profile.id), rank=1,
             score=float(Decimal(str(quality)) * ranking_fit), components=components,
             qualityScore=quality, filterFit=float(selected.filter_fit), rankingFit=float(ranking_fit),
+            verifiedSkillLevels=evidence,
             filterFactors=tuple(dict(code=f.code, coefficient=float(f.coefficient), reason=f.reason)
                                 for f in selected.factors),
             taxonomyVersion=TAXONOMY_VERSION, filterPolicyVersion=FILTER_VERSION, reasons=reasons))

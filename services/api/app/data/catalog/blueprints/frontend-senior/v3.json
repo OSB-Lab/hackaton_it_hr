@@ -1,0 +1,2083 @@
+{
+  "schemaVersion": 3,
+  "id": "frontend-senior",
+  "version": "v3",
+  "catalogVersion": "v3",
+  "specialization": "frontend",
+  "grade": "senior",
+  "slots": [
+    {
+      "id": "slot-1",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-2",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-3",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-4",
+      "skillTags": [
+        "javascript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-5",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-6",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-7",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-8",
+      "skillTags": [
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-9",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-10",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-11",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-12",
+      "skillTags": [
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-13",
+      "skillTags": [
+        "javascript",
+        "typescript"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-14",
+      "skillTags": [
+        "javascript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-15",
+      "skillTags": [
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-16",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-17",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-18",
+      "skillTags": [
+        "javascript",
+        "typescript",
+        "react"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-19",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    },
+    {
+      "id": "slot-20",
+      "skillTags": [
+        "teamwork"
+      ],
+      "questionType": "single_choice",
+      "maxScore": 1.0,
+      "weight": 1.0,
+      "rubricId": "exact"
+    }
+  ],
+  "rubric": [
+    {
+      "id": "exact",
+      "kind": "single_choice_exact",
+      "correctFraction": 1.0,
+      "incorrectFraction": 0.0,
+      "unansweredFraction": 0.0
+    }
+  ],
+  "scoring": {
+    "formula": "weighted_normalized_sum",
+    "scaleMin": 0,
+    "scaleMax": 100.0,
+    "thresholds": {
+      "passCorrect": 13,
+      "highCorrect": 16,
+      "minimumCoreSkillPass": 50,
+      "minimumCoreSkillHigh": 70
+    }
+  },
+  "variants": [
+    {
+      "id": "A",
+      "questions": [
+        {
+          "id": "frontend-senior-A-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем WeakMap полезен для кэшей?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "работает быстрее Map"
+            },
+            {
+              "id": "o2",
+              "text": "занимает больше памяти"
+            },
+            {
+              "id": "o3",
+              "text": "слабыми ключами — не мешает сборке мусора"
+            },
+            {
+              "id": "o4",
+              "text": "не поддерживает delete"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "frontend-senior-A-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `Proxy`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт копию объекта"
+            },
+            {
+              "id": "o2",
+              "text": "сериализует в JSON"
+            },
+            {
+              "id": "o3",
+              "text": "перехватывает операции над объектом (get/set и др.)"
+            },
+            {
+              "id": "o4",
+              "text": "сортирует свойства"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "frontend-senior-A-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое прототипное наследование?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "копирование полей"
+            },
+            {
+              "id": "o2",
+              "text": "наследование через class"
+            },
+            {
+              "id": "o3",
+              "text": "интерфейсы"
+            },
+            {
+              "id": "o4",
+              "text": "объекты наследуют через цепочку прототипов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "frontend-senior-A-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Во что компилируется async/await?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "синтаксический сахар над Promise и генераторами"
+            },
+            {
+              "id": "o2",
+              "text": "в CSS"
+            },
+            {
+              "id": "o3",
+              "text": "в WebSocket"
+            },
+            {
+              "id": "o4",
+              "text": "в отдельные потоки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "frontend-senior-A-typescript-1",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `infer` в conditional types?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удаляет тип"
+            },
+            {
+              "id": "o2",
+              "text": "объединяет ключи"
+            },
+            {
+              "id": "o3",
+              "text": "извлекает тип из подструктуры для дальнейшего использования"
+            },
+            {
+              "id": "o4",
+              "text": "создаёт переменную"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "frontend-senior-A-typescript-2",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем `satisfies` отличается от аннотации `: Type`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "проверяет совместимость, но сохраняет точный (literal) тип"
+            },
+            {
+              "id": "o2",
+              "text": "добавляет any"
+            },
+            {
+              "id": "o3",
+              "text": "ничем не отличается"
+            },
+            {
+              "id": "o4",
+              "text": "стирает типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "frontend-senior-A-typescript-3",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое mapped type?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "тип, строящийся итерацией по ключам (`{ [K in keyof T]: ... }`)"
+            },
+            {
+              "id": "o2",
+              "text": "тип-перечисление"
+            },
+            {
+              "id": "o3",
+              "text": "тип-объединение"
+            },
+            {
+              "id": "o4",
+              "text": "интерфейс"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "frontend-senior-A-typescript-4",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое контравариантность параметров функций в TS?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "параметры не типизируются"
+            },
+            {
+              "id": "o2",
+              "text": "параметры должны быть точнее"
+            },
+            {
+              "id": "o3",
+              "text": "параметры допускают более широкий тип (supertype)"
+            },
+            {
+              "id": "o4",
+              "text": "это запрещено"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "frontend-senior-A-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `useTransition`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "перезапускает компонент"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт состояние"
+            },
+            {
+              "id": "o3",
+              "text": "помечает обновление как некритичное, не блокируя ввод"
+            },
+            {
+              "id": "o4",
+              "text": "вызывает эффект"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "frontend-senior-A-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем `useLayoutEffect` отличается от `useEffect`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "только на сервере"
+            },
+            {
+              "id": "o2",
+              "text": "не выполняется"
+            },
+            {
+              "id": "o3",
+              "text": "выполняется позже"
+            },
+            {
+              "id": "o4",
+              "text": "выполняется синхронно до отрисовки (для DOM-измерений)"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "frontend-senior-A-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое Server Components?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "компоненты, рендерящиеся на сервере без JS-бандла клиенту"
+            },
+            {
+              "id": "o2",
+              "text": "CSS-модули"
+            },
+            {
+              "id": "o3",
+              "text": "компоненты без пропсов"
+            },
+            {
+              "id": "o4",
+              "text": "утилиты"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "frontend-senior-A-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает React reconciliation (fiber)?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "стилизацию"
+            },
+            {
+              "id": "o2",
+              "text": "HTTP-запросы"
+            },
+            {
+              "id": "o3",
+              "text": "прерываемый приоритетный пересчёт дерева компонентов"
+            },
+            {
+              "id": "o4",
+              "text": "сортировку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "frontend-senior-A-pair-1",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Как типизировать данные внешнего API без доверия к ответу?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удалить валидацию"
+            },
+            {
+              "id": "o2",
+              "text": "доверять any"
+            },
+            {
+              "id": "o3",
+              "text": "runtime-валидация (схема) + вывод типов"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "frontend-senior-A-pair-2",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как избежать гонок при асинхронных обновлениях состояния?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальный state"
+            },
+            {
+              "id": "o2",
+              "text": "отмена/игнорирование устаревшего ответа"
+            },
+            {
+              "id": "o3",
+              "text": "применять все ответы"
+            },
+            {
+              "id": "o4",
+              "text": "игнорировать порядок"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "frontend-senior-A-pair-3",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как гарантировать согласованность типа состояния с его переходами?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отдельные useState"
+            },
+            {
+              "id": "o2",
+              "text": "удалить типы"
+            },
+            {
+              "id": "o3",
+              "text": "только any"
+            },
+            {
+              "id": "o4",
+              "text": "дискриминируемый union по статусу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "frontend-senior-A-all-1",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как изолировать и переиспользовать сложную бизнес-логику в крупном React+TS-приложении?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальный state на всё"
+            },
+            {
+              "id": "o2",
+              "text": "отключение типов"
+            },
+            {
+              "id": "o3",
+              "text": "дублирование в компонентах"
+            },
+            {
+              "id": "o4",
+              "text": "доменный слой с чистыми функциями и типами"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "frontend-senior-A-all-2",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как снизить риск неконсистентных данных между компонентами?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключение строгого режима"
+            },
+            {
+              "id": "o2",
+              "text": "игнорирование обновлений"
+            },
+            {
+              "id": "o3",
+              "text": "копирование state в каждый компонент"
+            },
+            {
+              "id": "o4",
+              "text": "единый источник состояния и нормализация"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "frontend-senior-A-all-3",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как поддерживать производительность при росте дерева компонентов?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отключение reconciliation"
+            },
+            {
+              "id": "o2",
+              "text": "удаление key"
+            },
+            {
+              "id": "o3",
+              "text": "мемоизация, code splitting и селективные подписки"
+            },
+            {
+              "id": "o4",
+              "text": "ре-рендер всего дерева"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "frontend-senior-A-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как выстроить onboarding/менторинг, чтобы junior росли без потери качества?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "поэтапный план, ревью и измеримые цели"
+            },
+            {
+              "id": "o2",
+              "text": "бросить в бой без поддержки"
+            },
+            {
+              "id": "o3",
+              "text": "не тратить на это время"
+            },
+            {
+              "id": "o4",
+              "text": "делать всё за них"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "frontend-senior-A-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Команда хронически перерабатывает. Как устранить причину, а не симптом?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать"
+            },
+            {
+              "id": "o2",
+              "text": "снизить планку качества"
+            },
+            {
+              "id": "o3",
+              "text": "просто нанять людей"
+            },
+            {
+              "id": "o4",
+              "text": "найти корень (оценки/процессы/требования) и перестроить процесс"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "questions": [
+        {
+          "id": "frontend-senior-B-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `Proxy`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "перехватывает операции над объектом (get/set и др.)"
+            },
+            {
+              "id": "o2",
+              "text": "сортирует свойства"
+            },
+            {
+              "id": "o3",
+              "text": "сериализует в JSON"
+            },
+            {
+              "id": "o4",
+              "text": "создаёт копию объекта"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "frontend-senior-B-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое прототипное наследование?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "объекты наследуют через цепочку прототипов"
+            },
+            {
+              "id": "o2",
+              "text": "наследование через class"
+            },
+            {
+              "id": "o3",
+              "text": "интерфейсы"
+            },
+            {
+              "id": "o4",
+              "text": "копирование полей"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "frontend-senior-B-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Во что компилируется async/await?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "в CSS"
+            },
+            {
+              "id": "o2",
+              "text": "в отдельные потоки"
+            },
+            {
+              "id": "o3",
+              "text": "в WebSocket"
+            },
+            {
+              "id": "o4",
+              "text": "синтаксический сахар над Promise и генераторами"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "frontend-senior-B-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем `Symbol`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "объявляет переменную"
+            },
+            {
+              "id": "o2",
+              "text": "создаёт число"
+            },
+            {
+              "id": "o3",
+              "text": "уникальные ключи свойств без коллизий"
+            },
+            {
+              "id": "o4",
+              "text": "форматирует строку"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "frontend-senior-B-typescript-1",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем `satisfies` отличается от аннотации `: Type`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "ничем не отличается"
+            },
+            {
+              "id": "o2",
+              "text": "добавляет any"
+            },
+            {
+              "id": "o3",
+              "text": "проверяет совместимость, но сохраняет точный (literal) тип"
+            },
+            {
+              "id": "o4",
+              "text": "стирает типы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "frontend-senior-B-typescript-2",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое mapped type?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "тип-объединение"
+            },
+            {
+              "id": "o2",
+              "text": "тип-перечисление"
+            },
+            {
+              "id": "o3",
+              "text": "тип, строящийся итерацией по ключам (`{ [K in keyof T]: ... }`)"
+            },
+            {
+              "id": "o4",
+              "text": "интерфейс"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "frontend-senior-B-typescript-3",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое контравариантность параметров функций в TS?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "параметры допускают более широкий тип (supertype)"
+            },
+            {
+              "id": "o2",
+              "text": "это запрещено"
+            },
+            {
+              "id": "o3",
+              "text": "параметры не типизируются"
+            },
+            {
+              "id": "o4",
+              "text": "параметры должны быть точнее"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "frontend-senior-B-typescript-4",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое declaration merging?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "импорт"
+            },
+            {
+              "id": "o2",
+              "text": "конфликт имён"
+            },
+            {
+              "id": "o3",
+              "text": "слияние нескольких объявлений одного имени в один тип"
+            },
+            {
+              "id": "o4",
+              "text": "удаление объявлений"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "frontend-senior-B-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Чем `useLayoutEffect` отличается от `useEffect`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "только на сервере"
+            },
+            {
+              "id": "o2",
+              "text": "выполняется позже"
+            },
+            {
+              "id": "o3",
+              "text": "не выполняется"
+            },
+            {
+              "id": "o4",
+              "text": "выполняется синхронно до отрисовки (для DOM-измерений)"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "frontend-senior-B-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое Server Components?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "компоненты без пропсов"
+            },
+            {
+              "id": "o2",
+              "text": "утилиты"
+            },
+            {
+              "id": "o3",
+              "text": "CSS-модули"
+            },
+            {
+              "id": "o4",
+              "text": "компоненты, рендерящиеся на сервере без JS-бандла клиенту"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "frontend-senior-B-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает React reconciliation (fiber)?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "прерываемый приоритетный пересчёт дерева компонентов"
+            },
+            {
+              "id": "o2",
+              "text": "стилизацию"
+            },
+            {
+              "id": "o3",
+              "text": "сортировку"
+            },
+            {
+              "id": "o4",
+              "text": "HTTP-запросы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "frontend-senior-B-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `useSyncExternalStore`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт контекст"
+            },
+            {
+              "id": "o2",
+              "text": "подписку на внешнее хранилище без tearing"
+            },
+            {
+              "id": "o3",
+              "text": "вызывает API"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "frontend-senior-B-pair-1",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Как типизировать данные внешнего API без доверия к ответу?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать типы"
+            },
+            {
+              "id": "o2",
+              "text": "runtime-валидация (схема) + вывод типов"
+            },
+            {
+              "id": "o3",
+              "text": "доверять any"
+            },
+            {
+              "id": "o4",
+              "text": "удалить валидацию"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "frontend-senior-B-pair-2",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как избежать гонок при асинхронных обновлениях состояния?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальный state"
+            },
+            {
+              "id": "o2",
+              "text": "игнорировать порядок"
+            },
+            {
+              "id": "o3",
+              "text": "применять все ответы"
+            },
+            {
+              "id": "o4",
+              "text": "отмена/игнорирование устаревшего ответа"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "frontend-senior-B-pair-3",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как гарантировать согласованность типа состояния с его переходами?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "только any"
+            },
+            {
+              "id": "o2",
+              "text": "отдельные useState"
+            },
+            {
+              "id": "o3",
+              "text": "удалить типы"
+            },
+            {
+              "id": "o4",
+              "text": "дискриминируемый union по статусу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "frontend-senior-B-all-1",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как изолировать и переиспользовать сложную бизнес-логику в крупном React+TS-приложении?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "глобальный state на всё"
+            },
+            {
+              "id": "o2",
+              "text": "отключение типов"
+            },
+            {
+              "id": "o3",
+              "text": "дублирование в компонентах"
+            },
+            {
+              "id": "o4",
+              "text": "доменный слой с чистыми функциями и типами"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "frontend-senior-B-all-2",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как снизить риск неконсистентных данных между компонентами?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "единый источник состояния и нормализация"
+            },
+            {
+              "id": "o2",
+              "text": "копирование state в каждый компонент"
+            },
+            {
+              "id": "o3",
+              "text": "игнорирование обновлений"
+            },
+            {
+              "id": "o4",
+              "text": "отключение строгого режима"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "frontend-senior-B-all-3",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как поддерживать производительность при росте дерева компонентов?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удаление key"
+            },
+            {
+              "id": "o2",
+              "text": "отключение reconciliation"
+            },
+            {
+              "id": "o3",
+              "text": "ре-рендер всего дерева"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизация, code splitting и селективные подписки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "frontend-senior-B-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как выстроить onboarding/менторинг, чтобы junior росли без потери качества?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "делать всё за них"
+            },
+            {
+              "id": "o2",
+              "text": "не тратить на это время"
+            },
+            {
+              "id": "o3",
+              "text": "поэтапный план, ревью и измеримые цели"
+            },
+            {
+              "id": "o4",
+              "text": "бросить в бой без поддержки"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "frontend-senior-B-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Команда хронически перерабатывает. Как устранить причину, а не симптом?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "снизить планку качества"
+            },
+            {
+              "id": "o2",
+              "text": "просто нанять людей"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать"
+            },
+            {
+              "id": "o4",
+              "text": "найти корень (оценки/процессы/требования) и перестроить процесс"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    },
+    {
+      "id": "C",
+      "questions": [
+        {
+          "id": "frontend-senior-C-javascript-1",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое прототипное наследование?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "копирование полей"
+            },
+            {
+              "id": "o2",
+              "text": "наследование через class"
+            },
+            {
+              "id": "o3",
+              "text": "объекты наследуют через цепочку прототипов"
+            },
+            {
+              "id": "o4",
+              "text": "интерфейсы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-1"
+        },
+        {
+          "id": "frontend-senior-C-javascript-2",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Во что компилируется async/await?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "в WebSocket"
+            },
+            {
+              "id": "o2",
+              "text": "в отдельные потоки"
+            },
+            {
+              "id": "o3",
+              "text": "в CSS"
+            },
+            {
+              "id": "o4",
+              "text": "синтаксический сахар над Promise и генераторами"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-2"
+        },
+        {
+          "id": "frontend-senior-C-javascript-3",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Зачем `Symbol`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "создаёт число"
+            },
+            {
+              "id": "o2",
+              "text": "уникальные ключи свойств без коллизий"
+            },
+            {
+              "id": "o3",
+              "text": "форматирует строку"
+            },
+            {
+              "id": "o4",
+              "text": "объявляет переменную"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-3"
+        },
+        {
+          "id": "frontend-senior-C-javascript-4",
+          "skillTags": [
+            "javascript"
+          ],
+          "type": "single_choice",
+          "prompt": "Как mark-and-sweep GC решает циклические ссылки?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "находит достижимые от корней объекты, остальное собирает"
+            },
+            {
+              "id": "o2",
+              "text": "считает ссылки"
+            },
+            {
+              "id": "o3",
+              "text": "не решает их"
+            },
+            {
+              "id": "o4",
+              "text": "перезапускает JS"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-4"
+        },
+        {
+          "id": "frontend-senior-C-typescript-1",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое mapped type?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "тип, строящийся итерацией по ключам (`{ [K in keyof T]: ... }`)"
+            },
+            {
+              "id": "o2",
+              "text": "интерфейс"
+            },
+            {
+              "id": "o3",
+              "text": "тип-перечисление"
+            },
+            {
+              "id": "o4",
+              "text": "тип-объединение"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-5"
+        },
+        {
+          "id": "frontend-senior-C-typescript-2",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое контравариантность параметров функций в TS?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "это запрещено"
+            },
+            {
+              "id": "o2",
+              "text": "параметры должны быть точнее"
+            },
+            {
+              "id": "o3",
+              "text": "параметры не типизируются"
+            },
+            {
+              "id": "o4",
+              "text": "параметры допускают более широкий тип (supertype)"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-6"
+        },
+        {
+          "id": "frontend-senior-C-typescript-3",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое declaration merging?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "конфликт имён"
+            },
+            {
+              "id": "o2",
+              "text": "импорт"
+            },
+            {
+              "id": "o3",
+              "text": "удаление объявлений"
+            },
+            {
+              "id": "o4",
+              "text": "слияние нескольких объявлений одного имени в один тип"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-7"
+        },
+        {
+          "id": "frontend-senior-C-typescript-4",
+          "skillTags": [
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое distributive conditional types?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "тип без условий"
+            },
+            {
+              "id": "o2",
+              "text": "условный тип, применяемый к каждому члену union отдельно"
+            },
+            {
+              "id": "o3",
+              "text": "стирание union"
+            },
+            {
+              "id": "o4",
+              "text": "маппинг массива"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-8"
+        },
+        {
+          "id": "frontend-senior-C-react-1",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что такое Server Components?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "CSS-модули"
+            },
+            {
+              "id": "o2",
+              "text": "утилиты"
+            },
+            {
+              "id": "o3",
+              "text": "компоненты без пропсов"
+            },
+            {
+              "id": "o4",
+              "text": "компоненты, рендерящиеся на сервере без JS-бандла клиенту"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-9"
+        },
+        {
+          "id": "frontend-senior-C-react-2",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает React reconciliation (fiber)?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "прерываемый приоритетный пересчёт дерева компонентов"
+            },
+            {
+              "id": "o2",
+              "text": "стилизацию"
+            },
+            {
+              "id": "o3",
+              "text": "сортировку"
+            },
+            {
+              "id": "o4",
+              "text": "HTTP-запросы"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-10"
+        },
+        {
+          "id": "frontend-senior-C-react-3",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Что делает `useSyncExternalStore`?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "вызывает API"
+            },
+            {
+              "id": "o2",
+              "text": "подписку на внешнее хранилище без tearing"
+            },
+            {
+              "id": "o3",
+              "text": "создаёт контекст"
+            },
+            {
+              "id": "o4",
+              "text": "мемоизирует"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-11"
+        },
+        {
+          "id": "frontend-senior-C-react-4",
+          "skillTags": [
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как React.lazy + Suspense реализуют code splitting?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "серверным рендером"
+            },
+            {
+              "id": "o2",
+              "text": "ленивой загрузкой чанка и fallback при ожидании"
+            },
+            {
+              "id": "o3",
+              "text": "минификацией"
+            },
+            {
+              "id": "o4",
+              "text": "кэшированием"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-12"
+        },
+        {
+          "id": "frontend-senior-C-pair-1",
+          "skillTags": [
+            "javascript",
+            "typescript"
+          ],
+          "type": "single_choice",
+          "prompt": "Как типизировать данные внешнего API без доверия к ответу?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "доверять any"
+            },
+            {
+              "id": "o2",
+              "text": "runtime-валидация (схема) + вывод типов"
+            },
+            {
+              "id": "o3",
+              "text": "игнорировать типы"
+            },
+            {
+              "id": "o4",
+              "text": "удалить валидацию"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-13"
+        },
+        {
+          "id": "frontend-senior-C-pair-2",
+          "skillTags": [
+            "javascript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как избежать гонок при асинхронных обновлениях состояния?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать порядок"
+            },
+            {
+              "id": "o2",
+              "text": "отмена/игнорирование устаревшего ответа"
+            },
+            {
+              "id": "o3",
+              "text": "применять все ответы"
+            },
+            {
+              "id": "o4",
+              "text": "глобальный state"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-14"
+        },
+        {
+          "id": "frontend-senior-C-pair-3",
+          "skillTags": [
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как гарантировать согласованность типа состояния с его переходами?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "отдельные useState"
+            },
+            {
+              "id": "o2",
+              "text": "только any"
+            },
+            {
+              "id": "o3",
+              "text": "удалить типы"
+            },
+            {
+              "id": "o4",
+              "text": "дискриминируемый union по статусу"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-15"
+        },
+        {
+          "id": "frontend-senior-C-all-1",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как изолировать и переиспользовать сложную бизнес-логику в крупном React+TS-приложении?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "доменный слой с чистыми функциями и типами"
+            },
+            {
+              "id": "o2",
+              "text": "глобальный state на всё"
+            },
+            {
+              "id": "o3",
+              "text": "дублирование в компонентах"
+            },
+            {
+              "id": "o4",
+              "text": "отключение типов"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-16"
+        },
+        {
+          "id": "frontend-senior-C-all-2",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как снизить риск неконсистентных данных между компонентами?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "копирование state в каждый компонент"
+            },
+            {
+              "id": "o2",
+              "text": "игнорирование обновлений"
+            },
+            {
+              "id": "o3",
+              "text": "отключение строгого режима"
+            },
+            {
+              "id": "o4",
+              "text": "единый источник состояния и нормализация"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o4"
+          },
+          "slotId": "slot-17"
+        },
+        {
+          "id": "frontend-senior-C-all-3",
+          "skillTags": [
+            "javascript",
+            "typescript",
+            "react"
+          ],
+          "type": "single_choice",
+          "prompt": "Как поддерживать производительность при росте дерева компонентов?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "удаление key"
+            },
+            {
+              "id": "o2",
+              "text": "мемоизация, code splitting и селективные подписки"
+            },
+            {
+              "id": "o3",
+              "text": "отключение reconciliation"
+            },
+            {
+              "id": "o4",
+              "text": "ре-рендер всего дерева"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o2"
+          },
+          "slotId": "slot-18"
+        },
+        {
+          "id": "frontend-senior-C-teamwork-1",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Как выстроить onboarding/менторинг, чтобы junior росли без потери качества?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "поэтапный план, ревью и измеримые цели"
+            },
+            {
+              "id": "o2",
+              "text": "делать всё за них"
+            },
+            {
+              "id": "o3",
+              "text": "бросить в бой без поддержки"
+            },
+            {
+              "id": "o4",
+              "text": "не тратить на это время"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o1"
+          },
+          "slotId": "slot-19"
+        },
+        {
+          "id": "frontend-senior-C-teamwork-2",
+          "skillTags": [
+            "teamwork"
+          ],
+          "type": "single_choice",
+          "prompt": "Команда хронически перерабатывает. Как устранить причину, а не симптом?",
+          "options": [
+            {
+              "id": "o1",
+              "text": "игнорировать"
+            },
+            {
+              "id": "o2",
+              "text": "снизить планку качества"
+            },
+            {
+              "id": "o3",
+              "text": "найти корень (оценки/процессы/требования) и перестроить процесс"
+            },
+            {
+              "id": "o4",
+              "text": "просто нанять людей"
+            }
+          ],
+          "answerKey": {
+            "optionId": "o3"
+          },
+          "slotId": "slot-20"
+        }
+      ]
+    }
+  ]
+}

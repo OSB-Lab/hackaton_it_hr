@@ -1,8 +1,0 @@
-{
-  "status": "BLOCKED",
-  "reason": "Missing: versioned fixtures, independent relevance labels, ranking adapter",
-  "precisionAt3": null,
-  "scenarios": "NOT_RUN",
-  "variantComparison": "NOT_RUN",
-  "determinism": "NOT_RUN"
-}

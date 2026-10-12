@@ -14,6 +14,8 @@ export function CandidateProfile({ catalog }: { catalog: Catalog }) {
   if (!profile) return <Panel title="Профиль кандидата">{action.feedback}<Button variant="secondary" loading={action.busy} onClick={() => void action.run(load)}>Загрузить профиль</Button></Panel>;
   return <div className="space-y-5"><Panel title="Ваш профессиональный профиль" description="Расскажите о себе. Квалификация подтверждается отдельно — результатом одобренного теста.">
     <div className="mb-6 flex flex-wrap gap-2"><span className="workspace-badge">{profile.verifiedGrade ? `${profile.verifiedSpecialization} · ${profile.verifiedGrade}` : 'Квалификация не подтверждена'}</span><span className="workspace-badge">{profile.eligibleForEmployerSearch ? 'Доступен для подбора' : 'Пока не участвует в подборе'}</span></div>
+    {Object.keys(profile.verifiedSkills).length > 0 && <div className="mb-5"><h3 className="text-sm font-bold">Подтверждённые навыки (тест, по тегам)</h3><ul className="mt-2 flex flex-wrap gap-2">{Object.entries(profile.verifiedSkills).map(([skill,level])=><li key={skill} className="workspace-badge">{skill}: {level.toFixed(1)}%</li>)}</ul></div>}
+    {profile.diagnosticStatus==='DEMO'&&<div className="mb-5 rounded-xl border border-muted/60 p-4 text-sm"><h3 className="font-bold">Демо-диагностика · {profile.diagnosticRole} · {profile.diagnosticGrade}</h3><p>Распознавание терминов, не подтверждает квалификацию и не участвует в подборе.</p><ul className="mt-2 flex flex-wrap gap-2">{Object.entries(profile.diagnosticSkills).map(([skill,level])=><li key={skill} className="workspace-badge">{skill}: {level.toFixed(1)}%</li>)}</ul></div>}
     {action.feedback}
     <form className="mt-5 space-y-6" onSubmit={e => { e.preventDefault(); void action.run(async () => {
       const p = await send<Profile>('/me/candidate-profile', {
@@ -80,7 +82,42 @@ export function Assessment({ catalog, userId }: { catalog: Catalog; userId: numb
         {result.retestAvailableAt && <p className="text-sm">Повторное тестирование: {new Date(result.retestAvailableAt).toLocaleString('ru-RU')}</p>}{result.retestTargetGrade && <p className="text-sm">Предлагаемый следующий уровень: {result.retestTargetGrade}. Доступность проверит сервер.</p>}
         <Button variant="secondary" onClick={() => {setAttempt(null);setResult(null);}}>К выбору теста</Button></div>}
     </div>}
-  </Panel></div>;
+  </Panel><TaxonomyDiagnostic userId={userId}/></div>;
+}
+
+type DiagnosticAttempt = {id:number; status:'active'|'submitted'; assessment:{status:'DEMO'; role:string; grade:string; variant:string; skillIds:string[]; passCorrect:number; highCorrect:number; questions:{id:string; prompt:string; options:{id:string;text:string}[]}[]}};
+type DiagnosticCatalog = {status:'DEMO'; roles:{id:string;skillCount:number}[]; grades:string[]};
+
+function TaxonomyDiagnostic({userId}:{userId:number}) {
+  const [catalog,setCatalog]=useState<DiagnosticCatalog|null>(null);
+  const [role,setRole]=useState(''); const [grade,setGrade]=useState('');
+  const [attempt,setAttempt]=useState<DiagnosticAttempt|null>(null);
+  const [answers,setAnswers]=useState<Record<string,string>>({});
+  const [result,setResult]=useState<Result|null>(null);
+  const action=useAction(); const key=`fsp_taxonomy_demo_${userId}`;
+  useEffect(()=>{void action.run(async()=>{
+    const loaded=await get<DiagnosticCatalog>('/assessments/taxonomy/catalog');setCatalog(loaded);
+    const saved=recalled(key); if(saved && /^\d+$/.test(saved)) {
+      try {const a=await get<DiagnosticAttempt>(`/assessments/taxonomy/${saved}`);setAttempt(a);
+        if(a.status==='submitted')setResult((await send<{result:Result}>(`/assessments/taxonomy/${saved}/submit`,{answers:[]},'POST')).result);
+      } catch {remember(key,'');}
+    }
+  });},[key]);
+  return <Panel title="Диагностика по расширенной таксономии" description="DEMO: вопросы на распознавание терминов, НЕ подтверждают роль, грейд или навыки. Три формы для каждой пары роль × грейд.">
+    {action.feedback}
+    {!attempt && <form className="mt-4 space-y-4" onSubmit={e=>{e.preventDefault();void action.run(async()=>{
+      if(!role||!grade)throw new Error('Выберите роль и грейд.');
+      await send<Profile>('/me/candidate-profile',{specialization:role},'PATCH');
+      const a=await send<DiagnosticAttempt>('/assessments/taxonomy/start',{specialization:role,grade},'POST');
+      setAttempt(a);setResult(null);setAnswers({});remember(key,String(a.id));
+    });}}><div className="workspace-grid"><Select label="Роль (будет записана как заявленная)" value={role} onChange={setRole}><option value="">Выберите роль</option>{catalog?.roles.map(r=><option key={r.id} value={r.id}>{r.id} · {r.skillCount} навыков</option>)}</Select><Select label="Грейд (заявленный для диагностики)" value={grade} onChange={setGrade}><option value="">Выберите грейд</option>{catalog?.grades.map(g=><option key={g} value={g}>{g}</option>)}</Select></div><Button type="submit" loading={action.busy} disabled={!catalog}>Начать демо-диагностику</Button></form>}
+    {attempt&&<div className="mt-5 space-y-4"><p className="text-sm">{attempt.assessment.role} · {attempt.assessment.grade} · форма {attempt.assessment.variant} · {attempt.assessment.questions.length} вопросов. Порог: {attempt.assessment.passCorrect}, высокий результат: {attempt.assessment.highCorrect}. Итог не верифицирует квалификацию.</p>
+      {attempt.status==='active'&&<><div className="max-h-[65vh] space-y-4 overflow-y-auto border-y border-muted/60 py-4">{attempt.assessment.questions.map((q,i)=><fieldset key={q.id} className="rounded-xl border border-muted/60 p-4"><legend className="text-xs text-ink/60">Вопрос {i+1}</legend><p className="mb-2 text-sm">{q.prompt}</p>{q.options.map(o=><label key={o.id} className="flex gap-2 py-1 text-sm"><input type="radio" name={q.id} checked={answers[q.id]===o.id} onChange={()=>setAnswers(prev=>({...prev,[q.id]:o.id}))}/>{o.text}</label>)}</fieldset>)}</div>
+      <Button loading={action.busy} onClick={()=>void action.run(async()=>{const saved=await send<{result:Result}>(`/assessments/taxonomy/${attempt.id}/submit`,{answers:attempt.assessment.questions.map(q=>({questionId:q.id,optionId:answers[q.id]||null}))},'POST');setResult(saved.result);setAttempt({...attempt,status:'submitted'});})}>Завершить демо-диагностику</Button></>}
+      {result&&<Alert kind="info">Результат DEMO: {result.technicalTotal?.toFixed(1)}%. Распознавание терминов не подтверждает роль, грейд и уровень навыков; необходимы экспертные задания.</Alert>}
+      {attempt.status==='submitted'&&<Button variant="secondary" onClick={()=>{setAttempt(null);setResult(null);remember(key,'');}}>К выбору роли</Button>}
+    </div>}
+  </Panel>;
 }
 
 export function FspInfo() {

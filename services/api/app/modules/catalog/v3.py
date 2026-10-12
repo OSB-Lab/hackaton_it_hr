@@ -47,8 +47,8 @@ class EvidenceRules(FrozenModel):
 class BlueprintV3(Versioned):
     schemaVersion: Literal[3]
     catalogVersion: ID
-    specialization: Literal["backend", "frontend"]
-    grade: Literal["junior", "middle"]
+    specialization: Literal["backend", "frontend", "fullstack"]
+    grade: Literal["junior", "middle", "senior"]
     slots: tuple[TaggedSlot, ...] = Field(min_length=20, max_length=20)
     rubric: tuple[Rubric, ...] = Field(min_length=1)
     scoring: EvidenceRules
@@ -59,7 +59,8 @@ class BlueprintV3(Versioned):
         if {v.id for v in self.variants} != {"A", "B", "C"}:
             raise ValueError("Exactly A/B/C required")
         core = ({"python", "sql", "api"} if self.specialization == "backend"
-                else {"javascript", "typescript", "react"})
+                else {"javascript", "typescript", "react"} if self.specialization == "frontend"
+                else {"javascript", "react", "api"})
         expected = Counter({frozenset([s]): 4 for s in core})
         expected.update({frozenset(pair): 1 for pair in combinations(core, 2)})
         expected[frozenset(core)] = 3

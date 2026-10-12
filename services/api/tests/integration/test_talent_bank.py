@@ -132,13 +132,12 @@ def test_no_pii_or_false_qualification(talent_env):
     (client, headers, _, engine), (need, _, snapshot), candidates = talent_env
     with Session(engine) as session, session.begin():
         session.add(AssessmentAttempt(candidate_id=candidates[0], test_id="fixture", status="submitted",
-                    content_status="APPROVED", grade="senior", score=100,
-                    result={"outcome": "high", "status": "APPROVED"}, answers=["answerKey"]))
+                    grade="senior", score=100, result={"outcome": "high"}, answers=["answerKey"]))
     response = client.get(url(need, snapshot), headers=headers[0])
     assert response.status_code == 200
     for word in ("email", "phone", "fullName", "answerKey", "rubric", "scoring", "@", "79991234567", "Private Name", "senior", "high"):
         assert word not in response.text
-    assert set(TalentCandidateDTO.model_fields) == {"id", "specialization", "stack", "grade", "category", "hasFspAchievements"}
+    assert set(TalentCandidateDTO.model_fields) == {"id", "specialization", "stack", "grade", "category", "hasFspAchievements", "verifiedSkills"}
     for item in response.json()["items"]:
         assert item["candidate"]["grade"] is item["candidate"]["category"] is None
     assert client.get(url(need, snapshot), headers=headers[0], params={"grade": "senior"}).json()["items"] == []

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "catalog_version": "talent-taxonomy-v1",
+  "catalog_version": "talent-taxonomy-v2",
   "generated_at": "2026-10-11",
   "sources": {
     "onet31": {

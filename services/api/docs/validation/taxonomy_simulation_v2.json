@@ -1,0 +1,35 @@
+{
+  "adjacentLowerPassRate": 0.0333,
+  "answerPositionCounts": {
+    "o1": 233,
+    "o2": 201,
+    "o3": 232,
+    "o4": 234
+  },
+  "byGradePassRate": {
+    "junior": 0.6398,
+    "middle": 0.6597,
+    "senior": 0.6778
+  },
+  "candidateCount": 1000,
+  "categoryShortcutItemFraction": 0.0,
+  "caveat": "Response probabilities assume grade difficulty without independent human validation; simulated separation is not empirical validity.",
+  "cellCount": 15,
+  "curatedScenarioItems": 684,
+  "duplicateOrAmbiguousOptions": 0,
+  "fixtureVersion": "taxonomy-synthetic-v1",
+  "formCount": 45,
+  "formDecisionStability": 0.585,
+  "formIndependence": "NOT_ESTABLISHED: same concept and answer across A/B/C",
+  "generatedRecognitionItems": 0,
+  "gradeDiscriminationByContent": "UNREVIEWED: grade-specific scenarios, no external calibration",
+  "lexicalAnswerLeaks": 0,
+  "meanScoreSpreadAcrossForms": 14.62,
+  "model": "hypothetical_response_probability_v1",
+  "questionBankVersion": "taxonomy-curated-demo-v4-683ff1d69aa7",
+  "reusedMvpItems": 216,
+  "sameGradePassRate": 0.659,
+  "semanticStatus": "NOT_VALIDATED",
+  "strongJuniorOnMiddlePassRate": 0.0697,
+  "typicalMiddlePassRate": 0.7
+}

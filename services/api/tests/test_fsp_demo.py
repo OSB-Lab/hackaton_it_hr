@@ -13,14 +13,14 @@ def record(**changes):
 
 def test_registry_requires_explicit_demo_provenance_and_unique_ids(tmp_path):
     path = tmp_path / "fsp.json"
-    path.write_text(json.dumps({"schemaVersion": 1, "source": "synthetic-demo-not-fsp",
+    path.write_text(json.dumps({"schemaVersion": 1, "source": "fsp",
         "participants": [{"fspId": "f1", "achievements": [record()]}]}))
     assert load_registry(path)["f1"].achievements[0].recordId == "r1"
     for payload in (
         {"schemaVersion": 1, "source": "real-fsp", "participants": []},
-        {"schemaVersion": 1, "source": "synthetic-demo-not-fsp", "participants": [
+        {"schemaVersion": 1, "source": "fsp", "participants": [
             {"fspId": "f1", "achievements": []}, {"fspId": "f1", "achievements": []}]},
-        {"schemaVersion": 1, "source": "synthetic-demo-not-fsp", "participants": [
+        {"schemaVersion": 1, "source": "fsp", "participants": [
             {"fspId": "f1", "achievements": [record(skillIds=["unknown"])]}]},
     ):
         path.write_text(json.dumps(payload))
@@ -29,7 +29,7 @@ def test_registry_requires_explicit_demo_provenance_and_unique_ids(tmp_path):
 
 def test_scoring_is_bounded_secondary_and_uses_best_record_only(tmp_path):
     path = tmp_path / "fsp.json"
-    path.write_text(json.dumps({"schemaVersion": 1, "source": "synthetic-demo-not-fsp",
+    path.write_text(json.dumps({"schemaVersion": 1, "source": "fsp",
         "participants": [{"fspId": "f1", "achievements": [record(),
             record(recordId="r2", result="participant", role="participant", skillIds=["react"], achievedAt="2018-01-01")]}]}))
     achievements = load_registry(path)["f1"].achievements
@@ -52,7 +52,7 @@ def test_twenty_synthetic_candidates_keep_eligibility_and_test_dominant(tmp_path
         role="lead" if i % 5 else "participant",
         skillIds=["python"] if i % 3 else ["react"], achievedAt=f"{2025-i%8}-01-01")] if i % 4 else []}
         for i in range(20)]
-    path.write_text(json.dumps({"schemaVersion": 1, "source": "synthetic-demo-not-fsp", "participants": participants}))
+    path.write_text(json.dumps({"schemaVersion": 1, "source": "fsp", "participants": participants}))
     registry = load_registry(path)
     from app.modules.recommendations.ranking import calculate
     assert len(registry) == 20

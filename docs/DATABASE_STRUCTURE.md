@@ -121,7 +121,7 @@ CHECK `ck_candidate_verified_grade`: аналогичный набор для ve
 Email находится только в users. publish_profile/show_contacts — ключи privacy_settings,
 не отдельные колонки. Отсутствующий show_contacts трактуется сервисом как false.
 Verified pointer не UNIQUE; соответствие attempt своему кандидату и успешному
-APPROVED-результату проверяется `assessments/qualification.py`, не самим FK.
+результату проверяется `assessments/qualification.py`, не самим FK.
 
 ### companies — Company (`models/company.py`)
 
@@ -177,13 +177,12 @@ skills — API/service, не DB CHECK. Legacy nullable-строки могут �
 | snapshot_schema_version | INTEGER | NULL |
 | snapshot | JSON | NULL, none_as_null=True |
 | variant | VARCHAR | NULL |
-| content_status | VARCHAR | NULL |
 | status | VARCHAR | NN, default legacy |
 | submitted_at | TIMESTAMPTZ | NULL |
 | created_at | TIMESTAMPTZ | NN, default now() |
 
 CHECK: `ck_test_attempts_status`: legacy/active/submitted;
-`ck_test_attempts_variant`: A/B/C; `ck_test_attempts_content_status`: DEMO/APPROVED.
+`ck_test_attempts_variant`: A/B/C.
 Частичный уникальный индекс `uq_test_attempts_active_candidate(candidate_id)
 WHERE status = 'active'` запрещает две активные попытки любого типа у кандидата.
 Snapshot содержит внутренние вопросы/ключи/правила; публичная сериализация должна
@@ -481,16 +480,17 @@ sessions, refresh_tokens или talent_bank. Каталог и blueprints — ve
 
 ### Границы реалистичности набора
 
-- Текущий активный банк DEMO: даже 100 заполненных профилей/успешных DEMO attempts
-  не дадут verified qualification или непустой eligible ranking.
-- Для настоящего положительного сценария нужны реально утверждённые версии банка и
-  каталога, успешный submit, verified email, publication и publish_profile, совпадение
-  verified specialization и minGrade. Самозаявленные поля/seed scores не заменяют proof.
+- Квалификация определяется баллом (13/18 pass + per-skill ≥50%, 16/18 high + ≥70%),
+  а не флагом demo/approved. Успешная v3-попытка даёт verified qualification при
+  выполнении остальных hard gates.
+- Для положительного сценария нужны: успешный submit, verified email, publication и
+  publish_profile, совпадение verified specialization и minGrade. Самозаявленные
+  поля/seed scores не заменяют proof.
 - Контакты требуют origin employer, accepted invitation, его disclosure и актуальные
   verified email, processing/publication, publish_profile, show_contacts. Генерация
   записи disclosure сама по себе не разрешает выдачу контактов.
-- Искусственный APPROVED-контент существующих integration tests допустим только в
-  явно изолированных test fixtures, не должен попадать в реальный каталог/профили.
+- Тест-фикстуры integration tests используют изолированные копии каталога и не
+  должны попадать в реальный каталог/профили.
 - Текущий `app/commands/seed_demo.py` идемпотентен через `_ensure()` и использует
   `hash_password()`, но это фиксированный demo seed, не генератор 100 аккаунтов.
   Он не создаёт достоверную verified qualification; повторно его здесь не запускали.

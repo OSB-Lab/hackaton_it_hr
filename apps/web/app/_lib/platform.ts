@@ -12,6 +12,9 @@ export interface Profile {
   role: string | null; experienceMonths: number | null; softSkills: string[];
   specialization: string | null; selfDeclaredGrade: string | null;
   verifiedGrade: string | null; verifiedSpecialization: string | null;
+  verifiedSkills: Record<string, number>;
+  diagnosticRole: string | null; diagnosticGrade: string | null;
+  diagnosticStatus: 'DEMO' | null; diagnosticSkills: Record<string, number>;
   consents: { processing: boolean; publication: boolean }; privacy: { showContacts: boolean };
   fspSource: 'synthetic-demo-not-fsp' | null;
   fspAchievements: { recordId: string; kind: 'competition_result' | 'sport_rank'; result: string;
@@ -35,7 +38,7 @@ export interface Need {
   minGrade: string | null; targetGrade: string | null; requiredSkills: string[]; optionalSkills: string[] | null;
 }
 export interface Item {
-  candidate: { id: number; specialization?: string | null; grade?: string | null; stack?: string[]; hasFspAchievements?: boolean };
+  candidate: { id: number; specialization?: string | null; grade?: string | null; stack?: string[]; hasFspAchievements?: boolean; verifiedSkills?: Record<string,number> };
   rank: number | null; score: number;
   components: { skillFit: number; assessmentStrength: number; fspBonus: number } | null;
   filterFit?: number; rankingFit?: number; qualityScore?: number;

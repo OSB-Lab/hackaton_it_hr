@@ -37,7 +37,7 @@ def test_start_repeat_snapshot_and_no_grade_change(assessment_env, monkeypatch, 
     assert created.status_code == 201
     data = created.json()
     assert data["status"] == "active" and data["submittedAt"] is None
-    assert data["assessment"]["status"] == "DEMO"
+    assert client.get(f"/assessments/{data['id']}", headers=headers[0]).json() == data
     assert data["assessment"]["variant"] == variant
     for forbidden in ("answerKey", "optionId", "rubric", "scoring", "threshold", "checksum", "weight", "maxScore"):
         assert forbidden not in created.text
@@ -45,7 +45,7 @@ def test_start_repeat_snapshot_and_no_grade_change(assessment_env, monkeypatch, 
     with Session(engine) as session:
         row = session.get(Attempt, data["id"])
         snapshot = row.snapshot
-        assert row.content_status == "DEMO" and row.status == "active"
+        assert row.status == "active"
         assert row.score is None and row.grade is None and row.answers == []
         assert session.get(CandidateProfile, row.candidate_id).grade == initial_grade
         catalog = CatalogRepository()
@@ -205,7 +205,11 @@ def test_partial_unique_index_and_completed_history(assessment_env):
 def test_assessment_openapi(assessment_env):
     client, _, _, _ = assessment_env
     paths = client.get("/openapi.json").json()["paths"]
-    assert {p for p in paths if p.startswith("/assessments")} == {START, "/assessments/{attempt_id}", "/assessments/{attempt_id}/submit"}
+    assert {p for p in paths if p.startswith("/assessments")} == {
+        START, "/assessments/{attempt_id}", "/assessments/{attempt_id}/submit",
+        "/assessments/taxonomy/catalog", "/assessments/taxonomy/start",
+        "/assessments/taxonomy/{attempt_id}", "/assessments/taxonomy/{attempt_id}/submit",
+    }
     assert set(paths[START]["post"]["responses"]) >= {"200", "201"}
 
 

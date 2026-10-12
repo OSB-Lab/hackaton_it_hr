@@ -60,7 +60,6 @@ class ResultDTO(BaseModel):
     retestAvailableAt: datetime | None = None
     retestOffer: Literal["lower_retest_offered", "higher_retest_offered"] | None = None
     outcome: Literal["fail", "pass", "high"]
-    status: Literal["DEMO", "APPROVED"]
 
 
 class SubmitDTO(BaseModel):

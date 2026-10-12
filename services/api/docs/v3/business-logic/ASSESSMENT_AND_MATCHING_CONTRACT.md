@@ -1,3 +1,7 @@
+> **Исторический снимок.** Этот документ отражает состояние до удаления разделения demo/real/test
+> (флаги `DEMO`/`APPROVED`/`content_status` удалены, миграция `0012`, квалификация — по баллу).
+> Актуальное состояние — в [`README.md`](../../README.md) и [`docs/JURY.md`](../../docs/JURY.md).
+
 # Контракт тестирования и категоризации (SPR-14 / SPR-15, редакция для финала)
 
 > Статус: **LOCKED v3 business rules; question content pending expert review**. v2 не применять для новых blueprint:

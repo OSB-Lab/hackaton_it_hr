@@ -25,8 +25,6 @@ def validate_skills(catalog: Catalog, values, specialization: str | None = None)
 def validate_blueprint(catalog: Catalog, blueprint: Blueprint):
     if blueprint.catalogVersion != catalog.version:
         raise ValueError("Catalog version mismatch")
-    if blueprint.status == "APPROVED" and catalog.status != "APPROVED":
-        raise ValueError("APPROVED blueprint requires APPROVED catalog")
     validate_specialization(catalog, blueprint.specialization)
     validate_grade(catalog, blueprint.grade)
     validate_skills(catalog, [tag for slot in blueprint.slots for tag in (slot.skillTags if blueprint.schemaVersion == 3 else (slot.skillId,))], blueprint.specialization)

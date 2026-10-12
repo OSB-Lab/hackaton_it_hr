@@ -48,7 +48,7 @@ def test_core_gate_can_fail_a_passing_total():
     assert result.subscores["python"] == pytest.approx(400 / 9)
 
 
-@pytest.mark.parametrize("case", ["missing_c", "tags", "duplicate_tag", "teamwork_mix", "options", "weight", "threshold", "rubric", "auto_approval"])
+@pytest.mark.parametrize("case", ["missing_c", "tags", "duplicate_tag", "teamwork_mix", "options", "weight", "threshold", "rubric"])
 def test_strict_structure(case):
     data = CatalogRepository().blueprint("backend-junior-v3-demo").document.model_dump(mode="json")
     if case == "missing_c": data["variants"].pop()
@@ -59,7 +59,6 @@ def test_strict_structure(case):
     if case == "weight": data["slots"][0]["weight"] = 2
     if case == "threshold": data["scoring"]["thresholds"]["passCorrect"] = 12
     if case == "rubric": data["rubric"][0]["unansweredFraction"] = .5
-    if case == "auto_approval": data["status"] = "APPROVED"
     with pytest.raises(ValueError): decode(BlueprintV3, json.dumps(data))
 
 
